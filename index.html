@@ -1197,29 +1197,109 @@ Os sistemas energéticos do VORTEXA foram validados em ambiente CAE ANSYS e segu
 <h2>5. Cognição, Interfaces e IA Embarcada</h2>
 
 <section id="vortexcore">
-<h3>5.1 VORTEXCORE Family – Arquitetura Cognitiva Modular</h3>
+<h3>5.1 Evolução da Arquitetura Cognitiva VORTEXA</h3>
 
-<p>
-A <strong>VORTEXCORE™ Family</strong> constitui a base computacional embarcada do VORTEXA HYBRID. É uma arquitetura proprietária composta por uma família de ASIC SoC otimizados para aplicações extremas de mobilidade, com foco em inferência embarcada, resiliência sistêmica e autonomia cognitiva.
-</p>
+<div class="card mb-4">
+    <div class="card-header">
+        <h4>1. Camada Cognitiva e de Processamento Inteligente</h4>
+    </div>
+    <div class="card-body">
+        <div class="tech-item">
+            <h5>VORTEXA BRAIN™</h5>
+            <p>Núcleo decisório de alto nível, responsável por inferência, estratégia e decisões autônomas em tempo real. Atua como o "centro de gravidade" da inteligência embarcada, coordenando as ações do veículo em ambientes extremos.</p>
+        </div>
+        
+        <div class="tech-item">
+            <h5>xRT-VTXA™</h5>
+            <p>Runtime cognitivo operacional embarcado, responsável pela execução adaptativa e resiliência em tempo real. Funciona como o "sistema nervoso reflexo" da cápsula de sobrevivência (VSC-RESIL™), capaz de operar mesmo sob blackout parcial, reorganizando prioridades e decisões críticas.</p>
+        </div>
+        
+        <div class="tech-item">
+            <h5>VORTEXA SINAPSI™</h5>
+            <p>Arquitetura sináptica embarcada que conecta, organiza e interpreta dados gerados por todos os sistemas do veículo. Atua como a rede neural funcional que alimenta e interliga os módulos cognitivos, suportando aprendizado profundo contínuo em ambiente extremo.</p>
+        </div>
+        
+        <div class="tech-item">
+            <h5>NEVO OS™</h5>
+            <p>Sistema operacional multitarefa de IA distribuída embarcada. Hospedeiro das funções do runtime xRT-VTXA™ e dos SubCores™, provendo abstração computacional, escalabilidade e suporte a redes neurais embarcadas.</p>
+        </div>
+        
+        <div class="tech-item">
+            <h5>SubCores™</h5>
+            <p>Microcontroladores especializados distribuídos que executam funções críticas específicas (HUD, refrigeração, navegação, diagnóstico). Garantem redundância e fallback local, mantendo a operação mesmo em caso de falha parcial do sistema.</p>
+        </div>
+        
+        <div class="tech-item">
+            <h5>ECU Resilient™</h5>
+            <p>Unidade de controle de emergência isolável, imune a falhas do sistema central. Atua como um "cérebro secundário", mantendo funções mínimas vitais e operando mesmo sob blackout completo da IA.</p>
+        </div>
+    </div>
+</div>
 
-<h4>Composição da Família:</h4>
-<ul>
-  <li><strong>VortexCore Ultra:</strong> Unidade cognitiva central de alta capacidade, com capacidade de inferência neural de alto volume, gerenciamento da missão e coordenação dos SubCores.</li>
-  <li><strong>VortexCore Slim+:</strong> SoC leve e tolerante a falhas, aplicado em módulos funcionais (ERS, SISMO™, VULCANS™, HUD, VRSH™). Opera em ambientes com blackout parcial.</li>
-  <li><strong>VortexCore Resilient ECU:</strong> Unidade analógica de emergência, com fallback elétrico, failover imediato e execução isolada para rotinas mínimas de sobrevivência (marcha, sinalização, ventilação, blackout autônomo).</li>
-</ul>
+<div class="card mb-4">
+    <div class="card-header">
+        <h4>2. Camada de Hardware Cognitivo Avançado</h4>
+    </div>
+    <div class="card-body">
+        <div class="tech-item">
+            <h5>Família xAI VortexCore™ (ASIC SoC)</h5>
+            <p>Plataforma neuromórfica baseada em semicondutores de silício avançado, otimizada para IA embarcada em tempo real. Suporta inferência nativa, reorganização neural dinâmica, segurança avançada e latência ultrabaixa.</p>
+        </div>
+        
+        <div class="tech-item">
+            <h5>Evolução da Família xAI VortexCore™: Transição do Silício para Nanotubos de Carbono (CNT)</h5>
+            <p>A família de ASICs SoC xAI VortexCore™, atualmente baseada em tecnologia de semicondutores de silício, está em transição planejada para uma arquitetura fundamentada em nanotubos de carbono (CNT). Essa evolução tecnológica visa superar limitações físicas dos chips de silício, como dissipação térmica, densidade de integração e velocidade de comutação, aproveitando as propriedades eletrônicas excepcionais e alta eficiência energética dos CNTs.</p>
+            <p>Conforme o roadmap técnico estabelecido, a prototipagem inicial dos chips CNT está prevista para o terceiro trimestre de 2026, com validação funcional e testes de integração no segundo semestre. A produção piloto deve iniciar em meados de 2027, focando em aplicações críticas de IA embarcada, diagnóstico preditivo e controle adaptativo.</p>
+            <p>Essa transição assegura a vanguarda em performance computacional e resiliência operacional, alinhando inovação disruptiva e maturidade de desenvolvimento para atender às demandas de sistemas embarcados de próxima geração.</p>
+        </div>
+        
+        <div class="tech-item">
+            <h5>Riscos Técnicos e Estratégias de Mitigação</h5>
+            <ul>
+                <li><strong>Manufatura em Escala:</strong> Produção consistente de CNTs de alta qualidade permanece um desafio técnico.</li>
+                <li><strong>Integração Arquitetural:</strong> Adaptação dos sistemas atuais para suportar a nova arquitetura exige reengenharia significativa.</li>
+                <li><strong>Confiabilidade Operacional:</strong> Garantir estabilidade e durabilidade dos componentes CNT em ambientes extremos é crucial.</li>
+            </ul>
+            <p>Para mitigar esses riscos, o desenvolvimento é conduzido por um consórcio internacional composto por parceiros tecnológicos de ponta, incluindo instituições acadêmicas e indústrias líderes no desenvolvimento de semicondutores neuromórficos e nanotecnologia.</p>
+        </div>
+    </div>
+</div>
 
-<h4>Características Técnicas:</h4>
-<ul>
-  <li>Inferência embarcada em <strong>&lt;5 ms</strong> com fallback automático</li>
-  <li>Processamento xAI com <strong>circuitos tolerantes a radiação e temperatura</strong></li>
-  <li>Integração com sensores LiDAR, IMU, térmicos, neurofeedback, SpO₂ e comando gestual</li>
-  <li>Consumo energético distribuído com perfil de prioridade entre módulos críticos</li>
-</ul>
+<div class="card mb-4">
+    <div class="card-header">
+        <h4>3. Camada de Conectividade Inteligente</h4>
+    </div>
+    <div class="card-body">
+        <div class="tech-item">
+            <h5>VORTEXA NET™</h5>
+            <p>Infraestrutura de telemetria inteligente que integra Grok 6, xAI remota, sensores biométricos, Starlink, Mesh 4.0 e diagnósticos preditivos. Garante comunicação segura, atualizações OTA e controle remoto em ambientes adversos.</p>
+        </div>
+        
+        <div class="tech-item">
+            <h5>OptiCAN Matrix™</h5>
+            <p>Rede híbrida de alta largura de banda que combina CAN XL com fibra óptica POF, usada como barramento interno para comunicação resiliente e de alta velocidade entre módulos críticos.</p>
+        </div>
+        
+        <div class="tech-item">
+            <h5>Integração com o Sistema Operacional NEVO OS™</h5>
+            <p>O NEVO OS™ é projetado para operar de forma otimizada em sistemas embarcados que utilizam tanto a geração atual xAI VortexCore™ quanto os futuros chips CNT. Ele oferece desempenho otimizado, escalabilidade e resiliência operacional, fundamentais para suportar cargas computacionais críticas e assegurar continuidade operacional em missões extremas.</p>
+        </div>
+    </div>
+</div>
+
+<div class="tech-specs">
+    <h5>Parâmetros Técnicos Atualizados:</h5>
+    <ul>
+        <li><strong>Processador:</strong> xAI VortexCore (TSMC 2nm)</li>
+        <li><strong>Capacidade de Processamento:</strong> 120 TOPS (INT8)</li>
+        <li><strong>Latência de Decisão:</strong> ≤10 ms</li>
+        <li><strong>Conectividade:</strong> OptiCAN Matrix (10 Mbit/s)</li>
+        <li><strong>Normas:</strong> ASIL-D, MIL-STD-810H</li>
+    </ul>
+</div>
 
 <aside class="highlight">
-<strong>Nota:</strong> A evolução da arquitetura prevê, até 2040, a adoção de <strong>ASICs híbridos optoeletrônicos baseados em CNT (carbon nanotube logic)</strong>, já em simulação estrutural com suporte do consórcio Vortexa–QEV–DDLab.
+    <strong>Nota:</strong> A evolução da arquitetura prevê, até 2040, a adoção de <strong>ASICs híbridos optoeletrônicos baseados em CNT (carbon nanotube logic)</strong>, já em simulação estrutural com suporte do consórcio Vortexa-QEV-DDLab.
 </aside>
 </section>
 
