@@ -1,0 +1,2395 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VORTEXA HYBRID - Documentação Técnica</title>
+<style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #1a1a2e;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.2em;
+        }
+        h2 {
+            color: #1a1a2e;
+            border-bottom: 2px solid #1a1a2e;
+            padding-bottom: 5px;
+            margin-top: 40px;
+        }
+        h3 {
+            color: #16213e;
+        }
+        h4 {
+            color: #0f3460;
+        }
+        .container {
+            display: flex;
+            gap: 30px;
+        }
+        .toc {
+            flex: 1;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 20px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        .content {
+            flex: 3;
+            background-color: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .toc ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .toc li {
+            margin-bottom: 10px;
+        }
+        .toc a {
+            text-decoration: none;
+            color: #1a1a2e;
+            font-weight: 500;
+            display: block;
+            padding: 8px 10px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        .toc a:hover {
+            background-color: #e6e6e6;
+            color: #0f3460;
+        }
+        .toc > ul > li > a {
+            font-weight: bold;
+            color: #16213e;
+        }
+        .back-to-toc {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 8px 15px;
+            background-color: #1a1a2e;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9em;
+            transition: background-color 0.3s;
+        }
+        .back-to-toc:hover {
+            background-color: #0f3460;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #1a1a2e;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .highlight {
+            background-color: #fffde7;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+        .comparison-table th {
+            background-color: #0f3460;
+        }
+        .revision-info {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-left: 4px solid #000080;
+            margin: 20px 0;
+            font-style: italic;
+            color: #000080;
+        }
+        .tech-specs {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .tech-specs h5 {
+            margin-top: 0;
+            color: #495057;
+        }
+        .inconsistency-note {
+            background-color: #fff3cd;
+            padding: 10px;
+            border-left: 4px solid #ffc107;
+            margin: 10px 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+<header>
+<h1>VORTEXA HYBRID TECH FRAMEWORK</h1>
+<p>Estrutura Técnica Institucional e Estratégica</p>
+<div class="revision-info">
+<strong>Data de Revisão:</strong> 24 de Junho de 2025
+</div>
+</header>
+<div class="container">
+<nav class="toc" id="toc">
+<h2>Sumário</h2>
+<ul>
+  <li><a href="#introducao-institucional">Introdução Institucional</a></li>
+  <li><a href="#resumo-executivo">Parte I: Resumo Executivo</a>
+    <ul>
+      <li><a href="#visao-geral">1.1 Visão Geral do VORTEXA HYBRID</a></li>
+      <li><a href="#diferenciais">1.2 Diferenciais e Benefícios</a></li>
+      <li><a href="#roadmap">1.3 Roadmap Estratégico e Chamada para Ação</a></li>
+    </ul>
+  </li>
+  <li><a href="#detalhamento-tecnico">Parte II: Detalhamento Técnico</a>
+    <ul>
+      <li><a href="#estrutura">2. Estrutura, Sobrevivência e Design</a>
+        <ul>
+          <li><a href="#arquitetura">2.1 Arquitetura Estrutural e Modularidade</a></li>
+          <li><a href="#filosofia">2.2 Filosofia Funcional e Design Gordon Murray</a></li>
+          <li><a href="#capsula">2.3 Survivor Capsule™ (VSC-RESIL™)</a></li>
+          <li><a href="#smart-skin">2.4 VORTEXA SMART SKIN™</a></li>
+          <li><a href="#aplicacoes-estrutura">2.5 Aplicações Práticas</a></li>
+          <li><a href="#validacao-estrutura">2.6 Validação Técnica</a></li>
+        </ul>
+      </li>
+      <li><a href="#propulsao">3. Propulsão, Transmissão e Dinâmica</a>
+        <ul>
+          <li><a href="#powertrain">3.1 Sistema Híbrido de Alta Performance (V-DVD™)</a>
+            <ul>
+              <li><a href="#motor-termico">3.1.1 Motor Térmico VORTEXA HBR-1 (PIPO Moteurs)</a></li>
+              <li><a href="#motores-eletricos">3.1.2 Motores Elétricos Vetoriais (QEV Technologies)</a></li>
+              <li><a href="#integracao-hibrida">3.1.3 Integração Híbrida e Redundância</a></li>
+            </ul>
+          </li>
+          <li><a href="#transmissao">3.2 Arquitetura de Transmissão Resiliente – SADEV SMFD™</a></li>
+          <li><a href="#sistemas-criticos">3.3 VECS™ – Direção, Frenagem e Bypass</a></li>
+          <li><a href="#sismo">3.4 Suspensão Inteligente SISMO™ (DSSV + TAK-4i)</a></li>
+          <li><a href="#controle-trajetoria">3.5 Controle de Trajetória e Desempenho</a></li>
+          <li><a href="#aplicacoes-propulsao">3.6 Aplicações Práticas</a></li>
+          <li><a href="#validacao-propulsao">3.7 Validação Técnica</a></li>
+        </ul>
+      </li>
+      <li><a href="#energia">4. Energia e Sistemas Vitais</a>
+        <ul>
+          <li><a href="#estrategia-energetica">4.1 Estratégia Energética Distribuída</a></li>
+          <li><a href="#vulcans">4.2 VULCANS™ – Limpeza, Refrigeração e Proteção Térmica</a></li>
+          <li><a href="#diagnostico">4.3 Diagnóstico, OTA e Cibersegurança</a></li>
+          <li><a href="#backup-pem">4.4 Backup PEM + Microturbina de Emergência</a></li>
+          <li><a href="#sobrevivencia">4.5 Sistema de Sobrevivência Inteligente – Pacote Nível 2</a></li>
+          <li><a href="#seguranca">4.6 Segurança Ativa, EDR e Contenção de Falhas</a></li>
+          <li><a href="#aplicacoes-energia">4.7 Aplicações Práticas</a></li>
+          <li><a href="#validacao-energia">4.8 Validação Técnica</a></li>
+        </ul>
+      </li>
+      <li><a href="#cognicao">5. Cognição, Interfaces e IA Embarcada</a>
+        <ul>
+          <li><a href="#vortexcore">5.1 Arquitetura Cognitiva VORTEXCORE + NEVO OS</a></li>
+          <li><a href="#subcores">5.2 SubCores Cognitivas e Arquitetura xRT-VTXA</a></li>
+          <li><a href="#brain">5.3 VORTEXA BRAIN – Núcleo Estratégico</a></li>
+          <li><a href="#vrsh">5.4 VRSH™, HUD e Interfaces Biomecânicas</a></li>
+          <li><a href="#seguranca-cognitiva">5.5 Segurança Cognitiva e Integridade Embarcada</a></li>
+          <li><a href="#aplicacoes-cognitivas">5.6 Aplicações e Modos de Missão</a></li>
+          <li><a href="#validacao-cognicao">5.7 Validação Técnica</a></li>
+        </ul>
+      </li>
+      <li><a href="#escalabilidade">6. Escalabilidade, Logística e Validação</a>
+        <ul>
+          <li><a href="#kits">6.1 Kits Modulares de Missão</a></li>
+          <li><a href="#logistica">6.2 Logística Inteligente e QuickBay FieldOps</a></li>
+          <li><a href="#hidrogenio">6.3 VORTEXA H₂ OPS – Abastecimento e Segurança</a></li>
+          <li><a href="#cae">6.4 CAE VORTEXA – Simulação com ANSYS e CAE</a>
+            <ul>
+              <li><a href="#roadmap-cae">6.4.1 Roadmap e Marcos Intermediários</a></li>
+              <li><a href="#resultados-preliminares">6.4.2 Resultados Preliminares</a></li>
+              <li><a href="#gestao-riscos">6.4.3 Gestão de Riscos</a></li>
+            </ul>
+          </li>
+          <li><a href="#coleta-dados">6.5 Coleta de Dados e Aprendizado de Máquina</a></li>
+          <li><a href="#parceiros">6.6 Rede de Parceiros Estratégicos</a></li>
+          <li><a href="#aplicacoes-escalabilidade">6.7 Aplicações Práticas</a></li>
+          <li><a href="#validacao-escalabilidade">6.8 Validação Técnica</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#publico-geral">Parte III: Paper para o Público Geral</a>
+    <ul>
+      <li><a href="#o-que-e">7.1 O Que é o VORTEXA HYBRID?</a></li>
+      <li><a href="#impacto">7.2 Impacto em Rally, Defesa, Mineração e Resgate</a></li>
+      <li><a href="#sustentabilidade">7.3 Sustentabilidade e Futuro da Mobilidade</a></li>
+      <li><a href="#participar">7.4 Como Participar do Futuro do VORTEXA</a></li>
+      <li><a href="#faq">7.5 Perguntas Frequentes (FAQ)</a></li>
+    </ul>
+  </li>
+  <li><a href="#glossario">Glossário Técnico</a></li>
+  <li><a href="#normas-tecnicas">Normas Técnicas e Conformidade</a></li>
+</ul>
+</nav>
+<main class="content">
+
+<section class="section" id="introducao-institucional">
+<h2>Introdução Institucional</h2>
+<p>
+  O <strong>VORTEXA HYBRID TECH FRAMEWORK</strong> é a espinha dorsal do projeto VORTEXA HYBRID, uma plataforma cognitiva, modular e resiliente projetada para redefinir a mobilidade extrema em cenários como rally-raid (World Rally-Raid Championship - W2RC), operações militares, mineração e resgate autônomo. Desenvolvido por uma coalizão de instituições acadêmicas, engenharias globais e especialistas de classe mundial em inovação aplicada, o VORTEXA integra design funcional, inteligência artificial avançada, e resiliência estrutural para enfrentar desafios onde outros sistemas falham.
+</p>
+
+<div class="philosophy-quote">
+"<strong>Design meets survival:</strong> quando a forma segue a missão."
+</div>
+
+<p>
+  Fundada a partir do inconformismo técnico e da ambição funcional de criar algo inédito, a <strong>VORTEXA MOTORSPORT</strong> surge como um ecossistema internacional de cocriação, reunindo engenheiros de competição, pesquisadores aeroespaciais, projetistas militares e especialistas em sistemas de missão crítica. Seus centros de inovação estão distribuídos entre o Brasil, Alemanha, Califórnia e Emirados Árabes Unidos.
+</p>
+
+<p>
+  Diferente de soluções convencionais, o VORTEXA não parte de um veículo: parte de um <strong>framework sistêmico</strong> que integra design funcional, inteligência descentralizada, resiliência multicamada e interoperabilidade adaptativa. Trata-se de uma máquina viva, capaz de resistir a impactos severos, reconfigurar seus próprios subsistemas e manter a operação mesmo após falhas elétricas, eletrônicas ou estruturais críticas.
+</p>
+
+<p>
+  Seus pilares fundamentais incluem:
+  <ul>
+    <li><strong>Resiliência Sistêmica Total</strong>: com múltiplas camadas de redundância digital, física e energética.</li>
+    <li><strong>Inovação Sustentável e Escalonável</strong>: com arquitetura de transição energética (e-fuels → elétrico → hidrogênio).</li>
+    <li><strong>Inteligência Distribuída Modular</strong>: com VORTEXA BRAIN (xAI/Grok 6), SubCores locais, e rede OptiCAN Matrix.</li>
+  </ul>
+</p>
+
+<p>
+  Em sua essência, o VORTEXA representa a filosofia "design meets survival": tudo que é visível cumpre uma função crítica. Sua carenagem é ativa. Sua cápsula de sobrevivência é real. Seu cérebro é treinado. Sua energia é preditiva. E sua missão é ir além — mesmo quando tudo ao redor falha.
+</p>
+
+<p>
+  Este documento apresenta os cinco blocos sistêmicos que constituem o núcleo funcional da plataforma VORTEXA HYBRID:
+  <ol>
+    <li>estrutura e design funcional;</li>
+    <li>propulsão e mobilidade extrema;</li>
+    <li>sistemas energéticos e vitais;</li>
+    <li>cognição embarcada e interfaces humanas;</li>
+    <li>escalabilidade, validação e legado institucional.</li>
+  </ol>
+</p>
+
+<p>
+  Cada seção é acompanhada de especificações técnicas, lógica de operação, redundância e estratégias de missão, incluindo insights de simulação (CAE VORTEXA), integração IA (Grok 6/xAI), e compatibilidade com cenários extremos. O VORTEXA está sendo validado por meio de simulações digitais, testes planejados até 2030, e conformidade com normas como ISO 26262, MIL-STD-810H e FIA T1U.
+</p>
+
+<p>
+  Com parcerias estratégicas com ANSYS, SADEV, Oshkosh Defense, QEV Technologies, Bosch Motorsport, NVIDIA, Stanford DDL, CAE GmbH, MIT CSAIL, xAI e outros, a Vortexa Motorsport convida todos os inovadores a participar da construção de uma nova geração de mobilidade funcional, cognitiva e de sobrevivência.
+</p>
+</section>
+
+<section class="section" id="resumo-executivo">
+<h2>Parte I: Resumo Executivo</h2>
+
+<article id="visao-geral">
+<h3>1.1 Visão Geral do VORTEXA HYBRID</h3>
+<p>
+  O <strong>VORTEXA HYBRID</strong> é uma plataforma modular e resiliente baseada no <strong>VORTEXA HYBRID TECH FRAMEWORK</strong>, uma arquitetura integrada para mobilidade extrema. Composta por cinco blocos funcionais interdependentes — <em>estrutura, propulsão, energia, cognição e escalabilidade</em> —, a plataforma foi projetada para operar com confiabilidade em ambientes como W2RC, operações de defesa, mineração remota e resgate autônomo.
+</p>
+
+<p>
+  Diferente de um veículo convencional, o VORTEXA é uma <strong>máquina adaptativa</strong>, capaz de se reconfigurar dinamicamente via rede cognitiva embarcada. Sua lógica operacional parte de um núcleo de inteligência (VORTEXA BRAIN), com redundância descentralizada (SubCores), sistema operacional em tempo real (NEVO OS) e uma matriz de interconexão robusta (OptiCAN Matrix), suportada por criptografia proprietária (VORTEXA SECURELINK).
+</p>
+
+<p>
+  A infraestrutura energética combina múltiplas fontes (baterias de estado sólido, hidrogênio pressurizado, microturbina de fallback), gerenciadas por um sistema multicamadas (VECS™), enquanto a carenagem atua como organismo funcional — com propriedades energéticas, autorreparáveis e ultracapacitivas (VORTEXA SMART SKIN™).
+</p>
+
+<ul>
+  <li><strong>Proteção Tática Total:</strong> A Survivor Capsule™ (VSC-RESIL™) resiste a 50 g, 1.200 °C, e falhas totais.</li>
+  <li><strong>Desempenho Adaptativo:</strong> Powertrain híbrido (V-DVD™) com ICE de 390 kW + 4 ERS elétricos (150 kW cada).</li>
+  <li><strong>Inteligência Distribuída:</strong> Grok 6 (xAI) em VORTEXA BRAIN, SubCores locais, diagnóstico preditivo e IA tolerante a falhas.</li>
+  <li><strong>Interoperabilidade Modular:</strong> Kits de missão (rally, militar, mineração, resgate) reconfiguráveis em campo.</li>
+  <li><strong>Sustentabilidade Avançada:</strong> Operação com H₂ direto e e-fuels; arquitetura sem transmissão mecânica.</li>
+</ul>
+</article>
+
+<article id="diferenciais">
+<h3>1.2 Diferenciais e Benefícios</h3>
+<ul>
+  <li><strong>Resiliência Sistêmica:</strong> Redundância física, digital e energética, com fallback manual e microECUs.</li>
+  <li><strong>Eficiência Energética:</strong> 85% em modo híbrido, com torque vetorial e recuperação térmica avançada.</li>
+  <li><strong>Autonomia Inteligente:</strong> 300–900 km (modo fallback); até 2.000 km com 20 kg de H₂ (modo estendido).</li>
+  <li><strong>IA em Tempo Real:</strong> Grok 6 com latência ≤10 ms, inferência embarcada (TinyML) e xRT-VTXA para blackout.</li>
+  <li><strong>Aplicações Multissetoriais:</strong> Rally-raid (W2RC), defesa tática, mineração profunda, operações SAR.</li>
+</ul>
+
+<p>
+  Cada subsistema do VORTEXA está desenhado para interoperabilidade: sistemas de suspensão (SISMO™), refrigeração/limpeza (VULCANS™), telemetria e controle de pressão (CTIS), visualização (VRSH™) e propulsão híbrida são orquestrados por inteligência coletiva local e central.
+</p>
+</article>
+
+<article id="roadmap">
+<h3>1.3 Roadmap Estratégico e Chamada para Ação</h3>
+
+<table>
+<thead>
+<tr>
+<th>Ano</th>
+<th>Marco</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2025</td>
+<td>Validação CAE</td>
+<td>Modelagem de torque, crash, IA e fluxo térmico (ANSYS/CAE GmbH)</td>
+</tr>
+<tr>
+<td>2026</td>
+<td>Protótipos Funcionais</td>
+<td>Teste de powertrain híbrido (ICE + 2 ERS traseiros) e CTIS inteligente</td>
+</tr>
+<tr>
+<td>2027</td>
+<td>Arquitetura Completa</td>
+<td>Implementação com 4 ERS independentes, CAE VORTEXA embarcado</td>
+</tr>
+<tr>
+<td>2028</td>
+<td>Validação de Interfaces</td>
+<td>Testes de VRSH™, HUD Vuzix, sensores térmicos e BCI (neurofeedback)</td>
+</tr>
+<tr>
+<td>2029</td>
+<td>Rally dos Sertões</td>
+<td>Teste em campo com arquitetura plena, fallback ativo e kits modulares</td>
+</tr>
+<tr>
+<td>2030</td>
+<td>Borneo Extreme / Validação Final</td>
+<td>Ambiente hostil: dunas, floresta, umidade, blackout elétrico controlado</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+  <strong>Chamada para Ação:</strong> A Vortexa Motorsport convida parceiros industriais, institutos de pesquisa e agências de missão crítica a integrar a coalizão VORTEXA para testes de campo, validação de novas tecnologias (Smart Skin™, H₂ OPS™, VORTEXCORE), e colaboração em IA resiliente. Contato via <a href="https://www.vortexamotorsport.com">www.vortexamotorsport.com</a>.
+</p>
+
+<div class="inconsistency-note">
+<strong>Nota:</strong> O site oficial da Vortexa Motorsport será lançado em breve. O URL acima é um placeholder para referência futura.
+</div>
+</article>
+</section>
+
+<section class="section" id="detalhamento-tecnico">
+<h2>Parte II: Detalhamento Técnico</h2>
+
+<article id="estrutura">
+<h2>2. Estrutura, Sobrevivência e Design</h2>
+
+<section id="arquitetura">
+<h3>2.1 Arquitetura Estrutural e Modularidade</h3>
+
+<p>
+A estrutura do <strong>VORTEXA HYBRID</strong> foi concebida com um único princípio inegociável: <em>sobreviver e continuar operando</em> mesmo após falhas severas. Para isso, adota uma arquitetura modular, multicamadas e com redundância física e funcional. Denominada <strong>MRCS – Modular Reconfigurable Chassis System</strong>, esta arquitetura distribui os sistemas vitais em três módulos estruturais interligados, todos com blindagem segmentada e fixação anti-propagação.
+</p>
+
+<h4>Divisão Estrutural (MRCS)</h4>
+<ul>
+  <li><strong>IFM – Módulo Frontal Integrado:</strong> Estrutura de absorção programada, com radar frontal, painéis CIGS e zona de impacto controlado.</li>
+  <li><strong>CCM – Módulo Central Blindado:</strong> Monocoque multicamadas com Survivor Capsule™ integrada, blindagem balística, tanques laterais e VORTEXA BRAIN.</li>
+  <li><strong>RTM – Módulo Traseiro Térmico:</strong> Compartimento isolado para ICE HBR-1, ERS QEV, baterias estado sólido, microturbina e exaustão Akrapovič.</li>
+</ul>
+
+<p>
+Os módulos são acoplados com <strong>fixadores pneumáticos de liberação rápida</strong> e painéis laterais rebatíveis com travamento multiponto. A carenagem é funcional: atua como sistema de energia, escudo balístico e superfície de autorreparo.
+</p>
+
+<div class="tech-specs">
+<h5>Parâmetros Técnicos Atualizados:</h5>
+<ul>
+  <li><strong>Material:</strong> Compósito CFRP-grafeno com matriz epóxi e aramida</li>
+  <li><strong>Rigidez Torcional:</strong> 45 kNm/° (simulação CAE)</li>
+  <li><strong>Peso total da estrutura:</strong> ~1.800 kg (config. padrão)</li>
+  <li><strong>Tanques de H₂:</strong> 10 kg (Eaton 700 bar, encapsulados)</li>
+  <li><strong>Geometria modular:</strong> acoplável com redundância de circuito</li>
+</ul>
+</div>
+
+<div class="highlight">
+<strong>Nota:</strong> Toda a estrutura foi validada para conformidade com as normas <strong>MIL-STD-810H</strong> (impacto, vibração, calor), <strong>ISO 26262 ASIL-D</strong> (falha funcional) e <strong>FIA T1U</strong> (rally-raid).
+</div>
+</section>
+
+<section id="filosofia">
+<h3>2.2 Filosofia Funcional e Design Gordon Murray</h3>
+
+<p>
+Inspirado pela lógica de <strong>design funcional extremo</strong> defendida por Gordon Murray, cada curva e cada interface da estrutura do VORTEXA tem razão técnica de existir. A forma segue a função: zonas de impacto canalizam força; carenagens dissipam calor; painéis inteligentes absorvem radiação solar e fornecem microcarga.
+</p>
+
+<p>
+Todos os elementos visíveis — carenagem, reforços, splitters, painéis laterais — compõem uma arquitetura orgânica. Nada é estético: tudo cumpre ao menos uma função crítica. Esta abordagem garante <strong>aerodinâmica de sobrevivência</strong> (Cd ~0.38) mesmo com danos, combinada à eficiência energética e proteção estrutural.
+</p>
+</section>
+
+<section id="capsula">
+<h3>2.3 Survivor Capsule™ (VSC-RESIL™)</h3>
+
+<p>
+No centro do VORTEXA encontra-se a <strong>Survivor Capsule™</strong> — célula de sobrevivência multicamadas integrada ao monocoque central. Ela protege o tripulante e os sistemas vitais contra impactos severos, fogo, despressurização parcial, falhas elétricas e saturação de partículas.
+</p>
+
+<div class="tech-specs">
+<h5>Parâmetros Técnicos:</h5>
+<ul>
+  <li><strong>Resistência térmica:</strong> 1.200°C por 5 minutos</li>
+  <li><strong>Proteção g-force:</strong> até 50 g</li>
+  <li><strong>Normas:</strong> MIL-STD-810H, FIA T1U</li>
+  <li><strong>Autonomia ambiental:</strong> 12 h (isolamento total)</li>
+  <li><strong>Ventilação cruzada:</strong> 500 L/min (filtragem redundante)</li>
+</ul>
+</div>
+
+<h4>Materiais e Camadas da Cápsula:</h4>
+<ul>
+  <li><strong>Camada Externa:</strong> Fibra de carbono + epóxi balístico</li>
+  <li><strong>Blindagem Interna:</strong> Kevlar multidirecional para contenção de fragmentos</li>
+  <li><strong>Núcleo Ativo:</strong> Substrato multicamada com sensores de microfissura e autocura com resina grafeno-polimérica</li>
+  <li><strong>Membranas Internas:</strong> ETFE com proteção microbiológica e isolamento térmico</li>
+</ul>
+
+<h4>Sistema de Suporte à Vida – ECLSS Integrado:</h4>
+<ul>
+  <li>Controle de temperatura e pressão</li>
+  <li>O₂ pressurizado com autonomia de 12 h</li>
+  <li>Scrubber de CO₂ regenerativo</li>
+  <li>Monitoramento biométrico contínuo via VRSH™ (SpO₂, batimentos)</li>
+  <li>Iluminação e rádio HAM em fallback total</li>
+</ul>
+</section>
+
+<section id="smart-skin">
+<h3>2.4 VORTEXA SMART SKIN™</h3>
+
+<p>
+A <strong>VORTEXA SMART SKIN™</strong> é a carenagem funcional multicamadas do VORTEXA HYBRID. Mais do que uma estrutura externa, ela é um organismo técnico ativo, combinando funções de detecção, geração, proteção e regeneração. Desenvolvida em parceria com <strong>Gordon Murray Automotive, MIT, Bosch, QuantumScape e Sila Nanotech</strong>, a SMART SKIN cobre áreas críticas do veículo e opera mesmo sob blackout total.
+</p>
+
+<h4>Funções principais:</h4>
+<ul>
+  <li><strong>Autocura preditiva:</strong> reparo ativo de microfissuras em 2–5 minutos por zona</li>
+  <li><strong>Geração de energia solar:</strong> painéis CIGS integrados com desempenho otimizado</li>
+  <li><strong>Monitoramento embarcado:</strong> sensores térmicos, estruturais e eletromagnéticos</li>
+  <li><strong>Energia distribuída:</strong> ultracapacitores avançados para fallback operacional</li>
+</ul>
+
+<h4>Composição por Camadas Funcionais:</h4>
+<ol>
+  <li><strong>Camada 1 – Epiderme Térmica:</strong> filme polimérico externo com memória de forma e autorreparo induzido por calor.</li>
+  <li><strong>Camada 2 – CIGS Photovoltaic Layer:</strong> película solar flexível (18% eficiência) para recarga auxiliar e energia ambiental.</li>
+  <li><strong>Camada 3 – SensorGrid:</strong> matriz embarcada de sensores I²C para trinca, vibração, opacidade, tensão e temperatura.</li>
+  <li><strong>Camada 4 – <strong>Kleist Layer™</strong>:</strong> sistema ultracapacitivo regenerativo com nanomateriais porosos e eletrodos híbridos.</li>
+  <li><strong>Camada 5 – Substrato Estrutural:</strong> reforço com CFRP-aramida e grafeno disperso, conferindo resistência e leveza.</li>
+</ol>
+
+<p>
+Todo o sistema é gerenciado por um <strong>SubCore Slim+</strong> dedicado à SMART SKIN™, que avalia continuamente o estado funcional das camadas e ativa rotinas locais mesmo sem comunicação com o VORTEXCORE central.
+</p>
+
+<aside class="highlight">
+<strong>Nota:</strong> Em caso de falha múltipla, a SMART SKIN entra em <em>modo passivo</em>, mantendo apenas as funções de escudo térmico, alimentação de HUD, rádio HAM e VULCANS™ via Kleist Layer™.
+</aside>
+
+<!-- SubSeção: Autocura -->
+<section id="smart-skin-autocura">
+<h4>2.4.1 Mecanismo de Autocura e Ativação Local</h4>
+
+<p>
+A capacidade de autocura da <strong>SMART SKIN™</strong> combina <strong>química regenerativa encapsulada</strong> com <strong>inteligência embarcada distribuída</strong>. Sua principal função é garantir a continuidade estrutural e funcional mesmo sob repetidas agressões ambientais.
+</p>
+
+<h5>A. Cápsulas de Resina Epóxi Microencapsuladas</h5>
+<p>
+A epiderme térmica (Camada 1) contém microcápsulas (~10–100 μm) com resina epóxi, dispersas em matriz flexível. Quando ocorre uma microfissura, as cápsulas se rompem, liberando o composto, que se combina com um agente de cura em microcanais adjacentes.
+</p>
+
+<ul>
+  <li><strong>Tempo médio de cura:</strong> 2–5 minutos</li>
+  <li><strong>Ciclos por segmento:</strong> até 5</li>
+  <li><strong>Profundidade regenerável:</strong> até 2 mm</li>
+</ul>
+
+<h5>B. Polímeros com Memória de Forma (SMP)</h5>
+<p>
+Camada externa inteligente que responde ao calor para reposicionar fisicamente a fissura antes da cura química. Atua em sinergia com sensores térmicos da SensorGrid.
+</p>
+
+<h5>C. SubCore Local de Controle</h5>
+<p>
+Um <strong>SubCore Slim+</strong> isola o processo de cura, priorizando áreas críticas (HUD, sensores, câmeras). O módulo opera em fallback total com energia fornecida pela Kleist Layer™.
+</p>
+
+<aside class="highlight">
+<strong>Nota:</strong> O sistema possui precisão de detecção de 97.8%–99.2% e rastreia zonas já ciclicamente regeneradas. Após 5 ciclos, a área entra em modo “degradada” até manutenção.
+</aside>
+</section>
+
+<!-- SubSeção: Kleist Layer -->
+<section id="smart-skin-kleist">
+<h4>2.4.2 Kleist Layer™ – UltraCamada Energética Regenerativa</h4>
+
+<p>
+A <strong>Kleist Layer™</strong> representa a quarta camada funcional da VORTEXA SMART SKIN™. Trata-se de uma estrutura capacitiva regenerativa composta por <strong>nanomateriais híbridos porosos</strong> com alta superfície ativa, inspirada em pesquisas contemporâneas sobre estruturas metal-orgânicas avançadas.
+</p>
+
+<h5>Características Técnicas:</h5>
+<ul>
+  <li><strong>Capacitância:</strong> até 90–100 W/m² de densidade energética local</li>
+  <li><strong>Tempo de resposta:</strong> carga e descarga rápida (&lt;1 s)</li>
+  <li><strong>Substrato flexível condutor:</strong> dopado com grafeno/PANI/PEDOT</li>
+  <li><strong>Gerência por IA:</strong> SubCore Slim+ realiza balanceamento térmico e predição de consumo</li>
+</ul>
+
+<p>
+A Kleist Layer™ fornece energia auxiliar para HUD, rádios, VULCANS™ e módulos cognitivos mesmo em blackout prolongado, com resiliência térmica e eletromagnética. É recarregada por painéis CIGS integrados ou diretamente pelo sistema VECS™.
+</p>
+
+<aside class="highlight">
+<strong>Nota:</strong> A arquitetura não depende de tecnologias patenteadas de terceiros. Sua validação CAE é conduzida em conjunto com UTFPR e parceiros internacionais da Vortexa Energy Alliance.
+</aside>
+</section>
+</section>
+
+<section id="smart-skin-modularidade">
+<h4>2.4.3 Modularidade Adaptativa e Certificação Técnica</h4>
+
+<p>
+Em consonância com o conceito estrutural <strong>MRCS – Modular Reconfigurable Chassis System</strong>, a <strong>VORTEXA SMART SKIN™</strong> adota uma arquitetura <strong>completamente modular, plug-and-play e segmentável</strong>. Cada unidade da carenagem funcional é logicamente identificável, fisicamente acoplável e energeticamente autossuficiente.
+</p>
+
+<h5>Integração com MRCS:</h5>
+<ul>
+  <li><strong>Segmentos SMART SKIN™:</strong> acoplados diretamente aos módulos do chassi (cockpit, braços laterais, cápsula traseira)</li>
+  <li><strong>Conectores blindados:</strong> canais ópticos e capacitivos que garantem continuidade de energia, dados e sensores</li>
+  <li><strong>SubCores locais:</strong> cada segmento possui seu próprio SubCore Slim+ que opera de forma autônoma e coordenada com o VORTEXCORE central</li>
+  <li><strong>Encaixe térmico adaptativo:</strong> memória de forma e selagem autorregenerativa garantem integridade estrutural sob torque e dilatação</li>
+</ul>
+
+<h5>Certificações Estratégicas e Técnicas:</h5>
+<p>
+A arquitetura SMART SKIN™ é projetada para atender rigorosamente os padrões internacionais de missão crítica e sistemas embarcados cognitivos:
+</p>
+<ul>
+  <li><strong>MIL-STD-810H:</strong> resistência ambiental sob choque, vibração, poeira, imersão, radiação solar e ciclos térmicos extremos (ensaios previstos para 2026–2027)</li>
+  <li><strong>MIL-STD-461F:</strong> compatibilidade eletromagnética militar para garantir imunidade e não emissão de interferência crítica entre módulos embarcados</li>
+  <li><strong>ISO 26262 – ASIL-D:</strong> segurança funcional nos domínios de detecção estrutural, fallback energético, HUD e sobrevivência cognitiva embarcada</li>
+  <li><strong>ISO 21434:</strong> segurança cibernética para barramentos locais, SubCores distribuídos e comunicação intersegmentos</li>
+  <li><strong>ISO 7637-2:</strong> imunidade a surtos elétricos em sistemas de alimentação e fallback, aplicável à Kleist Layer™ e SensorGrid</li>
+  <li><strong>IEC 60529 / IP69K:</strong> vedação total contra partículas finas, lama, poeira e jatos de água de alta pressão e temperatura em ambientes agressivos</li>
+</ul>
+
+<p>
+Essa abordagem modular garante que a SMART SKIN™ possa ser reconfigurada, substituída ou ampliada em campo de maneira rápida e segura, com autodiagnóstico por zona, continuidade operacional em falha parcial e redundância sensorial integrada. Cada segmento se comporta como um “órgão técnico inteligente” adaptável às condições operacionais mais severas.
+</p>
+
+<aside class="highlight">
+<strong>Nota:</strong> A validação integrada da SMART SKIN™ com o MRCS ocorrerá nos protótipos de terceira geração (2028), incluindo ensaios dinâmicos de desacoplamento e recomposição térmica em tempo real.
+</aside>
+</section>
+
+
+<section id="aplicacoes-estrutura">
+<h3>2.5 Aplicações Práticas</h3>
+<ul>
+  <li><strong>Rally-Raid (W2RC):</strong> proteção contra capotagens múltiplas e detritos em dunas</li>
+  <li><strong>Defesa:</strong> blindagem modular e cápsula pressurizada para ambientes hostis</li>
+  <li><strong>Mineração:</strong> resistência abrasiva, vedação contra sílica e poeiras finas</li>
+  <li><strong>Resgate autônomo:</strong> cápsula autossuficiente, resgate em zonas colapsadas ou contaminadas</li>
+</ul>
+</section>
+
+<section id="validacao-estrutura">
+<h3>2.6 Validação Técnica</h3>
+<p>
+Toda a estrutura do VORTEXA está sendo validada por simulações em <strong>CAE VORTEXA™</strong>, gêmeo digital estratégico co-desenvolvido com ANSYS e CAE GmbH. Os dados de impacto, torque e falha estrutural são cruzados com mapas térmicos, simulação de blackout e deformação progressiva.
+</p>
+
+<ul>
+  <li><strong>Redução de picos de carga:</strong> 30% (simulação CAE)</li>
+  <li><strong>Tempo de autocura por zona:</strong> 2–5 min</li>
+  <li><strong>Perda funcional após impacto:</strong> &lt;1.2%</li>
+</ul>
+
+<div class="highlight">
+<strong>Nota:</strong> Os testes físicos da estrutura modular blindada (MRCS) estão planejados para 2027, com validação W2RC e defesa.
+</div>
+</section>
+
+</article>
+
+<a href="#toc" class="back-to-toc">↑ Voltar ao Sumário</a>
+
+
+<article id="propulsao">
+<h2>3. Propulsão, Transmissão e Dinâmica</h2>
+
+<section id="sistema-hibrido">
+<h3>3.1 Sistema Híbrido de Alta Performance (V-DVD™)</h3>
+
+<p>
+O sistema de propulsão do <strong>VORTEXA HYBRID</strong> é denominado <strong>VORTEXA DIRECT VECTOR DRIVE™ (V-DVD™)</strong>, uma arquitetura de tração direta híbrida com controle vetorial. Ele combina um motor térmico de ignição por compressão com motores elétricos independentes em cada eixo, todos sob controle inteligente distribuído via SubCores (xAI VortexCore).
+</p>
+
+<p>
+<strong>ERS (Energy Recovery System)</strong> refere-se aos motores elétricos vetoriais instalados nos eixos do VORTEXA. Esses módulos atuam tanto como propulsores independentes quanto como sistemas de regeneração de energia cinética (frenagem inteligente), permitindo propulsão full-electric, recuperação adaptativa e vetorização de torque. São integrados via SubCores e desenvolvidos em colaboração com a QEV Technologies.
+</p>
+
+<h4>Potência Combinada</h4>
+<ul>
+  <li><strong>Motor térmico:</strong> 390 kW (~520 hp) – fornecido por <strong>PIPO Moteurs</strong></li>
+  <li><strong>Motores elétricos:</strong> 4×150 kW = 600 kW – fornecidos pela <strong>QEV Technologies</strong></li>
+  <li><strong>Potência total combinada:</strong> 990 kW (~1.340 hp)</li>
+  <li><strong>Torque estimado:</strong> ~1.250 Nm com entrega instantânea e vetorizada</li>
+  <li><strong>Autonomia estendida:</strong> 1.500–2.000 km com 20 kg de H₂</li>
+</ul>
+
+<aside class="highlight">
+<strong>Nota Técnica FIA T1U:</strong> A potência combinada de ~1.340 hp é compatível com o regulamento FIA T1 Ultimate (W2RC), desde que sejam adotadas estratégias de limitação (Power Limiting Strategy – PLS), mapeamento validado e telemetria ativa. A FIA autoriza picos elevados de potência híbrida sob condições controladas, com foco em equivalência de desempenho geral.
+</aside>
+
+<h4>Modos Operacionais Inteligentes (via SubCores)</h4>
+<table>
+<thead>
+<tr><th>Modo</th><th>Função</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>BOOST</strong></td><td>Máxima entrega ICE + ERS (até 990 kW)</td></tr>
+<tr><td><strong>EV-ONLY</strong></td><td>Tração elétrica silenciosa com autonomia de 120–150 km</td></tr>
+<tr><td><strong>STEALTH</strong></td><td>Redução de assinatura térmica e sonora (op. tática)</td></tr>
+<tr><td><strong>FALLBACK</strong></td><td>Operação ICE isolado com tração simplificada (~150 kW)</td></tr>
+<tr><td><strong>ADAPTIVE DRIFT</strong></td><td>Vetorização dinâmica para pisos de baixa aderência</td></tr>
+<tr><td><strong>CRAWLING</strong></td><td>Torque ultra-controlado para travessias técnicas</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="motor-termico">
+<h3>3.1.1 Motor Térmico VORTEXA HBR-1 (PIPO Moteurs)</h3>
+
+<p>
+O <strong>HBR-1</strong> é um motor térmico 2.7L V6 desenvolvido em parceria com a <strong>PIPO Moteurs</strong>, operando com ignição por compressão (CI) e combustão direta de hidrogênio (sem célula de combustível). Sua arquitetura foi concebida para robustez extrema, operando com pressão interna superior a 700 bar e temperatura de combustão controlada via refrigeração multicamadas.
+</p>
+
+<h4>Especificações Técnicas:</h4>
+<ul>
+  <li><strong>Configuração:</strong> V6 2.7L, biturbo variável</li>
+  <li><strong>Potência:</strong> 390 kW (com pico térmico otimizado)</li>
+  <li><strong>Combustível:</strong> H₂ gasoso (direto, sem célula)</li>
+  <li><strong>Rendimento térmico:</strong> 48–51%</li>
+  <li><strong>Emissões:</strong> &lt;0.1 gCO₂/km (partida a frio &lt; -40°C)</li>
+</ul>
+
+<h4>Tecnologia VAVi™ – Vortexa Active Valvetrain Intelligent</h4>
+<p>
+O VAVi™ é um sistema de comando de válvulas ativo, proprietário da Vortexa Motorsport, com atuação eletropneumática e mapeamento dinâmico sem eixo comando. Permite controle individualizado de cada válvula com:
+</p>
+<ul>
+  <li><strong>Desacoplamento mecânico completo</strong> (sem árvore de cames)</li>
+  <li><strong>Resposta de abertura:</strong> &lt;1 ms por válvula</li>
+  <li><strong>Mapeamento adaptativo:</strong> otimização de torque, consumo e emissões</li>
+  <li><strong>Fallback:</strong> modo de segurança com acionamento fixo pneumático (modo SAFE-IDLE)</li>
+</ul>
+
+<p>
+O sistema é integrado à ECU Powertrain (xAI VortexCore) com aprendizado preditivo, permitindo antecipar falhas e evitar colapsos mecânicos sob uso extremo.
+</p>
+</section>
+
+<section id="motores-eletricos">
+<h3>3.1.2 Motores Elétricos Vetoriais (QEV Technologies)</h3>
+
+<p>
+A <strong>QEV Technologies</strong>, referência mundial em arquitetura elétrica para competições como FIA Formula E e Extreme E, é a parceira responsável pelos <strong>ERS Vetoriais do VORTEXA</strong>. São quatro unidades independentes de 150 kW com controle por SubCores dedicados, acopladas a sensores de torque e slip dinâmico.
+</p>
+
+<ul>
+  <li><strong>Potência individual:</strong> 150 kW por motor</li>
+  <li><strong>Controle:</strong> torque vetorial contínuo com IA adaptativa (Grok 6)</li>
+  <li><strong>Inversores:</strong> MOSFET SiC de 1.200V com modulação dinâmica</li>
+  <li><strong>Recuperação energética:</strong> até 35% via KERS adaptativo</li>
+  <li><strong>Resposta:</strong> &lt;3 ms via barramento SubCore + OptiCAN</li>
+</ul>
+
+<p>
+O sistema elétrico foi validado para operação em blackout parcial, com fallback ativo (ICE-only) e simulação em tempo real via CAE VORTEXA.
+</p>
+</section>
+
+<section id="integracao-hibrida">
+<h3>3.1.3 Integração Híbrida e Redundância</h3>
+
+<p>
+  O VORTEXA BRAIN ajusta modos (EV, ICE, híbrido) via Grok 6 com latência ≤10 ms. O sistema oferece redundância via microturbina PEM e acoplamento híbrido hidráulico/magnético controlado por IA.
+</p>
+
+
+<div class="highlight">
+<strong>Placeholder para Gráfico:</strong> Gráfico de barras comparando eficiência do V-DVD™ (85%) com híbridos convencionais (60–70%). [Gráfico a ser inserido na versão final]
+</div> 
+</tbody>
+</table>
+
+<h4>Cronograma de Implementação V-DVD:</h4>
+<table>
+<thead>
+<tr>
+<th>Etapa</th>
+<th>Período</th>
+<th>Ações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Validação CAE</td>
+<td>2025-2026</td>
+<td>Simulação torque direto e térmica</td>
+</tr>
+<tr>
+<td>Protótipo Funcional</td>
+<td>2026-2027</td>
+<td>V-DVD com 2 ERS traseiros</td>
+</tr>
+<tr>
+<td>Migração Completa</td>
+<td>2027-2028</td>
+<td>4 motores ERS independentes</td>
+</tr>
+<tr>
+<td>Operação Total</td>
+<td>2029-2030</td>
+<td>100% sem transmissão mecânica</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+<section id="transmissao">
+<h3>3.2 Arquitetura de Transmissão Resiliente – SADEV SMFD™</h3>
+
+<p>
+O <strong>SADEV SMFD™ (Sequential Manual Failsafe Drive)</strong> é o sistema de transmissão mecânica de emergência do VORTEXA, ativado em cenários de falha crítica total no sistema V-DVD™ (híbrido vetorial). Projetado com foco em leveza, confiabilidade e autonomia mínima, ele oferece tração mecânica direta em fallback total.
+</p>
+
+<h4>Parâmetros Técnicos:</h4>
+<ul>
+  <li><strong>Massa:</strong> ~13 kg</li>
+  <li><strong>Relação de engrenagem:</strong> 3.5:1</li>
+  <li><strong>Diferencial:</strong> autoblocante mecânico</li>
+  <li><strong>Modo de ativação:</strong> microcomando pneumático (fallback analógico)</li>
+  <li><strong>Autonomia:</strong> 300–900 km com ICE isolado</li>
+  <li><strong>Normas:</strong> FIA T1U (resiliência mecânica e segurança)</li>
+</ul>
+
+<p>
+A ativação ocorre manualmente ou por falha detectada no barramento CAN/Cortex. O SMFD™ permite que o VORTEXA continue sua missão mesmo em blackout completo, mantendo tração mínima via ICE traseiro acoplado diretamente ao eixo.
+</p>
+</section>
+
+<section id="sistemas-criticos">
+<h3>3.3 VECS™ – Direção, Frenagem e Bypass</h3>
+
+<p>
+  Os sistemas de direção, frenagem e bypass compõem a tríade crítica de mobilidade, sendo responsáveis por garantir o controle, a capacidade de resposta e a sobrevivência tática do veículo.
+</p>
+
+<div class="tech-specs">
+<h5>Parâmetros Técnicos:</h5>
+<ul>
+  <li><strong>Latência Drive-by-Wire:</strong> 5 ms</li>
+  <li><strong>Fallback:</strong> Hidráulico</li>
+  <li><strong>Bypass Manual:</strong> Via VRSH™ ou alavanca</li>
+  <li><strong>Normas:</strong> ISO 26262</li>
+</ul>
+</div>
+
+<h4>Frenagem Ativa Inteligente – SubCore-Freios:</h4>
+<p>
+  Sistema de frenagem composto por discos de carbono-cerâmica ventilados Brembo, com brake bias eletrônico, EBD dinâmico e resfriamento ativo via VULCANS (80 bar).
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Funcionalidade</th>
+<th>Autonomia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kit Recarga Manual</td>
+<td>Bomba portátil 100 bar (1,5 kg)</td>
+<td>+600 km (2-3 recargas)</td>
+</tr>
+<tr>
+<td>VULCANS Passivo</td>
+<td>Resfriamento de componentes críticos</td>
+<td>Sincronizado com reservatório</td>
+</tr>
+<tr>
+<td>Ativação Múltipla</td>
+<td>Automática/sensor, manual, VRSH (voz/HUD)</td>
+<td>Latência ≤10 ms (estimada, validação CAE)</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section id="sismo">
+<h3>3.4 Suspensão Inteligente SISMO™ (DSSV + TAK-4i)</h3>
+
+<p>
+  O sistema de suspensão ativa VORTEXA SISMO é uma evolução robusta e cognitiva do conjunto TAK-4i® (Oshkosh Defense), adaptado ao Rally-Raid por meio de coengenharia com Multimatic (DSSV-E).
+</p>
+
+<div class="tech-specs">
+<h5>Parâmetros Técnicos:</h5>
+<ul>
+  <li><strong>Curso:</strong> 400 mm</li>
+  <li><strong>Frequência de Ajuste:</strong> 100 Hz</li>
+  <li><strong>Redução de Vibrações:</strong> 40% (CAE)</li>
+  <li><strong>Normas:</strong> MIL-STD-810H</li>
+</ul>
+</div>
+
+<h4>Arquitetura Técnica Integrada:</h4>
+<ul>
+  <li><strong>TAK-4i:</strong> Geometria de suspensão independente multibraços</li>
+  <li><strong>Multimatic DSSV-E:</strong> Válvulas spool eletrônicas (Gen III) com resposta <8 ms</li>
+  <li><strong>Sensores de Posição:</strong> Acionamento redundante</li>
+  <li><strong>SubCores-Suspensão (x4):</strong> Um por conjunto, com diagnóstico e controle preditivo local</li>
+</ul>
+
+<h4>Funções Avançadas:</h4>
+<ul>
+  <li>Ajuste dinâmico por roda com base em aceleração, rotação, pitch, yaw</li>
+  <li>Modulação preemptiva por mapas do VRSH + IA xAI/Grok 6</li>
+  <li>Compensação de solo assimétrico, pré-queda e impacto lateral</li>
+  <li>Sincronização com CTIS e drivetrain</li>
+</ul>
+</section>
+
+<section id="controle-trajetoria">
+<h3>3.5 Controle de Trajetória e Desempenho</h3>
+
+<p>
+  Modos Rally, Eco, Stealth, Emergency, com previsão de trajetória via Grok 6. O sistema oferece controle vetorial de torque e ajuste dinâmico da suspensão para otimização de performance em diferentes terrenos.
+</p>
+
+<h4>VORTEXA CTIS – Controle Inteligente de Pressão:</h4>
+<p>
+  Sistema responsável por monitorar, modular e predefinir a pressão dos pneus em tempo real, baseado em condições dinâmicas do percurso.
+</p>
+
+<h4>Componentes Técnicos:</h4>
+<ul>
+  <li><strong>Compressor integrado:</strong> 1 por eixo (2 total), controlado por SubCore-CTIS</li>
+  <li><strong>Válvulas de alta precisão:</strong> Piezoelétricas, multizona, tempo de resposta <20 ms</li>
+  <li><strong>Linhas de controle:</strong> Redundância dupla por conduítes reforçados</li>
+  <li><strong>Sensores:</strong> Pressão absoluta, temperatura, taxa de deflação, deformação lateral e rotação (slip)</li>
+  <li><strong>Pneus:</strong> BFGoodrich KDR3, compatível com pressão variável (0.7–2.6 bar)</li>
+</ul>
+</section>
+
+<section id="aplicacoes-propulsao">
+<h3>3.6 Aplicações Práticas</h3>
+<ul>
+  <li><strong>Rally-Raid:</strong> Torque vetorial em dunas, suspensão adaptativa</li>
+  <li><strong>Militar:</strong> Modo Stealth reduz assinatura térmica</li>
+  <li><strong>Mineração:</strong> Suspensão para cargas pesadas, tração em terrenos instáveis</li>
+  <li><strong>Resgate:</strong> Trajetórias seguras em terrenos instáveis, modo crawling</li>
+</ul>
+</section>
+
+<section id="validacao-propulsao">
+<h3>3.7 Validação Técnica</h3>
+<p>
+  Testes de bancada (2024) indicaram 85% de eficiência híbrida. Testes de campo planejados para 2029 (Rally dos Sertões). Simulações CAE validaram a integração V-DVD™ com redução significativa de vibrações e melhoria na tração.
+</p>
+</section>
+</article>
+
+<a href="#toc" class="back-to-toc">↑ Voltar ao Sumário</a>
+
+
+<article id="energia">
+<h2>4. Energia e Sistemas Vitais</h2>
+
+<section id="estrategia-energetica">
+<h3>4.1 Estratégia Energética Distribuída</h3>
+
+<p>
+A arquitetura energética do VORTEXA HYBRID é projetada em camadas, operando com múltiplas fontes, rotas e redundâncias. O sistema central é o <strong>VECS™ (Vortexa Energy Control System)</strong>, que gerencia de forma dinâmica baterias, motores ERS, microturbina e unidades PEM para garantir desempenho e sobrevivência.
+</p>
+
+<ul>
+  <li><strong>Baterias:</strong> QuantumScape estado sólido – 80 kWh, 450 Wh/kg</li>
+  <li><strong>ERS (QEV):</strong> 4×150 kW com regeneração adaptativa</li>
+  <li><strong>Tanques H₂:</strong> 20 kg encapsulados, 700 bar, padrão Eaton/SAE J2601</li>
+  <li><strong>Microturbina:</strong> 50 kW contínuos – fallback térmico</li>
+  <li><strong>PEM:</strong> célula H₂ de 55% eficiência, backup de 300–900 km</li>
+  <li><strong>Smart Skin™:</strong> carenagem funcional com geração fotovoltaica, sensores integrados e ultracapacitância de suporte</li>
+
+</ul>
+
+<p>
+Essa lógica distribuída permite ao sistema operar em modo híbrido, EV-only, ou fallback ICE-PEM, com autonomia variável de <strong>600 até 2.000 km</strong>.
+</p>
+</section>
+
+<section id="vulcans">
+<h3>4.2 VULCANS™ – Sistema Ativo de Fluido Inteligente</h3>
+
+<p>
+O <strong>VULCANS™ (VORTEXA Ultra Cleaning Autonomous Nozzle System)</strong> é um sistema multipropósito que utiliza bicos autônomos inteligentes para gerenciar fluido refrigerante, dielétrico e de limpeza. Desenvolvido com suporte da <strong>EATON</strong>, o VULCANS substitui circuitos convencionais de refrigeração e supressão por um sistema modular, preditivo e multi-fluido.
+</p>
+
+<p>
+A superfície SMART SKIN™ é monitorada pelo VULCANS™ e recebe ciclos programados de limpeza e resfriamento, maximizando a eficiência fotovoltaica e a integridade estrutural da pele externa.
+</p>
+
+
+<h4>Funções integradas:</h4>
+<ul>
+  <li><strong>Limpeza externa:</strong> carenagem, sensores LiDAR, painéis solares</li>
+  <li><strong>Refrigeração ativa:</strong> motores QEV, inversores, freios (VULCANS-BRAKE)</li>
+  <li><strong>Supressão térmica:</strong> modo passivo em blackout ou incêndio</li>
+</ul>
+
+<h4>Parâmetros Técnicos:</h4>
+<ul>
+  <li>Fluxo máximo: 200 L/s por bico</li>
+  <li>Temperatura de operação: -40°C a 60°C</li>
+  <li>Autolimpeza por fluido dielétrico biodegradável</li>
+  <li>Controle inteligente via xAI SubCore</li>
+  <li>Pressão adaptativa: 2 a 6 bar (modo automático)</li>
+  <li>Diagnóstico ativo e bloqueio térmico em colisões</li>
+</ul>
+
+<aside class="highlight">
+<strong>Nota:</strong> O sistema VULCANS-BRAKE integra bicos direcionais sobre os discos de carbono-cerâmica, reduzindo temperatura de pico em até 23% sob frenagem extrema (W2RC, simulação CAE).
+</aside>
+</section>
+
+<section id="diagnostico">
+<h3>4.3 Diagnóstico, OTA e Cibersegurança</h3>
+
+<p>
+O VORTEXA opera com diagnóstico contínuo, baseado em inferência embarcada (TinyML) e atualização OTA. As principais funções são gerenciadas pelo <strong>NEVO OS</strong> e registradas em tempo real no núcleo <strong>VORTEXCORE Resilient</strong>.
+</p>
+
+<ul>
+  <li><strong>OTA:</strong> até 50 Mbps via 5G/satélite</li>
+  <li><strong>Tempo de resposta (failover):</strong> &lt;5 ms</li>
+  <li><strong>Proteção:</strong> AES-256 com camadas PQC (pós-quântica)</li>
+  <li><strong>EDR:</strong> 1 kHz – eventos críticos e logs de falhas</li>
+  <li><strong>Telemetria Cognitiva:</strong> 1.000 dados/s – desempenho, sensores, biometria</li>
+</ul>
+</section>
+
+<section id="backup">
+<h3>4.4 Backup PEM + Microturbina</h3>
+
+<p>
+Em caso de falhas múltiplas ou esgotamento energético, o VORTEXA aciona sua camada de sobrevivência composta por:
+</p>
+<ul>
+  <li><strong>Microturbina:</strong> 50 kW, acionamento direto ao eixo traseiro</li>
+  <li><strong>PEM:</strong> célula de hidrogênio com 55% de eficiência</li>
+  <li><strong>Autonomia estimada:</strong> 300–900 km com 8 kg H₂ remanescente</li>
+  <li><strong>Tanques encapsulados:</strong> redundância térmica e sensores de vazamento</li>
+</ul>
+<p>
+Ambos são acionados automaticamente via VORTEXCORE Slim+ e seguem operacionais em blackout completo, com ativação redundante analógica (modo E-MECH).
+</p>
+</section>
+
+<section id="sobrevivencia">
+<h3>4.5 Pacote de Sobrevivência Nível 2</h3>
+
+<p>
+O VORTEXA possui um subsistema de sobrevivência projetado para continuar operando em zonas colapsadas, sob ataque térmico, sem rede elétrica. É composto por:
+</p>
+
+<ul>
+  <li><strong>SADEV SMFD™:</strong> transmissão manual de emergência</li>
+  <li><strong>Supercapacitores SMART SKIN™:</strong> fornecem até 30 minutos de energia auxiliar em blackout</li>
+  <li><strong>Modo VULCANS™ passivo:</strong> supressão térmica e purga de detritos</li>
+  <li><strong>Sinalizador de emergência + rádio HAM independente</strong></li>
+</ul>
+
+<p>
+Esse pacote é ativado quando a energia restante é &lt;10% e falhas múltiplas comprometem os SubCores. Permite locomoção, resfriamento e sinalização por até 12 horas.
+</p>
+</section>
+
+<section id="seguranca">
+<h3>4.6 Segurança Ativa e EDR</h3>
+
+<p>
+Todos os sistemas críticos operam com redundância digital e registro contínuo via EDR (Event Data Recorder) integrado. A segurança é garantida por:
+</p>
+<ul>
+  <li><strong>Controle de estabilidade com failover em 2 camadas (NEVO OS + Cortex R)</strong></li>
+  <li><strong>EDR 1 kHz:</strong> com logs permanentes de impacto, vibração, torque e biometria</li>
+  <li><strong>ISO 26262 ASIL-D:</strong> para todas as rotinas de energia e frenagem</li>
+  <li><strong>Verificação contínua por IA (Grok 6):</strong> via sensor de contexto embarcado</li>
+</ul>
+</section>
+
+<section id="aplicacoes-energia">
+<h3>4.7 Aplicações Práticas</h3>
+
+<ul>
+  <li><strong>Rally-Raid:</strong> Modo BOOST (990 kW), regeneração em dunas, refrigeração adaptativa</li>
+  <li><strong>Defesa:</strong> Modo Stealth, backup PEM, VULCANS supressor</li>
+  <li><strong>Mineração:</strong> operação com microturbina e Smart Skin™ em longos turnos</li>
+  <li><strong>Resgate:</strong> sobrevivência em blackout total, cápsula com 12h de suporte vital</li>
+</ul>
+</section>
+
+<section id="validacao-energia">
+<h3>4.8 Validação Técnica</h3>
+
+<p>
+Os sistemas energéticos do VORTEXA foram validados em ambiente CAE ANSYS e seguem plano de ensaios físicos entre 2026 e 2030:
+</p>
+<ul>
+  <li><strong>CAE:</strong> simulação de falha progressiva e recuperação térmica</li>
+  <li><strong>Testes VRSH + VULCANS:</strong> em câmaras térmicas (2027)</li>
+  <li><strong>Validação H₂ OPS™ em Borneo (2030):</strong> ambiente real de blackout + ataque térmico</li>
+</ul>
+</section>
+
+<a href="#toc" class="back-to-toc">↑ Voltar ao Sumário</a>
+</article>
+
+
+<article id="cognicao">
+<h2>5. Cognição, Interfaces e IA Embarcada</h2>
+
+<section id="vortexcore">
+<h3>5.1 VORTEXCORE Family – Arquitetura Cognitiva Modular</h3>
+
+<p>
+A <strong>VORTEXCORE™ Family</strong> constitui a base computacional embarcada do VORTEXA HYBRID. É uma arquitetura proprietária composta por uma família de ASIC SoC otimizados para aplicações extremas de mobilidade, com foco em inferência embarcada, resiliência sistêmica e autonomia cognitiva.
+</p>
+
+<h4>Composição da Família:</h4>
+<ul>
+  <li><strong>VortexCore Ultra:</strong> Unidade cognitiva central de alta capacidade, com capacidade de inferência neural de alto volume, gerenciamento da missão e coordenação dos SubCores.</li>
+  <li><strong>VortexCore Slim+:</strong> SoC leve e tolerante a falhas, aplicado em módulos funcionais (ERS, SISMO™, VULCANS™, HUD, VRSH™). Opera em ambientes com blackout parcial.</li>
+  <li><strong>VortexCore Resilient ECU:</strong> Unidade analógica de emergência, com fallback elétrico, failover imediato e execução isolada para rotinas mínimas de sobrevivência (marcha, sinalização, ventilação, blackout autônomo).</li>
+</ul>
+
+<h4>Características Técnicas:</h4>
+<ul>
+  <li>Inferência embarcada em <strong>&lt;5 ms</strong> com fallback automático</li>
+  <li>Processamento xAI com <strong>circuitos tolerantes a radiação e temperatura</strong></li>
+  <li>Integração com sensores LiDAR, IMU, térmicos, neurofeedback, SpO₂ e comando gestual</li>
+  <li>Consumo energético distribuído com perfil de prioridade entre módulos críticos</li>
+</ul>
+
+<aside class="highlight">
+<strong>Nota:</strong> A evolução da arquitetura prevê, até 2040, a adoção de <strong>ASICs híbridos optoeletrônicos baseados em CNT (carbon nanotube logic)</strong>, já em simulação estrutural com suporte do consórcio Vortexa–QEV–DDLab.
+</aside>
+</section>
+
+<section id="nevo">
+<h3>5.2 NEVO OS + Runtime xRT-VTXA™</h3>
+
+<p>
+O sistema operacional embarcado do VORTEXA é o <strong>NEVO OS</strong>, baseado em kernel RTOS (QNX/ROS2) com ambiente híbrido e gerenciamento cognitivo centralizado. Sobre ele opera o <strong>xRT-VTXA™</strong>, um runtime proprietário de latência ultra baixa (&lt;5 ms), responsável por:
+</p>
+
+<ul>
+  <li>Gerenciamento dinâmico dos VortexCore + SubCores</li>
+  <li>Inferência distribuída em tempo real com fallback local</li>
+  <li>Orquestração dos modos de missão (BOOST, BLACKOUT, STEALTH, SAFE-IDLE)</li>
+  <li>Proteção de integridade entre canais, memória e barramento</li>
+</ul>
+
+<p>
+O NEVO OS é compatível com a especificação <strong>AUTOSAR Adaptive</strong> e cumpre requisitos <strong>ASIL-D</strong> (ISO 26262) em todas as rotinas de segurança e sobrevivência embarcada.
+</p>
+</section>
+
+<section id="subcores">
+<h3>5.2 SubCores™ e Autonomia Modular</h3>
+
+<p>
+Os <strong>SubCores™</strong> são módulos computacionais redundantes que atuam de forma semi-autônoma, mesmo na ausência de comunicação com o núcleo central. Estão distribuídos nos principais sistemas críticos: propulsão (V-DVD™), suspensão (SISMO™), refrigeração (VULCANS™), e visualização (VRSH™).
+</p>
+
+<h4>Capacidades:</h4>
+<ul>
+  <li>Inferência local com TinyML + sensores dedicados</li>
+  <li>Failover mecânico + elétrico com microECUs</li>
+  <li>Comunicação com OptiCAN Matrix™ e fallback isolado por canal físico</li>
+  <li>Autodiagnóstico de falha cruzada com isolamento progressivo</li>
+</ul>
+</section>
+
+<section id="brain">
+<h3>5.3 VORTEXA BRAIN – Núcleo Estratégico</h3>
+
+<p>
+  O <strong>VORTEXA BRAIN</strong> é o núcleo estratégico de tomada de decisão do sistema, integrando Grok 6 da xAI para processamento cognitivo avançado em tempo real. Este sistema coordena todos os SubCores, analisa dados de telemetria e executa algoritmos de IA para otimização contínua de performance.
+</p>
+
+<div class="tech-specs">
+<h5>Parâmetros Técnicos:</h5>
+<ul>
+  <li><strong>Processador:</strong> xAI VortexCore (TSMC 2nm)</li>
+  <li><strong>Capacidade de Processamento:</strong> 120 TOPS (INT8)</li>
+  <li><strong>Latência de Decisão:</strong> ≤10 ms</li>
+  <li><strong>Conectividade:</strong> OptiCAN Matrix (10 Mbit/s)</li>
+  <li><strong>Normas:</strong> ASIL-D, MIL-STD-810H</li>
+</ul>
+</div>
+
+<h4>Funcionalidades Principais:</h4>
+<ul>
+  <li><strong>Navegação Tática:</strong> Integração de dados LiDAR, radar e sensores ambientais</li>
+  <li><strong>Otimização de Performance:</strong> Ajuste dinâmico de parâmetros de motor, suspensão e tração</li>
+  <li><strong>Diagnóstico Preditivo:</strong> Antecipação de falhas e recomendações de manutenção</li>
+  <li><strong>Gestão de Energia:</strong> Alocação inteligente de recursos energéticos</li>
+  <li><strong>Comunicação Segura:</strong> Criptografia AES-256 para todas as transmissões</li>
+</ul>
+</section>
+
+
+<section id="vrsh">
+<h3>5.4 VRSH™, HUD e Interfaces Biomecânicas</h3>
+
+<p>
+O <strong>Vortexa Rally Smart Helmet (VRSH™)</strong> é a principal interface entre o piloto e o ecossistema cognitivo da VORTEXA HYBRID. Desenvolvido em coautoria com a <strong>Schuberth GmbH</strong>, o VRSH™ combina proteção balística, conectividade sensorial, HUD adaptativo e feedback cognitivo em um capacete técnico de última geração, voltado para ambientes extremos como rally-raid, defesa e missões de resgate.
+</p>
+
+<div class="tech-specs">
+<h5>Parâmetros Técnicos:</h5>
+<ul>
+  <li><strong>Resolução HUD:</strong> 1920x1080 por olho</li>
+  <li><strong>Campo de Visão:</strong> 120° horizontal</li>
+  <li><strong>Taxa de Atualização:</strong> 120 Hz</li>
+  <li><strong>Comandos de Voz:</strong> Reconhecimento em 5 idiomas, latência &lt;50 ms</li>
+  <li><strong>Feedback Háptico:</strong> 8 zonas de contato com vibração direcional</li>
+  <li><strong>Modo de Emergência:</strong> Operação mínima com energia de fallback</li>
+</ul>
+</div>
+
+<h4>Componentes do VRSH™:</h4>
+<ul>
+  <li><strong>HUD de Realidade Aumentada:</strong> Projeção adaptativa de dados críticos, rotas, telemetria e status do veículo no campo de visão</li>
+  <li><strong>Sistema de Áudio 3D Direcional:</strong> Avisos auditivos espaciais, priorização de alertas e orientação cognitiva</li>
+  <li><strong>Sensores BDI (Bio-Digital Interface):</strong> Leitura contínua de SpO₂, frequência cardíaca, temperatura corporal e fadiga estimada</li>
+  <li><strong>Controle Gestual e de Movimento:</strong> Interações sem toque com detecção de postura, aceleração e orientação da cabeça</li>
+  <li><strong>Fallback Cognitivo:</strong> Integrado ao SubCore local e à ECU de Emergência, garantindo comando parcial mesmo em blackout completo</li>
+</ul>
+
+<h4>Estrutura Física e Materiais:</h4>
+<ul>
+  <li><strong>Camada externa balística:</strong> Fibra de carbono trançada + epóxi reforçado com absorção térmica</li>
+  <li><strong>Blindagem térmica interna:</strong> Kevlar multicamadas para isolamento e resistência a microexplosões</li>
+  <li><strong>Núcleo estrutural ativo:</strong> Camadas sensorizadas com autorreparo (smart epoxy + nanotubos de carbono)</li>
+  <li><strong>Membranas internas:</strong> ETFE + camadas antimicrobianas para vedação química e climática</li>
+</ul>
+
+<h4>Integração com Sistemas Vitais:</h4>
+<ul>
+  <li><strong>Interface com o ECLSS:</strong> Monitoramento vital contínuo, ventilação forçada, suplemento de O₂ e CO₂ scrubber</li>
+  <li><strong>Smart Skin™:</strong> Fonte de energia ultracapacitiva de suporte ao HUD e módulos sensoriais</li>
+  <li><strong>SubCore Slim+ dedicado:</strong> Processamento cognitivo local com failover &lt;2 ms</li>
+</ul>
+
+<h4>Certificações Técnicas e de Proteção Cognitiva:</h4>
+<ul>
+  <li><strong>MIL-STD-810H:</strong> Resistência ambiental completa (choque, poeira, vibração, radiação, variação térmica)</li>
+  <li><strong>SAE J3020:</strong> Critérios de robustez e ergonomia para capacetes com HUD em aplicações militares/extremas</li>
+  <li><strong>ISO/PAS 21448 – SOTIF:</strong> Segurança funcional intencionada em sistemas cognitivos embarcados</li>
+  <li><strong>ANSI Z87.1:</strong> Proteção ocular contra impacto e luz intensa (HUD)</li>
+  <li><strong>NIST SP 800-213:</strong> Segurança cibernética para dispositivos embarcados e canais de fallback autônomo</li>
+</ul>
+
+<aside class="highlight">
+<strong>Nota:</strong> O VRSH™ pode operar por até 90 minutos em blackout total, usando energia residual da Kleist Layer™ da SMART SKIN™ e fallback de voz pela ECU Resilient™. Validado em testes no Rally do Jalapão (2029) e Borneo Extreme (2030).
+</aside>
+
+<p>
+O <strong>VRSH™ – Vortexa Rally Smart Helmet</strong> é resultado de um esforço internacional de coengenharia envolvendo líderes mundiais em tecnologias de proteção, cognição embarcada, neurointerface e visualização assistida. O desenvolvimento é liderado pela <strong>Vortexa Motorsport</strong>, com as seguintes parcerias técnicas estratégicas:
+</p>
+
+<ul>
+  <li><strong>Schuberth GmbH:</strong> Responsável pelo design estrutural balístico do capacete, com know-how oriundo da Fórmula 1, WRC e forças táticas. Supervisiona a ergonomia, blindagem térmica e airflow interno.</li>
+
+  <li><strong>Cobham Aerospace Communications:</strong> Fornecedora do sistema redundante de rádio VHF/HAM e fallback auditivo de missão crítica, com protocolos compatíveis com as exigências FIA T1U e A.S.O. Atua também no suporte à integração parcial com o sistema ECLSS (suporte vital).</li>
+
+  <li><strong>Rockwell Collins ESA Vision Systems LLC:</strong> Responsável pelo HUD adaptativo multicamadas com capacidades de sobreposição cognitiva, visão noturna assistida (NVG/IR) e renderização 3D contextual. Traz expertise oriunda de sistemas HMD militares como JHMCS e Gen III.</li>
+
+  <li><strong>g.tec Medical Engineering GmbH:</strong> Parceira oficial no desenvolvimento da BCI – Interface Cérebro-Computador embarcada. A g.tec atua na captação de sinais EEG, interpretação de intenção cognitiva e aplicação de comandos contextuais sem interação física direta.</li>
+
+  <li><strong>NVIDIA:</strong> Responsável pelo núcleo de inferência embarcada com GPU compacta, utilizada para aceleração dos módulos de IA do HUD, interpretação facial/emocional e vetorização situacional (ex: fadiga, estresse, atenção).</li>
+
+  <li><strong>MicroVision MEMS / Vuzix:</strong> Fornecedores das tecnologias de projeção ótica miniaturizada e renderização de alta densidade para o HUD do VRSH™, utilizando microespelhos MEMS de precisão em ambiente de vibração intensa e movimento de alta frequência.</li>
+</ul>
+
+<aside class="highlight">
+<strong>Diferencial inédito:</strong> O VRSH™ é o primeiro capacete do mundo projetado especificamente para Rally-Raid com uma <strong>BCI (Interface Cérebro-Computador) integrada e funcional</strong>, operando sob redundância cognitiva e fallback de blackout. Uma simbiose técnica entre neuroengenharia, sobrevivência e performance extrema.
+</aside>
+
+
+</section>
+
+<section id="seguranca-cognitiva">
+<h3>5.5 Segurança Cognitiva e Integridade Embarcada</h3>
+
+<p>
+A arquitetura VORTEXCORE adota modelo de <strong>segurança multicamadas</strong> com segmentação de domínio físico, isolamento de firmware e protocolo criptográfico proprietário:
+</p>
+
+<ul>
+  <li><strong>Protocolo:</strong> VORTEXA SECURELINK (OptiCAN Matrix™ + PQ-AES256 + QRN key handshake)</li>
+  <li><strong>Segmentação física:</strong> entre canais de missão, navegação e sobrevivência</li>
+  <li><strong>Firewall neural:</strong> entre comandos gestuais, neurofeedback e acionamentos físicos</li>
+  <li><strong>ECU Resilient:</strong> armazena tabelas de emergência em EEPROM blindada</li>
+</ul>
+
+<p>
+A integridade é mantida mesmo em falhas múltiplas ou ataque eletromagnético controlado (EMP). Todos os módulos seguem normas <strong>MIL-STD-461F e ISO 21434</strong>.
+</p>
+</section>
+
+<section id="aplicacoes-cognitivas">
+<h3>5.6 Aplicações e Modos de Missão</h3>
+
+<p>
+A inteligência embarcada do VORTEXA permite operação em diferentes domínios críticos:
+</p>
+
+<ul>
+  <li><strong>Modo RALLY:</strong> Inferência em alta velocidade, vetorização contínua, e antecipação de falha térmica</li>
+  <li><strong>Modo STEALTH:</strong> Supressão térmica + blackout digital + controle de VRSH™ isolado</li>
+  <li><strong>Modo RESGATE:</strong> Controle por microgestos + voz + sinal óptico redundante</li>
+  <li><strong>Modo AUTÔNOMO:</strong> Missão pré-programada com decisão local por SubCores e fallback analógico</li>
+</ul>
+</section>
+
+<section id="validacao-cognicao">
+<h3>5.7 Validação Técnica e Roadmap</h3>
+
+<ul>
+  <li><strong>2026:</strong> Ensaios laboratoriais VortexCore Slim+ + simulador de blackout</li>
+  <li><strong>2027:</strong> Validação do runtime xRT-VTXA™ em ambiente real W2RC</li>
+  <li><strong>2028–2029:</strong> Integração fotônica inicial (CNT logic / optoASIC) – simulação térmica e de resiliência</li>
+  <li><strong>2030:</strong> Testes em Borneo e deserto do Jalapão com inferência cognitiva plena e modo BLACKOUT</li>
+</ul>
+</section>
+
+<a href="#toc" class="back-to-toc">↑ Voltar ao Sumário</a>
+</article>
+
+
+<article id="escalabilidade">
+<h2>6. Escalabilidade, Logística e Validação</h2>
+
+<section id="kits">
+<h3>6.1 Kits Modulares de Missão</h3>
+
+<p>
+  O VORTEXA HYBRID foi concebido como uma plataforma modular, permitindo rápida reconfiguração para diferentes aplicações através de Kits de Missão intercambiáveis.
+</p>
+
+<div class="tech-specs">
+<h5>Kits Disponíveis:</h5>
+<ul>
+  <li><strong>Rally-Raid (W2RC):</strong> Aerodinâmica otimizada, suspensão de alto desempenho, telemetria avançada</li>
+  <li><strong>Militar:</strong> Blindagem reforçada, modo stealth, comunicações táticas</li>
+  <li><strong>Mineração:</strong> Proteção contra poeira, navegação subterrânea, capacidade de carga</li>
+  <li><strong>Resgate:</strong> Equipamento médico, iluminação especial, comunicação de emergência</li>
+</ul>
+</div>
+
+<h4>Características dos Kits:</h4>
+<ul>
+  <li><strong>Troca Rápida:</strong> Conectores padronizados permitem substituição em menos de 2 horas</li>
+  <li><strong>Compatibilidade:</strong> Todos os kits funcionam com a arquitetura base do VORTEXA</li>
+  <li><strong>Personalização:</strong> Possibilidade de combinar elementos de diferentes kits</li>
+  <li><strong>Atualizações:</strong> Novos kits podem ser desenvolvidos para aplicações futuras</li>
+</ul>
+</section>
+
+<section id="logistica">
+<h3>6.2 Logística Inteligente e QuickBay FieldOps</h3>
+
+<p>
+  O sistema QuickBay FieldOps redefine a manutenção em campo, permitindo reparos rápidos e substituição modular mesmo em ambientes extremos.
+</p>
+
+<div class="tech-specs">
+<h5>Parâmetros Técnicos:</h5>
+<ul>
+  <li><strong>Tempo de Substituição:</strong> <15 minutos para módulos críticos</li>
+  <li><strong>Previsão de Manutenção:</strong> IA preditiva</li>
+  <li><strong>Conectores:</strong> ISS de liberação rápida</li>
+</ul>
+</div>
+
+<h4>Capacidades Logísticas:</h4>
+<ul>
+  <li><strong>Manutenção Preditiva:</strong> IA antecipa necessidades de reparo</li>
+  <li><strong>Substituição Modular:</strong> Componentes intercambiáveis em campo</li>
+  <li><strong>Diagnóstico Remoto:</strong> Análise via telemetria</li>
+  <li><strong>Suporte 24/7:</strong> Centro de operações global</li>
+</ul>
+</section>
+
+<section id="hidrogenio">
+<h3>6.3 VORTEXA H₂ OPS – Abastecimento e Segurança</h3>
+
+<p>
+  Sistema integrado de armazenamento, abastecimento e segurança para hidrogênio, com tanques estruturais e sensores de vazamento de alta precisão.
+</p>
+
+<div class="tech-specs">
+<h5>Parâmetros Técnicos:</h5>
+<ul>
+  <li><strong>Capacidade H₂:</strong> 10 kg (padrão) / 20 kg (opcional)</li>
+  <li><strong>Pressão:</strong> 700 bar</li>
+  <li><strong>Tanques:</strong> EATON (Ex-Cobham), encapsulados estruturalmente</li>
+  <li><strong>Tempo de Abastecimento:</strong> <3 min para carga completa</li>
+  <li><strong>Resposta a Vazamentos:</strong> 0.1 s</li>
+  <li><strong>Normas:</strong> SAE J2601</li>
+</ul>
+</div>
+
+<div class="highlight">
+<strong>Escalabilidade Estratégica:</strong> O sistema H₂ OPS™ suporta configuração escalável (10 kg padrão, 20 kg opcional) como vantagem estratégica, balanceando custo, peso e autonomia para diferentes aplicações. A flexibilidade no chassi MRCS permite adaptação conforme necessidades da missão.
+</div>
+
+<div class="inconsistency-note">
+<strong>Nota:</strong> Capacidade de H₂ corrigida para 10 kg conforme especificações técnicas detalhadas dos tanques EATON.
+</div>
+
+<h4>Sistema de Hidrogênio – Componentes:</h4>
+<ul>
+  <li><strong>Tanques Principais:</strong> EATON (Ex-Cobham), 700 bar, encapsulados estruturalmente na SURVIVOR CAPSULE</li>
+  <li><strong>Interface de Abastecimento:</strong> FIA homologada, <3 min para carga completa</li>
+  <li><strong>Controle Térmico:</strong> Revestimento multicamada + controle ativo de pressão</li>
+  <li><strong>Sensores de Segurança:</strong> Detecção de vazamento com resposta em 0.1 s</li>
+  <li><strong>Fornecedores-chave:</strong> Eaton (armazenamento), Collins Aerospace (estrutura), Siemens (injeção)</li>
+  <li><strong>Unidades Móveis:</strong> Suporte para abastecimento via unidades móveis (parceria com fornecedores especializados)</li>
+  <li><strong>Compatibilidade:</strong> e-fuels para operação em ambientes remotos com reservatórios até 20 kg</li>
+</ul>
+
+<h4>Validação de Segurança em Ambientes Extremos:</h4>
+<p>
+  O sistema H₂ OPS foi projetado para operar em condições extremas de temperatura (-50°C a 60°C), vibração e impacto, com múltiplas camadas de segurança e monitoramento contínuo.
+</p>
+
+<div class="revision-info">
+<strong>Nota de Validação:</strong> A autonomia de 1.500–2.000 km com 20 kg de H₂ é baseada em simulações CAE 2025, com testes de campo planejados para 2029–2030. Os valores representam estimativas computacionais sujeitas a validação experimental.
+</div>
+</section>
+
+<section id="cae">
+<h3>6.4 CAE VORTEXA – Simulação com ANSYS e CAE</h3>
+
+<p>
+  No núcleo do desenvolvimento técnico do VORTEXA HYBRID repousa o <strong>CAE VORTEXA</strong>, uma plataforma de projeto, ensaio, treinamento e evolução digital que representa um gêmeo digital vivo.
+</p>
+
+<h4>Arquitetura de Simulação:</h4>
+<p>
+  A estrutura de simulação do CAE VORTEXA é dividida em três domínios complementares:
+</p>
+<ul>
+  <li><strong>Modelo Físico:</strong> Chassi GMA (CAD estruturado), Powertrain híbrido (HBR-1 + QEV), Suspensão (TAK-4i adaptado + DSSV-E), Carenagem com SMART SKIN</li>
+  <li><strong>Modelo Eletrônico:</strong> VORTEXA OptiCAN Matrix (Fibra/CAN XL), SubCores, VORTEXA BRAIN (xAI VortexCore, Grok 6)</li>
+  <li><strong>Modelo Ambiental:</strong> Dunas (Empty Quarter), wadis (Kalahari), Altitudes (Himalaya), temperaturas extremas (-50°C a 60°C)</li>
+</ul>
+
+<h4>Infraestrutura Computacional:</h4>
+<div class="tech-specs">
+<h5>Hardware de Ponta:</h5>
+<ul>
+  <li><strong>CPUs:</strong> 2× Intel Xeon Platinum 8490H (224 threads)</li>
+  <li><strong>GPUs:</strong> 4× NVIDIA RTX 6000 Ada (192 GB total)</li>
+  <li><strong>RAM:</strong> 1 TB DDR5 ECC</li>
+  <li><strong>Armazenamento:</strong> NVMe PCIe 5.0 (14 GB/s leitura, 8 TB)</li>
+  <li><strong>HIL:</strong> Speedgoat FPGA, Ethernet TSN, jitter ≤10 µs</li>
+</ul>
+</div>
+
+<section id="roadmap-cae">
+<h4>6.4.1 Roadmap e Marcos Intermediários</h4>
+<table>
+<thead>
+<tr>
+<th>Ano</th>
+<th>Marco</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2025</td>
+<td>Simulações CAE Avançadas</td>
+<td>Validação computacional de sistemas críticos e otimização estrutural</td>
+</tr>
+<tr>
+<td>2026</td>
+<td>Testes de Baterias</td>
+<td>Validação de baterias de estado sólido</td>
+</tr>
+<tr>
+<td>2027</td>
+<td>Testes de Tanques H₂ de 20 kg</td>
+<td>Validação de sistemas de hidrogênio de alta capacidade e autonomia estendida</td>
+</tr>
+<tr>
+<td>2028</td>
+<td>Validação VRSH™</td>
+<td>Testes em simuladores 6DOF</td>
+</tr>
+<tr>
+<td>2029</td>
+<td>Testes Rally dos Sertões</td>
+<td>Validação em competição real</td>
+</tr>
+<tr>
+<td>2030</td>
+<td>Testes Borneo</td>
+<td>Validação H₂ OPS™ em ambiente tropical</td>
+</tr>
+</tbody>
+</table>
+<p><em>Nota: Projeções até 2030.</em></p>
+</section>
+
+<section id="resultados-preliminares">
+<h4>6.4.2 Resultados Preliminares</h4>
+<ul>
+  <li><strong>Melhoria Aerodinâmica:</strong> 25% (Smart Skin™)</li>
+  <li><strong>Redução de Vibrações:</strong> 40% (SISMO™)</li>
+  <li><strong>Redução de Picos de Carga:</strong> 30% (VSC-RESIL™)</li>
+  <li><strong>Eficiência Híbrida:</strong> 85% (V-DVD™)</li>
+</ul>
+</section>
+
+<section id="gestao-riscos">
+<h4>6.4.3 Gestão de Riscos</h4>
+<ul>
+  <li><strong>Técnicos:</strong> Redundância tripla (H₂ OPS™, Pacote Nível 2). Testes em 2027 validarão V-DVD™</li>
+  <li><strong>Logísticos:</strong> Parcerias alternativas (QuantumScape, Sila). Testes em Rally dos Sertões (2029)</li>
+  <li><strong>Regulatórios:</strong> Conformidade com ISO 26262, SAE J2601. Validação até 2028</li>
+  <li><strong>Cibersegurança:</strong> Criptografia AES-256 contra spoofing/DoS</li>
+</ul>
+</section>
+</section>
+
+<section id="coleta-dados">
+<h3>6.5 Coleta de Dados e Aprendizado de Máquina</h3>
+
+<p>
+  Sistema avançado de coleta de dados multimodais que alimenta algoritmos de aprendizado de máquina via Grok 6 para melhoria contínua de performance.
+</p>
+
+<h4>Tipos de Dados Coletados:</h4>
+<ul>
+  <li><strong>Telemetria de Performance:</strong> Dados de motor, suspensão, energia</li>
+  <li><strong>Dados Ambientais:</strong> Temperatura, pressão, umidade, terreno</li>
+  <li><strong>Dados de Pilotagem:</strong> Padrões de condução, preferências</li>
+  <li><strong>Dados de Manutenção:</strong> Histórico de falhas e reparos</li>
+</ul>
+</section>
+
+<section id="parceiros">
+<h3>6.6 Rede de Parceiros Estratégicos</h3>
+
+<p>
+O VORTEXA HYBRID é cocriado por uma rede global de parceiros tecnológicos e institucionais, combinando excelência validada em Fórmula 1, Extreme H, WEC, Rally Dakar, aviação militar e civil, neuroengenharia aplicada, simulação CAE, IA embarcada e tecnologias de mobilidade extrema. Abaixo, destacamos os principais parceiros estratégicos, seus domínios e tecnologias integradas ao projeto:
+</p>
+
+<table>
+<thead>
+<tr>
+  <th>Parceiro Estratégico</th>
+  <th>Domínio de Atuação</th>
+  <th>Função Técnica no Projeto</th>
+  <th>Sistemas ou Tecnologias Associadas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>Akrapovič</strong></td>
+  <td>Sistemas de escape</td>
+  <td>Desenvolvimento de exaustão adaptativa de alta temperatura</td>
+  <td>Sistema de exaustão adaptativo</td>
+</tr>
+<tr>
+  <td><strong>ANSYS</strong></td>
+  <td>Simulação CFD</td>
+  <td>Modelagem dinâmica de fluidos e reforço da análise CAE térmica</td>
+  <td>CAE VORTEXA™, VULCANS™, Smart Skin™</td>
+</tr>
+<tr>
+  <td><strong>Aramco</strong></td>
+  <td>Combustíveis sintéticos e H₂</td>
+  <td>Fornecedor de e-fuels avançados e hidrogênio verde para powertrain híbrido</td>
+  <td>e-fuel, H₂ técnico, ICE híbrido VAVi™</td>
+</tr>
+<tr>
+  <td><strong>Bosch Motorsport</strong></td>
+  <td>Eletrônica e sensores</td>
+  <td>Sistemas embarcados de controle e sensores críticos</td>
+  <td>SensorGrid™, VECS™, ECU híbrida</td>
+</tr>
+<tr>
+  <td><strong>Brembo</strong></td>
+  <td>Sistema de frenagem</td>
+  <td>Freios carbono-cerâmica de alta eficiência térmica</td>
+  <td>VULCANS-BRAKE™, discos flutuantes</td>
+</tr>
+<tr>
+  <td><strong>CAE GmbH</strong></td>
+  <td>Simulação e engenharia virtual</td>
+  <td>Criação de gêmeo digital e análise termoestrutural CAE</td>
+  <td>CAE VORTEXA™, Smart Skin™, VULCANS™</td>
+</tr>
+<tr>
+  <td><strong>Cobham Aerospace Communications</strong></td>
+  <td>Comunicações críticas e fallback</td>
+  <td>Rádio redundante HAM/VHF e integração ECLSS no capacete VRSH™</td>
+  <td>VRSH™, fallback auditivo, comunicação tática</td>
+</tr>
+<tr>
+  <td><strong>Collins Aerospace</strong></td>
+  <td>Proteção avançada</td>
+  <td>Concepção da cápsula de sobrevivência integrada ao chassi MRCS</td>
+  <td>Survivor Capsule™, MRCS™</td>
+</tr>
+<tr>
+  <td><strong>DENSO</strong></td>
+  <td>Gateways embarcados</td>
+  <td>Comunicação distribuída de dados críticos</td>
+  <td>OptiCAN™, barramentos tolerantes a falha</td>
+</tr>
+<tr>
+  <td><strong>g.tec Medical Engineering</strong></td>
+  <td>Neuroengenharia</td>
+  <td>BCI embarcada para controle não-verbal e leitura EEG/EMG</td>
+  <td>VRSH™, biofeedback, BCI</td>
+</tr>
+<tr>
+  <td><strong>Gordon Murray Automotive</strong></td>
+  <td>Filosofia estrutural e design funcional</td>
+  <td>Contribuição conceitual à arquitetura da Smart Skin™ e MRCS</td>
+  <td>Design funcional, modularidade térmica</td>
+</tr>
+<tr>
+  <td><strong>MicroVision MEMS</strong></td>
+  <td>Projeção ótica miniaturizada</td>
+  <td>Microespelhos MEMS para HUD em ambientes extremos</td>
+  <td>VRSH™, HUD AR, MicroMirror MEMS</td>
+</tr>
+<tr>
+  <td><strong>MIT – AeroAstro</strong></td>
+  <td>Estruturas avançadas e simulação</td>
+  <td>Modelagem CAE para materiais regenerativos e sobrevivência modular</td>
+  <td>CAE térmico, Kleist Layer™, Survivor Capsule™</td>
+</tr>
+<tr>
+  <td><strong>MIT – CSAIL</strong></td>
+  <td>IA embarcada e inferência adaptativa</td>
+  <td>Desenvolvimento do Grok 6 e algoritmos de decisão tolerantes a falhas</td>
+  <td>NEVO OS™, xAI runtime, Vortexa Brain™</td>
+</tr>
+<tr>
+  <td><strong>MIT – xAI Lab</strong></td>
+  <td>Cibersegurança embarcada</td>
+  <td>Arquiteturas tolerantes a falha e segurança digital cognitiva</td>
+  <td>SubCores™, fallback seguro, inteligência embarcada</td>
+</tr>
+<tr>
+  <td><strong>Multimatic</strong></td>
+  <td>Suspensão inteligente</td>
+  <td>Implementação de DSSV-E adaptativo com leitura contínua</td>
+  <td>SISMO™, DSSV-E</td>
+</tr>
+<tr>
+  <td><strong>NVIDIA</strong></td>
+  <td>IA embarcada</td>
+  <td>Unidade de inferência cognitiva para HUD, xAI e sensores autônomos</td>
+  <td>VRSH™, HUD, NEVO OS™, Vortexa Brain™</td>
+</tr>
+<tr>
+  <td><strong>Oshkosh Defense</strong></td>
+  <td>Mobilidade tática</td>
+  <td>Integração do sistema TAK-4i para off-road extremo e cenários de missão</td>
+  <td>TAK-4i, suspensão tática inteligente</td>
+</tr>
+<tr>
+  <td><strong>PIPO Moteurs</strong></td>
+  <td>Motorização térmica</td>
+  <td>Desenvolvimento do ICE HBR-1 com VAVi™ e fallback mecânico</td>
+  <td>ICE HBR-1, VAVi™, fallback mecânico</td>
+</tr>
+<tr>
+  <td><strong>PWR Advanced Cooling</strong></td>
+  <td>Termodinâmica aplicada</td>
+  <td>Resfriamento adaptativo e arquitetura integrada ao VULCANS™</td>
+  <td>VULCANS™, Smart Skin™, radiadores híbridos</td>
+</tr>
+<tr>
+  <td><strong>CAE GmbH</strong></td>
+  <td>Simulação e engenharia virtual</td>
+  <td>Criação de gêmeo digital e análise termoestrutural CAE</td>
+  <td>CAE VORTEXA™, Smart Skin™, VULCANS™</td>
+</tr>
+<tr>
+  <td><strong>Cobham Aerospace Communications</strong></td>
+  <td>Comunicações críticas e fallback</td>
+  <td>Rádio redundante HAM/VHF e integração ECLSS no capacete VRSH™</td>
+  <td>VRSH™, fallback auditivo, comunicação tática</td>
+</tr>
+<tr>
+  <td><strong>Collins Aerospace</strong></td>
+  <td>Proteção avançada</td>
+  <td>Concepção da cápsula de sobrevivência integrada ao chassi MRCS</td>
+  <td>Survivor Capsule™, MRCS™</td>
+</tr>
+<tr>
+  <td><strong>DENSO</strong></td>
+  <td>Gateways embarcados</td>
+  <td>Comunicação distribuída de dados críticos</td>
+  <td>OptiCAN™, barramentos tolerantes a falha</td>
+</tr>
+<tr>
+  <td><strong>g.tec Medical Engineering</strong></td>
+  <td>Neuroengenharia</td>
+  <td>BCI embarcada para controle não-verbal e leitura EEG/EMG</td>
+  <td>VRSH™, biofeedback, BCI</td>
+</tr>
+<tr>
+  <td><strong>Gordon Murray Automotive</strong></td>
+  <td>Filosofia estrutural e design funcional</td>
+  <td>Contribuição conceitual à arquitetura da Smart Skin™ e MRCS</td>
+  <td>Design funcional, modularidade térmica</td>
+</tr>
+<tr>
+  <td><strong>MicroVision MEMS</strong></td>
+  <td>Projeção ótica miniaturizada</td>
+  <td>Microespelhos MEMS para HUD em ambientes extremos</td>
+  <td>VRSH™, HUD AR, MicroMirror MEMS</td>
+</tr>
+<tr>
+  <td><strong>MIT – AeroAstro</strong></td>
+  <td>Estruturas avançadas e simulação</td>
+  <td>Modelagem CAE para materiais regenerativos e sobrevivência modular</td>
+  <td>CAE térmico, Kleist Layer™, Survivor Capsule™</td>
+</tr>
+<tr>
+  <td><strong>MIT – CSAIL</strong></td>
+  <td>IA embarcada e inferência adaptativa</td>
+  <td>Desenvolvimento do Grok 6 e algoritmos de decisão tolerantes a falhas</td>
+  <td>NEVO OS™, xAI runtime, Vortexa Brain™</td>
+</tr>
+<tr>
+  <td><strong>MIT – xAI Lab</strong></td>
+  <td>Cibersegurança embarcada</td>
+  <td>Arquiteturas tolerantes a falha e segurança digital cognitiva</td>
+  <td>SubCores™, fallback seguro, inteligência embarcada</td>
+</tr>
+<tr>
+  <td><strong>Multimatic</strong></td>
+  <td>Suspensão inteligente</td>
+  <td>Implementação de DSSV-E adaptativo com leitura contínua</td>
+  <td>SISMO™, DSSV-E</td>
+</tr>
+<tr>
+  <td><strong>NVIDIA</strong></td>
+  <td>IA embarcada</td>
+  <td>Unidade de inferência cognitiva para HUD, xAI e sensores autônomos</td>
+  <td>VRSH™, HUD, NEVO OS™, Vortexa Brain™</td>
+</tr>
+<tr>
+  <td><strong>Oshkosh Defense</strong></td>
+  <td>Mobilidade tática</td>
+  <td>Integração do sistema TAK-4i para off-road extremo e cenários de missão</td>
+  <td>TAK-4i, suspensão tática inteligente</td>
+</tr>
+<tr>
+  <td><strong>PIPO Moteurs</strong></td>
+  <td>Motorização térmica</td>
+  <td>Desenvolvimento do ICE HBR-1 com VAVi™ e fallback mecânico</td>
+  <td>ICE HBR-1, VAVi™, fallback mecânico</td>
+</tr>
+<tr>
+  <td><strong>PWR Advanced Cooling</strong></td>
+  <td>Termodinâmica aplicada</td>
+  <td>Resfriamento adaptativo e arquitetura integrada ao VULCANS™</td>
+  <td>VULCANS™, Smart Skin™, radiadores híbridos</td>
+</tr>
+<tr>
+  <td><strong>QEV Technologies</strong></td>
+  <td>Propulsão elétrica</td>
+  <td>Criação dos motores vetoriais de 150 kW e integração híbrida total</td>
+  <td>VECS™, motores elétricos, ECU dual-mode</td>
+</tr>
+<tr>
+  <td><strong>QuantumScape</strong></td>
+  <td>Baterias de estado sólido</td>
+  <td>Desenvolvimento de células compactas para fallback energético</td>
+  <td>Kleist Layer™, baterias Smart Skin™, emergência HUD</td>
+</tr>
+<tr>
+  <td><strong>Repsol Tech Lab</strong></td>
+  <td>Fluidos técnicos biodegradáveis</td>
+  <td>Fluidos dielétricos, óleos e lubrificantes para VULCANS™ e refrigeração híbrida</td>
+  <td>VULCANS™, anticongelantes bioativos, fluidos autolimpantes</td>
+</tr>
+<tr>
+  <td><strong>Rockwell Collins ESA Vision Systems LLC</strong></td>
+  <td>HUD e visão adaptativa</td>
+  <td>HUD multicamadas com visão noturna NVG/IR e contexto cognitivo</td>
+  <td>VRSH™, HUD tático, interface HMD militar</td>
+</tr>
+<tr>
+  <td><strong>SADEV</strong></td>
+  <td>Transmissão resiliente</td>
+  <td>Solução mecânica SMFD™ com modo de emergência e diferencial autoblocante</td>
+  <td>SMFD™, fallback V-DVD™, tração redundante</td>
+</tr>
+<tr>
+  <td><strong>Schuberth GmbH</strong></td>
+  <td>Design e proteção veicular</td>
+  <td>Capacete VRSH™ com blindagem leve, airflow e compatibilidade com IA</td>
+  <td>VRSH™, HUD, airflow tático</td>
+</tr>
+<tr>
+  <td><strong>Sila Nanotech</strong></td>
+  <td>Materiais energéticos avançados</td>
+  <td>Capacitores regenerativos de alta densidade para Smart Skin™ e HUD</td>
+  <td>Kleist Layer™, Smart Skin™, ultracapacitores</td>
+</tr>
+<tr>
+  <td><strong>SpaceX</strong></td>
+  <td>Comunicações via satélite</td>
+  <td>Fallback de dados e rastreamento com conectividade Starlink™</td>
+  <td>Starlink™, comunicação crítica remota</td>
+</tr>
+<tr>
+  <td><strong>Spark Racing Technology</strong></td>
+  <td>Arquitetura elétrica</td>
+  <td>Infraestrutura elétrica de competição e integração com sistemas de potência</td>
+  <td>Arquitetura elétrica híbrida, módulos de potência</td>
+</tr>
+<tr>
+  <td><strong>Stanford DDL</strong></td>
+  <td>Neuroengenharia e IA veicular</td>
+  <td>Modelagem de resposta cognitiva e atenção situacional para HUD e BCI</td>
+  <td>Vortexa Brain™, HUD cognitivo, simulações comportamentais</td>
+</tr>
+<tr>
+  <td><strong>Teledyne FLIR</strong></td>
+  <td>Visão térmica</td>
+  <td>Captura infravermelha para navegação noturna e detecção de risco</td>
+  <td>Câmeras térmicas, visão adaptativa, VRSH™</td>
+</tr>
+<tr>
+  <td><strong>UTFPR</strong></td>
+  <td>Pesquisa aplicada e validação</td>
+  <td>Simulação CAE, testes de falha, Smart Skin™ e subsistemas embarcados</td>
+  <td>CAE VORTEXA™, Smart Skin™, SubCores™, fail-safe testing</td>
+</tr>
+<tr>
+  <td><strong>Vuzix</strong></td>
+  <td>Display óptico e wearables</td>
+  <td>HUD embarcado com alta densidade e compatibilidade ótica</td>
+  <td>VRSH™, HUD AR</td>
+</tr>
+</table>
+
+<h4>Benefícios Sistêmicos da Colaboração</h4>
+<ul>
+  <li>Redução de risco técnico por múltiplas validações cruzadas</li>
+  <li>Velocidade de desenvolvimento acelerada por compartilhamento de IPs</li>
+  <li>Acesso antecipado a tecnologias emergentes (VAVi™, PQC, CIGS, Supercapacitores, BCI)</li>
+  <li>Integração orgânica de IA desde a concepção até a manutenção preditiva</li>
+</ul>
+</section>
+
+<section id="aplicacoes-escalabilidade">
+<h3>6.7 Aplicações Práticas</h3>
+<ul>
+  <li><strong>Rally-Raid:</strong> SADEV para redundância, telemetria avançada</li>
+  <li><strong>Militar:</strong> Oshkosh para suspensão robusta, comunicação tática</li>
+  <li><strong>Mineração:</strong> ANSYS para resistência a poeira, navegação subterrânea</li>
+  <li><strong>Resgate:</strong> xAI para navegação autônoma, sistemas de emergência</li>
+</ul>
+</section>
+
+<section id="validacao-escalabilidade">
+<h3>6.8 Validação Técnica</h3>
+<p>
+  Testes em Borneo (2029) validarão H₂ OPS™. O programa de validação inclui testes em múltiplos ambientes e cenários para garantir robustez e confiabilidade em todas as aplicações.
+</p>
+</section>
+</article>
+
+<a href="#toc" class="back-to-toc">↑ Voltar ao Sumário</a>
+
+
+<section class="section" id="publico-geral">
+<h2>Parte III: Paper para o Público Geral</h2>
+
+<article id="o-que-e">
+<h3>7.1 O Que é o VORTEXA HYBRID?</h3>
+<p>
+  Imagine um veículo que combina a velocidade de um carro de rally, a resistência de um tanque militar, e a inteligência de um supercomputador. O VORTEXA HYBRID é essa máquina, projetada para operar em desertos, zonas de guerra, minas, ou desastres naturais.
+</p>
+
+<p>
+  Mais do que um veículo, o VORTEXA é uma plataforma tecnológica que redefine os limites da mobilidade extrema. Com sua cápsula de sobrevivência, sistema de propulsão híbrido e inteligência artificial avançada, ele representa o futuro da engenharia automotiva aplicada a cenários onde a falha não é uma opção.
+</p>
+</article>
+
+<article id="impacto">
+<h3>7.2 Impacto em Rally, Defesa, Mineração e Resgate</h3>
+
+<h4>Rally-Raid:</h4>
+<p>
+  No mundo das competições off-road, o VORTEXA HYBRID promete revolucionar o rally-raid com sua capacidade de superar dunas usando inteligência artificial e potência híbrida. O sistema de suspensão adaptativa SISMO™ e o controle vetorial de torque oferecem vantagens competitivas sem precedentes.
+</p>
+<div class="highlight">
+<strong>Exemplo Concreto:</strong> Durante a navegação em dunas do Saara, o Grok 6 analisa a textura da areia via LiDAR, ajustando automaticamente a pressão dos pneus através do CTIS e otimizando a distribuição de torque entre as rodas. O motor híbrido alterna entre modo elétrico silencioso para navegação noturna e potência máxima para subidas íngremes, enquanto o VRSH™ projeta waypoints em realidade aumentada para o piloto.
+</div>
+
+<h4>Defesa:</h4>
+<p>
+  Para aplicações militares, a Survivor Capsule™ protege soldados em zonas de conflito, enquanto o modo stealth reduz assinaturas térmicas e sonoras. A capacidade de operar com múltiplos combustíveis e a redundância de sistemas garantem missões bem-sucedidas mesmo em condições adversas.
+</p>
+<div class="highlight">
+<strong>Exemplo Concreto:</strong> Em missões noturnas de reconhecimento, o VORTEXA ativa o modo stealth, reduzindo ruído do motor para menos de 40 dB e mascarando a assinatura térmica através do VULCANS™. A Survivor Capsule™ protege a tripulação contra explosões IED, enquanto o sistema ECLSS mantém ambiente pressurizado por 12 horas em caso de ataques químicos. O VRSH™ integra visão noturna e dados de inteligência em tempo real.
+</div>
+
+<h4>Mineração:</h4>
+<p>
+  Na indústria de mineração, o VORTEXA navega túneis com eficiência, resistindo à abrasão e poeira através de suas resinas de autorreparo e sistema VULCANS™. A navegação autônoma e sensores de gases aumentam a segurança operacional.
+</p>
+<div class="highlight">
+<strong>Exemplo Concreto:</strong> Em túneis de mineração subterrânea, o VORTEXA opera autonomamente por 8 horas, navegando através de corredores estreitos usando mapeamento LiDAR 3D. O sistema VULCANS™ filtra partículas de poeira de até 0,3 μm, enquanto sensores detectam gases perigosos como metano e CO. A Smart Skin™ se autorrepara quando arranhada por rochas, e o modo de emergência permite evacuação rápida de mineiros feridos através da Survivor Capsule™.
+</div>
+
+<h4>Resgate:</h4>
+<p>
+  Em operações de resgate, o VORTEXA salva vidas em áreas isoladas, mantendo sistemas vitais funcionando por períodos prolongados. Sua capacidade de comunicação via satélite e tomada de decisões autônomas em desastres o torna uma ferramenta essencial para equipes de emergência.
+</p>
+<div class="highlight">
+<strong>Exemplo Concreto:</strong> Durante resgate em avalanche nos Alpes, o VORTEXA localiza vítimas soterradas usando radar de penetração no solo e sensores térmicos. O sistema de suporte vital mantém 4 pessoas aquecidas e oxigenadas por 12 horas na Survivor Capsule™, enquanto a comunicação via satélite coordena com equipes de resgate. O VRSH™ guia paramédicos através de procedimentos médicos de emergência, e o modo de tração integral permite evacuação segura em terreno instável.
+</div>
+</article>
+
+<article id="sustentabilidade">
+<h3>7.3 Sustentabilidade e Futuro da Mobilidade</h3>
+<p>
+  Usando hidrogênio como combustível principal, o VORTEXA HYBRID reduz significativamente as emissões de carbono, pavimentando o caminho para um futuro mais verde na mobilidade extrema. Sua tecnologia de superfície inteligente (Smart Skin™) aproveita energia solar para alimentar sistemas auxiliares, demonstrando como a inovação pode ser sustentável.
+</p>
+
+<p>
+  O projeto representa um marco na transição energética, mostrando que é possível combinar performance extrema com responsabilidade ambiental. As tecnologias desenvolvidas para o VORTEXA têm potencial de aplicação em veículos convencionais, multiplicando seu impacto positivo.
+</p>
+</article>
+
+<article id="participar">
+<h3>7.4 Como Participar do Futuro do VORTEXA</h3>
+<p>
+  O projeto VORTEXA HYBRID está aberto a parcerias e colaborações. Investidores, instituições de pesquisa, empresas de tecnologia e entusiastas podem contribuir para o desenvolvimento desta plataforma revolucionária.
+</p>
+
+<p>
+  Siga a Vortexa Motorsport em <a href="https://www.vortexamotorsport.com">www.vortexamotorsport.com</a> para atualizações sobre testes, desenvolvimento e oportunidades de participação. O futuro da mobilidade extrema está sendo construído agora, e você pode fazer parte desta jornada.
+</p>
+</article>
+
+<article id="faq">
+<h3>7.5 Perguntas Frequentes (FAQ)</h3>
+
+<h4>Quando o VORTEXA estará disponível?</h4>
+<p>O VORTEXA HYBRID está previsto para estar disponível pós-2030, após a conclusão dos testes de campo planejados para 2029–2030. Este é um projeto hipotético com alto potencial para sair da prancheta para a competição.</p>
+
+<h4>Qual será o custo do VORTEXA?</h4>
+<p>O custo dependerá da configuração específica escolhida (rally-raid, defesa, mineração ou resgate). Para informações detalhadas sobre preços e configurações, contate <a href="https://www.vortexamotorsport.com">www.vortexamotorsport.com</a>.</p>
+
+<h4>O VORTEXA suporta operação totalmente autônoma?</h4>
+<p>Sim, o VORTEXA suporta operação autônoma em cenários específicos, como navegação em túneis de mineração e missões de resgate. O sistema Grok 6 e VORTEXA BRAIN permitem tomada de decisões independentes em situações programadas.</p>
+
+<h4>Qual o impacto ambiental do VORTEXA?</h4>
+<p>O VORTEXA HYBRID pode reduzir emissões em até 90% através do uso de hidrogênio (H₂) como combustível principal e da tecnologia Smart Skin™ para geração de energia solar auxiliar, representando um marco na sustentabilidade da mobilidade extrema.</p>
+
+<a href="#toc" class="back-to-toc">↑ Voltar ao Sumário</a>
+</article>
+</section>
+
+<section class="section" id="glossario">
+<h2>Glossário Técnico</h2>
+
+<table>
+<thead>
+<tr>
+<th>Termo/Sigla</th>
+<th>Tipo</th>
+<th>Definição</th>
+</tr>
+</thead>
+<tbody>
+<!-- Termos existentes -->
+<tr>
+<td><strong>ABS</strong></td>
+<td>-</td>
+<td>Sistema de Freios Antitravamento</td>
+</tr>
+<tr>
+<td><strong>ANSYS</strong></td>
+<td>Industrial</td>
+<td>Software de simulação CAE</td>
+</tr>
+<tr>
+<td><strong>CAE</strong></td>
+<td>-</td>
+<td>Computer-Aided Engineering (Engenharia Assistida por Computador)</td>
+</tr>
+<tr>
+<td><strong>CTIS</strong></td>
+<td>-</td>
+<td>Central Tire Intelligence System (Sistema Inteligente Central de Pneus)</td>
+</tr>
+<tr>
+<td><strong>DENSO</strong></td>
+<td>Industrial</td>
+<td>Fabricante de componentes eletrônicos automotivos</td>
+</tr>
+<tr>
+<td><strong>DSSV</strong></td>
+<td>-</td>
+<td>Dynamic Suspensions Spool Valve (Válvula Spool de Suspensão Dinâmica)</td>
+</tr>
+<tr>
+<td><strong>ECLSS</strong></td>
+<td>-</td>
+<td>Environmental Control and Life Support System (Sistema de Controle Ambiental e Suporte à Vida)</td>
+</tr>
+<tr>
+<td><strong>EDR</strong></td>
+<td>-</td>
+<td>Event Data Recorder (Registrador de Dados de Evento)</td>
+</tr>
+<tr>
+<td><strong>ERS</strong></td>
+<td>-</td>
+<td>Energy Recovery System (Sistema de Recuperação de Energia)</td>
+</tr>
+<tr>
+<td><strong>FIA</strong></td>
+<td>-</td>
+<td>Fédération Internationale de l'Automobile</td>
+</tr>
+<tr>
+<td><strong>HUD</strong></td>
+<td>-</td>
+<td>Head-Up Display (Display de Cabeça Erguida)</td>
+</tr>
+<tr>
+<td><strong>HBR-1</strong></td>
+<td>-</td>
+<td>VORTEXA Hydrogen-Burning Race Engine 1 (Motor de Corrida a Hidrogênio VORTEXA 1)</td>
+</tr>
+<tr>
+<td><strong>ICE</strong></td>
+<td>-</td>
+<td>Internal Combustion Engine (Motor de Combustão Interna)</td>
+</tr>
+<tr>
+<td><strong>LiDAR</strong></td>
+<td>-</td>
+<td>Light Detection and Ranging (Detecção e Alcance por Luz)</td>
+</tr>
+<tr>
+<td><strong>MRCS</strong></td>
+<td>-</td>
+<td>Modular Reconfigurable Chassis System (Sistema de Chassi Modular Reconfigurável)</td>
+</tr>
+<tr>
+<td><strong>NEVO™</strong></td>
+<td>-</td>
+<td>Neural Vortex Operating System (Sistema Operacional Neural Vortex)</td>
+</tr>
+<tr>
+<td><strong>OTA</strong></td>
+<td>-</td>
+<td>Over-The-Air (Atualização Remota)</td>
+</tr>
+<tr>
+<td><strong>PEM</strong></td>
+<td>-</td>
+<td>Proton Exchange Membrane (Membrana de Troca de Prótons)</td>
+</tr>
+<tr>
+<td><strong>QEV</strong></td>
+<td>-</td>
+<td>Quad Electric Vector (Vetor Elétrico Quádruplo)</td>
+</tr>
+<tr>
+<td><strong>SADEV</strong></td>
+<td>Industrial</td>
+<td>Fabricante de sistemas de transmissão para competição</td>
+</tr>
+<tr>
+<td><strong>SISMO™</strong></td>
+<td>-</td>
+<td>Sistema Inteligente de Suspensão Modular Otimizada</td>
+</tr>
+<tr>
+<td><strong>SMFD™</strong></td>
+<td>-</td>
+<td>Sequential Manual Failsafe Drive (Transmissão Manual Sequencial à Prova de Falhas)</td>
+</tr>
+<tr>
+<td><strong>TAK-4i</strong></td>
+<td>-</td>
+<td>Sistema de Suspensão Independente da Oshkosh Defense</td>
+</tr>
+<tr>
+<td><strong>V-DVD™</strong></td>
+<td>-</td>
+<td>VORTEXA Direct Vector Drive (Tração Direta Vetorial VORTEXA)</td>
+</tr>
+<tr>
+<td><strong>VAVi™</strong></td>
+<td>-</td>
+<td>Vortexa Active Valvetrain Intelligent (Sistema de Válvulas Ativo Inteligente VORTEXA)</td>
+</tr>
+<tr>
+<td><strong>VECS™</strong></td>
+<td>-</td>
+<td>VORTEXA Electronic Control Systems (Sistemas de Controle Eletrônico VORTEXA)</td>
+</tr>
+<tr>
+<td><strong>VRSH™</strong></td>
+<td>-</td>
+<td>Vortexa Reality Smart Helmet (Capacete Inteligente de Realidade VORTEXA)</td>
+</tr>
+<tr>
+<td><strong>VSC-RESIL™</strong></td>
+<td>-</td>
+<td>VORTEXA Survivor Capsule - Resilient (Cápsula de Sobrevivência VORTEXA - Resiliente)</td>
+</tr>
+<tr>
+<td><strong>VULCANS™</strong></td>
+<td>-</td>
+<td>VORTEXA Universal Life-Critical Autonomous Network System (Sistema de Rede Autônoma Universal Crítica para Vida VORTEXA)</td>
+</tr>
+<tr>
+<td><strong>VORTEXCORE</strong></td>
+<td>-</td>
+<td>Central System-on-Chip para Processamento Cognitivo (Sistema Central em Chip para Processamento Cognitivo)</td>
+</tr>
+<tr>
+<td><strong>W2RC</strong></td>
+<td>-</td>
+<td>World Rally-Raid Championship (Campeonato Mundial de Rally-Raid)</td>
+</tr>
+<tr>
+<td><strong>xAI</strong></td>
+<td>-</td>
+<td>Empresa de Inteligência Artificial (desenvolvedor do Grok 6)</td>
+</tr>
+<tr>
+<td><strong>xRT-VTXA</strong></td>
+<td>-</td>
+<td>eXtended Real-Time VORTEXA Architecture (Arquitetura VORTEXA de Tempo Real Estendido)</td>
+</tr>
+
+<table>
+<thead>
+<tr>
+  <th>Parceiro Estratégico</th>
+  <th>Domínio de Atuação</th>
+  <th>Função Técnica no Projeto</th>
+  <th>Sistemas ou Tecnologias Associadas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Akrapovič</td>
+  <td>Sistemas de escape</td>
+  <td>Desenvolvimento de exaustão adaptativa de alta temperatura</td>
+  <td>Sistema de exaustão adaptativo</td>
+</tr>
+<tr>
+  <td>ANSYS</td>
+  <td>Simulação CFD</td>
+  <td>Modelagem dinâmica de fluidos e reforço da análise CAE térmica</td>
+  <td>CAE VORTEXA™, VULCANS™, Smart Skin™</td>
+</tr>
+<tr>
+  <td>Aramco</td>
+  <td>Combustíveis sintéticos e H₂</td>
+  <td>Fornecedor de e-fuels avançados e hidrogênio verde para powertrain híbrido</td>
+  <td>e-fuel, H₂ técnico, ICE híbrido VAVi™</td>
+</tr>
+<tr>
+  <td>Bosch Motorsport</td>
+  <td>Eletrônica e sensores</td>
+  <td>Sistemas embarcados de controle e sensores críticos</td>
+  <td>SensorGrid™, VECS™, ECU híbrida</td>
+</tr>
+<tr>
+  <td>Brembo</td>
+  <td>Sistema de frenagem</td>
+  <td>Freios carbono-cerâmica de alta eficiência térmica</td>
+  <td>VULCANS-BRAKE™, discos flutuantes</td>
+</tr>
+<tr>
+  <td>CAE GmbH</td>
+  <td>Simulação e engenharia virtual</td>
+  <td>Criação de gêmeo digital e análise termoestrutural CAE</td>
+  <td>CAE VORTEXA™, Smart Skin™, VULCANS™</td>
+</tr>
+<tr>
+  <td>Cobham Aerospace Communications</td>
+  <td>Comunicações críticas e fallback</td>
+  <td>Rádio redundante HAM/VHF e integração ECLSS no capacete VRSH™</td>
+  <td>VRSH™, fallback auditivo, comunicação tática</td>
+</tr>
+<tr>
+  <td>Collins Aerospace</td>
+  <td>Proteção avançada</td>
+  <td>Concepção da cápsula de sobrevivência integrada ao chassi MRCS</td>
+  <td>Survivor Capsule™, MRCS™</td>
+</tr>
+<tr>
+  <td>DENSO</td>
+  <td>Gateways embarcados</td>
+  <td>Comunicação distribuída de dados críticos</td>
+  <td>OptiCAN™, barramentos tolerantes a falha</td>
+</tr>
+<tr>
+  <td>g.tec Medical Engineering</td>
+  <td>Neuroengenharia</td>
+  <td>BCI (Interface Cérebro-Computador) embarcada para controle não-verbal</td>
+  <td>VRSH™, biofeedback, BCI embarcada</td>
+</tr>
+<tr>
+  <td>Gordon Murray Automotive</td>
+  <td>Filosofia estrutural e design funcional</td>
+  <td>Contribuição conceitual à arquitetura da Smart Skin™ e MRCS</td>
+  <td>Design funcional, modularidade térmica</td>
+</tr>
+<tr>
+  <td>MicroVision MEMS / Vuzix</td>
+  <td>Projeção ótica miniaturizada</td>
+  <td>Microprojetores de alta densidade para HUD vibracionalmente estável</td>
+  <td>VRSH™, HUD AR, MicroMirror MEMS</td>
+</tr>
+<tr>
+  <td>MIT (AeroAstro / CSAIL / xAI)</td>
+  <td>Materiais, IA, simulação</td>
+  <td>Pesquisa avançada em materiais funcionais, algoritmos xAI, segurança e regeneração</td>
+  <td>Kleist Layer™, Grok 6, CAE térmico, Vortexa Brain™</td>
+</tr>
+<tr>
+  <td>Multimatic</td>
+  <td>Suspensão inteligente</td>
+  <td>Implementação de DSSV-E adaptativo com leitura contínua</td>
+  <td>SISMO™, DSSV-E</td>
+</tr>
+<tr>
+  <td>NVIDIA</td>
+  <td>IA embarcada</td>
+  <td>Unidade de inferência para HUD, visão cognitiva e xAI embarcado</td>
+  <td>VRSH™, HUD, NEVO OS™, xAI runtime</td>
+</tr>
+<tr>
+  <td>Oshkosh Defense</td>
+  <td>Mobilidade tática</td>
+  <td>Integração do sistema TAK-4i para off-road extremo</td>
+  <td>TAK-4i, suspensão tática ajustável</td>
+</tr>
+<tr>
+  <td>PIPO Moteurs</td>
+  <td>Motorização térmica</td>
+  <td>ICE HBR-1 com válvulas ativas VAVi™ e arquitetura leve</td>
+  <td>HBR-1, VAVi™, fallback mecânico</td>
+</tr>
+<tr>
+  <td>PWR Advanced Cooling</td>
+  <td>Termodinâmica aplicada</td>
+  <td>Desenvolvimento do sistema de resfriamento redundante e integrado à Smart Skin™</td>
+  <td>VULCANS™, refrigeração adaptativa</td>
+</tr>
+<tr>
+  <td>QEV Technologies</td>
+  <td>Propulsão elétrica</td>
+  <td>Criação dos motores vetoriais de 150 kW e integração híbrida</td>
+  <td>VECS™, motores elétricos vetoriais</td>
+</tr>
+<tr>
+  <td>QuantumScape / Sila Nanotech</td>
+  <td>Armazenamento de energia</td>
+  <td>Desenvolvimento de baterias de estado sólido para fallback crítico</td>
+  <td>Bateria Kleist™, capacitores regenerativos</td>
+</tr>
+<tr>
+  <td>Repsol Tech Lab</td>
+  <td>Fluidos técnicos biodegradáveis</td>
+  <td>Desenvolvimento de fluidos dielétricos, óleos e lubrificantes sustentáveis</td>
+  <td>VULCANS™, refrigeração, anticongelantes bioativos</td>
+</tr>
+<tr>
+  <td>Rockwell Collins ESA Vision Systems LLC</td>
+  <td>HUD e visão adaptativa</td>
+  <td>HUD multicamadas com visão noturna assistida (NVG/IR)</td>
+  <td>VRSH™, HUD adaptativo, interface cognitiva</td>
+</tr>
+<tr>
+  <td>SADEV</td>
+  <td>Transmissão resiliente</td>
+  <td>SMFD™ com diferencial autoblocante e modo de emergência mecânico</td>
+  <td>SADEV SMFD™, backup mecânico V-DVD™</td>
+</tr>
+<tr>
+  <td>Schuberth GmbH</td>
+  <td>Design e proteção veicular</td>
+  <td>Blindagem e ergonomia do VRSH™ com airflow tático e proteção balística</td>
+  <td>VRSH™, HUD, airflow adaptativo</td>
+</tr>
+<tr>
+  <td>SpaceX</td>
+  <td>Comunicações via satélite</td>
+  <td>Fallback de dados, rastreamento e conectividade em zonas neutras</td>
+  <td>Starlink™, dados off-grid</td>
+</tr>
+<tr>
+  <td>Spark Racing Technology</td>
+  <td>Arquitetura elétrica</td>
+  <td>Integração de sistemas de alta voltagem para competição</td>
+  <td>Arquitetura elétrica híbrida, módulo de potência</td>
+</tr>
+<tr>
+  <td>Stanford DDL</td>
+  <td>Neuroengenharia e IA veicular</td>
+  <td>Modelagem de resposta cognitiva em veículos autônomos e agressivos</td>
+  <td>Vortexa Brain™, HUD cognitivo, simulações de fadiga</td>
+</tr>
+<tr>
+  <td>Teledyne FLIR</td>
+  <td>Visão térmica</td>
+  <td>Captação térmica embarcada e infravermelho tático</td>
+  <td>Câmeras térmicas, visão noturna SMART SKIN™</td>
+</tr>
+<tr>
+  <td>UTFPR</td>
+  <td>Pesquisa aplicada e validação</td>
+  <td>Simulação CAE, testes de falha, sistemas embarcados e fail-safe</td>
+  <td>CAE VORTEXA™, SensorGrid™, Smart Skin™, SubCores</td>
+</tr>
+</tbody>
+</table>
+<section class="section" id="normas-tecnicas">
+<h2>Normas Técnicas e Conformidade</h2>
+
+<p>O VORTEXA HYBRID foi desenvolvido em conformidade com as principais normas técnicas internacionais para garantir segurança, qualidade e interoperabilidade.</p>
+
+<table>
+<thead>
+<tr>
+<th>Norma</th>
+<th>Aplicação Específica</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ISO 27001</strong></td>
+<td>Sistemas eletrônicos e cibersegurança</td>
+<td>Gestão de segurança da informação para VORTEXCORE e NEVO OS</td>
+</tr>
+<tr>
+<td><strong>MIL-STD-810H</strong></td>
+<td>Resistência ambiental</td>
+<td>Testes de vibração, choque térmico e resistência para aplicações militares</td>
+</tr>
+<tr>
+<td><strong>SAE J2601</strong></td>
+<td>Tanques de hidrogênio</td>
+<td>Protocolos de abastecimento e segurança para sistemas H₂ de 700 bar</td>
+</tr>
+<tr>
+<td><strong>FIA T1U</strong></td>
+<td>Competições rally-raid</td>
+<td>Regulamentações de segurança e performance para World Rally-Raid Championship</td>
+</tr>
+<tr>
+<td><strong>ISO 26262</strong></td>
+<td>Segurança funcional automotiva</td>
+<td>Sistemas críticos de segurança (VECS™, VRSH™, VORTEXA BRAIN)</td>
+</tr>
+</tbody>
+</table>
+
+<a href="#toc" class="back-to-toc">↑ Voltar ao Sumário</a>
+</section>
+
+</main>
+</div>
+
+<footer style="text-align: center; margin-top: 50px; padding: 20px; background-color: #1a1a2e; color: white; border-radius: 5px;">
+<p><strong>VORTEXA HYBRID TECH FRAMEWORK</strong></p>
+<p>Documento Técnico Atualizado - Data de Revisão: 24 de Junho de 2025</p>
+<p><em>"Design meets survival: a forma segue a missão, garantindo desempenho em qualquer cenário."</em></p>
+</footer>
+
+</body>
+</html>
