@@ -227,7 +227,33 @@ const content = {
                         <div class="section-nav">
                             <a href="#press-release" class="nav-link">← Voltar à Seção</a>
                         </div>
-                        <p>A Vortexa Motorsport, nascida do ecossistema de inovação da Stanford StartX, apresenta o VORTEXA HYBRID TECH FRAMEWORK, uma plataforma de mobilidade inteligente que redefine os limites da engenharia automotiva. Diferente de qualquer veículo convencional, o VORTEXA HYBRID é um ecossistema vivo, adaptativo e resiliente, projetado para operar nos ambientes mais desafiadores do planeta, desde os desertos escaldantes até as operações de resgate mais críticas.</p>
+                        
+                        <h4>O Que é o VORTEXA HYBRID?</h4>
+                        <h5>VORTEXA HYBRID: Quando a Inteligência Entra na Luta Pela Sobrevivência</h5>
+                        
+                        <p><em>Imagine uma máquina que une o DNA da Fórmula 1, a resistência de um blindado e a mente de um supercomputador — e a solta nos desertos mais letais do planeta. Essa é a proposta do VORTEXA HYBRID: um veículo projetado para pensar, reagir e sobreviver onde a falha não é uma opção.</em></p>
+                        
+                        <p>Fruto de uma aliança global entre engenheiros, neurocientistas, militares e especialistas em mobilidade extrema, o VORTEXA é mais do que um protótipo disruptivo — é a consolidação de uma nova categoria: <strong>inteligência embarcada para sobrevivência funcional</strong>. Capaz de operar sob blackout, reagir a falhas estruturais e aprender com o próprio terreno, ele une propulsão híbrida de alta performance, arquitetura cognitiva distribuída e sistemas de missão modulares.</p>
+                        
+                        <p>No coração do VORTEXA está o <strong>Vortexa Brain™</strong>, uma unidade de inferência baseada em ASICs personalizados (xAI VortexCore), capaz de tomar decisões em milissegundos com suporte de <strong>SubCores™</strong> autônomos espalhados por suspensão, propulsão, energia e sobrevivência. Tudo isso operando sob o sistema embarcado <strong>NEVO OS™</strong>, com runtime de latência ultrabaixa (&lt;5 ms).</p>
+                        
+                        <p>Mas o que o torna verdadeiramente inédito é sua filosofia: <strong>falhar não é o fim, é o gatilho do aprendizado</strong>. Cada anomalia gera dados. Cada missão reforça os algoritmos. Cada falha alimenta o <strong>VORTEXA SINAPSI™</strong>, o núcleo de aprendizado profundo que conecta simulação, experiência real e autocorreção dinâmica.</p>
+                        
+                        <blockquote>
+                            <p><strong>"O VORTEXA é o único veículo que não apenas sobrevive ao caos — ele aprende com ele."</strong><br/>
+                            – Equipe VORTEXA</p>
+                        </blockquote>
+                        
+                        <h4>Características Essenciais:</h4>
+                        <ul>
+                            <li><strong>Arquitetura Híbrida Modular:</strong> ICE HBR-1 + Motores Vetoriais Elétricos (QEV)</li>
+                            <li><strong>Fallback Cognitivo:</strong> Decisão em tempo real via SubCores™ e xRT-VTXA™</li>
+                            <li><strong>Casco Inteligente:</strong> Smart Skin™ com sensores integrados, ultracapacitores e autocura</li>
+                            <li><strong>Capacete VRSH™:</strong> HUD AR, visão térmica, comando não-verbal (BCI/EMG)</li>
+                            <li><strong>Kits de Missão:</strong> Configurações adaptáveis para Rally-Raid, Defesa, Resgate, Mineração</li>
+                        </ul>
+                        
+                        <p><strong>Pronto para o impossível:</strong> Se existe um lugar onde a engenharia se transforma em sobrevivência inteligente, ele tem nome — VORTEXA HYBRID.</p>
                     </section>
                     
                     <section id="press-tech">
@@ -235,9 +261,25 @@ const content = {
                         <div class="section-nav">
                             <a href="#press-release" class="nav-link">← Voltar à Seção</a>
                         </div>
-                        <p>Com uma arquitetura modular e multicamadas, o VORTEXA HYBRID integra tecnologias de ponta em neuroengenharia, inteligência artificial e robótica autônoma. Seu design, inspirado na filosofia de Gordon Murray, prioriza a funcionalidade e a sobrevivência em vez de meros adornos. Cada componente é otimizado para resistir a falhas severas, reconfigurar-se dinamicamente e continuar operando mesmo sob as condições mais extremas.</p>
                         
-                        <p>No coração do VORTEXA HYBRID está o VORTEXA BRAIN™, um núcleo de inteligência distribuída que, em conjunto com os SubCores™ e o sistema operacional NEVO OS™, garante uma capacidade de adaptação sem precedentes. A inovadora VORTEXA SMART SKIN™ atua como um escudo térmico e sistema energético auxiliar, enquanto a Survivor Capsule™ (VSC-RESIL™) oferece proteção biomecânica e cognitiva inigualável para a tripulação.</p>
+                        <h4>Impacto em Rally, Defesa, Mineração e Resgate</h4>
+                        <h5>Do Deserto ao Campo de Batalha: Uma Plataforma Para Missões que Não Podem Falhar</h5>
+                        
+                        <p><em>O VORTEXA HYBRID não foi feito para avenidas. Ele foi concebido para sobreviver onde a maioria quebra. Em ambientes onde a decisão entre continuar ou parar pode custar vidas, ele responde com resiliência cognitiva e inteligência embarcada.</em></p>
+                        
+                        <p>Seja em um rally-raid como o Dakar, uma operação de evacuação médica em zona de conflito, um resgate autônomo em área de deslizamento ou uma missão em campo de mineração remoto — o VORTEXA adapta-se, reconfigura-se e continua avançando.</p>
+                        
+                        <h4>Aplicações Extremas:</h4>
+                        <ul>
+                            <li><strong>Rally-Raid (T1U – FIA / A.S.O.):</strong> Tração híbrida, suspensão SISMO™, fallback mecânico SADEV™, cockpit VRSH™ com BCI ativa. Otimizado para ambientes como o Empty Quarter, Jalapão e Atacama.</li>
+                            <li><strong>Defesa Tática:</strong> Modo Stealth embarcado, redundância de rádio auditivo via Cobham™, cápsula MRCS™ com blindagem leve e SubCore tático para blackout. Operação com IA embarcada sem rede externa.</li>
+                            <li><strong>Resgate Autônomo:</strong> Reconhecimento cognitivo, HUD AR integrado ao capacete VRSH™, fallback de energia via PEM + Kleist Layer™. Capaz de operar em locais de difícil acesso com autonomia parcial.</li>
+                            <li><strong>Mineração Inteligente:</strong> Monitoramento térmico adaptativo via SensorGrid™, isolamento EMI, kits de missão com configuração redundante, CAE VORTEXA™ ajustando parâmetros de forma preditiva.</li>
+                        </ul>
+                        
+                        <p>Todos os modos são configuráveis via runtime xRT-VTXA™ e gerenciados em tempo real por SubCores™ especializados, garantindo autonomia operacional mesmo sem conectividade externa. A arquitetura de missão permite upgrades rápidos (QuickBay™), mantendo o veículo pronto para novos contextos com apenas 1 operador.</p>
+                        
+                        <p><strong>O VORTEXA se adapta ao terreno, ao perigo e ao tempo. Cada missão reforça sua inteligência. Cada desafio o torna mais preparado. Esse não é um veículo. É um aliado operacional.</strong></p>
                     </section>
                     
                     <section id="press-market">
@@ -245,9 +287,74 @@ const content = {
                         <div class="section-nav">
                             <a href="#press-release" class="nav-link">← Voltar à Seção</a>
                         </div>
-                        <p>Com um powertrain híbrido de alta performance, o VORTEXA HYBRID promete eficiência energética superior e autonomia estendida, operando com hidrogênio e e-fuels. A capacidade de reconfiguração rápida em campo, através dos Flute Kits™ e da rede QuickBay™ FieldOps, assegura que o VORTEXA esteja sempre pronto para qualquer missão.</p>
                         
-                        <p>A Vortexa Motorsport está validando o VORTEXA HYBRID através de gêmeos digitais e testes de campo rigorosos, com um roadmap estratégico que culmina em validações extremas até 2030. Convidamos parceiros da indústria, institutos de pesquisa e agências de missão crítica a se juntarem a nós nesta jornada para moldar o futuro da mobilidade extrema.</p>
+                        <h4>Por Que o VORTEXA é Diferente?</h4>
+                        <h5>Não é Apenas um Veículo. É um Organismo Inteligente em Movimento.</h5>
+                        
+                        <p><em>Enquanto outros protótipos disputam torque, velocidade e eficiência, o VORTEXA joga outro jogo: o da sobrevivência autônoma e inteligência extrema. Ele não é só mais forte. É mais consciente. Não responde por comando — responde por antecipação.</em></p>
+                        
+                        <p>Projetado sob uma filosofia que une o funcionalismo de Gordon Murray ao pragmatismo de campo militar, o VORTEXA HYBRID nasce da ideia de que a <strong>tecnologia deve resistir, adaptar-se e aprender — tudo ao mesmo tempo.</strong></p>
+                        
+                        <h4>O Que o Torna Único:</h4>
+                        <ul>
+                            <li><strong>Inteligência Distribuída:</strong> SubCores™ locais com inferência embarcada (TinyML), atuando mesmo sob perda do núcleo central (Vortexa Brain™)</li>
+                            <li><strong>Resiliência Energética Trifásica:</strong> ICE híbrido, fallback PEM e camada ultracapacitiva Kleist Layer™ com ativação de emergência</li>
+                            <li><strong>Estrutura Modular Ativa:</strong> Smart Skin™ com autocura preditiva, sensores integrados e armazenamento de energia solar</li>
+                            <li><strong>Aprendizado Sináptico:</strong> Sistema VORTEXA SINAPSI™ registra falhas, acertos, ajustes e adaptações — e os transforma em simulação com o CAE VORTEXA™</li>
+                            <li><strong>Propósito Real:</strong> Criado não para pista, mas para ambientes onde a falha pode custar tudo: desertos, zonas hostis, altitudes, missões solitárias</li>
+                        </ul>
+                        
+                        <p>O VORTEXA não se compara à geração atual de veículos elétricos, off-roaders ou protótipos de rally. Ele pertence a uma nova categoria: <strong>sistemas cognitivos de missão veicular</strong>. E dentro dessa categoria, ele está sozinho. Por enquanto.</p>
+                        
+                        <p><strong>Disruptivo não é o que brilha. É o que muda as regras.</strong> O VORTEXA não compete com o mercado — ele desafia o conceito de mobilidade extrema como o conhecemos.</p>
+                        
+                        <h4>Futuro, Expansão e Missão Sistêmica</h4>
+                        <h5>Mais que Um Protótipo. Uma Plataforma Viva com Missão em Evolução.</h5>
+                        
+                        <p><em>O VORTEXA HYBRID não foi criado como fim — mas como fundação. Ele é o primeiro passo de uma plataforma modular, cognitiva e escalável para múltiplos domínios onde mobilidade, inteligência e sobrevivência precisam coexistir.</em></p>
+                        
+                        <p>Ao invés de versões estáticas, o VORTEXA segue um roteiro vivo de validação, aprendizado e replicação. A cada missão, ele coleta dados. A cada versão, ele evolui. A cada falha, ele fica mais preparado. E isso não se limita ao protótipo atual: estamos falando de uma <strong>família de plataformas integradas</strong>, que poderá alimentar veículos autônomos de resgate, operações defensivas, exploração industrial e soluções de engenharia extrema.</p>
+                        
+                        <h4>Etapas em Curso:</h4>
+                        <ul>
+                            <li><strong>2025–2026:</strong> Finalização de integração modular e roadmap de testes técnicos com SubCores™, PEM e Smart Skin™</li>
+                            <li><strong>2026–2028:</strong> Testes em ambientes reais (deserto, clima severo, blackout), integração BCI e modos de missão QuickBay™</li>
+                            <li><strong>2029+:</strong> Expansão para missões automatizadas, híbridas ou autônomas em contextos táticos, ambientais ou operacionais extremos</li>
+                        </ul>
+                        
+                        <h4>Missão Sistêmica:</h4>
+                        <p>O VORTEXA não é um produto. É uma iniciativa sistêmica que une engenheiros, designers, neurocientistas, pilotos, socorristas e pesquisadores. É sobre criar uma resposta tecnológica onde hoje há risco absoluto. É sobre dar à máquina não só força e velocidade — mas <strong>inteligência funcional</strong>.</p>
+                        
+                        <blockquote>
+                            <p><strong>"Projetamos o VORTEXA para sobreviver onde o impossível começa — e inspirar onde o futuro precisa de coragem."</strong><br/>
+                            – Equipe VORTEXA</p>
+                        </blockquote>
+                        
+                        <p><strong>Próximo destino:</strong> O futuro não será colonizado por máquinas mais potentes — mas por máquinas mais lúcidas.</p>
+                        
+                        <h4>Declaração Oficial de Projeto</h4>
+                        <h5>Uma Engenharia de Sobrevivência com Propósito</h5>
+                        
+                        <p>O VORTEXA HYBRID representa mais do que uma convergência de tecnologias — ele é a materialização de uma ideia: <strong>a inteligência precisa ser funcional, resistente e adaptável para fazer sentido em campo real</strong>. Projetamos uma arquitetura que aprende, uma carcaça que sente, um cérebro que sobrevive.</p>
+                        
+                        <p>Tudo foi pensado com propósito: cada sensor, cada fallback, cada algoritmo. Não buscamos apenas vencer provas, quebrar recordes ou gerar headlines. Buscamos criar algo que possa atravessar o impossível e voltar com dados para melhorar a próxima missão.</p>
+                        
+                        <p>Esta não é uma máquina final. É uma primeira iteração de um projeto sistêmico, colaborativo e em constante refinamento. Desenvolvido com especialistas de classe mundial, parceiros institucionais e acadêmicos de ponta, o VORTEXA é um chamado à engenharia com alma e ao design que responde ao caos com inteligência.</p>
+                        
+                        <blockquote>
+                            <p><strong>"Projetamos o VORTEXA como quem projeta um astronauta terrestre. Ele deve sobreviver. Ele deve pensar. Ele deve voltar."</strong><br/>
+                            – Comitê VORTEXA</p>
+                        </blockquote>
+                        
+                        <h4>Princípios Fundadores:</h4>
+                        <ul>
+                            <li><strong>Resiliência ativa:</strong> A falha é prevista. A adaptação é automática.</li>
+                            <li><strong>Aprendizado contínuo:</strong> Cada missão deixa o sistema mais consciente.</li>
+                            <li><strong>Design funcional:</strong> Nada é decorativo. Tudo é estruturante.</li>
+                            <li><strong>Missão coletiva:</strong> Desenvolvido por e para especialistas, pilotos, resgatistas, engenheiros e visionários.</li>
+                        </ul>
+                        
+                        <p><strong>O VORTEXA HYBRID não é o fim de uma linha de montagem. É o início de uma nova engenharia. Viva, consciente e em missão.</strong></p>
                     </section>
                 `
             },
