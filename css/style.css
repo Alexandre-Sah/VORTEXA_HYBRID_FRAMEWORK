@@ -1,0 +1,342 @@
+/* Estilos Gerais (Modo Claro Padrão) */
+:root {
+    --bg-color-light: #f4f4f4; /* Fundo geral claro */
+    --text-color-light: #333; /* Cor do texto padrão */
+    --header-bg-light: #1a1a2e; /* Azul escuro industrial para o cabeçalho */
+    --header-text-light: #e0e0e0; /* Texto claro no cabeçalho */
+    --sidebar-bg-light: #2c2c3e; /* Fundo do sumário um pouco mais claro que o cabeçalho */
+    --sidebar-link-light: #a0a0c0; /* Cor dos links do sumário */
+    --sidebar-link-hover-light: #6a6ad0; /* Cor dos links do sumário ao passar o mouse */
+    --content-bg-light: #ffffff; /* Fundo da área de conteúdo claro */
+    --border-color-light: #ddd; /* Cor das bordas e divisores em modo claro */
+    --button-bg-light: #4a4a6e; /* Fundo dos botões (idioma, tema) */
+    --button-text-light: #e0e0e0; /* Texto dos botões */
+    --button-hover-light: #6a6ac0; /* Fundo dos botões ao passar o mouse */
+}
+
+/* Modo Escuro (Aplicado quando a classe 'dark-mode' é adicionada ao body) */
+body.dark-mode {
+    --bg-color-light: #12121e; /* Fundo geral mais escuro */
+    --text-color-light: #e0e0e0; /* Texto claro */
+    --header-bg-light: #0d0d1a; /* Cabeçalho ainda mais escuro */
+    --header-text-light: #f0f0f0; /* Texto mais claro no cabeçalho */
+    --sidebar-bg-light: #15152a; /* Sumário mais escuro */
+    --sidebar-link-light: #b0b0d0; /* Links do sumário mais claros */
+    --sidebar-link-hover-light: #8a8ae0; /* Links do sumário ao passar o mouse mais vibrantes */
+    --content-bg-light: #1f1f3a; /* Fundo da área de conteúdo escuro */
+    --border-color-light: #444; /* Bordas e divisores em modo escuro */
+    --button-bg-light: #3a3a5e; /* Fundo dos botões no modo escuro */
+    --button-text-light: #f0f0f0; /* Texto dos botões no modo escuro */
+    --button-hover-light: #5a5ac0; /* Fundo dos botões ao passar o mouse no modo escuro */
+}
+
+/* Reset Básico e Estilos Padrão */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave para o modo claro/escuro */
+    line-height: 1.6;
+}
+
+/* Estilos para o Corpo do Site */
+a {
+    color: var(--sidebar-link-hover-light); /* Cor padrão dos links */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--header-bg-light); /* Títulos de seções com cor do cabeçalho */
+}
+
+h2 {
+    font-size: 2.2em;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color-light);
+    margin-bottom: 20px;
+    color: var(--header-bg-light); /* Certifica que é a cor principal */
+}
+
+h3 {
+    font-size: 1.8em;
+    margin-top: 30px;
+    color: var(--sidebar-bg-light); /* Subtítulos com a cor da sidebar */
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+ul, ol {
+    margin-bottom: 1em;
+    padding-left: 20px;
+}
+
+dt {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+dd {
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+
+/* CABEÇALHO PRINCIPAL */
+#main-header {
+    background-color: var(--header-bg-light);
+    color: var(--header-text-light);
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; /* Cabeçalho fixo no topo */
+    top: 0;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    width: 100%;
+    box-sizing: border-box; /* Inclui padding na largura total */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Alinha com o conteúdo principal */
+    margin: 0 auto;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.vortexa-logo {
+    height: 45px; /* Tamanho da logomarca */
+    margin-right: 15px;
+    border-radius: 50%; /* Se quiser um efeito de logo redonda */
+    object-fit: contain;
+}
+
+.logo-title h1 {
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: bold;
+    letter-spacing: 1px; /* Espaçamento entre as letras para um toque industrial */
+    text-transform: uppercase;
+    color: var(--header-text-light); /* Garante que o H1 do header use a cor do header */
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaçamento entre os seletores de idioma e tema */
+}
+
+.language-switcher button,
+.theme-switcher button {
+    background-color: var(--button-bg-light);
+    color: var(--button-text-light);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 25px; /* Botões arredondados */
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    min-width: 40px; /* Garante que o botão tenha um tamanho mínimo */
+    text-align: center;
+}
+
+.language-switcher button:hover,
+.theme-switcher button:hover {
+    background-color: var(--button-hover-light);
+    transform: translateY(-2px); /* Efeito sutil ao passar o mouse */
+}
+
+.language-switcher button.active {
+    background-color: var(--button-hover-light);
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.3); /* Efeito de profundidade para o ativo */
+}
+
+/* Ícones do tema: um visível no modo claro, outro no modo escuro */
+#theme-toggle .icon-dark { display: none; }
+body.dark-mode #theme-toggle .icon-dark { display: inline-block; }
+body.dark-mode #theme-toggle .icon-light { display: none; }
+
+
+/* CONTAINER PRINCIPAL: SUMÁRIO + CONTEÚDO */
+.main-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto; /* Centraliza o container principal */
+    background-color: var(--content-bg-light);
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden; /* Garante que nada transborde */
+}
+
+/* SUMÁRIO (COLUNA ESQUERDA) */
+#sidebar {
+    width: 280px;
+    min-width: 250px;
+    background-color: var(--sidebar-bg-light);
+    color: var(--header-text-light);
+    padding: 25px 20px;
+    box-sizing: border-box;
+    overflow-y: auto; /* Permite rolagem se o sumário for longo */
+    max-height: calc(100vh - 80px); /* Ajusta a altura para não cobrir o cabeçalho fixo */
+    position: sticky; /* Sumário fixo ao rolar */
+    top: 80px; /* Posição abaixo do cabeçalho */
+    align-self: flex-start; /* Impede que o sidebar se estique se o conteúdo for menor */
+}
+
+#sidebar-title {
+    color: var(--header-text-light);
+    margin-top: 0;
+    font-size: 1.6em;
+    border-bottom: 2px solid var(--button-hover-light); /* Linha divisória vibrante */
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar ul li {
+    margin-bottom: 8px;
+}
+
+#sidebar ul li a {
+    color: var(--sidebar-link-light);
+    text-decoration: none;
+    display: block;
+    padding: 6px 0;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+    font-size: 0.95em;
+}
+
+#sidebar ul li a:hover {
+    color: var(--sidebar-link-hover-light);
+    padding-left: 5px; /* Pequeno efeito de indentação ao passar o mouse */
+}
+
+#sidebar ul ul { /* Subníveis */
+    padding-left: 15px;
+    margin-top: 5px;
+    border-left: 2px solid rgba(255,255,255,0.1); /* Linha para indicar hierarquia */
+}
+#sidebar ul ul li a {
+    font-size: 0.9em; /* Font menor para subitens */
+}
+
+
+/* ÁREA DE CONTEÚDO PRINCIPAL (COLUNA DIREITA) */
+#content-area {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: var(--content-bg-light);
+    color: var(--text-color-light);
+    line-height: 1.7;
+}
+
+#content-area section {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed var(--border-color-light); /* Borda tracejada para separar seções */
+}
+
+#content-area section:last-child {
+    border-bottom: none; /* Remove a borda da última seção */
+}
+
+/* Estilos para os links do glossário no conteúdo */
+#content-area a[href^="#"] {
+    font-weight: bold;
+    text-decoration: underline;
+}
+#content-area a[href^="#"]:hover {
+    color: var(--button-hover-light);
+}
+
+
+/* RODAPÉ */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--header-bg-light);
+    color: var(--header-text-light);
+    margin-top: 20px;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    #main-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .logo-title h1 {
+        font-size: 1.5em;
+        text-align: center;
+        width: 100%;
+    }
+
+    .header-nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .main-container {
+        flex-direction: column;
+        margin: 10px auto;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    #sidebar {
+        width: 100%;
+        max-height: 250px; /* Limita a altura do sumário em telas menores */
+        border-bottom: 1px solid var(--border-color-light);
+        position: static; /* Remove o sticky em telas pequenas */
+        top: auto;
+    }
+
+    #content-area {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    h3 {
+        font-size: 1.4em;
+    }
+}
