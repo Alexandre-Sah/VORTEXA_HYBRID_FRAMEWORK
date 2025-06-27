@@ -1,160 +1,42 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VORTEXA HYBRID TECH FRAMEWORK</title>
-    <link rel="stylesheet" href="css/style.css">
-    </head>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Documentação interativa do VORTEXA HYBRID TECH FRAMEWORK - Plataforma de mobilidade extrema com tecnologia avançada">
+    <meta name="keywords" content="VORTEXA, hybrid, framework, mobilidade extrema, tecnologia automotiva">
+    <meta name="author" content="Vortexa Motorsport Inc.">
+</head>
 <body>
-    <header id="main-header">
-        <div class="header-content">
-            <div class="logo-title">
-                <h1>VORTEXA HYBRID TECH FRAMEWORK</h1>
+    <div class="container">
+        <nav class="sidebar">
+            <h2>Sumário</h2>
+            <ul>
+                <!-- O sumário será carregado dinamicamente via JavaScript -->
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <div class="controls">
+                <button id="lang-pt" class="active">PT</button>
+                <button id="lang-en">EN</button>
+                <button id="lang-it">IT</button>
+                <button id="theme-toggle">Modo Claro</button>
             </div>
-            <nav class="header-nav">
-                <div class="language-switcher">
-                    <button id="lang-pt" class="lang-button active" data-lang="pt">PT</button>
-                    <button id="lang-en" class="lang-button" data-lang="en">EN</button>
-                    <button id="lang-it" class="lang-button" data-lang="it">IT</button>
-                </div>
-                <div class="theme-switcher">
-                    <button id="theme-toggle" aria-label="Toggle dark/light theme">
-                        <span class="icon-light">☀️</span>
-                        <span class="icon-dark">🌙</span>
-                    </button>
-                </div>
-            </nav>
-        </div>
-    </header>
 
-    <div class="main-container">
-        <aside id="sidebar">
-            <h2 id="sidebar-title">Sumário</h2>
-            <nav>
-                <ul>
-                    <li><a href="#introduction" data-lang-key="intro-title">Introdução</a></li>
-                    <li><a href="#executive-summary" data-lang-key="exec-summary-title">Resumo Executivo</a>
-                        <ul>
-                            <li><a href="#executive-summary-general" data-lang-key="exec-summary-general">Público Geral</a></li>
-                            <li><a href="#executive-summary-executives" data-lang-key="exec-summary-executives">Executivos</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#technical-data" data-lang-key="tech-data-title">Dados Técnicos</a>
-                        <ul>
-                            <li><a href="#technical-data-engineering" data-lang-key="tech-data-engineering">Engenharia</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#press-release" data-lang-key="press-release-title">Press Release</a>
-                        <ul>
-                            <li><a href="#press-release-specialized" data-lang-key="press-release-specialized">Revistas Especializadas</a></li>
-                            <li><a href="#press-release-enthusiasts" data-lang-key="press-release-enthusiasts">Entusiastas</a></li>
-                            <li><a href="#press-release-segmented" data-lang-key="press-release-segmented">Público Segmentado</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#glossary" data-lang-key="glossary-title">Glossário Técnico</a></li>
-                    <li><a href="#standards" data-lang-key="standards-title">Normas Técnicas</a></li>
-                    <li><a href="#conformity" data-lang-key="conformity-title">Conformidade</a></li>
-                </ul>
-            </nav>
-        </aside>
+            <header>
+                <h1>VORTEXA HYBRID TECH FRAMEWORK</h1>
+            </header>
 
-        <main id="content-area">
-            <section id="introduction">
-                <h2 data-lang-key="intro-title">Introdução</h2>
-                <p data-lang-key="intro-content">Aqui você colocará a introdução geral sobre o VORTEXA HYBRID TECH FRAMEWORK. Esta seção deve apresentar o projeto de forma concisa e atraente para o público em geral, destacando sua visão e o impacto esperado. Use uma linguagem clara e convidativa.</p>
-                </section>
-
-            <section id="executive-summary">
-                <h2 data-lang-key="exec-summary-title">Resumo Executivo</h2>
-                <h3 id="executive-summary-general" data-lang-key="exec-summary-general">Público Geral</h3>
-                <p data-lang-key="exec-summary-general-content">Esta subseção oferece uma visão de alto nível do VORTEXA HYBRID para o público em geral, focando nos benefícios e na inovação de forma acessível. Evite jargões técnicos excessivos. Pode abordar os pontos fortes do ecossistema tecnológico e a integração inteligente de sistemas.</p>
-                <h3 id="executive-summary-executives" data-lang-key="exec-summary-executives">Executivos</h3>
-                <p data-lang-key="exec-summary-executives-content">Aqui, o resumo é voltado para executivos, destacando o valor de negócio, o potencial de mercado, a escalabilidade, o retorno sobre o investimento e a proposta de valor única do VORTEXA HYBRID. Aborde a robustez do sistema, a redundância e os sistemas de fallback como diferenciais estratégicos.</p>
-            </section>
-
-            <section id="technical-data">
-                <h2 data-lang-key="tech-data-title">Dados Técnicos</h2>
-                <h3 id="technical-data-engineering" data-lang-key="tech-data-engineering">Engenharia</h3>
-                <p data-lang-key="tech-data-engineering-content">Esta é a "Bíblia" para engenheiros e especialistas. Aqui você detalhará cada aspecto técnico do VORTEXA HYBRID, incorporando a "Estrutura Sugerida" que discutimos:</p>
-                
-                <h4>Core Systems (TRL 7-9)</h4>
-                <p>Descreva os sistemas fundamentais e maduros do VORTEXA, que já estão em alto nível de prontidão tecnológica. Inclua especificações detalhadas, diagramas de arquitetura, e dados de desempenho. Por exemplo, os sistemas térmicos, eletrônicos e mecânicos já consolidados.</p>
-                
-                <h4>Advanced Systems (TRL 4-6)</h4>
-                <p>Apresente os sistemas que estão em fase de desenvolvimento avançado ou prototipagem. Aqui você pode abordar conceitos como o <a href="#glossary" data-term="Smart Skin™">Smart Skin™</a> e o <a href="#glossary" data-term="VRSH™">VRSH™</a>, especificando o progresso, os desafios atuais e os planos de validação. Mencione as tecnologias que estão sendo exploradas, mas que ainda não atingiram a maturidade total.</p>
-                
-                <h4>Concept Systems (TRL 1-3)</h4>
-                <p>Detalhe as tecnologias em estágio inicial de pesquisa e conceito. É o lugar para discutir ideias inovadoras, mas que exigem mais P&D para se tornarem viáveis. Por exemplo, a <a href="#glossary" data-term="BCI">Interface Cérebro-Computador (BCI)</a> em motorsport pode ser abordada aqui, explicando o conceito, os desafios (vibrações extremas, resposta instantânea) e as futuras linhas de pesquisa para superar essas barreiras.</p>
-
-                <h4>Regulatory Compliance Matrix</h4>
-                <p>Uma matriz detalhada de conformidade com as regulamentações aplicáveis, como as da <a href="#standards" data-term="FIA">FIA</a>, normas aeronáuticas, automotivas e de telecomunicações. Aborde como o VORTEXA planeja atender ou adaptar-se a essas normas, especialmente em relação a sistemas de assistência ao piloto e uso de frequências de comunicação.</p>
-
-                <h4>Integration Roadmap</h4>
-                <p>Um cronograma visual e descritivo das fases de desenvolvimento e integração dos diversos sistemas, desde o MVP (Produto Mínimo Viável) até a produção completa. Mostre a interdependência dos sistemas e a hierarquia de prioridades. Isso pode incluir um plano de contingência com fallbacks para cada sistema principal.</p>
-
-                <h4>Risk Assessment</h4>
-                <p>Uma análise de risco abrangente para cada componente e subsistema, identificando riscos técnicos, regulatórios e de mercado. Descreva as estratégias de mitigação para cada risco, incluindo alternativas para tecnologias que podem apresentar incompatibilidades ou desafios de viabilidade (como a latência do <a href="#glossary" data-term="Starlink™">Starlink™</a> para comunicação crítica).</p>
-            </section>
-
-            <section id="press-release">
-                <h2 data-lang-key="press-release-title">Press Release</h2>
-                <h3 id="press-release-specialized" data-lang-key="press-release-specialized">Revistas Especializadas</h3>
-                <p data-lang-key="press-release-specialized-content">Este conteúdo é formatado para publicações técnicas e do setor, destacando os avanços tecnológicos, as parcerias estratégicas (clarificando reais vs. conceituais) e o impacto na engenharia e no desempenho.</p>
-                <h3 id="press-release-enthusiasts" data-lang-key="press-release-enthusiasts">Entusiastas</h3>
-                <p data-lang-key="press-release-enthusiasts-content">Um texto empolgante e acessível para o público entusiasta, focando na experiência de ponta, na emoção da inovação e nas possibilidades futuras que o VORTEXA HYBRID abre para o motorsport e além.</p>
-                <h3 id="press-release-segmented" data-lang-key="press-release-segmented">Público Segmentado</h3>
-                <p data-lang-key="press-release-segmented-content">Conteúdo direcionado a um público específico, como investidores, parceiros industriais ou reguladores, ajustando a linguagem e o foco para atender aos seus interesses e preocupações específicas.</p>
-            </section>
-
-            <section id="glossary">
-                <h2 data-lang-key="glossary-title">Glossário Técnico</h2>
-                <p data-lang-key="glossary-content">Aqui você listará e definirá todas as siglas e termos técnicos usados no site, com explicações claras e concisas.</p>
-                <dl>
-                    <dt id="bci">BCI</dt>
-                    <dd>Interface Cérebro-Computador: Tecnologia que permite a comunicação direta entre o cérebro humano e um dispositivo externo.</dd>
-                    <dt id="starlink">Starlink™</dt>
-                    <dd>Constelação de satélites de internet desenvolvida pela SpaceX. Requer análise de latência para aplicações críticas de motorsport.</dd>
-                    <dt id="smart-skin">Smart Skin™</dt>
-                    <dd>Conceito de pele inteligente para veículos, capaz de monitorar condições, detectar danos e adaptar-se ao ambiente. (Detalhar durabilidade, custo, manutenção).</dd>
-                    <dt id="vrsh">VRSH™</dt>
-                    <dd>Sistema de Realidade Virtual e Sensores Híbridos: Tecnologia que integra dados de sensores com uma interface de realidade virtual para o piloto ou equipe.</dd>
-                    <dt id="fia">FIA</dt>
-                    <dd>Fédération Internationale de l'Automobile: Órgão regulador de automobilismo a nível mundial, responsável por estabelecer normas e regulamentos para diversas categorias.</dd>
-                    <dt id="ham-radio">Comunicação HAM</dt>
-                    <dd>Frequências de rádio amador, com restrições legais para uso comercial ou competitivo em motorsport.</dd>
-                    </dl>
-                <p><a href="#top" data-lang-key="back-to-top">Voltar ao topo</a></p>
-            </section>
-
-            <section id="standards">
-                <h2 data-lang-key="standards-title">Normas Técnicas</h2>
-                <p data-lang-key="standards-content">Informações detalhadas sobre as normas técnicas e regulamentações pertinentes ao desenvolvimento e operação do VORTEXA HYBRID. Abordar as especificações de segurança, performance e design.</p>
-                <ul>
-                    <li>**FIA Sporting Regulations:** Foco nas regras que impactam diretamente sistemas de controle, assistência ao piloto e comunicação.</li>
-                    <li>**ISO Standards:** Normas relevantes para qualidade, segurança e gestão de projetos na indústria automotiva e aeroespacial.</li>
-                    <li>**Telecommunications Regulations:** Regulamentação para o uso de frequências de rádio e comunicação (análise de licenciamento para uso comercial).</li>
-                    </ul>
-                <p><a href="#top" data-lang-key="back-to-top">Voltar ao topo</a></p>
-            </section>
-
-            <section id="conformity">
-                <h2 data-lang-key="conformity-title">Conformidade</h2>
-                <p data-lang-key="conformity-content">Detalhes sobre como o projeto VORTEXA HYBRID está em conformidade com as leis, regulamentos e padrões da indústria. Inclua planos para certificações e aprovações necessárias para a implementação e uso do framework em ambientes competitivos.</p>
-                <ul>
-                    <li>**Plano de Certificação:** Etapas e requisitos para a certificação de sistemas e componentes.</li>
-                    <li>**Mitigação de Riscos Regulatórios:** Estratégias para abordar e resolver quaisquer incompatibilidades regulatórias identificadas.</li>
-                    <li>**Propriedade Intelectual:** Informações sobre o registro e proteção das tecnologias proprietárias do VORTEXA.</li>
-                </ul>
-                <p><a href="#top" data-lang-key="back-to-top">Voltar ao topo</a></p>
-            </main>
+            <div id="content">
+                <!-- O conteúdo será inserido aqui via JavaScript -->
+            </div>
+        </main>
     </div>
 
-    <footer>
-        <p data-lang-key="footer-text">&copy; 2025 VORTEXA HYBRID TECH FRAMEWORK. Todos os direitos reservados.</p>
-    </footer>
-
-    <script src="js/script.js"></script>
-    <script src="js/lang-content.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
+
