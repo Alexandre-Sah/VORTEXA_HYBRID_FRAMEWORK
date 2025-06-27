@@ -1,628 +1,387 @@
-/* Reset e estilos base */
-* {
+/* styles.css - Folha de Estilos Global do VORTEXA HYBRID TECH FRAMEWORK */
+
+:root {
+    --bg-color: #1a1a1a; /* Cor de fundo principal escura */
+    --text-color: #f0f0f0; /* Cor do texto principal clara */
+    --accent-color: #007bff; /* Azul para destaques e links */
+    --sidebar-bg-color: #222; /* Fundo da barra lateral ligeiramente mais claro que o fundo principal */
+    --header-bg-color: #2a2a2a; /* Fundo do cabeçalho */
+    --border-color: #444; /* Cor de borda suave */
+    --highlight-bg: #333; /* Fundo de item ativo/selecionado */
+    --highlight-text: #00e0ff; /* Azul ciano para texto destacado */
+    --scroll-thumb: #555; /* Cor da barra de rolagem */
+    --scroll-track: #333; /* Cor do trilho da barra de rolagem */
+}
+
+body.light-mode {
+    --bg-color: #f8f8f8; /* Fundo principal claro */
+    --text-color: #333; /* Texto principal escuro */
+    --accent-color: #0056b3; /* Azul mais escuro para destaque */
+    --sidebar-bg-color: #e0e0e0; /* Fundo da barra lateral claro */
+    --header-bg-color: #d0d0d0; /* Fundo do cabeçalho claro */
+    --border-color: #bbb; /* Cor de borda clara */
+    --highlight-bg: #c0c0c0; /* Fundo de item ativo/selecionado claro */
+    --highlight-text: #007bff; /* Azul padrão para texto destacado */
+    --scroll-thumb: #aaa; /* Cor da barra de rolagem clara */
+    --scroll-track: #e0e0e0; /* Cor do trilho da barra de rolagem clara */
+}
+
+/* Base */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex; /* Permite que o cabeçalho, sidebar e main-content se alinhem */
+    flex-direction: column; /* Cabeçalho no topo, depois o resto */
+    min-height: 100vh;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #1a1a1a;
-    color: #f0f0f0;
-    line-height: 1.6;
-    transition: all 0.3s ease;
+/* Rolagem customizada para Webkit */
+::-webkit-scrollbar {
+    width: 10px;
 }
 
-/* Modo claro */
-body.light-mode {
-    background-color: #f5f5f5;
-    color: #212529;
+::-webkit-scrollbar-track {
+    background: var(--scroll-track);
 }
 
-/* NOVO CABEÇALHO PRINCIPAL E FIXO */
-#main-header {
-    background: linear-gradient(90deg, #007bff, #0056b3); /* Exemplo de gradiente azul */
-    color: #ffffff;
-    padding: 15px 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-    display: flex;
-    justify-content: center; /* Centraliza o conteúdo dentro do header */
-    align-items: center;
-    position: sticky; /* ou fixed se preferir que ele NUNCA role para fora da tela */
-    top: 0;
-    width: 100%;
-    z-index: 2000; /* Garante que fique acima de outros elementos */
-    box-sizing: border-box;
+::-webkit-scrollbar-thumb {
+    background: var(--scroll-thumb);
+    border-radius: 5px;
 }
 
-body.light-mode #main-header {
-    background: linear-gradient(90deg, #e0f2ff, #a8d6ff);
-    color: #212529;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
 }
 
-.header-content {
+
+/* Cabeçalho Principal */
+.main-header {
+    background-color: var(--header-bg-color);
+    color: var(--text-color);
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    max-width: 1400px; /* Alinha com o container principal */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: fixed; /* Fixa o cabeçalho no topo */
+    width: 100%; /* Ocupa a largura total */
+    top: 0; /* Alinha no topo */
+    left: 0; /* Alinha à esquerda */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    box-sizing: border-box; /* Inclui padding na largura total */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.logo-title {
-    display: flex;
-    align-items: center;
-}
-
-.logo-title h1 {
+.main-header h1 {
     margin: 0;
     font-size: 1.8em;
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: inherit; /* Herda a cor do header */
+    color: var(--highlight-text); /* Destaca o título */
 }
 
-.header-nav {
+.header-controls {
     display: flex;
-    align-items: center;
-    gap: 20px;
+    gap: 15px;
 }
 
-.language-switcher, .theme-switcher {
-    display: flex;
-    gap: 10px;
-}
-
-.language-switcher button,
-.theme-switcher button {
-    background-color: rgba(255, 255, 255, 0.15);
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+.header-controls button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
     padding: 8px 15px;
-    border-radius: 20px;
+    border-radius: 5px;
     cursor: pointer;
     font-size: 0.9em;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
-    min-width: 40px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.language-switcher button:hover,
-.theme-switcher button:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+.header-controls button:hover {
+    background-color: darken(var(--accent-color), 10%);
     transform: translateY(-2px);
-    border-color: rgba(255, 255, 255, 0.5);
 }
 
-.language-switcher button.active {
-    background-color: #00aaff;
-    border-color: #00aaff;
-    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.4);
+.header-controls .lang-button.active {
+    background-color: var(--highlight-text); /* Cor para o idioma ativo */
+    color: var(--bg-color);
+    font-weight: bold;
 }
 
-body.light-mode .language-switcher button,
-body.light-mode .theme-switcher button {
-    background-color: rgba(0, 0, 0, 0.1);
-    color: #212529;
-    border-color: rgba(0, 0, 0, 0.2);
-}
-
-body.light-mode .language-switcher button:hover,
-body.light-mode .theme-switcher button:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-color: rgba(0, 0, 0, 0.3);
-}
-
-body.light-mode .language-switcher button.active {
-    background-color: #0088cc;
-    color: #ffffff;
-    border-color: #0088cc;
-}
-
-/* Ícones do tema: um visível no modo claro, outro no modo escuro */
-#theme-toggle .icon-dark { display: none; }
-body:not(.light-mode) #theme-toggle .icon-light { display: none; }
-body.light-mode #theme-toggle .icon-dark { display: inline-block; }
-body.light-mode #theme-toggle .icon-light { display: none; }
-
-
-/* Layout principal */
+/* Layout Principal (Sidebar + Conteúdo) */
 .container {
     display: flex;
-    /* Ajusta o padding-top para não ser coberto pelo cabeçalho fixo */
-    padding-top: 80px; /* Altura aproximada do cabeçalho */
-    min-height: calc(100vh - 80px); /* Ajusta a altura mínima */
-    max-width: 1400px; /* Limite de largura para o conteúdo principal */
-    margin: 0 auto; /* Centraliza o container */
+    flex: 1; /* Permite que o container ocupe o espaço restante */
+    padding-top: 60px; /* Compensa a altura do cabeçalho fixo */
 }
 
-/* Sidebar aprimorada */
+/* Sidebar */
 .sidebar {
-    width: 300px;
-    background: linear-gradient(180deg, #2c2c2c 0%, #1e1e1e 100%);
+    width: 280px; /* Largura ajustada */
+    background-color: var(--sidebar-bg-color);
     padding: 20px;
-    height: calc(100vh - 80px); /* Ajusta a altura para o cabeçalho fixo */
-    position: sticky; /* Mantém a sidebar fixa */
-    top: 80px; /* Posição abaixo do cabeçalho */
-    overflow-y: auto;
-    border-right: 3px solid #00aaff;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-}
-
-body.light-mode .sidebar {
-    background: linear-gradient(180deg, #e8e8e8 0%, #d0d0d0 100%);
-    border-right-color: #0088cc;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fixa a sidebar */
+    top: 60px; /* Alinha abaixo do cabeçalho */
+    left: 0;
+    height: calc(100% - 60px); /* Altura total da viewport menos a altura do cabeçalho */
+    overflow-y: auto; /* Adiciona scroll se o conteúdo for maior que a altura */
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
 }
 
 .sidebar h2 {
-    color: #00aaff;
+    color: var(--highlight-text);
     margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 1.8em;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 1px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #00aaff;
-}
-
-body.light-mode .sidebar h2 {
-    color: #0088cc;
-    border-bottom-color: #0088cc;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .sidebar ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .sidebar ul li {
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
 .sidebar ul li a {
     display: block;
-    padding: 10px 15px;
-    color: #f0f0f0;
+    padding: 8px 10px;
+    color: var(--text-color);
     text-decoration: none;
-    font-weight: 500;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-    font-size: 1.05em;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .sidebar ul li a:hover {
-    background-color: rgba(0, 170, 255, 0.2);
-    color: #00aaff;
-    transform: translateX(5px);
+    background-color: var(--highlight-bg);
+    color: var(--highlight-text);
 }
 
-.sidebar ul li.active a {
-    background: linear-gradient(90deg, #00aaff, #0066cc);
-    color: #ffffff;
-    box-shadow: 0 2px 8px rgba(0, 170, 255, 0.4);
-    transform: translateX(5px);
+.sidebar ul li a.active {
+    background-color: var(--highlight-bg);
+    color: var(--highlight-text);
+    font-weight: bold;
 }
 
-body.light-mode .sidebar ul li a {
-    color: #212529;
-}
-
-body.light-mode .sidebar ul li a:hover {
-    background-color: rgba(0, 136, 204, 0.1);
-    color: #0088cc;
-}
-
-body.light-mode .sidebar ul li.active a {
-    background: linear-gradient(90deg, #0088cc, #004488);
-    color: #ffffff;
-}
-
-.sidebar ul ul {
+.sidebar ul ul { /* Sub-níveis do sumário */
     padding-left: 15px;
-    border-left: 2px solid rgba(255, 255, 255, 0.1);
     margin-top: 5px;
-}
-
-body.light-mode .sidebar ul ul {
-    border-left-color: rgba(0, 0, 0, 0.1);
+    border-left: 2px solid var(--border-color);
 }
 
 .sidebar ul ul li a {
-    font-size: 0.95em;
-    padding: 8px 10px;
+    font-size: 0.9em;
+    padding: 6px 8px;
 }
 
-
-/* Conteúdo principal */
+/* Conteúdo Principal */
 .main-content {
-    flex-grow: 1;
-    padding: 20px 40px; /* Aumentei o padding horizontal */
-    background-color: #2a2a2a;
-    position: relative; /* Para positioning de elementos internos */
-    overflow-x: hidden; /* Evita scroll horizontal */
-    padding-top: 20px; /* Espaço para o cabeçalho, além do padding-top do container */
-}
-
-body.light-mode .main-content {
-    background-color: #ffffff;
-}
-
-/* Títulos do conteúdo */
-#content h2 {
-    color: #00aaff;
-    font-size: 2.5em;
-    margin-bottom: 25px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #00aaff;
-    animation: fadeIn 0.8s ease-out;
-}
-
-body.light-mode #content h2 {
-    color: #0088cc;
-    border-bottom-color: #0088cc;
-}
-
-#content h3 {
-    color: #00ccff;
-    font-size: 1.8em;
-    margin-top: 40px;
-    margin-bottom: 15px;
-    animation: fadeIn 0.8s ease-out;
-}
-
-body.light-mode #content h3 {
-    color: #0066aa;
-}
-
-#content h4 {
-    color: #88ddff;
-    font-size: 1.4em;
-    margin-top: 25px;
-    margin-bottom: 10px;
-}
-
-body.light-mode #content h4 {
-    color: #3377bb;
-}
-
-#content p {
-    margin-bottom: 1em;
-    line-height: 1.7;
-    text-align: justify;
-}
-
-/* Estilos de código */
-pre {
-    background-color: #333;
-    padding: 15px;
-    border-radius: 8px;
-    overflow-x: auto;
-    margin-bottom: 1em;
-}
-
-code {
-    font-family: 'Fira Code', 'Cascadia Code', monospace;
-    color: #e0e0e0;
-}
-
-body.light-mode pre {
-    background-color: #eee;
-}
-
-body.light-mode code {
-    color: #333;
-}
-
-/* Links no conteúdo */
-#content a {
-    color: #00aaff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-#content a:hover {
-    color: #00ccff;
-    text-decoration: underline;
-}
-
-body.light-mode #content a {
-    color: #0088cc;
-}
-
-body.light-mode #content a:hover {
-    color: #0066aa;
-}
-
-/* Listas */
-#content ul, #content ol {
-    margin-left: 25px;
-    margin-bottom: 1em;
-}
-
-#content ul li, #content ol li {
-    margin-bottom: 0.5em;
-}
-
-/* Controles (originalmente no main-content, agora no header) */
-/* Removido o .controls aqui pois foi movido para o header */
-
-/* Rodapé */
-footer {
-    background: linear-gradient(90deg, #1e1e1e, #000000);
-    color: #f0f0f0;
-    text-align: center;
+    margin-left: 280px; /* Compensa a largura da sidebar fixa */
+    flex-grow: 1; /* Ocupa o espaço restante */
     padding: 20px;
-    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.4);
-    margin-top: 40px;
-    position: relative;
-    z-index: 1000;
+    max-width: 900px; /* Largura máxima para legibilidade */
+    margin-right: auto; /* Centraliza o conteúdo se a tela for muito larga */
+    margin-left: calc(280px + 20px); /* Ajuste: largura da sidebar + padding extra */
+    box-sizing: border-box;
 }
 
-body.light-mode footer {
-    background: linear-gradient(90deg, #d0d0d0, #b0b0b0);
-    color: #212529;
-    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
+.main-content section {
+    background-color: var(--sidebar-bg-color);
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
 
-/* Animações */
-.fade-in {
-    animation: fadeIn 0.5s ease-in;
+.main-content h2 {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-top: 0;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+.main-content h3, .main-content h4 {
+    color: var(--highlight-text);
+    margin-top: 25px;
 }
 
-.slide-in {
-    animation: slideIn 0.3s ease-out;
+.main-content ul {
+    list-style: disc;
+    margin-left: 20px;
+    padding: 0;
 }
 
-@keyframes slideIn {
-    from { transform: translateX(-100%); }
-    to { transform: translateX(0); }
+.main-content ul li {
+    margin-bottom: 8px;
 }
 
-/* Melhorias de acessibilidade */
-:focus {
-    outline: 2px solid #00aaff;
-    outline-offset: 2px;
+.main-content a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
 
-body.light-mode :focus {
-    outline-color: #0066cc;
+.main-content a:hover {
+    text-decoration: underline;
+    color: var(--highlight-text);
 }
 
-/* Scrollbar personalizada */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: rgba(44, 44, 44, 0.3);
-}
-
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #00aaff, #0088cc);
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #0088cc, #006699);
-}
-
-body.light-mode ::-webkit-scrollbar-track {
-    background: rgba(200, 200, 200, 0.3);
-}
-
-body.light-mode ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #0088cc, #0056b3); /* Ajustado para um tom mais escuro no light mode */
-    border-radius: 4px;
-}
-
-/* --- GLOSSÁRIO --- */
+/* Estilo para o glossário em grid */
 .glossary-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 25px;
-    margin-top: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
 }
 
 .glossary-item {
-    background-color: #3a3a3a;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #00aaff;
-}
-
-body.light-mode .glossary-item {
-    background-color: #f0f0f0;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-color: #0088cc;
-}
-
-.glossary-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 170, 255, 0.4);
-}
-
-body.light-mode .glossary-item:hover {
-    box-shadow: 0 6px 20px rgba(0, 136, 204, 0.2);
+    background-color: var(--highlight-bg);
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .glossary-item h4 {
-    color: #00ccff;
-    font-size: 1.5em;
+    color: var(--highlight-text);
+    margin-top: 0;
     margin-bottom: 10px;
-    border-bottom: 1px dashed rgba(0, 170, 255, 0.5);
-    padding-bottom: 5px;
-}
-
-body.light-mode .glossary-item h4 {
-    color: #0066aa;
-    border-bottom-color: rgba(0, 136, 204, 0.3);
+    font-size: 1.1em;
 }
 
 .glossary-item p {
     font-size: 0.95em;
-    color: #e0e0e0;
+    line-height: 1.5;
+    color: var(--text-color);
 }
 
-body.light-mode .glossary-item p {
-    color: #444444;
+/* Estilo para tabelas (Normas Técnicas e Conformidade) */
+.main-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: var(--highlight-bg);
+    border-radius: 8px;
+    overflow: hidden; /* Garante que as bordas arredondadas funcionem com overflow */
 }
 
+.main-content th, .main-content td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.main-content th {
+    background-color: var(--accent-color);
+    color: white;
+    font-weight: bold;
+}
+
+.main-content tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.05); /* Leve listrado em modo escuro */
+}
+
+body.light-mode .main-content tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.5); /* Leve listrado em modo claro */
+}
+
+
+/* Destaques de Termos */
 .highlight-term {
-    background-color: rgba(0, 170, 255, 0.3);
-    padding: 2px 5px;
-    border-radius: 3px;
+    color: var(--highlight-text);
     font-weight: bold;
 }
 
-body.light-mode .highlight-term {
-    background-color: rgba(0, 136, 204, 0.15);
-}
-
-/* Estilos para o botão "Voltar ao Sumário" no glossário */
+/* Botão Voltar ao Topo */
 .back-to-summary-btn {
-    display: inline-block;
-    background-color: #00aaff;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
+    display: block;
     margin-top: 30px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    font-weight: bold;
+    text-align: right;
+    font-size: 0.9em;
+    color: var(--accent-color);
+    text-decoration: none;
 }
 
 .back-to-summary-btn:hover {
-    background-color: #0088cc;
-    transform: translateY(-2px);
+    text-decoration: underline;
+    color: var(--highlight-text);
 }
 
-body.light-mode .back-to-summary-btn {
-    background-color: #0066aa;
+/* Rodapé */
+footer {
+    background-color: var(--header-bg-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 15px 20px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: auto; /* Empurra o rodapé para baixo */
+    box-sizing: border-box;
+    width: 100%;
 }
 
-body.light-mode .back-to-summary-btn:hover {
-    background-color: #004488;
-}
-
-
-/* Responsividade */
-@media (max-width: 1024px) {
-    .sidebar {
-        width: 250px;
-    }
-    .main-content {
-        padding: 20px 25px;
-    }
-    .glossary-grid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 20px;
-    }
-}
-
+/* Responsividade Básica (exemplo) */
 @media (max-width: 768px) {
-    #main-header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 15px 20px;
-        position: static; /* Remove sticky header on small screens for simplicity */
-        box-shadow: none;
-        background: linear-gradient(90deg, #007bff, #0056b3); /* Keeps gradient */
-    }
-
-    .header-content {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
-
-    .logo-title h1 {
-        font-size: 1.5em;
-        text-align: center;
-        width: 100%;
-    }
-
-    .header-nav {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
     .container {
-        flex-direction: column;
-        padding-top: 0; /* Remove padding-top when header is not sticky */
-        min-height: auto;
+        flex-direction: column; /* Empilha sidebar e conteúdo em telas menores */
+        padding-top: 60px; /* Mantém o padding para o cabeçalho */
     }
 
     .sidebar {
-        width: 100%;
-        height: auto; /* Allow sidebar to collapse */
-        position: static; /* Remove sticky on small screens */
-        top: auto;
-        border-right: none;
-        border-bottom: 3px solid #00aaff;
-        box-shadow: none;
-        padding-bottom: 10px;
+        position: relative; /* Desfixa a sidebar em telas pequenas */
+        width: 100%; /* Ocupa largura total */
+        height: auto; /* Altura automática */
+        box-shadow: none; /* Remove sombra lateral */
+        border-bottom: 1px solid var(--border-color); /* Adiciona borda inferior */
+        top: 0; /* Remove alinhamento com cabeçalho fixo */
+        padding-top: 10px; /* Reduz padding superior */
     }
 
     .sidebar h2 {
-        font-size: 1.5em;
-        padding-bottom: 5px;
-        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .sidebar ul {
+        display: flex; /* Transforma em linha */
+        flex-wrap: wrap; /* Permite quebrar em várias linhas */
+        justify-content: center; /* Centraliza os itens */
+        gap: 5px; /* Espaço entre os itens */
+    }
+
+    .sidebar ul li {
+        margin-bottom: 0;
     }
 
     .sidebar ul li a {
-        padding: 8px 10px;
-        font-size: 1em;
+        padding: 5px 10px; /* Menor padding para itens da sidebar em linha */
     }
 
-    .sidebar ul ul {
-        padding-left: 10px;
+    .sidebar ul ul { /* Esconde submenus em telas menores */
+        display: none;
     }
 
     .main-content {
-        padding: 20px;
-        padding-top: 20px; /* Keep some padding at the top */
+        margin-left: 0; /* Remove margin-left da sidebar */
+        padding: 15px; /* Reduz padding */
+        max-width: 100%; /* Ocupa toda a largura */
     }
 
-    #content h2 {
-        font-size: 2em;
+    .main-header h1 {
+        font-size: 1.5em; /* Reduz tamanho do título do cabeçalho */
     }
 
-    #content h3 {
-        font-size: 1.5em;
+    .header-controls {
+        gap: 10px;
     }
 
-    .glossary-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    #main-header {
-        padding: 10px 15px;
-    }
-    .logo-title h1 {
-        font-size: 1.2em;
-    }
-    .language-switcher button,
-    .theme-switcher button {
-        padding: 6px 10px;
-        font-size: 0.8em;
-    }
-    .main-content {
-        padding: 15px;
+    .header-controls button {
+        padding: 6px 10px; /* Reduz padding dos botões */
     }
 }
