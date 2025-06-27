@@ -9,34 +9,44 @@
     <meta name="keywords" content="VORTEXA, hybrid, framework, mobilidade extrema, tecnologia automotiva">
     <meta name="author" content="Vortexa Motorsport Inc.">
 </head>
-<body>
+<body id="top">
+    <header id="main-header">
+        <div class="header-content">
+            <div class="logo-title">
+                <h1>VORTEXA HYBRID TECH FRAMEWORK</h1>
+            </div>
+            <nav class="header-nav">
+                <div class="language-switcher">
+                    <button id="lang-pt" class="lang-button active" data-lang="pt">PT</button>
+                    <button id="lang-en" class="lang-button" data-lang="en">EN</button>
+                    <button id="lang-it" class="lang-button" data-lang="it">IT</button>
+                </div>
+                <div class="theme-switcher">
+                    <button id="theme-toggle" aria-label="Toggle dark/light theme">
+                        <span class="icon-light">☀️</span>
+                        <span class="icon-dark">🌙</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
     <div class="container">
         <nav class="sidebar">
             <h2>Sumário</h2>
             <ul>
-                <!-- O sumário será carregado dinamicamente via JavaScript -->
-            </ul>
+                </ul>
         </nav>
 
         <main class="main-content">
-            <div class="controls">
-                <button id="lang-pt" class="active">PT</button>
-                <button id="lang-en">EN</button>
-                <button id="lang-it">IT</button>
-                <button id="theme-toggle">Modo Claro</button>
-            </div>
-
-            <header>
-                <h1>VORTEXA HYBRID TECH FRAMEWORK</h1>
-            </header>
-
-            <div id="content">
-                <!-- O conteúdo será inserido aqui via JavaScript -->
-            </div>
+            <div id="content"></div>
         </main>
     </div>
+
+    <footer>
+        <p data-lang-key="footer-text">&copy; 2025 VORTEXA HYBRID TECH FRAMEWORK. Todos os direitos reservados.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-

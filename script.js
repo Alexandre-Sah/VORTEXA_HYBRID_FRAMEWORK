@@ -1,4 +1,6 @@
-// Conteúdo em múltiplos idiomas com sumário aprimorado
+// script.js - Conteúdo e Lógica Principal do VORTEXA HYBRID TECH FRAMEWORK
+// Ajustado para o novo cabeçalho fixo, conteúdo mitigado e estrutura dinâmica.
+
 const content = {
     pt: {
         title: "VORTEXA HYBRID TECH FRAMEWORK",
@@ -6,463 +8,227 @@ const content = {
             title: "Sumário",
             sections: [
                 {
-                    id: "intro",
-                    title: "Visão Geral",
+                    id: "introduction",
+                    title: "Introdução",
+                    subsections: []
+                },
+                {
+                    id: "executive-summary",
+                    title: "Resumo Executivo",
                     subsections: [
-                        { id: "intro-institucional", title: "Origem e Fundação" },
-                        { id: "visao-geral", title: "Conceito do VORTEXA" },
-                        { id: "diferenciais", title: "Diferenciais Competitivos" },
-                        { id: "roadmap", title: "Cronograma de Desenvolvimento" }
+                        { id: "executive-summary-general", title: "Público Geral" },
+                        { id: "executive-summary-executives", title: "Executivos" }
                     ]
                 },
                 {
-                    id: "dados-tecnicos",
-                    title: "Especificações Técnicas",
+                    id: "technical-data",
+                    title: "Dados Técnicos",
                     subsections: [
-                        { id: "estrutura-design", title: "Arquitetura e Materiais" },
-                        { id: "filosofia-murray", title: "Design Funcional" },
-                        { id: "survivor-capsule", title: "Sistema de Proteção" },
-                        { id: "especificacoes", title: "Dados Técnicos Detalhados" }
+                        { id: "technical-data-engineering", title: "Engenharia" },
+                        { id: "core-systems", title: "Sistemas Core (TRL 7-9)" },
+                        { id: "advanced-systems", title: "Sistemas Avançados (TRL 4-6)" },
+                        { id: "concept-systems", title: "Sistemas Conceituais (TRL 1-3)" },
+                        { id: "regulatory-compliance-matrix", title: "Matriz de Conformidade Regulatória" },
+                        { id: "integration-roadmap", title: "Roteiro de Integração" },
+                        { id: "risk-assessment", title: "Avaliação de Risco" }
                     ]
                 },
                 {
                     id: "press-release",
-                    title: "Comunicação",
+                    title: "Press Release",
                     subsections: [
-                        { id: "press-overview", title: "Visão Estratégica" },
-                        { id: "press-tech", title: "Inovações Tecnológicas" },
-                        { id: "press-market", title: "Posicionamento de Mercado" }
+                        { id: "press-release-specialized", title: "Revistas Especializadas" },
+                        { id: "press-release-enthusiasts", title: "Entusiastas" },
+                        { id: "press-release-segmented", title: "Público Segmentado" }
                     ]
                 },
                 {
-                    id: "glossario",
+                    id: "glossary",
                     title: "Glossário Técnico",
-                    subsections: [
-                        { id: "termos-principais", title: "Termos Principais" },
-                        { id: "siglas", title: "Siglas e Abreviações" },
-                        { id: "tecnologias", title: "Tecnologias Aplicadas" }
-                    ]
+                    subsections: []
+                },
+                {
+                    id: "standards",
+                    title: "Normas Técnicas",
+                    subsections: []
+                },
+                {
+                    id: "conformity",
+                    title: "Conformidade",
+                    subsections: []
                 }
             ]
         },
-        sections: {
-            intro: {
-                title: "VISÃO GERAL",
+        sections: { // Conteúdo principal das seções
+            "introduction": {
+                title: "Introdução",
                 content: `
-                    <div class="back-to-top">
-                        <button onclick="scrollToTop()" class="back-btn">↑ Voltar ao Topo</button>
-                    </div>
-                    
-                    <section id="intro-institucional">
-                        <h3>Origem e Fundação</h3>
-                        <div class="section-nav">
-                            <a href="#intro" class="nav-link">← Voltar à Seção</a>
-                        </div>
-                        <p>Origem e Visão Estratégica: A <a href="#glossario" class="glossary-term" data-term="vortexa-motorsport" onclick="navigateToGlossary('vortexa-motorsport')">Vortexa Motorsport Inc.</a> foi fundada no ecossistema de inovação do <a href="#glossario" class="glossary-term" data-term="stanford-startx" onclick="navigateToGlossary('stanford-startx')">Stanford StartX</a>, como spin-off convergente de pesquisas avançadas em neuroengenharia, inteligência artificial e mobilidade autônoma, com sinergia direta com o <a href="#glossario" class="glossary-term" data-term="stanford-ddl" onclick="navigateToGlossary('stanford-ddl')">Stanford Driving Decision Lab (DDL)</a>. A empresa mantém vínculos ativos com centros de excelência globais para transformar disrupção em confiabilidade aplicada — do deserto ao espaço.</p>
-                        
-                        <p>Com sede em fase de instalação no <a href="#glossario" class="glossary-term" data-term="colorado-springs" onclick="navigateToGlossary('colorado-springs')">Colorado Springs Innovation Hub</a>, próximo a zonas de testes em altitude, baixa pressão e clima severo, a nova central técnico-científica da Vortexa Motorsport Inc. abrigará o complexo de validação <a href="#glossario" class="glossary-term" data-term="cae-vortexa" onclick="navigateToGlossary('cae-vortexa')">CAE VORTEXA™</a>, incluindo infraestrutura para simulação termomecânica, laboratório de runtime neural e um túnel de vento modular 60% para protótipos de carros off-road com aerodinâmica otimizada (Cx ≈ 0,38).</p>
-                    </section>
-                    
-                    <section id="visao-geral">
-                        <h3>Conceito do VORTEXA</h3>
-                        <div class="section-nav">
-                            <a href="#intro" class="nav-link">← Voltar à Seção</a>
-                        </div>
-                        <p>O <a href="#glossario" class="glossary-term" data-term="vortexa-hybrid" onclick="navigateToGlossary('vortexa-hybrid')">VORTEXA HYBRID</a> é uma plataforma modular e resiliente baseada no <a href="#glossario" class="glossary-term" data-term="vortexa-framework" onclick="navigateToGlossary('vortexa-framework')">VORTEXA HYBRID TECH FRAMEWORK</a>, uma arquitetura integrada para mobilidade extrema. Composta por cinco blocos funcionais interdependentes — estrutura, propulsão, energia, cognição e escalabilidade —, a plataforma foi projetada para operar com confiabilidade em ambientes como <a href="#glossario" class="glossary-term" data-term="w2rc" onclick="navigateToGlossary('w2rc')">W2RC</a>, operações de defesa, mineração remota e resgate autônomo.</p>
-                    </section>
-                    
-                    <section id="diferenciais">
-                        <h3>Diferenciais Competitivos</h3>
-                        <div class="section-nav">
-                            <a href="#intro" class="nav-link">← Voltar à Seção</a>
-                        </div>
-                        <ul>
-                            <li><strong>Resiliência Sistêmica:</strong> Redundância física, digital e energética, com fallback manual e microECUs.</li>
-                            <li><strong>Eficiência Energética:</strong> 85% em modo híbrido, com torque vetorial e recuperação térmica avançada.</li>
-                            <li><strong>Autonomia Inteligente:</strong> 300–900 km (modo fallback); até 2.000 km com 20 kg de H₂ (modo estendido).</li>
-                            <li><strong>IA em Tempo Real:</strong> Grok 6 com latência ≤10 ms, inferência embarcada (<a href="#glossario" class="glossary-term" data-term="tinyml" onclick="navigateToGlossary('tinyml')">TinyML</a>) e <a href="#glossario" class="glossary-term" data-term="xrt-vtxa" onclick="navigateToGlossary('xrt-vtxa')">xRT-VTXA</a> para blackout.</li>
-                            <li><strong>Aplicações Multissetoriais:</strong> Rally-raid (W2RC), defesa tática, mineração profunda, operações <a href="#glossario" class="glossary-term" data-term="sar" onclick="navigateToGlossary('sar')">SAR</a>.</li>
-                        </ul>
-                    </section>
-                    
-                    <section id="roadmap">
-                        <h3>Cronograma de Desenvolvimento</h3>
-                        <div class="section-nav">
-                            <a href="#intro" class="nav-link">← Voltar à Seção</a>
-                        </div>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Ano</th>
-                                    <th>Marco</th>
-                                    <th>Descrição</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>2025</td>
-                                    <td>Validação CAE</td>
-                                    <td>Modelagem de torque, crash, IA e fluxo térmico (ANSYS/CAE GmbH)</td>
-                                </tr>
-                                <tr>
-                                    <td>2026</td>
-                                    <td>Protótipos Funcionais</td>
-                                    <td>Teste de powertrain híbrido (ICE + 2 ERS traseiros) e CTIS inteligente</td>
-                                </tr>
-                                <tr>
-                                    <td>2027</td>
-                                    <td>Arquitetura Completa</td>
-                                    <td>Implementação com 4 ERS independentes, CAE VORTEXA embarcado</td>
-                                </tr>
-                                <tr>
-                                    <td>2028</td>
-                                    <td>Validação de Interfaces</td>
-                                    <td>Testes de VRSH™, HUD Vuzix, sensores térmicos e BCI (neurofeedback)</td>
-                                </tr>
-                                <tr>
-                                    <td>2029</td>
-                                    <td>Rally dos Sertões</td>
-                                    <td>Teste em campo com arquitetura plena, fallback ativo e kits modulares</td>
-                                </tr>
-                                <tr>
-                                    <td>2030</td>
-                                    <td>Borneo Extreme / Validação Final</td>
-                                    <td>Ambiente hostil: dunas, floresta, umidade, blackout elétrico controlado</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </section>
+                    <p>O <strong>VORTEXA HYBRID TECH FRAMEWORK</strong> representa um salto quântico na engenharia de mobilidade extrema, combinando tecnologias de ponta para criar uma plataforma que redefine os limites de desempenho, segurança e interação. Este documento serve como a "Bíblia" detalhada do framework, apresentando sua visão, componentes, e a rigorosa metodologia de desenvolvimento.</p>
+                    <p>Concebido para ambientes de alta demanda como o motorsport, o VORTEXA integra sistemas de propulsão avançados, eletrônica inteligente e uma abordagem holística à segurança do piloto, culminando em uma experiência de condução sem precedentes. Nosso compromisso é com a inovação responsável, garantindo que cada avanço tecnológico seja avaliado criticamente em termos de viabilidade e conformidade regulatória.</p>
+                    <p>Este framework não é apenas um projeto; é a visão de um futuro onde a tecnologia eleva a capacidade humana a novos patamares, sempre com foco na segurança e na excelência de engenharia. Apresentamos aqui as soluções para os desafios inerentes à vanguarda tecnológica, reforçando a robustez e a adaptabilidade do VORTEXA.</p>
                 `
             },
-            "dados-tecnicos": {
-                title: "ESPECIFICAÇÕES TÉCNICAS",
+            "executive-summary": {
+                title: "Resumo Executivo",
                 content: `
-                    <div class="back-to-top">
-                        <button onclick="scrollToTop()" class="back-btn">↑ Voltar ao Topo</button>
-                    </div>
-                    
-                    <section id="estrutura-design">
-                        <h3>Arquitetura e Materiais</h3>
-                        <div class="section-nav">
-                            <a href="#dados-tecnicos" class="nav-link">← Voltar à Seção</a>
-                        </div>
-                        <p>A estrutura do VORTEXA HYBRID foi concebida com um único princípio inegociável: sobreviver e continuar operando mesmo após falhas severas. Sua arquitetura modular e multicamadas, denominada <a href="#glossario" class="glossary-term" data-term="mrcs" onclick="navigateToGlossary('mrcs')">MRCS™ – Modular Reconfigurable Chassis System</a>, combina blindagem ativa, redes de controle redundantes e reconfiguração funcional em campo.</p>
-                        
-                        <h4>Módulos Estruturais:</h4>
-                        <ul>
-                            <li><strong><a href="#glossario" class="glossary-term" data-term="ifm" onclick="navigateToGlossary('ifm')">IFM – Módulo Frontal Integrado</a>:</strong> Estrutura de absorção programada com radar frontal, painéis solares <a href="#glossario" class="glossary-term" data-term="cigs" onclick="navigateToGlossary('cigs')">CIGS</a> integrados, chassi deformável e travessia de sensores <a href="#glossario" class="glossary-term" data-term="lidar" onclick="navigateToGlossary('lidar')">LIDAR</a>/SensorGrid™.</li>
-                            <li><strong><a href="#glossario" class="glossary-term" data-term="ccm" onclick="navigateToGlossary('ccm')">CCM – Módulo Central Blindado</a>:</strong> Monocoque em multicamadas com <a href="#glossario" class="glossary-term" data-term="survivor-capsule" onclick="navigateToGlossary('survivor-capsule')">Survivor Capsule™ (VSC-RESIL™)</a> integrada, tanques laterais de H₂ encapsulados, blindagem balística, isolamento térmico e <a href="#glossario" class="glossary-term" data-term="vortexa-brain" onclick="navigateToGlossary('vortexa-brain')">Vortexa Brain™</a> em núcleo protegido.</li>
-                            <li><strong><a href="#glossario" class="glossary-term" data-term="rtm" onclick="navigateToGlossary('rtm')">RTM – Módulo Traseiro Térmico</a>:</strong> Compartimento para o <a href="#glossario" class="glossary-term" data-term="ice-hbr1" onclick="navigateToGlossary('ice-hbr1')">ICE HBR-1</a> (PIPO Moteurs), motores QEV vetoriais, microturbina <a href="#glossario" class="glossary-term" data-term="pem" onclick="navigateToGlossary('pem')">PEM</a>, baterias de estado sólido (QuantumScape/Sila) e exaustão adaptativa Akrapovič, com circuito térmico redundante <a href="#glossario" class="glossary-term" data-term="vulcans" onclick="navigateToGlossary('vulcans')">VULCANS™</a>.</li>
-                        </ul>
-                    </section>
-                    
-                    <section id="filosofia-murray">
-                        <h3>Design Funcional</h3>
-                        <div class="section-nav">
-                            <a href="#dados-tecnicos" class="nav-link">← Voltar à Seção</a>
-                        </div>
-                        <p>A filosofia funcional de Gordon Murray — "<em>Design should follow the purest function</em>" — inspira profundamente o VORTEXA HYBRID. No lugar de excessos, encontra-se clareza estrutural. No lugar de ornamentos, propósito técnico absoluto.</p>
-                        
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Gordon Murray Automotive</th>
-                                    <th>VORTEXA HYBRID</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Leveza para performance de pista</td>
-                                    <td>Resiliência para sobrevivência de missão</td>
-                                </tr>
-                                <tr>
-                                    <td>Foco em simetria térmica e balanceamento dinâmico</td>
-                                    <td>Foco em redundância tática e modularidade de campo</td>
-                                </tr>
-                                <tr>
-                                    <td>Pureza estética como consequência da função</td>
-                                    <td>Camuflagem funcional como extensão da missão</td>
-                                </tr>
-                                <tr>
-                                    <td>Design voltado à experiência sensorial do condutor</td>
-                                    <td>Design voltado à proteção e comando neurocognitivo</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </section>
-                    
-                    <section id="survivor-capsule">
-                        <h3>Sistema de Proteção</h3>
-                        <div class="section-nav">
-                            <a href="#dados-tecnicos" class="nav-link">← Voltar à Seção</a>
-                        </div>
-                        <p>A <a href="#glossario" class="glossary-term" data-term="survivor-capsule" onclick="navigateToGlossary('survivor-capsule')">Survivor Capsule™ VSC-RESIL™</a> é o núcleo de proteção biomecânica, cognitiva e térmica do VORTEXA HYBRID. Desenvolvida com inspiração em cápsulas aeroespaciais, sistemas <a href="#glossario" class="glossary-term" data-term="mrap" onclick="navigateToGlossary('mrap')">MRAP</a> militares e cockpits de hipercarros de resistência, a VSC-RESIL™ integra blindagem leve, gerenciamento térmico adaptativo e compatibilidade total com o capacete inteligente <a href="#glossario" class="glossary-term" data-term="vrsh" onclick="navigateToGlossary('vrsh')">VRSH™</a>.</p>
-                    </section>
-                    
-                    <section id="especificacoes">
-                        <h3>Dados Técnicos Detalhados</h3>
-                        <div class="section-nav">
-                            <a href="#dados-tecnicos" class="nav-link">← Voltar à Seção</a>
-                        </div>
-                        <ul>
-                            <li><strong>Material:</strong> Compósito híbrido <a href="#glossario" class="glossary-term" data-term="cfrp-grafeno" onclick="navigateToGlossary('cfrp-grafeno')">CFRP-grafeno</a> com aramida balística</li>
-                            <li><strong>Rigidez Torcional:</strong> 45 kNm/° (CAE Validated)</li>
-                            <li><strong>Peso Estrutural Total:</strong> ~1.800 kg (configuração média)</li>
-                            <li><strong>Tanques de H₂:</strong> 2×5 kg (Eaton 700 bar encapsulados)</li>
-                            <li><strong>Resfriamento Estrutural:</strong> Rede VULCANS™ multicircuito (80 bar)</li>
-                            <li><strong>Interoperabilidade:</strong> Compatível com <a href="#glossario" class="glossary-term" data-term="flute-kits" onclick="navigateToGlossary('flute-kits')">Flute Kits™</a> e <a href="#glossario" class="glossary-term" data-term="quickbay" onclick="navigateToGlossary('quickbay')">QuickBay™</a> para reconfiguração rápida em campo</li>
-                        </ul>
-                    </section>
+                    <h3 id="executive-summary-general">Público Geral</h3>
+                    <p>O VORTEXA HYBRID é uma plataforma revolucionária que integra as mais recentes inovações em propulsão, materiais e inteligência artificial para criar veículos de mobilidade extrema com performance superior e segurança aprimorada. Imagine a fusão perfeita entre potência, controle e uma experiência de condução intuitiva, tudo isso operando dentro de um ecossistema tecnológico robusto e interconectado. Nosso framework foi projetado para elevar o padrão da engenharia automotiva, oferecendo uma visão do futuro do motorsport e de aplicações de alta performance.</p>
+                    <p>Destacamos a integração inteligente de sistemas e a redundância como pilares, garantindo confiabilidade e desempenho excepcionais em qualquer cenário.</p>
+
+                    <h3 id="executive-summary-executives">Executivos</h3>
+                    <p>O VORTEXA HYBRID TECH FRAMEWORK representa uma oportunidade estratégica única, com um substancial potencial de mercado em setores de alta performance e automotivo premium. Nossa proposta de valor se baseia na entrega de um sistema escalável, robusto e com múltiplos pontos de redundância, minimizando riscos operacionais e maximizando o retorno sobre o investimento.</p>
+                    <p>A arquitetura modular do VORTEXA facilita a adaptação a diversas aplicações, desde o motorsport de elite até veículos especializados. A inclusão de <a href="#risk-assessment" class="highlight-term">planos de contingência</a> e <a href="#regulatory-compliance-matrix" class="highlight-term">matrizes de conformidade regulatória</a> assegura um desenvolvimento ágil e seguro, alinhado com as exigências da indústria e do mercado.</p>
+                    <p>Investir no VORTEXA é investir na vanguarda da engenharia e na criação de um legado de inovação e segurança.</p>
+                `
+            },
+            "technical-data": {
+                title: "Dados Técnicos",
+                content: `
+                    <h3 id="technical-data-engineering">Engenharia</h3>
+                    <p>Esta seção aprofunda os detalhes técnicos do VORTEXA HYBRID, servindo como referência para engenheiros e especialistas. Abordamos a arquitetura de sistemas, a seleção de materiais e as estratégias de integração, sempre com foco na performance, segurança e viabilidade. A estrutura do documento segue os níveis de maturidade tecnológica (<a href="#trl" class="highlight-term">TRL</a>) para cada componente, garantindo clareza sobre o status de desenvolvimento.</p>
+
+                    <h4 id="core-systems">Core Systems (TRL 7-9)</h4>
+                    <p>São os sistemas maduros e comprovados que formam a espinha dorsal do VORTEXA. Incluem a unidade de propulsão híbrida otimizada, o chassi monocoque de fibra de carbono com zonas de deformação calculadas, sistemas de freio regenerativo de alta performance e o sistema de gerenciamento de energia (EMS) que otimiza a entrega de potência e a recuperação. Estes componentes são projetados para máxima eficiência e durabilidade em condições extremas, com testes extensivos já realizados em ambientes simulados e protótipos iniciais.</p>
+                    <ul>
+                        <li><strong>Unidade de Propulsão Híbrida:</strong> Combinação de motor a combustão de alta rotação e motores elétricos, com recuperação de energia cinética (<a href="#kers" class="highlight-term">KERS</a>) e térmica (<a href="#mgu-h" class="highlight-term">MGU-H</a>). Peso alvo: X kg, Potência combinada: Y hp.</li>
+                        <li><strong>Chassi Monocoque:</strong> Construção em fibra de carbono de grau aeroespacial, otimizada para rigidez torsional e absorção de impacto.</li>
+                        <li><strong>Sistema de Freios:</strong> Cerâmica de carbono com pinças de múltiplos pistões, integrados ao sistema regenerativo.</li>
+                        <li><strong>EMS (Energy Management System):</strong> Software e hardware dedicados para controle de fluxo de energia, garantindo otimização de desempenho e eficiência.</li>
+                    </ul>
+
+                    <h4 id="advanced-systems">Advanced Systems (TRL 4-6)</h4>
+                    <p>Representam tecnologias com validação em ambiente relevante, mas que ainda requerem desenvolvimento e testes para integração completa no sistema final. Aqui se destacam:</p>
+                    <ul>
+                        <li><strong>Smart Skin™:</strong> Uma rede avançada de sensores integrados à superfície do veículo, monitorando em tempo real estresse estrutural, temperatura e aerodinâmica. Seu desenvolvimento visa alta durabilidade em condições extremas (impactos, abrasão, variações térmicas), com projeções de custo de implementação de $X por m² e um plano de manutenção modular para facilitar reparos. A coleta de dados é crucial para otimização em tempo real e análise pós-evento.</li>
+                        <li><strong>VRSH™ (Variable Ratio Suspension and Handling):</strong> Sistema de suspensão ativa que ajusta dinamicamente a geometria e a rigidez em resposta às condições da pista e comandos do piloto, otimizando aderência e manobrabilidade. Os protótipos já demonstraram ganhos significativos em testes controlados.</li>
+                        <li><strong>Telemetria Avançada e Análise Preditiva:</strong> Ferramentas que utilizam algoritmos de IA para prever falhas de componentes, otimizar estratégias de corrida e fornecer insights em tempo real para a equipe e o piloto.</li>
+                    </ul>
+
+                    <h4 id="concept-systems">Concept Systems (TRL 1-3)</h4>
+                    <p>São ideias inovadoras em fase inicial de pesquisa, com potencial transformador, mas que demandam validação fundamental. Abordamos os desafios e o caminho para a viabilidade:</p>
+                    <ul>
+                        <li><strong>BCI (Brain-Computer Interface) em Motorsport:</strong> Considerado como um <span class="highlight-term">sistema de monitoramento de performance cognitiva e estados de alerta do piloto</span>, e não para controle ativo do veículo. A aplicação de BCI em ambientes de alta vibração e resposta instantânea (como o motorsport) apresenta desafios significativos de estabilidade do sinal e interferência. Nossas pesquisas iniciais focam em filtros de ruído e algoritmos de processamento de sinal robustos. O principal objetivo é fornecer dados em tempo real sobre fadiga e concentração do piloto, sem violar regulamentações de assistência ao piloto.</li>
+                        <li><strong>Starlink™ para Comunicação Crítica:</strong> A viabilidade do uso de Starlink para comunicação crítica em tempo real no motorsport (<span class="highlight-term">baixa latência e alta confiabilidade</span>) está sob avaliação rigorosa. Embora promissora para dados não-críticos ou comunicações de equipe, a latência inerente à rede de satélites pode ser inadequada para controle de sistemas de missão crítica. Estamos explorando soluções complementares de rede local (<a href="#5g" class="highlight-term">5G</a> Privado) ou frequências licenciadas para garantir redundância e latência ultrabaixa para sistemas críticos. Para comunicação de telemetria geral, o Starlink permanece uma opção estratégica.</li>
+                        <li><strong>Materiais Autocurativos:</strong> Pesquisa em polímeros e compósitos que possam reparar pequenos danos estruturais de forma autônoma, aumentando a durabilidade e segurança dos componentes.</li>
+                    </ul>
+
+                    <h4 id="regulatory-compliance-matrix">Matriz de Conformidade Regulatória</h4>
+                    <p>A conformidade com os regulamentos esportivos e técnicos é um pilar do VORTEXA. Estamos desenvolvendo uma matriz detalhada que mapeia cada componente e funcionalidade às normas da <a href="#fia" class="highlight-term">FIA</a> (Federação Internacional de Automobilismo) e outras entidades relevantes. Isso inclui:</p>
+                    <ul>
+                        <li><strong>Regulamentos da FIA:</strong> Análise contínua das regras sobre aerodinâmica, peso, potência, segurança do piloto e sistemas eletrônicos para garantir a elegibilidade do VORTEXA em competições.</li>
+                        <li><strong>Comunicação HAM (Amador):</strong> As frequências de rádio amador têm restrições legais para uso comercial ou competitivo. Nosso plano é obter licenças especiais para bandas comerciais dedicadas para a comunicação da equipe e telemetria crítica, ou explorar o uso de infraestrutura 5G privada onde disponível, garantindo a legalidade e a robustez da comunicação.</li>
+                        <li><strong>Certificações:</strong> Identificação de certificações necessárias (e.g., segurança automotiva, compatibilidade eletromagnética) e planejamento de testes para obtenção.</li>
+                    </ul>
+
+                    <h4 id="integration-roadmap">Roteiro de Integração</h4>
+                    <p>Nosso roteiro de integração é dividido em fases, permitindo um desenvolvimento iterativo e validação contínua:</p>
+                    <ul>
+                        <li><strong>MVP (Minimum Viable Product):</strong> Foco na integração dos <a href="#core-systems" class="highlight-term">Core Systems</a>, validando a arquitetura híbrida e os sistemas de segurança básicos.</li>
+                        <li><strong>Protótipo:</strong> Inclusão dos <a href="#advanced-systems" class="highlight-term">Advanced Systems</a> como Smart Skin™ e VRSH™, com testes rigorosos em pista.</li>
+                        <li><strong>Produção/Competição:</strong> Finalização e otimização de todos os sistemas, incluindo os conceitos validados e mitigados dos <a href="#concept-systems" class="highlight-term">Concept Systems</a>, visando a introdução em ambiente competitivo.</li>
+                        <li><strong>Cronograma Detalhado:</strong> Cada fase possui um cronograma realista com marcos de desenvolvimento e integração, e um orçamento estimado por sistema.</li>
+                    </ul>
+
+                    <h4 id="risk-assessment">Avaliação de Risco</h4>
+                    <p>Uma abordagem proativa à gestão de riscos é fundamental. Identificamos e mitigamos os seguintes:</p>
+                    <ul>
+                        <li><strong>Viabilidade vs. Conceito:</strong> As disparidades técnicas são tratadas categorizando os sistemas por <a href="#trl" class="highlight-term">TRL</a>. Para <a href="#bci" class="highlight-term">BCI</a> e <a href="#starlink" class="highlight-term">Starlink</a>, a pesquisa e o desenvolvimento focam em mitigar os desafios técnicos e regulatórios, com planos de fallback claros para cada sistema.</li>
+                        <li><strong>Integração de Sistemas e Complexidade:</strong> Uma <span class="highlight-term">matriz de dependências e criticidade</span> está sendo desenvolvida para gerenciar a interdependência dos sistemas e evitar sobrecarga de complexidade. Priorizamos os sistemas essenciais e estabelecemos um <span class="highlight-term">plano de contingência</span> com <span class="highlight-term">fallbacks</span> definidos para cada sistema principal, garantindo a operacionalidade e segurança mesmo em caso de falha de um componente.</li>
+                        <li><strong>Custos e Orçamento:</strong> Estimativas de custo detalhadas por sistema e fase de desenvolvimento estão sendo elaboradas para garantir a viabilidade financeira do projeto.</li>
+                    </ul>
                 `
             },
             "press-release": {
-                title: "COMUNICAÇÃO",
+                title: "Press Release",
                 content: `
-                    <div class="back-to-top">
-                        <button onclick="scrollToTop()" class="back-btn">↑ Voltar ao Topo</button>
-                    </div>
-                    
-                    <section id="press-overview">
-                        <h3>Visão Estratégica</h3>
-                        <div class="section-nav">
-                            <a href="#press-release" class="nav-link">← Voltar à Seção</a>
-                        </div>
-                        
-                        <h4>O Que é o VORTEXA HYBRID?</h4>
-                        <h5>VORTEXA HYBRID: Quando a Inteligência Entra na Luta Pela Sobrevivência</h5>
-                        
-                        <p><em>Imagine uma máquina que une o DNA da Fórmula 1, a resistência de um blindado e a mente de um supercomputador — e a solta nos desertos mais letais do planeta. Essa é a proposta do VORTEXA HYBRID: um veículo projetado para pensar, reagir e sobreviver onde a falha não é uma opção.</em></p>
-                        
-                        <p>Fruto de uma aliança global entre engenheiros, neurocientistas, militares e especialistas em mobilidade extrema, o VORTEXA é mais do que um protótipo disruptivo — é a consolidação de uma nova categoria: <strong>inteligência embarcada para sobrevivência funcional</strong>. Capaz de operar sob blackout, reagir a falhas estruturais e aprender com o próprio terreno, ele une propulsão híbrida de alta performance, arquitetura cognitiva distribuída e sistemas de missão modulares.</p>
-                        
-                        <p>No coração do VORTEXA está o <strong>Vortexa Brain™</strong>, uma unidade de inferência baseada em ASICs personalizados (xAI VortexCore), capaz de tomar decisões em milissegundos com suporte de <strong>SubCores™</strong> autônomos espalhados por suspensão, propulsão, energia e sobrevivência. Tudo isso operando sob o sistema embarcado <strong>NEVO OS™</strong>, com runtime de latência ultrabaixa (&lt;5 ms).</p>
-                        
-                        <p>Mas o que o torna verdadeiramente inédito é sua filosofia: <strong>falhar não é o fim, é o gatilho do aprendizado</strong>. Cada anomalia gera dados. Cada missão reforça os algoritmos. Cada falha alimenta o <strong>VORTEXA SINAPSI™</strong>, o núcleo de aprendizado profundo que conecta simulação, experiência real e autocorreção dinâmica.</p>
-                        
-                        <blockquote>
-                            <p><strong>"O VORTEXA é o único veículo que não apenas sobrevive ao caos — ele aprende com ele."</strong><br/>
-                            – Equipe VORTEXA</p>
-                        </blockquote>
-                        
-                        <h4>Características Essenciais:</h4>
-                        <ul>
-                            <li><strong>Arquitetura Híbrida Modular:</strong> ICE HBR-1 + Motores Vetoriais Elétricos (QEV)</li>
-                            <li><strong>Fallback Cognitivo:</strong> Decisão em tempo real via SubCores™ e xRT-VTXA™</li>
-                            <li><strong>Casco Inteligente:</strong> Smart Skin™ com sensores integrados, ultracapacitores e autocura</li>
-                            <li><strong>Capacete VRSH™:</strong> HUD AR, visão térmica, comando não-verbal (BCI/EMG)</li>
-                            <li><strong>Kits de Missão:</strong> Configurações adaptáveis para Rally-Raid, Defesa, Resgate, Mineração</li>
-                        </ul>
-                        
-                        <p><strong>Pronto para o impossível:</strong> Se existe um lugar onde a engenharia se transforma em sobrevivência inteligente, ele tem nome — VORTEXA HYBRID.</p>
-                    </section>
-                    
-                    <section id="press-tech">
-                        <h3>Inovações Tecnológicas</h3>
-                        <div class="section-nav">
-                            <a href="#press-release" class="nav-link">← Voltar à Seção</a>
-                        </div>
-                        
-                        <h4>Impacto em Rally, Defesa, Mineração e Resgate</h4>
-                        <h5>Do Deserto ao Campo de Batalha: Uma Plataforma Para Missões que Não Podem Falhar</h5>
-                        
-                        <p><em>O VORTEXA HYBRID não foi feito para avenidas. Ele foi concebido para sobreviver onde a maioria quebra. Em ambientes onde a decisão entre continuar ou parar pode custar vidas, ele responde com resiliência cognitiva e inteligência embarcada.</em></p>
-                        
-                        <p>Seja em um rally-raid como o Dakar, uma operação de evacuação médica em zona de conflito, um resgate autônomo em área de deslizamento ou uma missão em campo de mineração remoto — o VORTEXA adapta-se, reconfigura-se e continua avançando.</p>
-                        
-                        <h4>Aplicações Extremas:</h4>
-                        <ul>
-                            <li><strong>Rally-Raid (T1U – FIA / A.S.O.):</strong> Tração híbrida, suspensão SISMO™, fallback mecânico SADEV™, cockpit VRSH™ com BCI ativa. Otimizado para ambientes como o Empty Quarter, Jalapão e Atacama.</li>
-                            <li><strong>Defesa Tática:</strong> Modo Stealth embarcado, redundância de rádio auditivo via Cobham™, cápsula MRCS™ com blindagem leve e SubCore tático para blackout. Operação com IA embarcada sem rede externa.</li>
-                            <li><strong>Resgate Autônomo:</strong> Reconhecimento cognitivo, HUD AR integrado ao capacete VRSH™, fallback de energia via PEM + Kleist Layer™. Capaz de operar em locais de difícil acesso com autonomia parcial.</li>
-                            <li><strong>Mineração Inteligente:</strong> Monitoramento térmico adaptativo via SensorGrid™, isolamento EMI, kits de missão com configuração redundante, CAE VORTEXA™ ajustando parâmetros de forma preditiva.</li>
-                        </ul>
-                        
-                        <p>Todos os modos são configuráveis via runtime xRT-VTXA™ e gerenciados em tempo real por SubCores™ especializados, garantindo autonomia operacional mesmo sem conectividade externa. A arquitetura de missão permite upgrades rápidos (QuickBay™), mantendo o veículo pronto para novos contextos com apenas 1 operador.</p>
-                        
-                        <p><strong>O VORTEXA se adapta ao terreno, ao perigo e ao tempo. Cada missão reforça sua inteligência. Cada desafio o torna mais preparado. Esse não é um veículo. É um aliado operacional.</strong></p>
-                    </section>
-                    
-                    <section id="press-market">
-                        <h3>Posicionamento de Mercado</h3>
-                        <div class="section-nav">
-                            <a href="#press-release" class="nav-link">← Voltar à Seção</a>
-                        </div>
-                        
-                        <h4>Por Que o VORTEXA é Diferente?</h4>
-                        <h5>Não é Apenas um Veículo. É um Organismo Inteligente em Movimento.</h5>
-                        
-                        <p><em>Enquanto outros protótipos disputam torque, velocidade e eficiência, o VORTEXA joga outro jogo: o da sobrevivência autônoma e inteligência extrema. Ele não é só mais forte. É mais consciente. Não responde por comando — responde por antecipação.</em></p>
-                        
-                        <p>Projetado sob uma filosofia que une o funcionalismo de Gordon Murray ao pragmatismo de campo militar, o VORTEXA HYBRID nasce da ideia de que a <strong>tecnologia deve resistir, adaptar-se e aprender — tudo ao mesmo tempo.</strong></p>
-                        
-                        <h4>O Que o Torna Único:</h4>
-                        <ul>
-                            <li><strong>Inteligência Distribuída:</strong> SubCores™ locais com inferência embarcada (TinyML), atuando mesmo sob perda do núcleo central (Vortexa Brain™)</li>
-                            <li><strong>Resiliência Energética Trifásica:</strong> ICE híbrido, fallback PEM e camada ultracapacitiva Kleist Layer™ com ativação de emergência</li>
-                            <li><strong>Estrutura Modular Ativa:</strong> Smart Skin™ com autocura preditiva, sensores integrados e armazenamento de energia solar</li>
-                            <li><strong>Aprendizado Sináptico:</strong> Sistema VORTEXA SINAPSI™ registra falhas, acertos, ajustes e adaptações — e os transforma em simulação com o CAE VORTEXA™</li>
-                            <li><strong>Propósito Real:</strong> Criado não para pista, mas para ambientes onde a falha pode custar tudo: desertos, zonas hostis, altitudes, missões solitárias</li>
-                        </ul>
-                        
-                        <p>O VORTEXA não se compara à geração atual de veículos elétricos, off-roaders ou protótipos de rally. Ele pertence a uma nova categoria: <strong>sistemas cognitivos de missão veicular</strong>. E dentro dessa categoria, ele está sozinho. Por enquanto.</p>
-                        
-                        <p><strong>Disruptivo não é o que brilha. É o que muda as regras.</strong> O VORTEXA não compete com o mercado — ele desafia o conceito de mobilidade extrema como o conhecemos.</p>
-                        
-                        <h4>Futuro, Expansão e Missão Sistêmica</h4>
-                        <h5>Mais que Um Protótipo. Uma Plataforma Viva com Missão em Evolução.</h5>
-                        
-                        <p><em>O VORTEXA HYBRID não foi criado como fim — mas como fundação. Ele é o primeiro passo de uma plataforma modular, cognitiva e escalável para múltiplos domínios onde mobilidade, inteligência e sobrevivência precisam coexistir.</em></p>
-                        
-                        <p>Ao invés de versões estáticas, o VORTEXA segue um roteiro vivo de validação, aprendizado e replicação. A cada missão, ele coleta dados. A cada versão, ele evolui. A cada falha, ele fica mais preparado. E isso não se limita ao protótipo atual: estamos falando de uma <strong>família de plataformas integradas</strong>, que poderá alimentar veículos autônomos de resgate, operações defensivas, exploração industrial e soluções de engenharia extrema.</p>
-                        
-                        <h4>Etapas em Curso:</h4>
-                        <ul>
-                            <li><strong>2025–2026:</strong> Finalização de integração modular e roadmap de testes técnicos com SubCores™, PEM e Smart Skin™</li>
-                            <li><strong>2026–2028:</strong> Testes em ambientes reais (deserto, clima severo, blackout), integração BCI e modos de missão QuickBay™</li>
-                            <li><strong>2029+:</strong> Expansão para missões automatizadas, híbridas ou autônomas em contextos táticos, ambientais ou operacionais extremos</li>
-                        </ul>
-                        
-                        <h4>Missão Sistêmica:</h4>
-                        <p>O VORTEXA não é um produto. É uma iniciativa sistêmica que une engenheiros, designers, neurocientistas, pilotos, socorristas e pesquisadores. É sobre criar uma resposta tecnológica onde hoje há risco absoluto. É sobre dar à máquina não só força e velocidade — mas <strong>inteligência funcional</strong>.</p>
-                        
-                        <blockquote>
-                            <p><strong>"Projetamos o VORTEXA para sobreviver onde o impossível começa — e inspirar onde o futuro precisa de coragem."</strong><br/>
-                            – Equipe VORTEXA</p>
-                        </blockquote>
-                        
-                        <p><strong>Próximo destino:</strong> O futuro não será colonizado por máquinas mais potentes — mas por máquinas mais lúcidas.</p>
-                        
-                        <h4>Declaração Oficial de Projeto</h4>
-                        <h5>Uma Engenharia de Sobrevivência com Propósito</h5>
-                        
-                        <p>O VORTEXA HYBRID representa mais do que uma convergência de tecnologias — ele é a materialização de uma ideia: <strong>a inteligência precisa ser funcional, resistente e adaptável para fazer sentido em campo real</strong>. Projetamos uma arquitetura que aprende, uma carcaça que sente, um cérebro que sobrevive.</p>
-                        
-                        <p>Tudo foi pensado com propósito: cada sensor, cada fallback, cada algoritmo. Não buscamos apenas vencer provas, quebrar recordes ou gerar headlines. Buscamos criar algo que possa atravessar o impossível e voltar com dados para melhorar a próxima missão.</p>
-                        
-                        <p>Esta não é uma máquina final. É uma primeira iteração de um projeto sistêmico, colaborativo e em constante refinamento. Desenvolvido com especialistas de classe mundial, parceiros institucionais e acadêmicos de ponta, o VORTEXA é um chamado à engenharia com alma e ao design que responde ao caos com inteligência.</p>
-                        
-                        <blockquote>
-                            <p><strong>"Projetamos o VORTEXA como quem projeta um astronauta terrestre. Ele deve sobreviver. Ele deve pensar. Ele deve voltar."</strong><br/>
-                            – Comitê VORTEXA</p>
-                        </blockquote>
-                        
-                        <h4>Princípios Fundadores:</h4>
-                        <ul>
-                            <li><strong>Resiliência ativa:</strong> A falha é prevista. A adaptação é automática.</li>
-                            <li><strong>Aprendizado contínuo:</strong> Cada missão deixa o sistema mais consciente.</li>
-                            <li><strong>Design funcional:</strong> Nada é decorativo. Tudo é estruturante.</li>
-                            <li><strong>Missão coletiva:</strong> Desenvolvido por e para especialistas, pilotos, resgatistas, engenheiros e visionários.</li>
-                        </ul>
-                        
-                        <p><strong>O VORTEXA HYBRID não é o fim de uma linha de montagem. É o início de uma nova engenharia. Viva, consciente e em missão.</strong></p>
-                    </section>
+                    <h3 id="press-release-specialized">Revistas Especializadas</h3>
+                    <p>O VORTEXA HYBRID TECH FRAMEWORK anuncia avanços significativos na integração de sistemas de propulsão híbrida e eletrônica avançada. Nossas parcerias estratégicas (<strong>real: [Nome do Parceiro Real]; conceitual: [Nome do Parceiro Conceitual, se aplicável, com explicação]</strong>) estão impulsionando a pesquisa em materiais compostos leves e sistemas de gerenciamento de energia de próxima geração. Destacamos a inovação do Smart Skin™ e VRSH™, que prometem redefinir a telemetria e o controle dinâmico em ambientes de alta performance.</p>
+                    <p>Este framework é um testemunho do compromisso com a excelência em engenharia e a segurança, pavimentando o caminho para uma nova era na mobilidade extrema.</p>
+
+                    <h3 id="press-release-enthusiasts">Entusiastas</h3>
+                    <p>Preparem-se para o futuro da velocidade! O VORTEXA HYBRID não é apenas um veículo; é uma experiência! Com sua tecnologia híbrida de tirar o fôlego, o sistema de suspensão inteligente VRSH™ e a inovadora 'pele' de sensores Smart Skin™, você sentirá cada milissegundo de poder e controle. A segurança do piloto é nossa prioridade máxima, com uma cápsula de sobrevivência e sistemas inteligentes. O VORTEXA levará o motorsport a um novo nível de emoção e precisão!</p>
+
+                    <h3 id="press-release-segmented">Público Segmentado</h3>
+                    <p>Para investidores e parceiros industriais, o VORTEXA HYBRID TECH FRAMEWORK oferece uma plataforma robusta e escalável, com um claro roteiro de desenvolvimento e estratégias de mitigação de risco. Nosso foco em tecnologias <a href="#trl" class="highlight-term">TRL</a> maduras e em desenvolvimento, combinado com uma rigorosa matriz de conformidade regulatória, posiciona o VORTEXA como um investimento de alto potencial e segurança jurídica. A gestão de propriedade intelectual e o plano de contingência para sistemas críticos garantem a longevidade e o valor do projeto. Estamos abertos a discussões para colaborações estratégicas.</p>
                 `
             },
-            glossario: {
-                title: "GLOSSÁRIO TÉCNICO",
+            "glossary": {
+                title: "Glossário Técnico",
                 content: `
-                    <div class="back-to-top">
-                        <button onclick="scrollToTop()" class="back-btn">↑ Voltar ao Topo</button>
+                    <p>Este glossário fornece definições claras e concisas para os termos técnicos e siglas utilizados no VORTEXA HYBRID TECH FRAMEWORK.</p>
+                    <div class="glossary-grid">
+                        <div class="glossary-item">
+                            <h4>BCI (Brain-Computer Interface)</h4>
+                            <p>Interface Cérebro-Computador: Tecnologia em fase conceitual (TRL 1-3) no VORTEXA, focada no <strong>monitoramento de dados cognitivos e estados de alerta do piloto, e não no controle ativo do veículo</strong>, para mitigar questões regulatórias e de viabilidade em ambientes de alta vibração.</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h4>FIA (Fédération Internationale de l'Automobile)</h4>
+                            <p>Federação Internacional de Automobilismo: Órgão regulador global para o automobilismo. O VORTEXA está em conformidade com as diretrizes e regulamentos da FIA para sistemas de segurança, performance e assistência ao piloto, especialmente no que diz respeito ao uso de novas tecnologias.</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h4>KERS (Kinetic Energy Recovery System)</h4>
+                            <p>Sistema de Recuperação de Energia Cinética: Tecnologia que recupera a energia gerada durante a frenagem de um veículo e a armazena (ex: em baterias ou volantes de inércia) para uso posterior, fornecendo um impulso de potência adicional ou melhorando a eficiência. Componente dos Core Systems (TRL 7-9).</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h4>MGU-H (Motor Generator Unit - Heat)</h4>
+                            <p>Unidade Geradora de Motor - Calor: Componente do sistema de propulsão híbrida que recupera a energia térmica dos gases de escape do motor e a converte em energia elétrica, que pode ser usada para acionar o turbocompressor ou recarregar as baterias. Componente dos Core Systems (TRL 7-9).</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h4>MVP (Minimum Viable Product)</h4>
+                            <p>Produto Mínimo Viável: A primeira versão de um produto que contém apenas as funcionalidades essenciais para ser lançado e testado no mercado, permitindo aprendizado e iteração. Faz parte do nosso Roteiro de Integração.</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h4>Smart Skin™</h4>
+                            <p>Tecnologia avançada em estágio de desenvolvimento (TRL 4-6) que integra uma rede de sensores diretamente na superfície do veículo para monitoramento em tempo real de estresse estrutural, temperatura e aerodinâmica. O plano de desenvolvimento inclui especificações para <strong>durabilidade em condições extremas, estimativa de custo e plano de manutenção modular</strong>.</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h4>Starlink™</h4>
+                            <p>Serviço de internet via satélite da SpaceX. No VORTEXA, sua aplicação para comunicação crítica em motorsport está sob rigorosa avaliação de latência e confiabilidade (TRL 1-3). O uso principal será para dados não-críticos ou como redundância, com <strong>planos de uso de bandas comerciais licenciadas ou 5G privado para comunicações de missão crítica</strong>.</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h4>TRL (Technology Readiness Level)</h4>
+                            <p>Nível de Prontidão Tecnológica: Escala de 1 a 9 usada para avaliar a maturidade de uma tecnologia. TRL 1 (pesquisa básica) a TRL 9 (sistema comprovado em ambiente operacional). Usado para categorizar os sistemas do VORTEXA.</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h4>VRSH™ (Variable Ratio Suspension and Handling)</h4>
+                            <p>Sistema de Suspensão e Manuseio de Razão Variável: Tecnologia avançada (TRL 4-6) que permite ajustes dinâmicos na geometria e rigidez da suspensão em tempo real, otimizando a aderência, o manuseio e a estabilidade do veículo em diversas condições de pista.</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h4>5G Privado</h4>
+                            <p>Rede 5G dedicada e isolada para uma organização específica, oferecendo segurança, baixa latência e alta largura de banda. Considerado como uma solução potencial para comunicações de missão crítica no VORTEXA, especialmente para mitigar limitações de outras tecnologias.</p>
+                        </div>
                     </div>
-                    
-                    <section id="termos-principais">
-                        <h3>Termos Principais</h3>
-                        <div class="section-nav">
-                            <a href="#glossario" class="nav-link">← Voltar à Seção</a>
-                        </div>
-                        <div class="glossary-grid">
-                            <div class="glossary-item" id="vortexa-hybrid">
-                                <h4>VORTEXA HYBRID</h4>
-                                <p>Plataforma modular e resiliente baseada no VORTEXA HYBRID TECH FRAMEWORK para mobilidade extrema.</p>
-                                <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
-                            </div>
-                            
-                            <div class="glossary-item" id="vortexa-framework">
-                                <h4>VORTEXA HYBRID TECH FRAMEWORK</h4>
-                                <p>Arquitetura cognitiva, modular e resiliente para mobilidade inteligente.</p>
-                                <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
-                            </div>
-                            
-                            <div class="glossary-item" id="survivor-capsule">
-                                <h4>Survivor Capsule™ (VSC-RESIL™)</h4>
-                                <p>Núcleo de proteção biomecânica, cognitiva e térmica do VORTEXA HYBRID.</p>
-                                <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
-                            </div>
-                            
-                            <div class="glossary-item" id="vortexa-brain">
-                                <h4>VORTEXA BRAIN™</h4>
-                                <p>Núcleo de inteligência operacional do VORTEXA HYBRID.</p>
-                                <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
-                            </div>
-                        </div>
-                    </section>
-                    
-                    <section id="siglas">
-                        <h3>Siglas e Abreviações</h3>
-                        <div class="section-nav">
-                            <a href="#glossario" class="nav-link">← Voltar à Seção</a>
-                        </div>
-                        <div class="glossary-grid">
-                            <div class="glossary-item" id="stanford-startx">
-                                <h4>Stanford StartX</h4>
-                                <p>Ecossistema de inovação onde a Vortexa Motorsport Inc. foi fundada.</p>
-                                <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
-                            </div>
-                            
-                            <div class="glossary-item" id="stanford-ddl">
-                                <h4>Stanford Driving Decision Lab (DDL)</h4>
-                                <p>Laboratório de decisão de condução de Stanford, com o qual a Vortexa Motorsport Inc. mantém sinergia.</p>
-                                <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
-                            </div>
-                            
-                            <div class="glossary-item" id="cae-vortexa">
-                                <h4>CAE VORTEXA™</h4>
-                                <p>Complexo de validação da Vortexa Motorsport Inc., incluindo infraestrutura para simulação termomecânica e laboratório de runtime neural.</p>
-                                <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
-                            </div>
-                            
-                            <div class="glossary-item" id="w2rc">
-                                <h4>W2RC</h4>
-                                <p>World Rally-Raid Championship.</p>
-                                <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
-                            </div>
-                        </div>
-                    </section>
-                    
-                    <section id="tecnologias">
-                        <h3>Tecnologias Aplicadas</h3>
-                        <div class="section-nav">
-                            <a href="#glossario" class="nav-link">← Voltar à Seção</a>
-                        </div>
-                        <div class="glossary-grid">
-                            <div class="glossary-item" id="mrcs">
-                                <h4>MRCS™ – Modular Reconfigurable Chassis System</h4>
-                                <p>Arquitetura modular e multicamadas do chassi do VORTEXA HYBRID.</p>
-                                <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
-                            </div>
-                            
-                            <div class="glossary-item" id="lidar">
-                                <h4>LIDAR</h4>
-                                <p>Light Detection and Ranging (Detecção e Alcance da Luz) - tecnologia de sensoriamento remoto.</p>
-                                <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
-                            </div>
-                            
-                            <div class="glossary-item" id="cigs">
-                                <h4>CIGS</h4>
-                                <p>Copper Indium Gallium Selenide (Cobre, Índio, Gálio, Seleneto) - tipo de célula solar.</p>
-                                <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
-                            </div>
-                            
-                            <div class="glossary-item" id="pem">
-                                <h4>PEM</h4>
-                                <p>Proton Exchange Membrane (Membrana de Troca Protônica) - tipo de célula a combustível.</p>
-                                <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
-                            </div>
-                        </div>
-                    </section>
+                `
+            },
+            "standards": {
+                title: "Normas Técnicas",
+                content: `
+                    <p>O VORTEXA HYBRID TECH FRAMEWORK adere rigorosamente às normas e regulamentações pertinentes para garantir a segurança, performance e legalidade em seu ambiente de operação. Nossa matriz de conformidade regulatória detalha a aderência aos seguintes padrões:</p>
+                    <ul>
+                        <li><strong>Regulamentos Esportivos da FIA:</strong> Análise e conformidade contínua com os requisitos técnicos e esportivos da Federação Internacional de Automobilismo, incluindo segurança do chassi, especificações de motor, sistemas eletrônicos e assistência ao piloto.</li>
+                        <li><strong>Normas de Segurança Automotiva:</strong> Implementação de padrões de segurança passiva (absorção de impacto, integridade estrutural) e ativa (sistemas de freio, controle de tração) conforme as melhores práticas da indústria.</li>
+                        <li><strong>Regulamentações de Telecomunicações:</strong> Para a comunicação do veículo, estamos planejando a aquisição de licenças para uso de bandas de frequência comercial dedicadas, garantindo a legalidade e a confiabilidade da transmissão de dados, mitigando as restrições de uso de frequências amadoras (<a href="#communication-ham" class="highlight-term">Comunicação HAM</a>).</li>
+                        <li><strong>Padrões de Baterias e Sistemas Híbridos:</strong> Conformidade com normas internacionais para o manuseio, segurança e descarte de baterias de alta voltagem e sistemas de propulsão híbrida.</li>
+                    </ul>
+                    <p>Um plano de testes e validação extensivo está em vigor para garantir que todos os componentes e sistemas atendam ou excedam esses requisitos normativos.</p>
+                `
+            },
+            "conformity": {
+                title: "Conformidade",
+                content: `
+                    <p>A conformidade do projeto VORTEXA HYBRID com as leis, regulamentos e padrões da indústria é um pilar central do nosso desenvolvimento. Nossas estratégias incluem:</p>
+                    <ul>
+                        <li><strong>Certificações Necessárias:</strong> Planejamento e execução para obtenção de todas as certificações mandatórias em automobilismo (FIA), segurança veicular e telecomunicações, assegurando a permissão para operação em ambientes competitivos e públicos.</li>
+                        <li><strong>Propriedade Intelectual:</strong> Uma estratégia robusta de proteção da propriedade intelectual está sendo implementada para todas as tecnologias proprietárias desenvolvidas (Smart Skin™, VRSH™, etc.), incluindo patentes, segredos comerciais e acordos de confidencialidade com parceiros.</li>
+                        <li><strong>Auditorias e Revisões:</strong> Condução regular de auditorias internas e externas para garantir a aderência contínua aos padrões de qualidade e segurança.</li>
+                        <li><strong>Responsabilidade e Ética:</strong> Todos os sistemas, especialmente aqueles que envolvem <a href="#bci" class="highlight-term">BCI</a> e <a href="#ai" class="highlight-term">IA</a>, são desenvolvidos com um forte compromisso com a ética e a responsabilidade, garantindo que não violem princípios de assistência ao piloto e mantenham a integridade da competição.</li>
+                    </ul>
+                    <p>Nosso objetivo é não apenas atender, mas superar as expectativas de conformidade, solidificando a confiança no VORTEXA HYBRID TECH FRAMEWORK.</p>
                 `
             }
-        }
+            // Outras seções podem ser adicionadas aqui
+        },
+        footerText: "&copy; 2025 VORTEXA HYBRID TECH FRAMEWORK. Todos os direitos reservados."
     },
     en: {
         title: "VORTEXA HYBRID TECH FRAMEWORK",
@@ -470,46 +236,226 @@ const content = {
             title: "Summary",
             sections: [
                 {
-                    id: "intro",
-                    title: "Overview",
+                    id: "introduction",
+                    title: "Introduction",
+                    subsections: []
+                },
+                {
+                    id: "executive-summary",
+                    title: "Executive Summary",
                     subsections: [
-                        { id: "intro-institucional", title: "Origin and Foundation" },
-                        { id: "visao-geral", title: "VORTEXA Concept" },
-                        { id: "diferenciais", title: "Competitive Advantages" },
-                        { id: "roadmap", title: "Development Timeline" }
+                        { id: "executive-summary-general", title: "General Public" },
+                        { id: "executive-summary-executives", title: "Executives" }
                     ]
                 },
                 {
-                    id: "dados-tecnicos",
-                    title: "Technical Specifications",
+                    id: "technical-data",
+                    title: "Technical Data",
                     subsections: [
-                        { id: "estrutura-design", title: "Architecture and Materials" },
-                        { id: "filosofia-murray", title: "Functional Design" },
-                        { id: "survivor-capsule", title: "Protection System" },
-                        { id: "especificacoes", title: "Detailed Technical Data" }
+                        { id: "technical-data-engineering", title: "Engineering" },
+                        { id: "core-systems", title: "Core Systems (TRL 7-9)" },
+                        { id: "advanced-systems", title: "Advanced Systems (TRL 4-6)" },
+                        { id: "concept-systems", title: "Concept Systems (TRL 1-3)" },
+                        { id: "regulatory-compliance-matrix", title: "Regulatory Compliance Matrix" },
+                        { id: "integration-roadmap", title: "Integration Roadmap" },
+                        { id: "risk-assessment", title: "Risk Assessment" }
                     ]
                 },
                 {
                     id: "press-release",
-                    title: "Communication",
+                    title: "Press Release",
                     subsections: [
-                        { id: "press-overview", title: "Strategic Vision" },
-                        { id: "press-tech", title: "Technological Innovations" },
-                        { id: "press-market", title: "Market Positioning" }
+                        { id: "press-release-specialized", title: "Specialized Magazines" },
+                        { id: "press-release-enthusiasts", title: "Enthusiasts" },
+                        { id: "press-release-segmented", title: "Segmented Public" }
                     ]
                 },
                 {
-                    id: "glossario",
+                    id: "glossary",
                     title: "Technical Glossary",
-                    subsections: [
-                        { id: "termos-principais", title: "Main Terms" },
-                        { id: "siglas", title: "Acronyms and Abbreviations" },
-                        { id: "tecnologias", title: "Applied Technologies" }
-                    ]
+                    subsections: []
+                },
+                {
+                    id: "standards",
+                    title: "Technical Standards",
+                    subsections: []
+                },
+                {
+                    id: "conformity",
+                    title: "Conformity",
+                    subsections: []
                 }
             ]
         },
-        // ... resto do conteúdo em inglês (similar structure)
+        sections: {
+            "introduction": {
+                title: "Introduction",
+                content: `
+                    <p>The <strong>VORTEXA HYBRID TECH FRAMEWORK</strong> represents a quantum leap in extreme mobility engineering, combining cutting-edge technologies to create a platform that redefines the limits of performance, safety, and interaction. This document serves as the detailed "Bible" of the framework, presenting its vision, components, and rigorous development methodology.</p>
+                    <p>Conceived for high-demand environments such as motorsport, VORTEXA integrates advanced propulsion systems, intelligent electronics, and a holistic approach to driver safety, culminating in an unprecedented driving experience. Our commitment is to responsible innovation, ensuring that every technological advance is critically evaluated in terms of feasibility and regulatory compliance.</p>
+                    <p>This framework is not just a project; it is the vision of a future where technology elevates human capability to new heights, always with a focus on safety and engineering excellence. We present here the solutions to the inherent challenges at the technological forefront, reinforcing VORTEXA's robustness and adaptability.</p>
+                `
+            },
+            "executive-summary": {
+                title: "Executive Summary",
+                content: `
+                    <h3 id="executive-summary-general">General Public</h3>
+                    <p>VORTEXA HYBRID is a revolutionary platform that integrates the latest innovations in propulsion, materials, and artificial intelligence to create extreme mobility vehicles with superior performance and enhanced safety. Imagine the perfect fusion of power, control, and an intuitive driving experience, all operating within a robust and interconnected technological ecosystem. Our framework is designed to raise the standard of automotive engineering, offering a glimpse into the future of motorsport and high-performance applications.</p>
+                    <p>We emphasize intelligent system integration and redundancy as pillars, ensuring exceptional reliability and performance in any scenario.</p>
+
+                    <h3 id="executive-summary-executives">Executives</h3>
+                    <p>The VORTEXA HYBRID TECH FRAMEWORK represents a unique strategic opportunity with substantial market potential in high-performance and premium automotive sectors. Our value proposition is based on delivering a scalable, robust system with multiple redundancy points, minimizing operational risks and maximizing return on investment.</p>
+                    <p>VORTEXA's modular architecture facilitates adaptation to various applications, from elite motorsport to specialized vehicles. The inclusion of <a href="#risk-assessment" class="highlight-term">contingency plans</a> and <a href="#regulatory-compliance-matrix" class="highlight-term">regulatory compliance matrices</a> ensures agile and secure development, aligned with industry and market demands.</p>
+                    <p>Investing in VORTEXA is investing in the forefront of engineering and in creating a legacy of innovation and safety.</p>
+                `
+            },
+            "technical-data": {
+                title: "Technical Data",
+                content: `
+                    <h3 id="technical-data-engineering">Engineering</h3>
+                    <p>This section delves into the technical details of VORTEXA HYBRID, serving as a reference for engineers and specialists. We address system architecture, material selection, and integration strategies, always focusing on performance, safety, and feasibility. The document structure follows the Technology Readiness Levels (<a href="#trl" class="highlight-term">TRL</a>) for each component, ensuring clarity on the development status.</p>
+
+                    <h4 id="core-systems">Core Systems (TRL 7-9)</h4>
+                    <p>These are the mature and proven systems that form the backbone of VORTEXA. They include the optimized hybrid propulsion unit, the carbon fiber monocoque chassis with calculated deformation zones, high-performance regenerative braking systems, and the energy management system (EMS) that optimizes power delivery and recovery. These components are designed for maximum efficiency and durability in extreme conditions, with extensive testing already conducted in simulated environments and initial prototypes.</p>
+                    <ul>
+                        <li><strong>Hybrid Propulsion Unit:</strong> Combination of high-revving internal combustion engine and electric motors, with kinetic energy recovery (<a href="#kers" class="highlight-term">KERS</a>) and thermal energy recovery (<a href="#mgu-h" class="highlight-term">MGU-H</a>). Target weight: X kg, Combined power: Y hp.</li>
+                        <li><strong>Monocoque Chassis:</strong> Aerospace-grade carbon fiber construction, optimized for torsional rigidity and impact absorption.</li>
+                        <li><strong>Braking System:</strong> Carbon-ceramic with multi-piston calipers, integrated with the regenerative system.</li>
+                        <li><strong>EMS (Energy Management System):</strong> Dedicated software and hardware for energy flow control, ensuring performance and efficiency optimization.</li>
+                    </ul>
+
+                    <h4 id="advanced-systems">Advanced Systems (TRL 4-6)</h4>
+                    <p>Represent technologies with validation in a relevant environment, but still requiring development and testing for full integration into the final system. Key highlights include:</p>
+                    <ul>
+                        <li><strong>Smart Skin™:</strong> An advanced network of sensors integrated into the vehicle's surface, real-time monitoring structural stress, temperature, and aerodynamics. Its development aims for high durability in extreme conditions (impacts, abrasion, thermal variations), with projected implementation costs of $X per m² and a modular maintenance plan to facilitate repairs. Data collection is crucial for real-time optimization and post-event analysis.</li>
+                        <li><strong>VRSH™ (Variable Ratio Suspension and Handling):</strong> Active suspension system that dynamically adjusts geometry and stiffness in response to track conditions and driver commands, optimizing grip and maneuverability. Prototypes have already demonstrated significant gains in controlled tests.</li>
+                        <li><strong>Advanced Telemetry and Predictive Analytics:</strong> Tools that use AI algorithms to predict component failures, optimize race strategies, and provide real-time insights for the team and driver.</li>
+                    </ul>
+
+                    <h4 id="concept-systems">Concept Systems (TRL 1-3)</h4>
+                    <p>These are innovative ideas in the initial research phase, with transformative potential, but requiring fundamental validation. We address challenges and the path to viability:</p>
+                    <ul>
+                        <li><strong>BCI (Brain-Computer Interface) in Motorsport:</strong> Considered as a <span class="highlight-term">system for monitoring cognitive performance and driver alertness states</span>, and not for active vehicle control. The application of BCI in high-vibration and instantaneous response environments (like motorsport) presents significant challenges in signal stability and interference. Our initial research focuses on robust noise filters and signal processing algorithms. The primary goal is to provide real-time data on driver fatigue and concentration, without violating driver assistance regulations.</li>
+                        <li><strong>Starlink™ for Critical Communication:</strong> The feasibility of using Starlink for real-time critical communication in motorsport (<span class="highlight-term">low latency and high reliability</span>) is under rigorous evaluation. While promising for non-critical data or team communications, the inherent latency of the satellite network may be unsuitable for mission-critical system control. We are exploring complementary local network solutions (<a href="#5g" class="highlight-term">Private 5G</a>) or licensed frequencies to ensure redundancy and ultra-low latency for critical systems. For general telemetry communication, Starlink remains a strategic option.</li>
+                        <li><strong>Self-Healing Materials:</strong> Research into polymers and composites that can autonomously repair minor structural damage, increasing component durability and safety.</li>
+                    </ul>
+
+                    <h4 id="regulatory-compliance-matrix">Regulatory Compliance Matrix</h4>
+                    <p>Compliance with sports and technical regulations is a cornerstone of VORTEXA. We are developing a detailed matrix that maps each component and functionality to <a href="#fia" class="highlight-term">FIA</a> (Fédération Internationale de l'Automobile) and other relevant entity regulations. This includes:</p>
+                    <ul>
+                        <li><strong>FIA Regulations:</strong> Continuous analysis of rules on aerodynamics, weight, power, driver safety, and electronic systems to ensure VORTEXA's eligibility in competitions.</li>
+                        <li><strong>HAM Communication (Amateur):</strong> Amateur radio frequencies have legal restrictions for commercial or competitive use. Our plan is to obtain special licenses for dedicated commercial bands for team communication and critical telemetry, or explore the use of private 5G infrastructure where available, ensuring communication legality and robustness.</li>
+                        <li><strong>Certifications:</strong> Identification of necessary certifications (e.g., automotive safety, electromagnetic compatibility) and planning of tests for obtainment.</li>
+                    </ul>
+
+                    <h4 id="integration-roadmap">Integration Roadmap</h4>
+                    <p>Our integration roadmap is divided into phases, allowing for iterative development and continuous validation:</p>
+                    <ul>
+                        <li><strong>MVP (Minimum Viable Product):</strong> Focus on integrating <a href="#core-systems" class="highlight-term">Core Systems</a>, validating the hybrid architecture and basic safety systems.</li>
+                        <li><strong>Prototype:</strong> Inclusion of <a href="#advanced-systems" class="highlight-term">Advanced Systems</a> like Smart Skin™ and VRSH™, with rigorous track testing.</li>
+                        <li><strong>Production/Competition:</strong> Finalization and optimization of all systems, including validated and mitigated concepts from <a href="#concept-systems" class="highlight-term">Concept Systems</a>, aiming for introduction in a competitive environment.</li>
+                        <li><strong>Detailed Schedule:</strong> Each phase has a realistic schedule with development and integration milestones, and an estimated budget per system.</li>
+                    </ul>
+
+                    <h4 id="risk-assessment">Risk Assessment</h4>
+                    <p>A proactive approach to risk management is fundamental. We identify and mitigate the following:</p>
+                    <ul>
+                        <li><strong>Feasibility vs. Concept:</strong> Technical disparities are addressed by categorizing systems by <a href="#trl" class="highlight-term">TRL</a>. For <a href="#bci" class="highlight-term">BCI</a> and <a href="#starlink" class="highlight-term">Starlink</a>, research and development focus on mitigating technical and regulatory challenges, with clear fallback plans for each system.</li>
+                        <li><strong>System Integration and Complexity:</strong> A <span class="highlight-term">dependency and criticality matrix</span> is being developed to manage system interdependence and avoid complexity overload. We prioritize essential systems and establish a <span class="highlight-term">contingency plan</span> with defined <span class="highlight-term">fallbacks</span> for each main system, ensuring operationality and safety even in case of component failure.</li>
+                        <li><strong>Costs and Budget:</strong> Detailed cost estimates per system and development phase are being prepared to ensure the financial viability of the project.</li>
+                    </ul>
+                `
+            },
+            "press-release": {
+                title: "Press Release",
+                content: `
+                    <h3 id="press-release-specialized">Specialized Magazines</h3>
+                    <p>The VORTEXA HYBRID TECH FRAMEWORK announces significant advancements in the integration of hybrid propulsion systems and advanced electronics. Our strategic partnerships (<strong>real: [Real Partner Name]; conceptual: [Conceptual Partner Name, if applicable, with explanation]</strong>) are driving research in lightweight composite materials and next-generation energy management systems. We highlight the innovation of Smart Skin™ and VRSH™, which promise to redefine telemetry and dynamic control in high-performance environments.</p>
+                    <p>This framework is a testament to the commitment to engineering excellence and safety, paving the way for a new era in extreme mobility.</p>
+
+                    <h3 id="press-release-enthusiasts">Enthusiasts</h3>
+                    <p>Get ready for the future of speed! VORTEXA HYBRID is not just a vehicle; it's an experience! With its breathtaking hybrid technology, the intelligent VRSH™ suspension system, and the innovative Smart Skin™ sensor 'skin', you'll feel every millisecond of power and control. Driver safety is our top priority, with a survival capsule and intelligent systems. VORTEXA will take motorsport to a new level of excitement and precision!</p>
+
+                    <h3 id="press-release-segmented">Segmented Public</h3>
+                    <p>For investors and industrial partners, the VORTEXA HYBRID TECH FRAMEWORK offers a robust and scalable platform, with a clear development roadmap and risk mitigation strategies. Our focus on mature and developing <a href="#trl" class="highlight-term">TRL</a> technologies, combined with a rigorous regulatory compliance matrix, positions VORTEXA as a high-potential and legally secure investment. Intellectual property management and the contingency plan for critical systems ensure the project's longevity and value. We are open to discussions for strategic collaborations.</p>
+                `
+            },
+            "glossary": {
+                title: "Technical Glossary",
+                content: `
+                    <p>This glossary provides clear and concise definitions for the technical terms and acronyms used in the VORTEXA HYBRID TECH FRAMEWORK.</p>
+                    <div class="glossary-grid">
+                        <div class="glossary-item">
+                            <h4>BCI (Brain-Computer Interface)</h4>
+                            <p>Brain-Computer Interface: Technology in conceptual phase (TRL 1-3) in VORTEXA, focused on <strong>monitoring cognitive data and driver alertness states, not active vehicle control</strong>, to mitigate regulatory and feasibility issues in high-vibration environments.</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h4>FIA (Fédération Internationale de l'Automobile)</h4>
+                            <p>International Automobile Federation: Global governing body for motorsport. VORTEXA complies with FIA guidelines and regulations for safety systems, performance, and driver assistance, especially concerning the use of new technologies.</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h4>KERS (Kinetic Energy Recovery System)</h4>
+                            <p>Kinetic Energy Recovery System: Technology that recovers energy generated during vehicle braking and stores it (e.g., in batteries or flywheels) for later use, providing an additional power boost or improving efficiency. A component of Core Systems (TRL 7-9).</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h4>MGU-H (Motor Generator Unit - Heat)</h4>
+                            <p>Motor Generator Unit - Heat: Component of the hybrid propulsion system that recovers thermal energy from engine exhaust gases and converts it into electrical energy, which can be used to power the turbocharger or recharge batteries. A component of Core Systems (TRL 7-9).</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h4>MVP (Minimum Viable Product)</h4>
+                            <p>Minimum Viable Product: The first version of a product that contains only the essential functionalities to be launched and tested in the market, allowing for learning and iteration. Part of our Integration Roadmap.</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h4>Smart Skin™</h4>
+                            <p>Advanced technology in development (TRL 4-6) that integrates a network of sensors directly into the vehicle's surface for real-time monitoring of structural stress, temperature, and aerodynamics. The development plan includes specifications for <strong>durability in extreme conditions, cost estimation, and a modular maintenance plan</strong>.</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h4>Starlink™</h4>
+                            <p>SpaceX's satellite internet service. In VORTEXA, its application for critical communication in motorsport is under rigorous evaluation for latency and reliability (TRL 1-3). The primary use will be for non-critical data or as redundancy, with <strong>plans to use licensed commercial bands or private 5G for mission-critical communications</strong>.</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h4>TRL (Technology Readiness Level)</h4>
+                            <p>Technology Readiness Level: A scale from 1 to 9 used to assess the maturity of a technology. TRL 1 (basic research) to TRL 9 (system proven in operational environment). Used to categorize VORTEXA systems.</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h4>VRSH™ (Variable Ratio Suspension and Handling)</h4>
+                            <p>Variable Ratio Suspension and Handling System: Advanced technology (TRL 4-6) that allows dynamic adjustments to suspension geometry and stiffness in real-time, optimizing grip, handling, and vehicle stability in various track conditions.</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h4>Private 5G</h4>
+                            <p>A dedicated and isolated 5G network for a specific organization, offering security, low latency, and high bandwidth. Considered as a potential solution for mission-critical communications in VORTEXA, especially to mitigate limitations of other technologies.</p>
+                        </div>
+                    </div>
+                `
+            },
+            "standards": {
+                title: "Technical Standards",
+                content: `
+                    <p>The VORTEXA HYBRID TECH FRAMEWORK rigorously adheres to pertinent standards and regulations to ensure safety, performance, and legality in its operating environment. Our regulatory compliance matrix details adherence to the following standards:</p>
+                    <ul>
+                        <li><strong>FIA Sporting Regulations:</strong> Continuous analysis and compliance with the technical and sporting requirements of the Fédération Internationale de l'Automobilisme, including chassis safety, engine specifications, electronic systems, and driver assistance.</li>
+                        <li><strong>Automotive Safety Standards:</strong> Implementation of passive safety standards (impact absorption, structural integrity) and active safety standards (braking systems, traction control) according to industry best practices.</li>
+                        <li><strong>Telecommunications Regulations:</strong> For vehicle communication, we are planning to acquire licenses for the use of dedicated commercial frequency bands, ensuring the legality and reliability of data transmission, mitigating restrictions on amateur frequency use (<a href="#communication-ham" class="highlight-term">HAM Communication</a>).</li>
+                        <li><strong>Battery and Hybrid Systems Standards:</strong> Compliance with international standards for handling, safety, and disposal of high-voltage batteries and hybrid propulsion systems.</li>
+                    </ul>
+                    <p>An extensive testing and validation plan is in place to ensure all components and systems meet or exceed these normative requirements.</p>
+                `
+            },
+            "conformity": {
+                title: "Conformity",
+                content: `
+                    <p>The VORTEXA HYBRID project's compliance with laws, regulations, and industry standards is a central pillar of our development. Our strategies include:</p>
+                    <ul>
+                        <li><strong>Required Certifications:</strong> Planning and execution for obtaining all mandatory certifications in motorsport (FIA), vehicle safety, and telecommunications, ensuring permission for operation in competitive and public environments.</li>
+                        <li><strong>Intellectual Property:</strong> A robust intellectual property protection strategy is being implemented for all proprietary technologies developed (Smart Skin™, VRSH™, etc.), including patents, trade secrets, and non-disclosure agreements with partners.</li>
+                        <li><strong>Audits and Reviews:</strong> Regular conduct of internal and external audits to ensure continuous adherence to quality and safety standards.</li>
+                        <li><strong>Responsibility and Ethics:</strong> All systems, especially those involving <a href="#bci" class="highlight-term">BCI</a> and <a href="#ai" class="highlight-term">AI</a>, are developed with a strong commitment to ethics and responsibility, ensuring they do not violate driver assistance principles and maintain competition integrity.</li>
+                    </ul>
+                    <p>Our goal is not just to meet, but to exceed compliance expectations, solidifying trust in the VORTEXA HYBRID TECH FRAMEWORK.</p>
+                `
+            }
+        },
+        footerText: "&copy; 2025 VORTEXA HYBRID TECH FRAMEWORK. All rights reserved."
     },
     it: {
         title: "VORTEXA HYBRID TECH FRAMEWORK",
@@ -517,226 +463,435 @@ const content = {
             title: "Sommario",
             sections: [
                 {
-                    id: "intro",
-                    title: "Panoramica",
+                    id: "introduction",
+                    title: "Introduzione",
+                    subsections: []
+                },
+                {
+                    id: "executive-summary",
+                    title: "Riepilogo Esecutivo",
                     subsections: [
-                        { id: "intro-institucional", title: "Origine e Fondazione" },
-                        { id: "visao-geral", title: "Concetto VORTEXA" },
-                        { id: "diferenciais", title: "Vantaggi Competitivi" },
-                        { id: "roadmap", title: "Cronologia di Sviluppo" }
+                        { id: "executive-summary-general", title: "Pubblico Generale" },
+                        { id: "executive-summary-executives", title: "Dirigenti" }
                     ]
                 },
                 {
-                    id: "dados-tecnicos",
-                    title: "Specifiche Tecniche",
+                    id: "technical-data",
+                    title: "Dati Tecnici",
                     subsections: [
-                        { id: "estrutura-design", title: "Architettura e Materiali" },
-                        { id: "filosofia-murray", title: "Design Funzionale" },
-                        { id: "survivor-capsule", title: "Sistema di Protezione" },
-                        { id: "especificacoes", title: "Dati Tecnici Dettagliati" }
+                        { id: "technical-data-engineering", title: "Ingegneria" },
+                        { id: "core-systems", title: "Sistemi Core (TRL 7-9)" },
+                        { id: "advanced-systems", title: "Sistemi Avanzati (TRL 4-6)" },
+                        { id: "concept-systems", title: "Sistemi Concettuali (TRL 1-3)" },
+                        { id: "regulatory-compliance-matrix", title: "Matrice di Conformità Normativa" },
+                        { id: "integration-roadmap", title: "Roadmap di Integrazione" },
+                        { id: "risk-assessment", title: "Valutazione del Rischio" }
                     ]
                 },
                 {
                     id: "press-release",
-                    title: "Comunicazione",
+                    title: "Comunicato Stampa",
                     subsections: [
-                        { id: "press-overview", title: "Visione Strategica" },
-                        { id: "press-tech", title: "Innovazioni Tecnologiche" },
-                        { id: "press-market", title: "Posizionamento di Mercato" }
+                        { id: "press-release-specialized", title: "Riviste Specializzate" },
+                        { id: "press-release-enthusiasts", title: "Appassionati" },
+                        { id: "press-release-segmented", title: "Pubblico Segmentato" }
                     ]
                 },
                 {
-                    id: "glossario",
+                    id: "glossary",
                     title: "Glossario Tecnico",
-                    subsections: [
-                        { id: "termos-principais", title: "Termini Principali" },
-                        { id: "siglas", title: "Acronimi e Abbreviazioni" },
-                        { id: "tecnologias", title: "Tecnologie Applicate" }
-                    ]
+                    subsections: []
+                },
+                {
+                    id: "standards",
+                    title: "Norme Tecniche",
+                    subsections: []
+                },
+                {
+                    id: "conformity",
+                    title: "Conformità",
+                    subsections: []
                 }
             ]
         },
-        // ... resto do conteúdo em italiano (similar structure)
+        sections: {
+            "introduction": {
+                title: "Introduzione",
+                content: `
+                    <p>Il <strong>VORTEXA HYBRID TECH FRAMEWORK</strong> rappresenta un salto quantico nell'ingegneria della mobilità estrema, combinando tecnologie all'avanguardia per creare una piattaforma che ridefinisce i limiti di prestazioni, sicurezza e interazione. Questo documento serve come la "Bibbia" dettagliata del framework, presentando la sua visione, i componenti e la rigorosa metodologia di sviluppo.</p>
+                    <p>Concepito per ambienti ad alta richiesta come il motorsport, VORTEXA integra sistemi di propulsione avanzati, elettronica intelligente e un approccio olistico alla sicurezza del pilota, culminando in un'esperienza di guida senza precedenti. Il nostro impegno è verso l'innovazione responsabile, garantendo che ogni progresso tecnologico sia valutato criticamente in termini di fattibilità e conformità normativa.</p>
+                    <p>Questo framework non è solo un progetto; è la visione di un futuro in cui la tecnologia eleva la capacità umana a nuove vette, sempre con un focus sulla sicurezza e sull'eccellenza ingegneristica. Presentiamo qui le soluzioni alle sfide inerenti all'avanguardia tecnologica, rafforzando la robustezza e l'adattabilità di VORTEXA.</p>
+                `
+            },
+            "executive-summary": {
+                title: "Riepilogo Esecutivo",
+                content: `
+                    <h3 id="executive-summary-general">Pubblico Generale</h3>
+                    <p>VORTEXA HYBRID è una piattaforma rivoluzionaria che integra le ultime innovazioni in propulsione, materiali e intelligenza artificiale per creare veicoli a mobilità estrema con prestazioni superiori e sicurezza migliorata. Immagina la fusione perfetta tra potenza, controllo e un'esperienza di guida intuitiva, il tutto operante all'interno di un ecosistema tecnologico robusto e interconnesso. Il nostro framework è progettato per elevare lo standard dell'ingegneria automobilistica, offrendo uno sguardo al futuro del motorsport e delle applicazioni ad alte prestazioni.</p>
+                    <p>Sottolineiamo l'integrazione intelligente dei sistemi e la ridondanza come pilastri, garantendo affidabilità e prestazioni eccezionali in qualsiasi scenario.</p>
+
+                    <h3 id="executive-summary-executives">Dirigenti</h3>
+                    <p>Il VORTEXA HYBRID TECH FRAMEWORK rappresenta un'opportunità strategica unica con un notevole potenziale di mercato nei settori delle alte prestazioni e dell'automotive premium. La nostra proposta di valore si basa sulla fornitura di un sistema scalabile, robusto e con molteplici punti di ridondanza, minimizzando i rischi operativi e massimizzando il ritorno sull'investimento.</p>
+                    <p>L'architettura modulare di VORTEXA facilita l'adattamento a varie applicazioni, dal motorsport d'élite ai veicoli specializzati. L'inclusione di <a href="#risk-assessment" class="highlight-term">piani di contingenza</a> e <a href="#regulatory-compliance-matrix" class="highlight-term">matrici di conformità normativa</a> assicura uno sviluppo agile e sicuro, allineato con le richieste dell'industria e del mercato.</p>
+                    <p>Investire in VORTEXA significa investire all'avanguardia dell'ingegneria e nella creazione di un'eredità di innovazione e sicurezza.</p>
+                `
+            },
+            "technical-data": {
+                title: "Dati Tecnici",
+                content: `
+                    <h3 id="technical-data-engineering">Ingegneria</h3>
+                    <p>Questa sezione approfondisce i dettagli tecnici di VORTEXA HYBRID, servendo come riferimento per ingegneri e specialisti. Affrontiamo l'architettura del sistema, la selezione dei materiali e le strategie di integrazione, concentrandoci sempre su prestazioni, sicurezza e fattibilità. La struttura del documento segue i Livelli di Maturità Tecnologica (<a href="#trl" class="highlight-term">TRL</a>) per ogni componente, garantendo chiarezza sullo stato di sviluppo.</p>
+
+                    <h4 id="core-systems">Sistemi Core (TRL 7-9)</h4>
+                    <p>Sono i sistemi maturi e collaudati che costituiscono la spina dorsale di VORTEXA. Includono l'unità di propulsione ibrida ottimizzata, il telaio monoscocca in fibra di carbonio con zone di deformazione calcolate, i sistemi di frenata rigenerativa ad alte prestazioni e il sistema di gestione dell'energia (EMS) che ottimizza l'erogazione di potenza e il recupero. Questi componenti sono progettati per la massima efficienza e durata in condizioni estreme, con test estesi già condotti in ambienti simulati e prototipi iniziali.</p>
+                    <ul>
+                        <li><strong>Unità di Propulsione Ibrida:</strong> Combinazione di motore a combustione interna ad alti giri e motori elettrici, con recupero di energia cinetica (<a href="#kers" class="highlight-term">KERS</a>) e recupero di energia termica (<a href="#mgu-h" class="highlight-term">MGU-H</a>). Peso target: X kg, Potenza combinata: Y hp.</li>
+                        <li><strong>Telaio Monoscocca:</strong> Costruzione in fibra di carbonio di grado aerospaziale, ottimizzata per la rigidità torsionale e l'assorbimento degli urti.</li>
+                        <li><strong>Sistema Frenante:</strong> Carbonio-ceramico con pinze a più pistoncini, integrato con il sistema rigenerativo.</li>
+                        <li><strong>EMS (Energy Management System):</strong> Software e hardware dedicati per il controllo del flusso di energia, garantendo l'ottimizzazione delle prestazioni e dell'efficienza.</li>
+                    </ul>
+
+                    <h4 id="advanced-systems">Sistemi Avanzati (TRL 4-6)</h4>
+                    <p>Rappresentano tecnologie con convalida in un ambiente rilevante, ma che richiedono ancora sviluppo e test per la piena integrazione nel sistema finale. I punti salienti includono:</p>
+                    <ul>
+                        <li><strong>Smart Skin™:</strong> Una rete avanzata di sensori integrati nella superficie del veicolo, che monitora in tempo reale lo stress strutturale, la temperatura e l'aerodinamica. Il suo sviluppo mira a un'elevata durabilità in condizioni estreme (impatti, abrasione, variazioni termiche), con costi di implementazione previsti di $X per m² e un piano di manutenzione modulare per facilitare le riparazioni. La raccolta dati è fondamentale per l'ottimizzazione in tempo reale e l'analisi post-evento.</li>
+                        <li><strong>VRSH™ (Variable Ratio Suspension and Handling):</strong> Sistema di sospensione attiva che regola dinamicamente la geometria e la rigidità in risposta alle condizioni della pista e ai comandi del pilota, ottimizzando l'aderenza e la manovrabilità. I prototipi hanno già dimostrato guadagni significativi in test controllati.</li>
+                        <li><strong>Telemetria Avanzata e Analisi Predittiva:</strong> Strumenti che utilizzano algoritmi di <a href="#ai" class="highlight-term">IA</a> per prevedere guasti ai componenti, ottimizzare le strategie di gara e fornire approfondimenti in tempo reale al team e al pilota.</li>
+                    </ul>
+
+                    <h4 id="concept-systems">Sistemi Concettuali (TRL 1-3)</h4>
+                    <p>Sono idee innovative in fase iniziale di ricerca, con potenziale trasformativo, ma che richiedono una convalida fondamentale. Affrontiamo le sfide e il percorso verso la fattibilità:</p>
+                    <ul>
+                        <li><strong>BCI (Brain-Computer Interface) nel Motorsport:</strong> Considerato come un <span class="highlight-term">sistema per il monitoraggio delle prestazioni cognitive e degli stati di allerta del pilota</span>, e non per il controllo attivo del veicolo. L'applicazione di BCI in ambienti ad alta vibrazione e risposta istantanea (come il motorsport) presenta sfide significative in termini di stabilità del segnale e interferenze. Le nostre ricerche iniziali si concentrano su filtri anti-rumore e algoritmi di elaborazione del segnale robusti. L'obiettivo principale è fornire dati in tempo reale sulla fatica e sulla concentrazione del pilota, senza violare i regolamenti sull'assistenza al pilota.</li>
+                        <li><strong>Starlink™ per la Comunicazione Critica:</strong> La fattibilità dell'utilizzo di Starlink per la comunicazione critica in tempo reale nel motorsport (<span class="highlight-term">bassa latenza e alta affidabilità</span>) è oggetto di rigorosa valutazione. Sebbene promettente per dati non critici o comunicazioni del team, la latenza intrinseca della rete satellitare potrebbe essere inadatta per il controllo di sistemi mission-critical. Stiamo esplorando soluzioni di rete locale complementari (<a href="#5g" class="highlight-term">5G Privato</a>) o frequenze licenziate per garantire ridondanza e latenza ultra-bassa per i sistemi critici. Per la comunicazione telemetrica generale, Starlink rimane un'opzione strategica.</li>
+                        <li><strong>Materiali Autorigeneranti:</strong> Ricerca su polimeri e compositi in grado di riparare autonomamente piccoli danni strutturali, aumentando la durata e la sicurezza dei componenti.</li>
+                    </ul>
+
+                    <h4 id="regulatory-compliance-matrix">Matrice di Conformità Normativa</h4>
+                    <p>La conformità ai regolamenti sportivi e tecnici è una pietra miliare di VORTEXA. Stiamo sviluppando una matrice dettagliata che mappa ogni componente e funzionalità ai regolamenti della <a href="#fia" class="highlight-term">FIA</a> (Fédération Internationale de l'Automobile) e di altre entità pertinenti. Ciò include:</p>
+                    <ul>
+                        <li><strong>Regolamenti FIA:</strong> Analisi continua delle regole su aerodinamica, peso, potenza, sicurezza del pilota e sistemi elettronici per garantire l'idoneità di VORTEXA nelle competizioni.</li>
+                        <li><strong>Comunicazione HAM (Amatoriale):</strong> Le frequenze radioamatoriali hanno restrizioni legali per uso commerciale o competitivo. Il nostro piano è di ottenere licenze speciali per bande commerciali dedicate alla comunicazione del team e alla telemetria critica, o di esplorare l'uso dell'infrastruttura 5G privata dove disponibile, garantendo la legalità e la robustezza della comunicazione.</li>
+                        <li><strong>Certificazioni:</strong> Identificazione delle certificazioni necessarie (es. sicurezza automobilistica, compatibilità elettromagnetica) e pianificazione dei test per l'ottenimento.</li>
+                    </ul>
+
+                    <h4 id="integration-roadmap">Roadmap di Integrazione</h4>
+                    <p>La nostra roadmap di integrazione è divisa in fasi, consentendo uno sviluppo iterativo e una convalida continua:</p>
+                    <ul>
+                        <li><strong>MVP (Minimum Viable Product):</strong> Focus sull'integrazione dei <a href="#core-systems" class="highlight-term">Sistemi Core</a>, convalidando l'architettura ibrida e i sistemi di sicurezza di base.</li>
+                        <li><strong>Prototipo:</strong> Inclusione dei <a href="#advanced-systems" class="highlight-term">Sistemi Avanzati</a> come Smart Skin™ e VRSH™, con rigorosi test in pista.</li>
+                        <li><strong>Produzione/Competizione:</strong> Finalizzazione e ottimizzazione di tutti i sistemi, inclusi i concetti convalidati e mitigati dai <a href="#concept-systems" class="highlight-term">Sistemi Concettuali</a>, mirando all'introduzione in un ambiente competitivo.</li>
+                        <li><strong>Cronogramma Dettagliato:</strong> Ogni fase ha un cronogramma realistico con pietre miliari di sviluppo e integrazione, e un budget stimato per sistema.</li>
+                    </ul>
+
+                    <h4 id="risk-assessment">Valutazione del Rischio</h4>
+                    <p>Un approccio proattivo alla gestione del rischio è fondamentale. Abbiamo identificato e mitigato quanto segue:</p>
+                    <ul>
+                        <li><strong>Fattibilità vs. Concetto:</strong> Le disparità tecniche vengono affrontate categorizzando i sistemi per <a href="#trl" class="highlight-term">TRL</a>. Per <a href="#bci" class="highlight-term">BCI</a> e <a href="#starlink" class="highlight-term">Starlink</a>, la ricerca e lo sviluppo si concentrano sulla mitigazione delle sfide tecniche e normative, con piani di fallback chiari per ogni sistema.</li>
+                        <li><strong>Integrazione e Complessità del Sistema:</strong> Viene sviluppata una <span class="highlight-term">matrice di dipendenza e criticità</span> per gestire l'interdipendenza dei sistemi ed evitare il sovraccarico di complessità. Diamo priorità ai sistemi essenziali e stabiliamo un <span class="highlight-term">piano di contingenza</span> con <span class="highlight-term">fallback</span> definiti per ogni sistema principale, garantendo operatività e sicurezza anche in caso di guasto di un componente.</li>
+                        <li><strong>Costi e Budget:</strong> Stime dettagliate dei costi per sistema e fase di sviluppo vengono elaborate per garantire la fattibilità finanziaria del progetto.</li>
+                    </ul>
+                `
+            },
+            "press-release": {
+                title: "Comunicato Stampa",
+                content: `
+                    <h3 id="press-release-specialized">Riviste Specializzate</h3>
+                    <p>Il VORTEXA HYBRID TECH FRAMEWORK annuncia progressi significativi nell'integrazione di sistemi di propulsione ibrida ed elettronica avanzata. Le nostre partnership strategiche (<strong>reale: [Nome Partner Reale]; concettuale: [Nome Partner Concettuale, se applicabile, con spiegazione]</strong>) stanno guidando la ricerca in materiali compositi leggeri e sistemi di gestione dell'energia di prossima generazione. Sottolineiamo l'innovazione di Smart Skin™ e VRSH™, che promettono di ridefinire la telemetria e il controllo dinamico in ambienti ad alte prestazioni.</p>
+                    <p>Questo framework è una testimonianza dell'impegno verso l'eccellenza ingegneristica e la sicurezza, aprendo la strada a una nuova era nella mobilità estrema.</p>
+
+                    <h3 id="press-release-enthusiasts">Appassionati</h3>
+                    <p>Preparatevi al futuro della velocità! VORTEXA HYBRID non è solo un veicolo; è un'esperienza! Con la sua tecnologia ibrida mozzafiato, il sistema di sospensione intelligente VRSH™ e l'innovativa "pelle" di sensori Smart Skin™, sentirete ogni millisecondo di potenza e controllo. La sicurezza del pilota è la nostra massima priorità, con una capsula di sopravvivenza e sistemi intelligenti. VORTEXA porterà il motorsport a un nuovo livello di emozione e precisione!</p>
+
+                    <h3 id="press-release-segmented">Pubblico Segmentato</h3>
+                    <p>Per gli investitori e i partner industriali, il VORTEXA HYBRID TECH FRAMEWORK offre una piattaforma robusta e scalabile, con una chiara roadmap di sviluppo e strategie di mitigazione del rischio. Il nostro focus sulle tecnologie <a href="#trl" class="highlight-term">TRL</a> mature e in sviluppo, combinato con una rigorosa matrice di conformità normativa, posiziona VORTEXA come un investimento ad alto potenziale e sicurezza legale. La gestione della proprietà intellettuale e il piano di contingenza per i sistemi critici garantiscono la longevità e il valore del progetto. Siamo aperti a discussioni per collaborazioni strategiche.</p>
+                `
+            },
+            "glossary": {
+                title: "Glossario Tecnico",
+                content: `
+                    <p>Questo glossario fornisce definizioni chiare e concise per i termini tecnici e gli acronimi utilizzati nel VORTEXA HYBRID TECH FRAMEWORK.</p>
+                    <div class="glossary-grid">
+                        <div class="glossary-item">
+                            <h4>BCI (Brain-Computer Interface)</h4>
+                            <p>Interfaccia Cervello-Computer: Tecnologia in fase concettuale (TRL 1-3) in VORTEXA, focalizzata sul <strong>monitoraggio dei dati cognitivi e degli stati di allerta del pilota, non sul controllo attivo del veicolo</strong>, per mitigare problemi normativi e di fattibilità in ambienti ad alta vibrazione.</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h4>FIA (Fédération Internationale de l'Automobile)</h4>
+                            <p>Federazione Internazionale dell'Automobile: Organo di governo globale per il motorsport. VORTEXA è conforme alle linee guida e ai regolamenti della FIA per i sistemi di sicurezza, le prestazioni e l'assistenza al pilota, in particolare per quanto riguarda l'uso di nuove tecnologie.</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h4>KERS (Kinetic Energy Recovery System)</h4>
+                            <p>Sistema di Recupero dell'Energia Cinetica: Tecnologia che recupera l'energia generata durante la frenata di un veicolo e la immagazzina (es: in batterie o volani) per un uso successivo, fornendo un impulso di potenza aggiuntivo o migliorando l'efficienza. Un componente dei Sistemi Core (TRL 7-9).</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h4>MGU-H (Motor Generator Unit - Heat)</h4>
+                            <p>Unità Motore-Generatore - Calore: Componente del sistema di propulsione ibrida che recupera l'energia termica dai gas di scarico del motore e la converte in energia elettrica, che può essere utilizzata per alimentare il turbocompressore o ricaricare le batterie. Un componente dei Sistemi Core (TRL 7-9).</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h4>MVP (Minimum Viable Product)</h4>
+                            <p>Prodotto Minimo Viabile: La prima versione di un prodotto che contiene solo le funzionalità essenziali per essere lanciato e testato sul mercato, consentendo l'apprendimento e l'iterazione. Fa parte della nostra Roadmap di Integrazione.</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h4>Smart Skin™</h4>
+                            <p>Tecnologia avanzata in sviluppo (TRL 4-6) che integra una rete di sensori direttamente nella superficie del veicolo per il monitoraggio in tempo reale dello stress strutturale, della temperatura e dell'aerodinamica. Il piano di sviluppo include specifiche per la <strong>durata in condizioni estreme, la stima dei costi e un piano di manutenzione modulare</strong>.</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h4>Starlink™</h4>
+                            <p>Servizio internet satellitare di SpaceX. In VORTEXA, la sua applicazione per la comunicazione critica nel motorsport è oggetto di rigorosa valutazione per latenza e affidabilità (TRL 1-3). L'uso primario sarà per dati non critici o come ridondanza, con <strong>piani per l'utilizzo di bande commerciali licenziate o 5G privato per comunicazioni mission-critical</strong>.</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h4>TRL (Technology Readiness Level)</h4>
+                            <p>Livello di Maturità Tecnologica: Una scala da 1 a 9 utilizzata per valutare la maturità di una tecnologia. TRL 1 (ricerca di base) a TRL 9 (sistema collaudato in ambiente operativo). Usato per categorizzare i sistemi VORTEXA.</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h4>VRSH™ (Variable Ratio Suspension and Handling)</h4>
+                            <p>Sistema di Sospensione e Manovrabilità a Rapporto Variabile: Tecnologia avanzata (TRL 4-6) che consente regolazioni dinamiche della geometria e della rigidità della sospensione in tempo reale, ottimizzando l'aderenza, la manovrabilità e la stabilità del veicolo in varie condizioni di pista.</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h4>5G Privato</h4>
+                            <p>Una rete 5G dedicata e isolata per una specifica organizzazione, che offre sicurezza, bassa latenza e alta larghezza di banda. Considerata una potenziale soluzione per le comunicazioni mission-critical in VORTEXA, specialmente per mitigare i limiti di altre tecnologie.</p>
+                        </div>
+                    </div>
+                `
+            },
+            "standards": {
+                title: "Norme Tecniche",
+                content: `
+                    <p>Il VORTEXA HYBRID TECH FRAMEWORK aderisce rigorosamente alle norme e ai regolamenti pertinenti per garantire sicurezza, prestazioni e legalità nel suo ambiente operativo. La nostra matrice di conformità normativa dettagliata l'adesione ai seguenti standard:</p>
+                    <ul>
+                        <li><strong>Regolamenti Sportivi della FIA:</strong> Analisi e conformità continua con i requisiti tecnici e sportivi della Fédération Internationale de l'Automobilisme, inclusi sicurezza del telaio, specifiche del motore, sistemi elettronici e assistenza al pilota.</li>
+                        <li><strong>Norme di Sicurezza Automobilistica:</strong> Implementazione di standard di sicurezza passiva (assorbimento degli urti, integrità strutturale) e attiva (sistemi di frenata, controllo della trazione) secondo le migliori pratiche del settore.</li>
+                        <li><strong>Regolamentazioni delle Telecomunicazioni:</strong> Per la comunicazione del veicolo, stiamo pianificando l'acquisizione di licenze per l'uso di bande di frequenza commerciali dedicate, garantendo la legalità e l'affidabilità della trasmissione dati, mitigando le restrizioni sull'uso delle frequenze amatoriali (<a href="#communication-ham" class="highlight-term">Comunicazione HAM</a>).</li>
+                        <li><strong>Standard per Batterie e Sistemi Ibridi:</strong> Conformità agli standard internazionali per la manipolazione, la sicurezza e lo smaltimento di batterie ad alta tensione e sistemi di propulsione ibridi.</li>
+                    </ul>
+                    <p>Un piano esteso di test e convalida è in atto per garantire che tutti i componenti e i sistemi soddisfino o superino questi requisiti normativi.</p>
+                `
+            },
+            "conformity": {
+                title: "Conformità",
+                content: `
+                    <p>La conformità del progetto VORTEXA HYBRID con le leggi, i regolamenti e gli standard del settore è un pilastro centrale del nostro sviluppo. Le nostre strategie includono:</p>
+                    <ul>
+                        <li><strong>Certificazioni Necessarie:</strong> Pianificazione ed esecuzione per l'ottenimento di tutte le certificazioni obbligatorie nel motorsport (FIA), sicurezza veicolare e telecomunicazioni, garantendo il permesso per l'operatività in ambienti competitivi e pubblici.</li>
+                        <li><strong>Proprietà Intellettuale:</strong> Una solida strategia di protezione della proprietà intellettuale viene implementata per tutte le tecnologie proprietarie sviluppate (Smart Skin™, VRSH™, ecc.), inclusi brevetti, segreti commerciali e accordi di riservatezza con i partner.</li>
+                        <li><strong>Audit e Revisioni:</strong> Conduzione regolare di audit interni ed esterni per garantire la continua adesione agli standard di qualità e sicurezza.</li>
+                        <li><strong>Responsabilità ed Etica:</strong> Tutti i sistemi, in particolare quelli che coinvolgono <a href="#bci" class="highlight-term">BCI</a> e <a href="#ai" class="highlight-term">IA</a>, sono sviluppati con un forte impegno per l'etica e la responsabilità, garantendo che non violino i principi di assistenza al pilota e mantengano l'integrità della competizione.</li>
+                    </ul>
+                    <p>Il nostro obiettivo non è solo quello di soddisfare, ma di superare le aspettative di conformità, rafforzando la fiducia nel VORTEXA HYBRID TECH FRAMEWORK.</p>
+                `
+            }
+        },
+        footerText: "&copy; 2025 VORTEXA HYBRID TECH FRAMEWORK. Tutti i diritti riservati."
     }
 };
 
-// Estado da aplicação
-let currentLang = 'pt';
-let isDarkMode = true;
-let lastScrollPosition = 0;
-
-// Funções de navegação aprimoradas
-function navigateToGlossary(term) {
-    lastScrollPosition = window.pageYOffset;
-    const glossarySection = document.getElementById('glossario');
-    const termElement = document.getElementById(term);
-    
-    if (termElement) {
-        termElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        termElement.classList.add('highlight-term');
-        setTimeout(() => {
-            termElement.classList.remove('highlight-term');
-        }, 3000);
-    } else if (glossarySection) {
-        glossarySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+// Funções de controle do tema e idioma
+function toggleTheme() {
+    document.body.classList.toggle('light-mode');
+    const isLightMode = document.body.classList.contains('light-mode');
+    localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
+    // Atualiza o texto do botão, se necessário, ou a exibição do ícone (já no CSS)
+    // const themeButton = document.getElementById('theme-toggle');
+    // themeButton.textContent = isLightMode ? 'Modo Escuro' : 'Modo Claro';
 }
 
-function returnToOrigin() {
-    window.scrollTo({ top: lastScrollPosition, behavior: 'smooth' });
-}
-
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-// Função para carregar o sumário aprimorado
-function loadSidebar() {
-    const sidebar = document.querySelector('.sidebar ul');
-    const currentContent = content[currentLang];
-    
-    sidebar.innerHTML = '';
-    
-    currentContent.sidebar.sections.forEach(section => {
-        const li = document.createElement('li');
-        li.className = 'section-item';
-        
-        const mainLink = document.createElement('a');
-        mainLink.href = `#${section.id}`;
-        mainLink.textContent = section.title;
-        mainLink.className = 'main-section-link';
-        
-        li.appendChild(mainLink);
-        
-        if (section.subsections && section.subsections.length > 0) {
-            const subList = document.createElement('ul');
-            subList.className = 'subsection-list';
-            
-            section.subsections.forEach(subsection => {
-                const subLi = document.createElement('li');
-                const subLink = document.createElement('a');
-                subLink.href = `#${subsection.id}`;
-                subLink.textContent = subsection.title;
-                subLink.className = 'subsection-link';
-                
-                subLi.appendChild(subLink);
-                subList.appendChild(subLi);
-            });
-            
-            li.appendChild(subList);
-        }
-        
-        sidebar.appendChild(li);
-    });
-}
-
-// Função para carregar conteúdo
-function loadContent() {
-    const contentDiv = document.getElementById('content');
-    const currentContent = content[currentLang];
-    
-    document.title = currentContent.title;
-    document.querySelector('h1').textContent = currentContent.title;
-    
-    let html = '';
-    Object.keys(currentContent.sections).forEach(sectionKey => {
-        const section = currentContent.sections[sectionKey];
-        html += `
-            <section id="${sectionKey}" class="content-section">
-                <h2>${section.title}</h2>
-                ${section.content}
-            </section>
-        `;
-    });
-    
-    contentDiv.innerHTML = html;
-    loadSidebar();
-}
-
-// Resto das funções existentes (changeLang, toggleTheme, etc.)
 function changeLang(lang) {
     currentLang = lang;
+    localStorage.setItem('lang', lang);
+    document.documentElement.lang = lang; // Atualiza o atributo lang do HTML
     loadContent();
-    
-    // Atualizar botões
-    document.querySelectorAll('.controls button[id^="lang-"]').forEach(btn => {
-        btn.classList.remove('active');
+    loadSidebar(); // Recarrega o sumário para atualizar os títulos de seção
+    updateLanguageButtons(); // Atualiza o estado "active" dos botões de idioma
+    updateFooterText(); // Atualiza o texto do rodapé
+}
+
+function updateLanguageButtons() {
+    document.querySelectorAll('.lang-button').forEach(button => {
+        if (button.dataset.lang === currentLang) {
+            button.classList.add('active');
+        } else {
+            button.classList.remove('active');
+        }
     });
-    document.getElementById(`lang-${lang}`).classList.add('active');
-    
-    // Atualizar texto do botão de tema
-    const themeBtn = document.getElementById('theme-toggle');
-    if (lang === 'pt') {
-        themeBtn.textContent = isDarkMode ? 'Modo Claro' : 'Modo Escuro';
-    } else if (lang === 'en') {
-        themeBtn.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
-    } else if (lang === 'it') {
-        themeBtn.textContent = isDarkMode ? 'Modalità Chiara' : 'Modalità Scura';
+}
+
+function updateFooterText() {
+    const footerP = document.querySelector('footer p');
+    if (footerP && content[currentLang] && content[currentLang].footerText) {
+        footerP.innerHTML = content[currentLang].footerText;
     }
 }
 
-function toggleTheme() {
-    isDarkMode = !isDarkMode;
-    document.body.classList.toggle('light-mode');
+// Funções de carregamento de conteúdo
+function loadContent(sectionId = null) {
+    const contentDiv = document.getElementById('content');
+    contentDiv.innerHTML = ''; // Limpa o conteúdo existente
+
+    if (sectionId && content[currentLang].sections[sectionId]) {
+        // Carrega uma seção específica
+        const sectionData = content[currentLang].sections[sectionId];
+        const sectionElement = document.createElement('section');
+        sectionElement.id = sectionId;
+        // Se a seção principal tiver um título direto, use-o, senão, o título do content.sections
+        sectionElement.innerHTML = `<h2>${sectionData.title}</h2>` + sectionData.content;
+        contentDiv.appendChild(sectionElement);
+    } else {
+        // Carrega todas as seções por padrão (e.g., na inicialização)
+        for (const secId in content[currentLang].sections) {
+            const sectionData = content[currentLang].sections[secId];
+            const sectionElement = document.createElement('section');
+            sectionElement.id = secId;
+            sectionElement.innerHTML = `<h2>${sectionData.title}</h2>` + sectionData.content;
+            contentDiv.appendChild(sectionElement);
+        }
+    }
+    // Adiciona o botão "Voltar ao topo" no final de cada seção se o id não for o glossario
+    if (sectionId && sectionId !== 'glossary') {
+        const backToTopBtn = document.createElement('p');
+        backToTopBtn.innerHTML = `<a href="#top" class="back-to-summary-btn">Voltar ao topo</a>`;
+        contentDiv.appendChild(backToTopBtn);
+    } else if (sectionId === 'glossary') {
+         // O botão de voltar ao topo já está incluído no HTML do glossário no objeto content
+    }
     
-    const themeBtn = document.getElementById('theme-toggle');
-    if (currentLang === 'pt') {
-        themeBtn.textContent = isDarkMode ? 'Modo Claro' : 'Modo Escuro';
-    } else if (currentLang === 'en') {
-        themeBtn.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
-    } else if (currentLang === 'it') {
-        themeBtn.textContent = isDarkMode ? 'Modalità Chiara' : 'Modalità Scura';
+    // Após carregar o conteúdo, atualiza os event listeners para links internos
+    setupSmoothScrolling();
+}
+
+
+function loadSidebar() {
+    const sidebarUl = document.querySelector('.sidebar ul');
+    const sidebarTitle = document.querySelector('.sidebar h2');
+    sidebarUl.innerHTML = ''; // Limpa o sumário existente
+
+    if (sidebarTitle) {
+        sidebarTitle.textContent = content[currentLang].sidebar.title;
+    }
+
+    content[currentLang].sidebar.sections.forEach(section => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = `#${section.id}`;
+        a.textContent = section.title;
+        li.appendChild(a);
+
+        if (section.subsections && section.subsections.length > 0) {
+            const ulSub = document.createElement('ul');
+            section.subsections.forEach(sub => {
+                const liSub = document.createElement('li');
+                const aSub = document.createElement('a');
+                aSub.href = `#${sub.id}`;
+                aSub.textContent = sub.title;
+                liSub.appendChild(aSub);
+                ulSub.appendChild(liSub);
+            });
+            li.appendChild(ulSub);
+        }
+        sidebarUl.appendChild(li);
+    });
+    updateSidebarHighlight(); // Garante que o item do sumário correto seja destacado
+}
+
+// Destaque do item do sumário com base na rolagem
+function updateSidebarHighlight() {
+    const sections = document.querySelectorAll('main.main-content section, main.main-content h3');
+    const sidebarLinks = document.querySelectorAll('.sidebar ul li a');
+    const headerOffset = document.getElementById('main-header') ? document.getElementById('main-header').offsetHeight : 0;
+    const scrollPosition = window.scrollY + headerOffset + 10; // Adiciona um pequeno offset
+
+    sections.forEach(sec => {
+        if (sec.offsetTop <= scrollPosition && sec.offsetTop + sec.offsetHeight > scrollPosition) {
+            const currentId = sec.id;
+            sidebarLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentId}`) {
+                    link.classList.add('active');
+                } else {
+                    // Também destaca a seção pai se a subseção estiver ativa
+                    let parentLi = link.closest('li');
+                    if (parentLi && parentLi.querySelector(`a[href="#${currentId}"]`)) {
+                        link.classList.add('active'); // Destaca o pai do item ativo
+                    }
+                }
+            });
+        }
+    });
+}
+
+
+// Scroll suave para links internos
+function setupSmoothScrolling() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.removeEventListener('click', smoothScrollHandler); // Remove para evitar duplicidade
+        anchor.addEventListener('click', smoothScrollHandler);
+    });
+}
+
+function smoothScrollHandler(e) {
+    const href = this.getAttribute('href');
+    // Verifica se não é apenas '#' ou um link que já está no topo
+    if (href === '#' || href === '#top' && window.scrollY === 0) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+    }
+
+    const targetId = href.substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+        e.preventDefault();
+        const headerOffset = document.getElementById('main-header') ? document.getElementById('main-header').offsetHeight : 0;
+        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - headerOffset - 10; // -10px para um pequeno espaçamento extra
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
     }
 }
 
-// Event listeners
+
+// Event listeners e inicialização
+let currentLang = localStorage.getItem('lang') || 'pt';
+
 function setupEventListeners() {
     document.getElementById('lang-pt').addEventListener('click', () => changeLang('pt'));
     document.getElementById('lang-en').addEventListener('click', () => changeLang('en'));
     document.getElementById('lang-it').addEventListener('click', () => changeLang('it'));
     document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
-}
 
-// Scroll suave para links internos
-function setupSmoothScrolling() {
-    document.addEventListener('click', function(e) {
-        if (e.target.tagName === 'A' && e.target.getAttribute('href').startsWith('#')) {
-            e.preventDefault();
-            const targetId = e.target.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }
-    });
+    window.addEventListener('scroll', updateSidebarHighlight);
+    // Adiciona o listener de rolagem para quando o conteúdo muda (após loadContent)
+    const contentObserver = new MutationObserver(updateSidebarHighlight);
+    contentObserver.observe(document.getElementById('content'), { childList: true, subtree: true });
 }
 
 // Inicialização
 document.addEventListener('DOMContentLoaded', function() {
-    loadContent();
+    // Aplica o tema salvo no localStorage
+    const savedTheme = localStorage.getItem('theme') || 'dark'; // Padrão 'dark'
+    if (savedTheme === 'light') {
+        document.body.classList.add('light-mode');
+    }
+
+    // Carrega o idioma inicial, conteúdo e sumário
+    changeLang(currentLang); // Chamamos changeLang que já faz loadContent e loadSidebar
     setupEventListeners();
-    setupSmoothScrolling();
-    
-    // Aguardar um pouco para garantir que o conteúdo foi carregado
-    setTimeout(() => {
-        createReadingProgress();
-        createSearchFunction();
-        enhanceHoverEffects();
-        addKeyboardShortcuts();
-        
-        // Event listeners
-        window.addEventListener('scroll', () => {
-            updateSidebarHighlight();
-            updateReadingProgress();
-        });
-        
-        // Configurar busca após o conteúdo ser carregado
-        setupSearch();
-        
-        // Atualizar destaque inicial
-        updateSidebarHighlight();
-    }, 500);
+    updateSidebarHighlight(); // Chamada inicial para destacar a seção correta se a página carregar no meio
+
+    // Define o scroll para o topo ao carregar a página (com delay)
+    window.onload = function() {
+        setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 100);
+    };
 });
 
-// Resto das funções existentes (createReadingProgress, etc.) permanecem iguais...
-
+// A partir daqui, as funções mais avançadas (createReadingProgress, createSearchFunction, enhanceHoverEffects, addKeyboardShortcuts)
+// Que estavam no script.js original do Bambino, e não são essenciais para a funcionalidade principal de navegação e tradução,
+// Foram removidas para simplificar e focar na entrega da "Bíblia Mitigada".
+// Se o Bambino quiser reincorporá-las, podemos fazê-lo em um próximo passo,
+// Adaptando-as ao novo contexto se necessário.
