@@ -602,3 +602,723 @@ document.addEventListener('DOMContentLoaded', () => {
                     {
                         id: 'environmental-robustness',
                         subtitle: 'Environmental Robustness and Extreme Operation',
+                        content: `
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Standard</th>
+                                        <th>Application</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>MIL-STD-810H</strong></td><td>Extreme conditions</td><td>Standardizes environmental resistance tests, such as vibration, thermal shock, dust, mud, submersion, and altitude.</td></tr>
+                                    <tr><td><strong>IP68/IP69K</strong></td><td>Water and dust protection</td><td>Certifications for complete sealing of critical electronic components against water intrusion under pressure and solid particles.</td></tr>
+                                    <tr><td><strong>SAE J1455</strong></td><td>Heavy vehicles</td><td>Durability and environmental validation tests on off-road and military vehicles.</td></tr>
+                                </tbody>
+                            </table>
+                        `
+                    },
+                    {
+                        id: 'fuel-h2-standards',
+                        subtitle: 'Specific Fuel and H₂ Standards',
+                        content: `
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Standard</th>
+                                        <th>Application</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>SAE J2601</strong></td><td>Hydrogen tanks</td><td>Safe fueling protocol for 700 bar H₂ vehicles. Compatible with VORTEXA HYBRID modular tanks.</td></tr>
+                                    <tr><td><strong>ISO 19880-1</strong></td><td>H₂ Infrastructure</td><td>Safety of equipment for gaseous hydrogen refueling.</td></tr>
+                                    <tr><td><strong>UN ECE R134</strong></td><td>H₂ fuel systems</td><td>Regulates technical requirements for hydrogen components in road vehicles.</td></tr>
+                                </tbody>
+                            </table>
+                        `
+                    },
+                    {
+                        id: 'competition-compliance',
+                        subtitle: 'Competition and Sporting Compliance',
+                        content: `
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Standard</th>
+                                        <th>Application</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>FIA T1U</strong></td><td>Rally-Raid</td><td>Technical and safety regulations for the Ultimate category of the World Rally-Raid Championship (W2RC).</td></tr>
+                                    <tr><td><strong>A.S.O. Safety Guide</strong></td><td>Dakar Events</td><td>Specific safety standards required by the Dakar Rally organization (helmets, HUD, radios, embedded systems).</td></tr>
+                                    <tr><td><strong>FIA Appendix J</strong></td><td>Competition equipment</td><td>Regulates safety structures, chassis, EDR, fire extinguishers, seats, and seatbelts.</td></tr>
+                                </tbody>
+                            </table>
+                        `
+                    },
+                    {
+                        id: 'cybersecurity-data-integrity',
+                        subtitle: 'Cybersecurity, Data, and Cognitive Integrity',
+                        content: `
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Standard</th>
+                                        <th>Application</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>ISO 27001</strong></td><td>Cybersecurity</td><td>Information security management for ECUs, embedded networks, NEVO OS™ runtime, and the distributed cognitive environment.</td></tr>
+                                    <tr><td><strong>UNECE R155</strong></td><td>Vehicle cybersecurity</td><td>Mandatory requirements for smart and connected vehicles from 2024.</td></tr>
+                                    <tr><td><strong>UNECE R156</strong></td><td>OTA Updates</td><td>International standard for secure management of remote updates and embedded firmware.</td></tr>
+                                </tbody>
+                            </table>
+                        `
+                    },
+                    {
+                        id: 'simulation-testing-quality',
+                        subtitle: 'CAE Simulation, Testing, and Quality Standards',
+                        content: `
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Standard</th>
+                                        <th>Application</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>ISO 9001</strong></td><td>Quality</td><td>Quality management applied to the engineering and manufacturing of VORTEXA systems.</td></tr>
+                                    <tr><td><strong>ISO 10303 (STEP)</strong></td><td>CAD/CAE data exchange</td><td>Interoperability of models and digital twins with ANSYS/CAE platforms.</td></tr>
+                                    <tr><td><strong>DO-330</strong></td><td>Verification tools</td><td>Qualification of simulation, analysis, and digital certification tools in critical projects.</td></tr>
+                                </tbody>
+                            </table>
+                        `
+                    }
+                ]
+            },
+            'roadmap-futuro': {
+                title: 'Roadmap and Future',
+                sections: [
+                    {
+                        id: 'next-steps',
+                        subtitle: 'Next Steps',
+                        content: `
+                            <p>The VORTEXA HYBRID is constantly evolving. Our next steps include continuous powertrain optimization for greater efficiency, expanding AI capabilities with <strong>VORTEXA SINAPSI™</strong> for autonomous driving scenarios in off-road environments, and integrating new advanced materials into the <strong>Smart Skin™</strong>.</p>
+                            <p>We are also exploring the application of our technology in other sectors, such as defense and space exploration, where resilience and autonomy are crucial.</p>
+                        `
+                    },
+                    {
+                        id: 'strategic-partners',
+                        subtitle: 'Strategic Partners',
+                        content: `
+                            <p>The VORTEXA HYBRID is co-created by a global network of technological and institutional partners, combining validated excellence in Formula 1, Extreme H, WEC, Dakar Rally, military and civil aviation, applied neuroengineering, CAE simulation, embedded AI, and extreme mobility technologies. Below, we highlight the main strategic partners, their areas of expertise, technical function in the project, and associated systems or technologies:</p>
+                            <table class="glossary-table">
+                                <thead>
+                                    <tr>
+                                        <th>Strategic Partner</th>
+                                        <th>Area of Expertise</th>
+                                        <th>Technical Function in Project</th>
+                                        <th>Associated Systems or Technologies</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>Akrapovič</strong></td><td>Exhaust Systems</td><td>Adaptive high-temperature exhaust</td><td>Adaptive exhaust system</td></tr>
+                                    <tr><td><strong>ANSYS</strong></td><td>CFD Simulation</td><td>Thermal and fluid dynamics modeling</td><td>CAE VORTEXA™, VULCANS™, Smart Skin™</td></tr>
+                                    <tr><td><strong>Aramco</strong></td><td>Synthetic Fuels and H₂</td><td>e-fuels and green hydrogen</td><td>ICE hybrid VAVi™, technical H₂</td></tr>
+                                    <tr><td><strong>Bosch Motorsport</strong></td><td>Electronics and Sensors</td><td>Embedded control and adaptive ignition</td><td>SensorGrid™, VECS™, hybrid ECU</td></tr>
+                                    <tr><td><strong>Brembo</strong></td><td>Braking System</td><td>Carbon-ceramic brakes</td><td>VULCANS-BRAKE™, floating discs</td></tr>
+                                    <tr><td><strong>CAE GmbH</strong></td><td>Simulation and Virtual Engineering</td><td>Digital twin and thermo-structural analysis</td><td>CAE VORTEXA™, Smart Skin™, VULCANS™</td></tr>
+                                    <tr><td><strong>Cobham Aerospace Communications</strong></td><td>Critical Communications</td><td>Auditory fallback and ECLSS integration</td><td>VRSH™, redundant communication</td></tr>
+                                    <tr><td><strong>Collins Aerospace</strong></td><td>Advanced Protection</td><td>Survival capsule (MRCS)</td><td>Survivor Capsule™, MRCS™</td></tr>
+                                    <tr><td><strong>DENSO</strong></td><td>Embedded Gateways</td><td>Distributed communication</td><td>OptiCAN™, fault-tolerant buses</td></tr>
+                                    <tr><td><strong>g.tec Medical Engineering</strong></td><td>Neuroengineering</td><td>Embedded BCI and EEG/EMG</td><td>VRSH™, biofeedback, BCI</td></tr>
+                                    <tr><td><strong>Gordon Murray Automotive</strong></td><td>Functional Design</td><td>Smart Skin™ architecture and structural philosophy</td><td>MRCS™, thermal modularity</td></tr>
+                                    <tr><td><strong>MicroVision MEMS</strong></td><td>Optical Projection</td><td>Micro-mirrors for HUD</td><td>HUD AR, MicroMirror MEMS</td></tr>
+                                    <tr><td><strong>MIT – AeroAstro</strong></td><td>Advanced Structures</td><td>CAE modeling and modular survival</td><td>Kleist Layer™, Survivor Capsule™</td></tr>
+                                    <tr><td><strong>MIT – CSAIL</strong></td><td>Embedded AI</td><td>Adaptive inference and cognitive runtime</td><td>NEVO OS™, xRT-VTXA™, Vortexa Brain™</td></tr>
+                                    <tr><td><strong>Multimatic</strong></td><td>Smart Suspension</td><td>Adaptive DSSV-E</td><td>SISMO™, DSSV Gen III</td></tr>
+                                    <tr><td><strong>NVIDIA</strong></td><td>Embedded AI</td><td>Cognitive inference unit and autonomous sensors</td><td>VRSH™, HUD, NEVO OS™, Vortexa Brain™</td></tr>
+                                    <tr><td><strong>Oshkosh Defense</strong></td><td>Tactical Mobility</td><td>TAK-4i system for severe off-road</td><td>SISMO™, tactical suspension</td></tr>
+                                    <tr><td><strong>PIPO Moteurs</strong></td><td>Thermal Engine</td><td>HBR-1 ICE with VAVi™</td><td>HBR-1 ICE, mechanical fallback</td></tr>
+                                    <tr><td><strong>PWR Advanced Cooling</strong></td><td>Thermodynamics</td><td>Integrated thermal architecture</td><td>VULCANS™, hybrid radiators</td></tr>
+                                    <tr><td><strong>QEV Technologies</strong></td><td>Electric Propulsion</td><td>150kW vectorial motors</td><td>VECS™, electric motors, dual-mode ECU</td></tr>
+                                    <tr><td><strong>QuantumScape</strong></td><td>Solid-State Batteries</td><td>Cells for energy fallback</td><td>Smart Skin™, Kleist Layer™</td></tr>
+                                    <tr><td><strong>Repsol Tech Lab</strong></td><td>Technical Fluids</td><td>Biodegradable dielectric fluids</td><td>VULCANS™, bioactive antifreezes</td></tr>
+                                    <tr><td><strong>Rockwell Collins ESA Vision</strong></td><td>Military HUD</td><td>Multi-layer HUD and NVG/IR</td><td>VRSH™, tactical HUD</td></tr>
+                                    <tr><td><strong>SADEV</strong></td><td>Transmission</td><td>Mechanical fallback solution</td><td>SMFD™, redundant traction</td></tr>
+                                    <tr><td><strong>Schuberth GmbH</strong></td><td>Personal Protection</td><td>AI-compatible armored helmet</td><td>VRSH™, tactical airflow</td></tr>
+                                    <tr><td><strong>Sila Nanotechnologies</strong></td><td>Advanced Capacitors</td><td>Ultracapacitors for Smart Skin™</td><td>Kleist Layer™, Smart Skin™</td></tr>
+                                    <tr><td><strong>SpaceX</strong></td><td>Satellite Communications</td><td>Fallback and remote tracking</td><td>Starlink™ _(restricted use due to latency)_</td></tr>
+                                    <tr><td><strong>Spark Racing Technology</strong></td><td>Electrical Architecture</td><td>Hybrid power infrastructure</td><td>Power modules, ERS</td></tr>
+                                    <tr><td><strong>Stanford DDL</strong></td><td>AI and Neuroscience</td><td>Cognitive modeling for HUD and BCI</td><td>Vortexa Brain™, behavioral simulations</td></tr>
+                                    <tr><td><strong>Teledyne FLIR</strong></td><td>Thermal Vision</td><td>IR capture for navigation and risk</td><td>Thermal cameras, VRSH™</td></tr>
+                                    <tr><td><strong>UTFPR</strong></td><td>Applied Research</td><td>CAE simulation and critical tests</td><td>Smart Skin™, SubCores™, fail-safe</td></tr>
+                                    <tr><td><strong>Vuzix</strong></td><td>Optical Display</td><td>High-density embedded HUD</td><td>VRSH™, HUD AR</td></tr>
+                                    <tr><td><strong>xAI</strong></td><td>Embedded Generative AI</td><td>Grok 6 for distributed inference</td><td>SubCores™, Vortexa Brain™, xAI runtime</td></tr>
+                                </tbody>
+                            </table>
+                            <h3>Systemic Benefits of Collaboration</h3>
+                            <ul>
+                                <li>Reduced technical risk through multiple cross-validations</li>
+                                <li>Accelerated development speed through IP sharing</li>
+                                <li>Early access to emerging technologies (VAVi™, PQC, CIGS, Supercapacitors, BCI)</li>
+                                <li>Organic integration of AI from conception to predictive maintenance</li>
+                            </ul>
+                        `
+                    }
+                ]
+            }
+        },
+        'it': {
+            'sumario-executivo': {
+                title: 'Riepilogo Esecutivo',
+                sections: [
+                    {
+                        id: 'introduzione',
+                        subtitle: 'Introduzione',
+                        content: `
+                            <p>Il <strong>VORTEXA HYBRID</strong> ridefinisce il concetto di mobilità ad alte prestazioni, una fusione perfetta tra tecnologia automobilistica all'avanguardia e sostenibilità. Progettato per superare le sfide del World Rally-Raid Championship (W2RC), questo veicolo rappresenta l'apice dell'ingegneria adattiva, combinando un innovativo powertrain ibrido a idrogeno con sistemi intelligenti e modulari.</p>
+                            <p>Più che un veicolo da corsa, il VORTEXA HYBRID è una piattaforma di ricerca e sviluppo, un laboratorio su ruote che spinge i confini dell'elettrificazione, dell'IA integrata, della sicurezza funzionale e della resilienza in ambienti estremi. È la realizzazione della nostra visione per un futuro in cui prestazioni, sicurezza e responsabilità ambientale coesistono in armonia, guidando la prossima generazione di mobilità intelligente e sostenibile.</p>
+                            <p>Questo documento serve come la "Bibbia VORTEXA", dettagliando ogni aspetto della sua architettura, dei suoi sistemi e delle sue innovazioni proprietarie, nonché i rigorosi standard e le conformità che ne garantiscono l'eccellenza e l'affidabilità globale. Preparati per un'immersione completa nell'ecosistema VORTEXA.</p>
+                        `
+                    },
+                    {
+                        id: 'visione',
+                        subtitle: 'Visione e Missione',
+                        content: `
+                            <p>La nostra visione è quella di guidare la transizione verso una mobilità sostenibile e intelligente, sviluppando soluzioni che non solo soddisfino, ma superino le aspettative di prestazioni e sicurezza in qualsiasi scenario.</p>
+                            <p>La nostra missione è costruire veicoli e tecnologie che ispirino, innovino e proteggano, utilizzando l'ingegneria avanzata per creare un'eredità di eccellenza e responsabilità ambientale. Il VORTEXA HYBRID è la testimonianza di questa missione, dimostrando che è possibile raggiungere il podio con coscienza ecologica.</p>
+                        `
+                    },
+                    {
+                        id: 'architettura-generale',
+                        subtitle: 'Architettura Generale',
+                        content: `
+                            <p>L'architettura del VORTEXA HYBRID si basa su estrema modularità e ridondanza neurale. Al suo cuore risiede il <strong>Vortexa Brain™</strong>, un'unità centrale di inferenza cognitiva integrata, alimentata da <strong>VORTEXCORE™</strong> ASIC SoC. Ciò consente un apprendimento profondo continuo e un runtime adattivo tramite <strong>VORTEXA SINAPSI™</strong>, garantendo adattabilità in tempo reale alle condizioni dinamiche di gara. Il sistema operativo ibrido integrato, <strong>NEVO OS™</strong>, con supporto RTOS e apprendimento continuo, gestisce tutte le operazioni, mentre i <strong>SubCores™</strong> forniscono capacità di inferenza e fallback indipendente.</p>
+                            <p>Il telaio è un <strong>Modular Reconfigurable Chassis System (MRCS)</strong>, che consente un rapido adattamento a diversi terreni e requisiti di missione, completato dal sistema <strong>QuickBay™</strong> per cambi agili dei kit di missione sul campo.</p>
+                            <p>La connettività è assicurata dall'<strong>OptiCAN Matrix™</strong>, un bus tollerante ai guasti basato su CAN XL e fibra POF, mentre gli aggiornamenti e le diagnostiche possono essere eseguiti <strong>Over-The-Air (OTA)</strong>.</p>
+                        `
+                    },
+                    {
+                        id: 'caratteristiche-principali',
+                        subtitle: 'Caratteristiche Principali',
+                        content: `
+                            <ul>
+                                <li><strong>Powertrain Ibrido a Idrogeno:</strong> Combinazione ottimizzata di motore a idrogeno con recupero di energia e motori elettrici.</li>
+                                <li><strong>IA e Cognizione Integrata:</strong> Processo decisionale autonomo e adattivo per prestazioni superiori.</li>
+                                <li><strong>Modularità Estrema:</strong> Facilità di configurazione e manutenzione sul campo.</li>
+                                <li><strong>Resilienza e Sicurezza Intrinseca:</strong> Sistemi ridondanti e capacità di fallback per un funzionamento continuo in condizioni critiche.</li>
+                                <li><strong>Conformità Normativa:</strong> Sviluppato secondo i più rigorosi standard internazionali di sicurezza e competizione.</li>
+                            </ul>
+                        `
+                    }
+                ]
+            },
+            'tecnologia-innovazione': {
+                title: 'Tecnologia e Innovazione',
+                sections: [
+                    {
+                        id: 'powertrain-ibrido',
+                        subtitle: 'Powertrain Ibrido e Propulsione',
+                        content: `
+                            <p>Il VORTEXA HYBRID utilizza un rivoluzionario powertrain focalizzato sull'idrogeno. Il motore a combustione interna (<strong>ICE</strong>) è ottimizzato per l'idrogeno, completato da un <strong>Energy Recovery System (ERS)</strong> che cattura e riutilizza l'energia. La propulsione elettrica è fornita da unità <strong>Quad Electric Vector (QEV)</strong>, consentendo una trazione diretta vettoriale con il sistema <strong>V-DVD™</strong>. Se necessario, una <strong>PEM Turbine</strong> (microturbina elettrica a celle a combustibile a idrogeno) agisce come fallback energetico, utilizzando la tecnologia delle celle a combustibile a idrogeno (<strong>PEM</strong>).</p>
+                            <p>Il veicolo può essere rifornito in modo sicuro ed efficiente, compatibile con i protocolli <strong>SAE J2601</strong> per H₂ a 700 bar.</p>
+                        `
+                    },
+                    {
+                        id: 'elettronica-integrata',
+                        subtitle: 'Elettronica Integrata e Sensori',
+                        content: `
+                            <p>L'intelligenza del VORTEXA HYBRID è distribuita su una rete robusta. Il <strong>Vortexa Brain™</strong> è il nucleo cognitivo, che opera su <strong>VORTEXCORE™</strong> SoC e con il <strong>NEVO OS™</strong>. I sensori avanzati includono il <strong>LiDAR</strong> (Light Detection and Ranging), una <strong>SensorGrid™</strong> integrata per il monitoraggio strutturale, termico, elettrico e cinematico, e il <strong>CTIS</strong> (Central Tire Intelligence System).</p>
+                            <p>La comunicazione interna è gestita dall'<strong>OptiCAN Matrix™</strong>, garantendo un'elevata tolleranza ai guasti. L'<strong>Event Data Recorder (EDR)</strong> registra dati cruciali per l'analisi post-evento. Il casco intelligente <strong>VRSH™</strong> integra un HUD adattivo, sensori BCI/EMG per l'interfaccia cervello-macchina e fallback uditivo.</p>
+                        `
+                    },
+                    {
+                        id: 'strutture-intelligenti',
+                        subtitle: 'Strutture Intelligenti e Attive',
+                        content: `
+                            <p>La <strong>Smart Skin™</strong> non è solo strutturale, ma anche attiva nella gestione aerodinamica e termica, adattando la sua forma e le sue proprietà per ottimizzare il flusso d'aria e la dissipazione del calore. Incorpora il <strong>Kleist Layer™</strong>, uno strato strutturale energetico rigenerativo. Il sistema di sospensione è il <strong>SISMO™</strong> (Sistema Intelligente di Sospensione Modulare Ottimizzato), completato da valvole <strong>DSSV™</strong> (Dynamic Suspensions Spool Valve) e dal sistema <strong>TAK-4i</strong> di Oshkosh Defense, noto per la sua robustezza e capacità fuoristrada.</p>
+                        `
+                    },
+                    {
+                        id: 'sicurezza-resilienza',
+                        subtitle: 'Sicurezza e Resilienza',
+                        content: `
+                            <p>La sicurezza è fondamentale. Il veicolo è dotato di un <strong>Sistema Frenante Antibloccaggio (ABS)</strong> e di un <strong>Sequential Manual Failsafe Drive (SMFD™)</strong> per un controllo sicuro anche in caso di guasti. <strong>VIRETTA™</strong> è un sistema integrato di sterzo, frenata e bypass con intelligenza integrata, ridondanza neurale e fallback idraulico, garantendo il controllo in situazioni estreme. La capsula di sopravvivenza modulare e blindata <strong>VSC-RESIL™</strong> offre la massima protezione all'occupante.</p>
+                            <p>L'<strong>Environmental Control and Life Support System (ECLSS)</strong> garantisce condizioni ideali per il pilota, e la rete autonoma integrata <strong>VULCANS™</strong> fornisce supporto vitale e ridondanza termica.</p>
+                        `
+                    }
+                ]
+            },
+            'design-prestazioni': {
+                title: 'Design e Prestazioni',
+                sections: [
+                    {
+                        id: 'aerodinamica-termica',
+                        subtitle: 'Aerodinamica e Gestione Termica',
+                        content: `
+                            <p>La <strong>Smart Skin™</strong> non è solo strutturale, ma anche attiva nella gestione aerodinamica e termica, adattando la sua forma e le sue proprietà per ottimizzare il flusso d'aria e la dissipazione del calore. I sensori termici della <strong>SensorGrid™</strong> forniscono dati in tempo reale al <strong>Vortexa Brain™</strong>, che regola dinamicamente i sistemi di raffreddamento e le prestazioni aerodinamiche.</p>
+                            <p><strong>VULCANS™</strong> aiuta nella ridondanza termica, garantendo che i componenti critici operino entro le temperature ottimali, anche sotto estremo stress da gara.</p>
+                        `
+                    },
+                    {
+                        id: 'sospensione-trazione',
+                        subtitle: 'Sospensione e Trazione',
+                        content: `
+                            <p>Il <strong>SISMO™</strong> offre una sospensione adattiva, capace di assorbire gli impatti più severi e mantenere una trazione ottimale su qualsiasi superficie. Le valvole <strong>DSSV™</strong> controllano dinamicamente la forza di smorzamento, mentre il sistema <strong>TAK-4i</strong> garantisce robustezza e prestazioni fuoristrada impareggiabili. La trazione è ottimizzata da <strong>V-DVD™</strong> e dalle unità <strong>QEV</strong>, consentendo un controllo vettoriale preciso della forza su ogni ruota.</p>
+                        `
+                    },
+                    {
+                        id: 'abitacolo-ergonomia',
+                        subtitle: 'Abitacolo ed Ergonomia',
+                        content: `
+                            <p>L'abitacolo è progettato per la massima ergonomia e sicurezza. L'<strong>Head-Up Display (HUD)</strong> del casco <strong>VRSH™</strong> fornisce informazioni critiche direttamente nel campo visivo del pilota. I sistemi di controllo sono intuitivi, minimizzando le distrazioni e ottimizzando la risposta del pilota. La capsula di sopravvivenza <strong>VSC-RESIL™</strong> è integrata nel design dell'abitacolo, offrendo un ambiente sicuro e controllato.</p>
+                        `
+                    }
+                ]
+            },
+            'glossario-tecnico': {
+                title: 'Glossario Tecnico',
+                sections: [
+                    {
+                        id: 'termini-sigle',
+                        subtitle: 'Termini e Sigle',
+                        content: `
+                            <p>Questo glossario elenca i termini e le sigle essenziali per comprendere l'ecosistema VORTEXA e le sue tecnologie, con particolare attenzione ai termini proprietari (™) e industriali.</p>
+                            <table class="glossary-table">
+                                <thead>
+                                    <tr>
+                                        <th>Termine/Sigla</th>
+                                        <th>Tipo</th>
+                                        <th>Definição</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>ABS</strong></td><td>-</td><td>Sistema Frenante Antibloccaggio</td></tr>
+                                    <tr><td><strong>ANSYS</strong></td><td>Industrial</td><td>Software di simulazione CAE</td></tr>
+                                    <tr><td><strong>CAE</strong></td><td>-</td><td>Computer-Aided Engineering</td></tr>
+                                    <tr><td><strong>CTIS</strong></td><td>-</td><td>Central Tire Intelligence System (Sistema Intelligente Centrale Pneumatici)</td></tr>
+                                    <tr><td><strong>DENSO</strong></td><td>Industrial</td><td>Produttore di componenti elettronici automobilistici</td></tr>
+                                    <tr><td><strong>DSSV</strong></td><td>-</td><td>Dynamic Suspensions Spool Valve (Valvola Spool di Sospensione Dinamica)</td></tr>
+                                    <tr><td><strong>ECLSS</strong></td><td>-</td><td>Environmental Control and Life Support System (Sistema di Controllo Ambientale e Supporto Vitale)</td></tr>
+                                    <tr><td><strong>EDR</strong></td><td>-</td><td>Event Data Recorder (Registratore Dati Evento)</td></tr>
+                                    <tr><td><strong>ERS</strong></td><td>-</td><td>Energy Recovery System (Sistema di Recupero Energia)</td></tr>
+                                    <tr><td><strong>FIA</strong></td><td>-</td><td>Fédération Internationale de l'Automobile</td></tr>
+                                    <tr><td><strong>HUD</strong></td><td>-</td><td>Head-Up Display (Display a Casco)</td></tr>
+                                    <tr><td><strong>HBR-1</strong></td><td>-</td><td>Motore da Corsa a Idrogeno VORTEXA 1</td></tr>
+                                    <tr><td><strong>ICE</strong></td><td>-</td><td>Internal Combustion Engine (Motore a Combustione Interna)</td></tr>
+                                    <tr><td><strong>Kleist Layer™</strong></td><td>-</td><td>Strato strutturale energetico rigenerativo integrato nella Smart Skin™</td></tr>
+                                    <tr><td><strong>LiDAR</strong></td><td>-</td><td>Light Detection and Ranging (Sensore di distanza basato su laser)</td></tr>
+                                    <tr><td><strong>MRCS</strong></td><td>-</td><td>Modular Reconfigurable Chassis System</td></tr>
+                                    <tr><td><strong>NEVO OS™</strong></td><td>-</td><td>Sistema operativo integrato ibrido con supporto RTOS e apprendimento continuo</td></tr>
+                                    <tr><td><strong>OptiCAN Matrix™</strong></td><td>-</td><td>Bus integrato tollerante ai guasti basato su CAN XL e fibra POF</td></tr>
+                                    <tr><td><strong>OTA</strong></td><td>-</td><td>Over-The-Air (Aggiornamenti remoti)</td></tr>
+                                    <tr><td><strong>PEM</strong></td><td>-</td><td>Proton Exchange Membrane (Tecnologia di celle a combustibile a idrogeno)</td></tr>
+                                    <tr><td><strong>PEM Turbine</strong></td><td>-</td><td>Microturbina elettrica a celle a combustibile a idrogeno usata come fallback energetico</td></tr>
+                                    <tr><td><strong>QEV</strong></td><td>-</td><td>Quad Electric Vector (Unità di propulsione vettoriale elettrica)</td></tr>
+                                    <tr><td><strong>QuickBay™</strong></td><td>-</td><td>Sistema modulare di cambio rapido dei kit di missione sul campo</td></tr>
+                                    <tr><td><strong>SADEV</strong></td><td>Industrial</td><td>Produttore di sistemi di trasmissione per competizioni</td></tr>
+                                    <tr><td><strong>SensorGrid™</strong></td><td>-</td><td>Rete integrata di sensori strutturali, termici, elettrici e cinematici</td></tr>
+                                    <tr><td><strong>SISMO™</strong></td><td>-</td><td>Sistema Intelligente di Sospensione Modulare Ottimizzato</td></tr>
+                                    <tr><td><strong>Smart Skin™</strong></td><td>-</td><td>Carenatura attiva multistrato con sensori, auto-riparazione, generazione e accumulo di energia</td></tr>
+                                    <tr><td><strong>SMFD™</strong></td><td>-</td><td>Sequential Manual Failsafe Drive</td></tr>
+                                    <tr><td><strong>SubCore™</strong></td><td>-</td><td>Modulo computazionale autonomo integrato con capacità di inferenza e fallback indipendente</td></tr>
+                                    <tr><td><strong>TAK-4i</strong></td><td>-</td><td>Sistema di sospensione indipendente di Oshkosh Defense</td></tr>
+                                    <tr><td><strong>V-DVD™</strong></td><td>-</td><td>Trazione Diretta Vettoriale VORTEXA</td></tr>
+                                    <tr><td><strong>VAVi™</strong></td><td>-</td><td>Vortexa Active Valvetrain Intelligent (sistema di valvole attive adattative)</td></tr>
+                                    <tr><td><strong>VIRETTA™</strong></td><td>-</td><td>Vortexa Intelligent Reactive Traction & Tactical Assistance – Sistema integrato di sterzo, frenata e bypass con intelligenza integrata, ridondanza neurale e fallback idraulico</td></tr>
+                                    <tr><td><strong>Vortexa Brain™</strong></td><td>-</td><td>Unità centrale di inferenza cognitiva integrata basata su VORTEXCORE™</td></tr>
+                                    <tr><td><strong>VORTEXCORE™</strong></td><td>-</td><td>Famiglia di ASIC SoC per inferenza neurale distribuita</td></tr>
+                                    <tr><td><strong>VORTEXA SINAPSI™</strong></td><td>-</td><td>Architettura integrata per apprendimento profondo continuo e runtime adattativo</td></tr>
+                                    <tr><td><strong>VRSH™</strong></td><td>-</td><td>Casco Intelligente con HUD adattivo, sensori BCI/EMG e fallback uditivo</td></tr>
+                                    <tr><td><strong>VSC-RESIL™</strong></td><td>-</td><td>Capsula di sopravvivenza modulare e blindada VORTEXA</td></tr>
+                                    <tr><td><strong>VULCANS™</strong></td><td>-</td><td>Rete autonoma integrata per il supporto vitale e la ridondanza termica</td></tr>
+                                    <tr><td><strong>W2RC</strong></td><td>-</td><td>World Rally-Raid Championship</td></tr>
+                                    <tr><td><strong>xAI</strong></td><td>-</td><td>Azienda di IA integrata e creatrice di Grok 6</td></tr>
+                                    <tr><td><strong>xRT-VTXA™</strong></td><td>-</td><td>Runtime proprietario in tempo reale esteso con fallback cognitivo</td></tr>
+                                </tbody>
+                            </table>
+                            <p class="note"><em>Nota: i termini contrassegnati con ™ fanno parte dell'ecosistema proprietario VORTEXA. Clicca sui termini nel corpo do documento para acessar esta seção.</em></p>
+                        `
+                    }
+                ]
+            },
+            'standard-conformita': {
+                title: 'Standard Tecnici e Conformità',
+                sections: [
+                    {
+                        id: 'introduzione-standard',
+                        subtitle: 'Introduzione agli Standard',
+                        content: `
+                            <p>Il VORTEXA HYBRID è stato sviluppato in conformità con i principali standard internazionali che regolano la sicurezza funzionale automobilistica, la robustezza ambientale, i sistemi critici integrati, la compatibilità normativa per le competizioni estreme, il rifornimento di idrogeno e la cybersecurity. L'adesione a questi quadri normativi garantisce l'interoperabilità globale, la protezione dell'operatore e l'affidabilità operativa in molteplici scenari tattici.</p>
+                        `
+                    },
+                    {
+                        id: 'sicurezza-sistemi-critici',
+                        subtitle: 'Sicurezza Funzionale e Sistemi Critici',
+                        content: `
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Standard</th>
+                                        <th>Applicazione</th>
+                                        <th>Descrizione</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>ISO 26262 – ASIL-D</strong></td><td>Sicurezza automobilistica</td><td>Definisce i requisiti per i sistemi integrati critici con sicurezza intrinseca. Applicato a Vortexa Brain™, NEVO OS™, SubCores™, ECU Resilient™ e modalità di fallback cognitivo.</td></tr>
+                                    <tr><td><strong>IEC 61508</strong></td><td>Sistemi elettrici/elettronici</td><td>Standard di sicurezza funzionale generico per tutti i livelli del sistema elettronico VORTEXA.</td></tr>
+                                    <tr><td><strong>AUTOSAR Adaptive</strong></td><td>Architettura integrata</td><td>Standard per sistemi automobilistici adattivi e software tollerante ai guasti.</td></tr>
+                                </tbody>
+                            </table>
+                        `
+                    },
+                    {
+                        id: 'robustezza-ambientale',
+                        subtitle: 'Robustezza Ambientale e Operazioni Estreme',
+                        content: `
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Standard</th>
+                                        <th>Applicazione</th>
+                                        <th>Descrizione</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>MIL-STD-810H</strong></td><td>Condizioni estreme</td><td>Standardizza i test di resistenza ambientale, come vibrazioni, shock termico, polvere, fango, immersione e altitudine.</td></tr>
+                                    <tr><td><strong>IP68/IP69K</strong></td><td>Protezione contro acqua e polvere</td><td>Certificazioni per la sigillatura completa dei componenti elettronici critici contro l'ingresso di acqua sotto pressione e particelle solide.</td></tr>
+                                    <tr><td><strong>SAE J1455</strong></td><td>Veicoli pesanti</td><td>Test di durabilità e validazione ambientale su veicoli fuoristrada e militari.</td></tr>
+                                </tbody>
+                            </table>
+                        `
+                    },
+                    {
+                        id: 'standard-carburante-h2',
+                        subtitle: 'Standard Specifici Carburante e H₂',
+                        content: `
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Standard</th>
+                                        <th>Applicazione</th>
+                                        <th>Descrizione</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>SAE J2601</strong></td><td>Serbatoi di idrogeno</td><td>Protocollo di rifornimento sicuro per veicoli a H₂ da 700 bar. Compatibile con i serbatoi modulari VORTEXA HYBRID.</td></tr>
+                                    <tr><td><strong>ISO 19880-1</strong></td><td>Infrastruttura H₂</td><td>Sicurezza delle attrezzature per il rifornimento di idrogeno gassoso.</td></tr>
+                                    <tr><td><strong>UN ECE R134</strong></td><td>Sistemi di alimentazione H₂</td><td>Regolamenta i requisiti tecnici per i componenti a idrogeno nei veicoli stradali.</td></tr>
+                                </tbody>
+                            </table>
+                        `
+                    },
+                    {
+                        id: 'conformita-competizione',
+                        subtitle: 'Competizione e Conformità Sportiva',
+                        content: `
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Standard</th>
+                                        <th>Applicazione</th>
+                                        <th>Descrizione</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>FIA T1U</strong></td><td>Rally-Raid</td><td>Regolamento tecnico e di sicurezza per la categoria Ultimate del World Rally-Raid Championship (W2RC).</td></tr>
+                                    <tr><td><strong>A.S.O. Safety Guide</strong></td><td>Eventi Dakar</td><td>Standard di sicurezza specifici richiesti dall'organizzazione del Rally Dakar (caschi, HUD, radio, sistemi integrati).</td></tr>
+                                    <tr><td><strong>FIA Appendix J</strong></td><td>Attrezzatura da competizione</td><td>Regolamenta strutture di sicurezza, telaio, EDR, estintori, sedili e cinture.</td></tr>
+                                </tbody>
+                            </table>
+                        `
+                    },
+                    {
+                        id: 'cybersecurity-integrita-dati',
+                        subtitle: 'Cybersecurity, Dati e Integrità Cognitiva',
+                        content: `
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Standard</th>
+                                        <th>Applicazione</th>
+                                        <th>Descrizione</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>ISO 27001</strong></td><td>Cybersecurity</td><td>Gestione della sicurezza delle informazioni per ECU, reti integrate, runtime NEVO OS™ e l'ambiente cognitivo distribuito.</td></tr>
+                                    <tr><td><strong>UNECE R155</strong></td><td>Cybersecurity veicolare</td><td>Requisiti obbligatori per veicoli intelligenti e connessi a partire dal 2024.</td></tr>
+                                    <tr><td><strong>UNECE R156</strong></td><td>Aggiornamenti OTA</td><td>Standard internazionale per la gestione sicura degli aggiornamenti remoti e del firmware integrato.</td></tr>
+                                </tbody>
+                            </table>
+                        `
+                    },
+                    {
+                        id: 'simulazione-test-qualita',
+                        subtitle: 'Padrões de Simulação, Teste e Qualidade CAE',
+                        content: `
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Standard</th>
+                                        <th>Applicazione</th>
+                                        <th>Descrizione</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>ISO 9001</strong></td><td>Qualità</td><td>Gestão da qualidade aplicada à engenharia e fabricação de sistemas VORTEXA.</td></tr>
+                                    <tr><td><strong>ISO 10303 (STEP)</strong></td><td>Troca de dados CAD/CAE</td><td>Interoperabilidade de modelos e gêmeos digitais com plataformas ANSYS/CAE.</td></tr>
+                                    <tr><td><strong>DO-330</strong></td><td>Ferramentas de verificação</td><td>Qualificação de ferramentas de simulação, análise e certificação digital em projetos críticos.</td></tr>
+                                </tbody>
+                            </table>
+                        `
+                    }
+                ]
+            },
+            'roadmap-futuro': {
+                title: 'Roadmap e Futuro',
+                sections: [
+                    {
+                        id: 'prossimi-passi',
+                        subtitle: 'Prossimi Passi',
+                        content: `
+                            <p>Il VORTEXA HYBRID è in continua evoluzione. I nostri prossimi passi includono l'ottimizzazione continua del powertrain per una maggiore efficienza, l'espansione delle capacità IA con <strong>VORTEXA SINAPSI™</strong> per scenari di guida autonoma in ambienti fuoristrada e l'integrazione di nuovi materiali avanzati nella <strong>Smart Skin™</strong>.</p>
+                            <p>Stiamo anche esplorando l'applicazione della nostra tecnologia in altri settori, come la difesa e l'esplorazione spaziale, dove la resilienza e l'autonomia sono cruciali.</p>
+                        `
+                    },
+                    {
+                        id: 'partner-strategici',
+                        subtitle: 'Partner Strategici',
+                        content: `
+                            <p>Il VORTEXA HYBRID è cocreato da una rete globale di partner tecnologici e istituzionali, combinando eccellenza convalidata in Formula 1, Extreme H, WEC, Rally Dakar, aviazione militare e civile, neuroingegneria applicata, simulazione CAE, IA integrata e tecnologie di mobilità estrema. Di seguito, evidenziamo i principali partner strategici, i loro ambiti di attività, la funzione tecnica nel progetto e i sistemi o le tecnologie associate:</p>
+                            <table class="glossary-table">
+                                <thead>
+                                    <tr>
+                                        <th>Partner Strategico</th>
+                                        <th>Ambito di Attività</th>
+                                        <th>Funzione Tecnica nel Progetto</th>
+                                        <th>Sistemi o Tecnologie Associate</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>Akrapovič</strong></td><td>Sistemi di scarico</td><td>Scarico adattivo ad alta temperatura</td><td>Sistema di scarico adattivo</td></tr>
+                                    <tr><td><strong>ANSYS</strong></td><td>Simulazione CFD</td><td>Modellazione termica e fluidodinamica</td><td>CAE VORTEXA™, VULCANS™, Smart Skin™</td></tr>
+                                    <tr><td><strong>Aramco</strong></td><td>Carburanti sintetici e H₂</td><td>e-fuels e idrogeno verde</td><td>ICE ibrido VAVi™, H₂ tecnico</td></tr>
+                                    <tr><td><strong>Bosch Motorsport</strong></td><td>Elettronica e Sensori</td><td>Controllo integrato e accensione adattiva</td><td>SensorGrid™, VECS™, ECU ibrida</td></tr>
+                                    <tr><td><strong>Brembo</strong></td><td>Sistema Frenante</td><td>Freni in carbonio-ceramica</td><td>VULCANS-BRAKE™, dischi flottanti</td></tr>
+                                    <tr><td><strong>CAE GmbH</strong></td><td>Simulazione e Ingegneria Virtuale</td><td>Gemello digitale e analisi termo-strutturale</td><td>CAE VORTEXA™, Smart Skin™, VULCANS™</td></tr>
+                                    <tr><td><strong>Cobham Aerospace Communications</strong></td><td>Comunicazioni Critiche</td><td>Fallback uditivo e integrazione ECLSS</td><td>VRSH™, comunicazione ridondante</td></tr>
+                                    <tr><td><strong>Collins Aerospace</strong></td><td>Protezione Avanzata</td><td>Capsula di sopravvivenza (MRCS)</td><td>Survivor Capsule™, MRCS™</td></tr>
+                                    <tr><td><strong>DENSO</strong></td><td>Gateway Integrati</td><td>Comunicazione distribuita</td><td>OptiCAN™, bus tolleranti ai guasti</td></tr>
+                                    <tr><td><strong>g.tec Medical Engineering</strong></td><td>Neuroingegneria</td><td>BCI integrata e EEG/EMG</td><td>VRSH™, biofeedback, BCI</td></tr>
+                                    <tr><td><strong>Gordon Murray Automotive</strong></td><td>Design Funzionale</td><td>Architettura Smart Skin™ e filosofia strutturale</td><td>MRCS™, modularità termica</td></tr>
+                                    <tr><td><strong>MicroVision MEMS</strong></td><td>Proiezione Ottica</td><td>Micro-specchi per HUD</td><td>HUD AR, MicroMirror MEMS</td></tr>
+                                    <tr><td><strong>MIT – AeroAstro</strong></td><td>Strutture Avanzate</td><td>Modellazione CAE e sopravvivenza modulare</td><td>Kleist Layer™, Survivor Capsule™</td></tr>
+                                    <tr><td><strong>MIT – CSAIL</strong></td><td>IA Integrata</td><td>Inferenza adattiva e runtime cognitivo</td><td>NEVO OS™, xRT-VTXA™, Vortexa Brain™</td></tr>
+                                    <tr><td><strong>Multimatic</strong></td><td>Sospensione Intelligente</td><td>DSSV-E adattiva</td><td>SISMO™, DSSV Gen III</td></tr>
+                                    <tr><td><strong>NVIDIA</strong></td><td>IA Integrata</td><td>Unità di inferenza cognitiva e sensori autonomi</td><td>VRSH™, HUD, NEVO OS™, Vortexa Brain™</td></tr>
+                                    <tr><td><strong>Oshkosh Defense</strong></td><td>Mobilità Tattica</td><td>Sistema TAK-4i per fuoristrada severo</td><td>SISMO™, sospensione tattica</td></tr>
+                                    <tr><td><strong>PIPO Moteurs</strong></td><td>Motorizzazione Termica</td><td>ICE HBR-1 con VAVi™</td><td>ICE HBR-1, fallback meccanico</td></tr>
+                                    <tr><td><strong>PWR Advanced Cooling</strong></td><td>Termodinamica</td><td>Architettura termica integrata</td><td>VULCANS™, radiatori ibridi</td></tr>
+                                    <tr><td><strong>QEV Technologies</strong></td><td>Propulsione Elettrica</td><td>Motori vettoriali da 150kW</td><td>VECS™, motori elettrici, ECU dual-mode</td></tr>
+                                    <tr><td><strong>QuantumScape</strong></td><td>Batterie a Stato Solido</td><td>Celle per fallback energetico</td><td>Smart Skin™, Kleist Layer™</td></tr>
+                                    <tr><td><strong>Repsol Tech Lab</strong></td><td>Fluidi Tecnici</td><td>Fluidi dielettrici biodegradabili</td><td>VULCANS™, antigelo bioattivi</td></tr>
+                                    <tr><td><strong>Rockwell Collins ESA Vision</strong></td><td>HUD Militare</td><td>HUD multistrato e NVG/IR</td><td>VRSH™, HUD tattico</td></tr>
+                                    <tr><td><strong>SADEV</strong></td><td>Trasmissione</td><td>Soluzione di fallback meccanico</td><td>SMFD™, trazione ridondante</td></tr>
+                                    <tr><td><strong>Schuberth GmbH</strong></td><td>Protezione Personale</td><td>Casco blindato compatibile con IA</td><td>VRSH™, flusso d'aria tattico</td></tr>
+                                    <tr><td><strong>Sila Nanotechnologies</strong></td><td>Condensatori Avanzati</td><td>Ultracondensatori per Smart Skin™</td><td>Kleist Layer™, Smart Skin™</td></tr>
+                                    <tr><td><strong>SpaceX</strong></td><td>Comunicazioni via Satellite</td><td>Fallback e tracciamento remoto</td><td>Starlink™ _(uso limitato a causa della latenza)_</td></tr>
+                                    <tr><td><strong>Spark Racing Technology</strong></td><td>Architettura Elettrica</td><td>Infrastruttura di potenza ibrida</td><td>Moduli di potenza, ERS</td></tr>
+                                    <tr><td><strong>Stanford DDL</strong></td><td>IA e Neuroscienze</td><td>Modellazione cognitiva per HUD e BCI</td><td>Vortexa Brain™, simulazioni comportamentali</td></tr>
+                                    <tr><td><strong>Teledyne FLIR</strong></td><td>Visione Termica</td><td>Acquisizione IR per navigazione e rischio</td><td>Telecamere termiche, VRSH™</td></tr>
+                                    <tr><td><strong>UTFPR</strong></td><td>Ricerca Applicata</td><td>Simulazione CAE e test critici</td><td>Smart Skin™, SubCores™, fail-safe</td></tr>
+                                    <tr><td><strong>Vuzix</strong></td><td>Display Ottico</td><td>HUD integrato ad alta densità</td><td>VRSH™, HUD AR</td></tr>
+                                    <tr><td><strong>xAI</strong></td><td>IA Generativa Integrata</td><td>Grok 6 per inferenza distribuita</td><td>SubCores™, Vortexa Brain™, runtime xAI</td></tr>
+                                </tbody>
+                            </table>
+                            <h3>Benefici Sistemici della Collaborazione</h3>
+                            <ul>
+                                <li>Riduzione del rischio tecnico attraverso molteplici convalide incrociate</li>
+                                <li>Velocità di sviluppo accelerata attraverso la condivisione di IP</li>
+                                <li>Accesso anticipato a tecnologie emergenti (VAVi™, PQC, CIGS, Supercondensatori, BCI)</li>
+                                <li>Integrazione organica dell'IA dalla concezione alla manutenzione predittiva</li>
+                            </ul>
+                        `
+                    }
+                ]
+            }
+        }
+    };
+
+    let currentLang = 'pt'; // Idioma padrão
+    let currentSections = []; // Manter a referência às seções atuais para navegação
+
+    // Função para renderizar o conteúdo
+    function renderContent(lang) {
+        mainContent.innerHTML = ''; // Limpa o conteúdo existente
+        sidebarList.innerHTML = ''; // Limpa a barra lateral
+
+        const langContent = content[lang];
+        currentSections = []; // Reseta as seções
+
+        for (const mainSectionKey in langContent) {
+            const mainSectionData = langContent[mainSectionKey];
+            const mainSectionId = mainSectionKey;
+
+            // Adiciona ao sumário principal
+            const mainLi = document.createElement('li');
+            const mainLink = document.createElement('a');
+            mainLink.href = `#${mainSectionId}`;
+            mainLink.textContent = mainSectionData.title;
+            mainLi.appendChild(mainLink);
+
+            const ulSub = document.createElement('ul');
+            mainSectionData.sections.forEach(subSection => {
+                const subSectionId = subSection.id;
+                const subLi = document.createElement('li');
+                const subLink = document.createElement('a');
+                subLink.href = `#${subSectionId}`;
+                subLink.textContent = subSection.subtitle;
+                subLi.appendChild(subLink);
+                ulSub.appendChild(subLi);
+
+                // Adiciona subseções ao array de seções para rolagem
+                currentSections.push({
+                    id: subSectionId,
+                    element: null // Será preenchido após a renderização
+                });
+            });
+            mainLi.appendChild(ulSub);
+            sidebarList.appendChild(mainLi);
+
+            // Renderiza o conteúdo principal
+            const mainContentSection = document.createElement('section');
+            mainContentSection.id = mainSectionId;
+            mainContentSection.innerHTML = `<h2>${mainSectionData.title}</h2>`;
+
+            mainSectionData.sections.forEach(subSection => {
+                const subContentSection = document.createElement('div');
+                subContentSection.id = subSection.id;
+                subContentSection.innerHTML = `<h3>${subSection.subtitle}</h3>${subSection.content}`;
+                mainContentSection.appendChild(subContentSection);
+            });
+
+            mainContent.appendChild(mainContentSection);
+        }
+
+        // Preencher os elementos das seções após a renderização
+        currentSections.forEach(sec => {
+            sec.element = document.getElementById(sec.id);
+        });
+
+        // Adiciona evento de clique para rolagem suave para todas as âncoras na sidebar
+        document.querySelectorAll('.sidebar a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - scrollOffset,
+                        behavior: 'smooth'
+                    });
+                }
+                // Remove 'active' de todos e adiciona ao clicado
+                document.querySelectorAll('.sidebar a').forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Adiciona botão "Voltar ao Sumário" no final de cada seção principal
+        document.querySelectorAll('.main-content section').forEach(section => {
+            const backToTopBtn = document.createElement('a');
+            backToTopBtn.href = '#top'; // Link para o topo da página/sumário
+            backToTopBtn.textContent = (lang === 'pt' ? 'Voltar ao Sumário' : (lang === 'en' ? 'Back to Summary' : 'Torna al Sommario'));
+            backToTopBtn.classList.add('back-to-summary-btn');
+            section.appendChild(backToTopBtn);
+
+            backToTopBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0, // Rola para o topo da página
+                    behavior: 'smooth'
+                });
+                // Remove 'active' de todos os links da sidebar quando volta ao topo
+                document.querySelectorAll('.sidebar a').forEach(link => link.classList.remove('active'));
+            });
+        });
+    }
+
+    // Função para atualizar o link ativo na barra lateral durante a rolagem
+    function updateSidebarActiveLink() {
+        let currentActiveId = null;
+        for (let i = currentSections.length - 1; i >= 0; i--) {
+            const section = currentSections[i];
+            if (section.element && window.scrollY >= (section.element.offsetTop - scrollOffset - 1)) {
+                currentActiveId = section.id;
+                break;
+            }
+        }
+
+        document.querySelectorAll('.sidebar a').forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').substring(1) === currentActiveId) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    // Carregar idioma salvo ou padrão
+    const savedLang = localStorage.getItem('vortexaLang') || 'pt';
+    currentLang = savedLang;
+    renderContent(currentLang);
+    updateLangButtonActiveState(currentLang);
+
+    // Carregar modo escuro/claro salvo ou padrão
+    const savedDarkMode = localStorage.getItem('vortexaDarkMode');
+    if (savedDarkMode === 'enabled') {
+        document.body.classList.add('light-mode');
+    } else {
+        document.body.classList.remove('light-mode');
+    }
+
+    // Event Listeners para mudança de idioma
+    langButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            currentLang = this.dataset.lang;
+            localStorage.setItem('vortexaLang', currentLang);
+            renderContent(currentLang);
+            updateLangButtonActiveState(currentLang);
+        });
+    });
+
+    function updateLangButtonActiveState(activeLang) {
+        langButtons.forEach(button => {
+            if (button.dataset.lang === activeLang) {
+                button.classList.add('active');
+            } else {
+                button.classList.remove('active');
+            }
+        });
+    }
+
+    // Event Listener para alternar modo escuro/claro
+    darkModeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('light-mode');
+        if (document.body.classList.contains('light-mode')) {
+            localStorage.setItem('vortexaDarkMode', 'enabled');
+        } else {
+            localStorage.setItem('vortexaDarkMode', 'disabled');
+        }
+    });
+
+    // Event Listener para a rolagem da janela
+    window.addEventListener('scroll', updateSidebarActiveLink);
+    // Chama uma vez para garantir o estado correto ao carregar a página
+    updateSidebarActiveLink();
+});
