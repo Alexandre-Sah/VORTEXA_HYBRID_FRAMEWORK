@@ -358,600 +358,136 @@ const content = {
                     </section>
                 `
             },
-            glossario: {                title: "Glossário Técnico",
-                content: `<p><strong>Glossário Técnico</strong></p>
-<table>
-<thead>
-<tr>
-<th><strong>Termo/Sigla</strong></th>
-<th><strong>Tipo</strong></th>
-<th><strong>Definição</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>ABS</strong></td>
-<td>-</td>
-<td>Sistema de Freios Antitravamento</td>
-</tr>
-<tr>
-<td><strong>ANSYS</strong></td>
-<td>Industrial</td>
-<td>Software de simulação CAE</td>
-</tr>
-<tr>
-<td><strong>CAE</strong></td>
-<td>-</td>
-<td>Computer-Aided Engineering (Engenharia Assistida por Computador)</td>
-</tr>
-<tr>
-<td><strong>CTIS</strong></td>
-<td>-</td>
-<td>Central Tire Intelligence System (Sistema Inteligente Central de Pneus)</td>
-</tr>
-<tr>
-<td><strong>DENSO</strong></td>
-<td>Industrial</td>
-<td>Fabricante de componentes eletrônicos automotivos</td>
-</tr>
-<tr>
-<td><strong>DSSV</strong></td>
-<td>-</td>
-<td>Dynamic Suspensions Spool Valve (Válvula Spool de Suspensão Dinâmica)</td>
-</tr>
-<tr>
-<td><strong>ECLSS</strong></td>
-<td>-</td>
-<td>Environmental Control and Life Support System (Sistema de Controle Ambiental e Suporte à Vida)</td>
-</tr>
-<tr>
-<td><strong>EDR</strong></td>
-<td>-</td>
-<td>Event Data Recorder (Registrador de Dados de Evento)</td>
-</tr>
-<tr>
-<td><strong>ERS</strong></td>
-<td>-</td>
-<td>Energy Recovery System (Sistema de Recuperação de Energia)</td>
-</tr>
-<tr>
-<td><strong>FIA</strong></td>
-<td>-</td>
-<td>Fédération Internationale de l\\'Automobile</td>
-</tr>
-<tr>
-<td><strong>HUD</strong></td>
-<td>-</td>
-<td>Head-Up Display (Display de Cabeça Erguida)</td>
-</tr>
-<tr>
-<td><strong>HBR-1</strong></td>
-<td>-</td>
-<td>Motor de Corrida a Hidrogênio VORTEXA 1</td>
-</tr>
-<tr>
-<td><strong>ICE</strong></td>
-<td>-</td>
-<td>Internal Combustion Engine (Motor de Combustão Interna)</td>
-</tr>
-<tr>
-<td><strong>Kleist Layer™</strong></td>
-<td>-</td>
-<td>Camada estrutural energética regenerativa integrada à Smart Skin™</td>
-</tr>
-<tr>
-<td><strong>LiDAR</strong></td>
-<td>-</td>
-<td>Light Detection and Ranging (Sensor de distância baseado em laser)</td>
-</tr>
-<tr>
-<td><strong>MRCS</strong></td>
-<td>-</td>
-<td>Modular Reconfigurable Chassis System</td>
-</tr>
-<tr>
-<td><strong>NEVO OS™</strong></td>
-<td>-</td>
-<td>Sistema operacional embarcado híbrido com suporte a RTOS e aprendizado contínuo</td>
-</tr>
-<tr>
-<td><strong>OptiCAN Matrix™</strong></td>
-<td>-</td>
-<td>Barramento embarcado tolerante a falhas baseado em CAN XL e fibra POF</td>
-</tr>
-<tr>
-<td><strong>OTA</strong></td>
-<td>-</td>
-<td>Over-The-Air (Atualizações remotas)</td>
-</tr>
-<tr>
-<td><strong>PEM</strong></td>
-<td>-</td>
-<td>Proton Exchange Membrane (Tecnologia de célula de hidrogênio)</td>
-</tr>
-<tr>
-<td><strong>PEM Turbine</strong></td>
-<td>-</td>
-<td>Microturbina elétrica de célula a hidrogênio usada como fallback energético</td>
-</tr>
-<tr>
-<td><strong>QEV</strong></td>
-<td>-</td>
-<td>Quad Electric Vector (Unidade de propulsão vetorial elétrica)</td>
-</tr>
-<tr>
-<td><strong>QuickBay™</strong></td>
-<td>-</td>
-<td>Sistema modular de troca rápida de kits de missão em campo</td>
-</tr>
-<tr>
-<td><strong>SADEV</strong></td>
-<td>Industrial</td>
-<td>Fabricante de sistemas de transmissão de competição</td>
-</tr>
-<tr>
-<td><strong>SensorGrid™</strong></td>
-<td>-</td>
-<td>Rede embarcada de sensores estruturais, térmicos, elétricos e cinemáticos</td>
-</tr>
-<tr>
-<td><strong>SISMO™</strong></td>
-<td>-</td>
-<td>Sistema Inteligente de Suspensão Modular Otimizada</td>
-</tr>
-<tr>
-<td><strong>Smart Skin™</strong></td>
-<td>-</td>
-<td>Carenagem ativa multicamadas com sensores, autocura, geração e armazenamento de energia</td>
-</tr>
-<tr>
-<td><strong>SMFD™</strong></td>
-<td>-</td>
-<td>Sequential Manual Failsafe Drive</td>
-</tr>
-<tr>
-<td><strong>SubCore™</strong></td>
-<td>-</td>
-<td>Módulo computacional autônomo embarcado com capacidade de inferência e fallback independente</td>
-</tr>
-<tr>
-<td><strong>TAK-4i</strong></td>
-<td>-</td>
-<td>Sistema de suspensão independente da Oshkosh Defense</td>
-</tr>
-<tr>
-<td><strong>V-DVD™</strong></td>
-<td>-</td>
-<td>Tração Direta Vetorial VORTEXA</td>
-</tr>
-<tr>
-<td><strong>VAVi™</strong></td>
-<td>-</td>
-<td>Vortexa Active Valvetrain Intelligent (sistema de válvulas ativas adaptativas)</td>
-</tr>
-<tr>
-<td><strong>VIRETTA™</strong></td>
-<td>-</td>
-<td>Vortexa Intelligent Reactive Traction &amp; Tactical Assistance – Sistema integrado de direção, frenagem e bypass com inteligência embarcada, redundância neural e failback hidráulico.</td>
-</tr>
-<tr>
-<td><strong>Vortexa Brain™</strong></td>
-<td>-</td>
-<td>Unidade central de inferência cognitiva embarcada baseada em VORTEXCORE™</td>
-</tr>
-<tr>
-<td><strong>VORTEXCORE™</strong></td>
-<td>-</td>
-<td>Família de ASIC SoCs para inferência neural distribuída</td>
-</tr>
-<tr>
-<td><strong>VORTEXA SINAPSI™</strong></td>
-<td>-</td>
-<td>Arquitetura embarcada para aprendizado profundo contínuo e runtime adaptativo</td>
-</tr>
-<tr>
-<td><strong>VRSH™</strong></td>
-<td>-</td>
-<td>Capacete Inteligente com HUD adaptativo, sensores BCI/EMG e fallback auditivo</td>
-</tr>
-<tr>
-<td><strong>VSC-RESIL™</strong></td>
-<td>-</td>
-<td>Cápsula de sobrevivência modular e blindada VORTEXA</td>
-</tr>
-<tr>
-<td><strong>VULCANS™</strong></td>
-<td>-</td>
-<td>Rede autônoma embarcada para suporte de vida e redundância térmica</td>
-</tr>
-<tr>
-<td><strong>W2RC</strong></td>
-<td>-</td>
-<td>World Rally-Raid Championship</td>
-</tr>
-<tr>
-<td><strong>xAI</strong></td>
-<td>-</td>
-<td>Empresa de IA embarcada e criadora do Grok 6</td>
-</tr>
-<tr>
-<td><strong>xRT-VTXA™</strong></td>
-<td>-</td>
-<td>Runtime proprietário de tempo real estendido com fallback cognitivo</td>
-</tr>
-</tbody>
-</table>
-<p><em>Nota: termos marcados com ™ fazem parte do ecossistema proprietário VORTEXA. Clique sobre os termos no corpo do documento para acessar esta seção.</em></p>
-<p><strong>Normas Técnicas e Conformidade</strong></p>
-<p>O VORTEXA HYBRID foi desenvolvido em conformidade com as principais normas internacionais que regem a segurança funcional automotiva, robustez ambiental, sistemas críticos embarcados, compatibilidade regulatória para competição extrema, abastecimento de hidrogênio e cibersegurança. A adesão a esses marcos normativos assegura a interoperabilidade global, proteção do operador e confiabilidade operacional em múltiplos cenários táticos.</p>
-<p><strong>1. Segurança Funcional e Sistemas Críticos</strong></p>
-<table>
-<thead>
-<tr>
-<th><strong>Norma</strong></th>
-<th><strong>Aplicação</strong></th>
-<th><strong>Descrição</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>ISO 26262 – ASIL-D</strong></td>
-<td>Segurança automotiva</td>
-<td>Define requisitos para sistemas embarcados críticos com falha segura. Aplicada ao Vortexa Brain™, NEVO OS™, SubCores™, ECU Resilient™ e modos de fallback cognitivo.</td>
-</tr>
-<tr>
-<td><strong>IEC 61508</strong></td>
-<td>Sistemas elétricos/eletrônicos</td>
-<td>Norma genérica de segurança funcional para todos os níveis do sistema eletrônico do VORTEXA.</td>
-</tr>
-<tr>
-<td><strong>AUTOSAR Adaptive</strong></td>
-<td>Arquitetura embarcada</td>
-<td>Padrão para sistemas automotivos adaptativos e software tolerante a falhas.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>2. Robustez Ambiental e Operação Extrema</strong></p>
-<table>
-<thead>
-<tr>
-<th><strong>Norma</strong></th>
-<th><strong>Aplicação</strong></th>
-<th><strong>Descrição</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>MIL-STD-810H</strong></td>
-<td>Condições extremas</td>
-<td>Padroniza testes de resistência ambiental, como vibração, choque térmico, poeira, lama, submersão e altitude.</td>
-</tr>
-<tr>
-<td><strong>IP68/IP69K</strong></td>
-<td>Proteção contra água e poeira</td>
-<td>Certificações para selagem completa de componentes eletrônicos críticos contra intrusão de água sob pressão e partículas sólidas.</td>
-</tr>
-<tr>
-<td><strong>SAE J1455</strong></td>
-<td>Veículos pesados</td>
-<td>Testes de durabilidade e validação ambiental em veículos fora de estrada e militares.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>3. Normas Específicas de Combustível e H₂</strong></p>
-<table>
-<thead>
-<tr>
-<th><strong>Norma</strong></th>
-<th><strong>Aplicação</strong></th>
-<th><strong>Descrição</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>SAE J2601</strong></td>
-<td>Tanques de hidrogênio</td>
-<td>Protocolo de abastecimento seguro para veículos com H₂ de 700 bar. Compatível com os tanques modulares do VORTEXA HYBRID.</td>
-</tr>
-<tr>
-<td><strong>ISO 19880-1</strong></td>
-<td>Infraestrutura H₂</td>
-<td>Segurança de equipamentos para reabastecimento com hidrogênio gasoso.</td>
-</tr>
-<tr>
-<td><strong>UN ECE R134</strong></td>
-<td>Sistemas de combustível H₂</td>
-<td>Regulamenta requisitos técnicos para componentes de hidrogênio em veículos rodoviários.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>4. Competição e Conformidade Esportiva</strong></p>
-<table>
-<thead>
-<tr>
-<th><strong>Norma</strong></th>
-<th><strong>Aplicação</strong></th>
-<th><strong>Descrição</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>FIA T1U</strong></td>
-<td>Rally-Raid</td>
-<td>Regulamento técnico e de segurança para a categoria Ultimate do World Rally-Raid Championship (W2RC).</td>
-</tr>
-<tr>
-<td><strong>A.S.O. Safety Guide</strong></td>
-<td>Eventos Dakar</td>
-<td>Normas específicas de segurança exigidas pela organização do Rally Dakar (capacetes, HUD, rádios, sistemas embarcados).</td>
-</tr>
-<tr>
-<td><strong>FIA Appendix J</strong></td>
-<td>Equipamento de competição</td>
-<td>Regulamenta estruturas de segurança, chassi, EDR, extintores, assentos e cintos.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>5. Cibersegurança, Dados e Integridade Cognitiva</strong></p>
-<table>
-<thead>
-<tr>
-<th><strong>Norma</strong></th>
-<th><strong>Aplicação</strong></th>
-<th><strong>Descrição</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>ISO 27001</strong></td>
-<td>Cibersegurança</td>
-<td>Gestão de segurança da informação para ECUs, redes embarcadas, runtime NEVO OS™ e o ambiente cognitivo distribuído.</td>
-</tr>
-<tr>
-<td><strong>UNECE R155</strong></td>
-<td>Segurança cibernética veicular</td>
-<td>Requisitos obrigatórios para veículos inteligentes e conectados a partir de 2024.</td>
-</tr>
-<tr>
-<td><strong>UNECE R156</strong></td>
-<td>Atualizações OTA</td>
-<td>Norma internacional para gerenciamento seguro de atualizações remotas e firmware embarcado.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>6. Padrões de Simulação, Teste e Qualidade CAE</strong></p>
-<table>
-<thead>
-<tr>
-<th><strong>Norma</strong></th>
-<th><strong>Aplicação</strong></th>
-<th><strong>Descrição</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>ISO 9001</strong></td>
-<td>Qualidade</td>
-<td>Gestão de qualidade aplicada à engenharia e manufatura de sistemas VORTEXA.</td>
-</tr>
-<tr>
-<td><strong>ISO 10303 (STEP)</strong></td>
-<td>Troca de dados CAD/CAE</td>
-<td>Interoperabilidade de modelos e gêmeos digitais com plataformas ANSYS/CAE.</td>
-</tr>
-<tr>
-<td><strong>DO-330</strong></td>
-<td>Ferramentas de verificação</td>
-<td>Qualificação de ferramentas de simulação, análise e certificação digital em projetos críticos.</td>
-</tr>
-</tbody>
-</table>`
-        </div>
-        <div class="glossary-item" id="sensorgid">
-            <h4>SensorGrid™</h4>
-            <p>Rede embarcada de sensores estruturais, térmicos, elétricos e cinemáticos</p>
-            <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
-        </div>
-        <div class="glossary-item" id="sismo">
-            <h4>SISMO™</h4>
-            <p>Sistema Inteligente de Suspensão Modular Otimizada</p>
-            <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
-        </div>
-        <div class="glossary-item" id="smart-skin">
-            <h4>Smart Skin™</h4>
-            <p>Carenagem ativa multicamadas com sensores, autocura, geração e armazenamento de energia</p>
-            <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
-        </div>
-        <div class="glossary-item" id="smfd">
-            <h4>SMFD™</h4>
-            <p>Sequential Manual Failsafe Drive</p>
-            <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
-        </div>
-        <div class="glossary-item" id="subcore">
-            <h4>SubCore™</h4>
-            <p>Módulo computacional autônomo embarcado com capacidade de inferência e fallback independente</p>
-            <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
-        </div>
-        <div class="glossary-item" id="tak-4i">
-            <h4>TAK-4i</h4>
-            <p>Sistema de suspensão independente da Oshkosh Defense</p>
-            <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
-        </div>
-        <div class="glossary-item" id="v-dvd">
-            <h4>V-DVD™</h4>
-            <p>Tração Direta Vetorial VORTEXA</p>
-            <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
-        </div>
-        <div class="glossary-item" id="vavi">
-            <h4>VAVi™</h4>
-            <p>Vortexa Active Valvetrain Intelligent (sistema de válvulas ativas adaptativas)</p>
-            <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
-        </div>
-        <div class="glossary-item" id="viretta">
-            <h4>VIRETTA™</h4>
-            <p>Vortexa Intelligent Reactive Traction & Tactical Assistance – Sistema integrado de direção, frenagem e bypass com inteligência embarcada, redundância neural e failback hidráulico.</p>
-            <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
-        </div>
-        <div class="glossary-item" id="vortexa-brain">
-            <h4>Vortexa Brain™</h4>
-            <p>Unidade central de inferência cognitiva embarcada baseada em VORTEXCORE™</p>
-            <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
-        </div>
-        <div class="glossary-item" id="vortexacore">
-            <h4>VORTEXCORE™</h4>
-            <p>Família de ASIC SoCs para inferência neural distribuída</p>
-            <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
-        </div>
-        <div class="glossary-item" id="vortexa-sinapsi">
-            <h4>VORTEXA SINAPSI™</h4>
-            <p>Arquitetura embarcada para aprendizado profundo contínuo e runtime adaptativo</p>
-            <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
-        </div>
-        <div class="glossary-item" id="vrsh">
-            <h4>VRSH™</h4>
-            <p>Capacete Inteligente com HUD adaptativo, sensores BCI/EMG e fallback auditivo</p>
-            <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
-        </div>
-        <div class="glossary-item" id="vsc-resil">
-            <h4>VSC-RESIL™</h4>
-            <p>Cápsula de sobrevivência modular e blindada VORTEXA</p>
-            <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
-        </div>
-        <div class="glossary-item" id="vulcans">
-            <h4>VULCANS™</h4>
-            <p>Rede autônoma embarcada para suporte de vida e redundância térmica</p>
-            <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
-        </div>
-        <div class="glossary-item" id="w2rc">
-            <h4>W2RC</h4>
-            <p>World Rally-Raid Championship</p>
-            <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
-        </div>
-        <div class="glossary-item" id="xai">
-            <h4>xAI</h4>
-            <p>Empresa de IA embarcada e criadora do Grok 6</p>
-            <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
-        </div>
-        <div class="glossary-item" id="xrt-vtca">
-            <h4>xRT-VTXA™</h4>
-            <p>Runtime proprietário de tempo real estendido com fallback cognitivo</p>
-            <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
-        </div>
-    </div>
-    <p><em>Nota: termos marcados com ™ fazem parte do ecossistema proprietário VORTEXA. Clique sobre os termos no corpo do documento para acessar esta seção.</em></p>
-</section>
-
-<section id="normas-tecnicas">
-    <h3>Normas Técnicas e Conformidade</h3>
-    <div class="section-nav">
-        <a href="#glossario" class="nav-link">← Voltar à Seção</a>
-    </div>
-    <p>O VORTEXA HYBRID foi desenvolvido em conformidade com as principais normas internacionais que regem a segurança funcional automotiva, robustez ambiental, sistemas críticos embarcados, compatibilidade regulatória para competição extrema, abastecimento de hidrogênio e cibersegurança. A adesão a esses marcos normativos assegura a interoperabilidade global, proteção do operador e confiabilidade operacional em múltiplos cenários táticos.</p>
-
-    <h4>1. Segurança Funcional e Sistemas Críticos</h4>
-    <table>
-        <thead>
-            <tr>
-                <th>Norma</th>
-                <th>Aplicação</th>
-                <th>Descrição</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>ISO 26262 – ASIL-D</td>
-                <td>Segurança automotiva</td>
-                <td>Define requisitos para sistemas embarcados críticos com falha segura. Aplicada ao Vortexa Brain™, NEVO OS™, SubCores™, ECU Resilient™ e modos de fallback cognitivo.</td>
-            </tr>
-            <tr>
-                <td>IEC 61508</td>
-                <td>Sistemas elétricos/eletrônicos</td>
-                <td>Norma genérica de segurança funcional para todos os níveis do sistema eletrônico do VORTEXA.</td>
-            </tr>
-            <tr>
-                <td>AUTOSAR Adaptive</td>
-                <td>Arquitetura embarcada</td>
-                <td>Padrão para sistemas automotivos adaptativos e software tolerante a falhas.</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h4>2. Robustez Ambiental e Operação Extrema</h4>
-    <table>
-        <thead>
-            <tr>
-                <th>Norma</th>
-                <th>Aplicação</th>
-                <th>Descrição</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>MIL-STD-810H</td>
-                <td>Condições extremas</td>
-                <td>Padroniza testes de resistência ambiental, como vibração, choque térmico, poeira, lama, submersão e altitude.</td>
-            </tr>
-            <tr>
-                <td>IP68/IP69K</td>
-                <td>Proteção contra água e poeira</td>
-                <td>Certificações para selagem completa de componentes eletrônicos críticos contra intrusão de água sob pressão e partículas sólidas.</td>
-            </tr>
-            <tr>
-                <td>SAE J1455</td>
-                <td>Veículos pesados</td>
-                <td>Testes de durabilidade e validação ambiental em veículos fora de estrada e militares.</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h4>3. Normas Específicas de Combustível e H₂</h4>
-    <table>
-        <thead>
-            <tr>
-                <th>Norma</th>
-                <th>Aplicação</th>
-                <th>Descrição</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>SAE J2601</td>
-                <td>Tanques de hidrogênio</td>
-                <td>Protocolo de abastecimento seguro para veículos com H₂ de 700 bar. Compatível com os tanques modulares do VORTEXA HYBRID.</td>
-            </tr>
-            <tr>
-                <td>ISO 19880-1</td>
-                <td>Infraestrutura H₂</td>
-                <td>Segurança de equipamentos para reabastecimento com hidrogênio gasoso.</td>
-            </tr>
-            <tr>
-                <td>UN ECE R134</td>
-                <td>Sistemas de combustível H₂</td>
-                <td>Regulamenta requisitos técnicos para componentes de hidrogênio em veículos rodoviários.</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h4>4. Competição e Conformidade Esportiva</h4>
-    <table>
-        <thead>
-            <tr>
-                <th>Norma</th>
-                <th>Aplicação</th>
-                <th>Descrição</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>FIA T1U</td>
-                <td>Rally-Raid</td>
-                <td>Regulamento técnico e de segurança para a categoria Ultimate do World Rally-Raid Championship (W2RC).</td>
-            </tr>
-            <tr>
-                <td>A.S.O. Safety Guide</td>
-                <td>Eventos Dakar</td>
-                <td>Normas específicas de segurança exigidas pela o
-(Content truncated due to size limit. Use line ranges to read in chunks)
+            glossario: {
+                title: "GLOSSÁRIO TÉCNICO",
+                content: `
+                    <div class="back-to-top">
+                        <button onclick="scrollToTop()" class="back-btn">↑ Voltar ao Topo</button>
+                    </div>
+                    
+                    <section id="termos-principais">
+                        <h3>Termos Principais</h3>
+                        <div class="section-nav">
+                            <a href="#glossario" class="nav-link">← Voltar à Seção</a>
+                        </div>
+                        <div class="glossary-grid">
+                            <div class="glossary-item" id="vortexa-hybrid">
+                                <h4>VORTEXA HYBRID</h4>
+                                <p>Plataforma modular e resiliente baseada no VORTEXA HYBRID TECH FRAMEWORK para mobilidade extrema.</p>
+                                <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
+                            </div>
+                            
+                            <div class="glossary-item" id="vortexa-framework">
+                                <h4>VORTEXA HYBRID TECH FRAMEWORK</h4>
+                                <p>Arquitetura cognitiva, modular e resiliente para mobilidade inteligente.</p>
+                                <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
+                            </div>
+                            
+                            <div class="glossary-item" id="survivor-capsule">
+                                <h4>Survivor Capsule™ (VSC-RESIL™)</h4>
+                                <p>Núcleo de proteção biomecânica, cognitiva e térmica do VORTEXA HYBRID.</p>
+                                <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
+                            </div>
+                            
+                            <div class="glossary-item" id="vortexa-brain">
+                                <h4>VORTEXA BRAIN™</h4>
+                                <p>Núcleo de inteligência operacional do VORTEXA HYBRID.</p>
+                                <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section id="siglas">
+                        <h3>Siglas e Abreviações</h3>
+                        <div class="section-nav">
+                            <a href="#glossario" class="nav-link">← Voltar à Seção</a>
+                        </div>
+                        <div class="glossary-grid">
+                            <div class="glossary-item" id="stanford-startx">
+                                <h4>Stanford StartX</h4>
+                                <p>Ecossistema de inovação onde a Vortexa Motorsport Inc. foi fundada.</p>
+                                <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
+                            </div>
+                            
+                            <div class="glossary-item" id="stanford-ddl">
+                                <h4>Stanford Driving Decision Lab (DDL)</h4>
+                                <p>Laboratório de decisão de condução de Stanford, com o qual a Vortexa Motorsport Inc. mantém sinergia.</p>
+                                <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
+                            </div>
+                            
+                            <div class="glossary-item" id="cae-vortexa">
+                                <h4>CAE VORTEXA™</h4>
+                                <p>Complexo de validação da Vortexa Motorsport Inc., incluindo infraestrutura para simulação termomecânica e laboratório de runtime neural.</p>
+                                <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
+                            </div>
+                            
+                            <div class="glossary-item" id="w2rc">
+                                <h4>W2RC</h4>
+                                <p>World Rally-Raid Championship.</p>
+                                <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section id="tecnologias">
+                        <h3>Tecnologias Aplicadas</h3>
+                        <div class="section-nav">
+                            <a href="#glossario" class="nav-link">← Voltar à Seção</a>
+                        </div>
+                        <div class="glossary-grid">
+                            <div class="glossary-item" id="mrcs">
+                                <h4>MRCS™ – Modular Reconfigurable Chassis System</h4>
+                                <p>Arquitetura modular e multicamadas do chassi do VORTEXA HYBRID.</p>
+                                <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
+                            </div>
+                            
+                            <div class="glossary-item" id="lidar">
+                                <h4>LIDAR</h4>
+                                <p>Light Detection and Ranging (Detecção e Alcance da Luz) - tecnologia de sensoriamento remoto.</p>
+                                <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
+                            </div>
+                            
+                            <div class="glossary-item" id="cigs">
+                                <h4>CIGS</h4>
+                                <p>Copper Indium Gallium Selenide (Cobre, Índio, Gálio, Seleneto) - tipo de célula solar.</p>
+                                <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
+                            </div>
+                            
+                            <div class="glossary-item" id="pem">
+                                <h4>PEM</h4>
+                                <p>Proton Exchange Membrane (Membrana de Troca Protônica) - tipo de célula a combustível.</p>
+                                <button onclick="returnToOrigin()" class="return-btn">← Voltar ao texto</button>
+                            </div>
+                        </div>
+                    </section>
+                `
+            }
+        }
+    },
+    en: {
+        title: "VORTEXA HYBRID TECH FRAMEWORK",
+        sidebar: {
+            title: "Summary",
+            sections: [
+                {
+                    id: "intro",
+                    title: "Overview",
+                    subsections: [
+                        { id: "intro-institucional", title: "Origin and Foundation" },
+                        { id: "visao-geral", title: "VORTEXA Concept" },
+                        { id: "diferenciais", title: "Competitive Advantages" },
+                        { id: "roadmap", title: "Development Timeline" }
+                    ]
+                },
+                {
+                    id: "dados-tecnicos",
+                    title: "Technical Specifications",
+                    subsections: [
+                        { id: "estrutura-design", title: "Architecture and Materials" },
+                        { id: "filosofia-murray", title: "Functional Design" },
+                        { id: "survivor-capsule", title: "Protection System" },
+                        { id: "especificacoes", title: "Detailed Technical Data" }
+                    ]
                 },
                 {
                     id: "press-release",
