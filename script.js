@@ -2,6 +2,7 @@
 const content = {
     pt: {
         title: "VORTEXA HYBRID TECH FRAMEWORK",
+        slogan: "Design meets survival: quando a forma segue a missão",
         sidebar: {
             title: "Sumário",
             sections: [
@@ -44,10 +45,291 @@ const content = {
                     ]
                 }
             ]
-        },
-        sections: {
-            intro: {
-                title: "VISÃO GERAL",
+        }
+    },
+    en: {
+        title: "VORTEXA HYBRID TECH FRAMEWORK",
+        slogan: "Design meets survival: when form follows mission",
+        sidebar: {
+            title: "Summary",
+            sections: [
+                {
+                    id: "intro",
+                    title: "Overview",
+                    subsections: [
+                        { id: "intro-institucional", title: "Origin and Foundation" },
+                        { id: "visao-geral", title: "VORTEXA Concept" },
+                        { id: "diferenciais", title: "Competitive Advantages" },
+                        { id: "roadmap", title: "Development Timeline" }
+                    ]
+                },
+                {
+                    id: "dados-tecnicos",
+                    title: "Technical Specifications",
+                    subsections: [
+                        { id: "estrutura-design", title: "Architecture and Materials" },
+                        { id: "filosofia-murray", title: "Functional Design" },
+                        { id: "survivor-capsule", title: "Protection System" },
+                        { id: "especificacoes", title: "Detailed Technical Data" }
+                    ]
+                },
+                {
+                    id: "press-release",
+                    title: "Communication",
+                    subsections: [
+                        { id: "press-overview", title: "Strategic Vision" },
+                        { id: "press-tech", title: "Technological Innovations" },
+                        { id: "press-market", title: "Market Positioning" }
+                    ]
+                },
+                {
+                    id: "glossario",
+                    title: "Technical Glossary",
+                    subsections: [
+                        { id: "termos-principais", title: "Main Terms" },
+                        { id: "siglas", title: "Acronyms and Abbreviations" },
+                        { id: "tecnologias", title: "Applied Technologies" }
+                    ]
+                }
+            ]
+        }
+    },
+    de: {
+        title: "VORTEXA HYBRID TECH FRAMEWORK",
+        slogan: "Design meets survival: wenn Form der Mission folgt",
+        sidebar: {
+            title: "Inhaltsverzeichnis",
+            sections: [
+                {
+                    id: "intro",
+                    title: "Überblick",
+                    subsections: [
+                        { id: "intro-institucional", title: "Ursprung und Gründung" },
+                        { id: "visao-geral", title: "VORTEXA Konzept" },
+                        { id: "diferenciais", title: "Wettbewerbsvorteile" },
+                        { id: "roadmap", title: "Entwicklungsplan" }
+                    ]
+                },
+                {
+                    id: "dados-tecnicos",
+                    title: "Technische Spezifikationen",
+                    subsections: [
+                        { id: "estrutura-design", title: "Architektur und Materialien" },
+                        { id: "filosofia-murray", title: "Funktionales Design" },
+                        { id: "survivor-capsule", title: "Schutzsystem" },
+                        { id: "especificacoes", title: "Detaillierte technische Daten" }
+                    ]
+                },
+                {
+                    id: "press-release",
+                    title: "Kommunikation",
+                    subsections: [
+                        { id: "press-overview", title: "Strategische Vision" },
+                        { id: "press-tech", title: "Technologische Innovationen" },
+                        { id: "press-market", title: "Marktpositionierung" }
+                    ]
+                },
+                {
+                    id: "glossario",
+                    title: "Technisches Glossar",
+                    subsections: [
+                        { id: "termos-principais", title: "Hauptbegriffe" },
+                        { id: "siglas", title: "Akronyme und Abkürzungen" },
+                        { id: "tecnologias", title: "Angewandte Technologien" }
+                    ]
+                }
+            ]
+        }
+    },
+    fr: {
+        title: "VORTEXA HYBRID TECH FRAMEWORK",
+        slogan: "Design meets survival: quand la forme suit la mission",
+        sidebar: {
+            title: "Sommaire",
+            sections: [
+                {
+                    id: "intro",
+                    title: "Vue d'ensemble",
+                    subsections: [
+                        { id: "intro-institucional", title: "Origine et Fondation" },
+                        { id: "visao-geral", title: "Concept VORTEXA" },
+                        { id: "diferenciais", title: "Avantages Concurrentiels" },
+                        { id: "roadmap", title: "Calendrier de Développement" }
+                    ]
+                },
+                {
+                    id: "dados-tecnicos",
+                    title: "Spécifications Techniques",
+                    subsections: [
+                        { id: "estrutura-design", title: "Architecture et Matériaux" },
+                        { id: "filosofia-murray", title: "Design Fonctionnel" },
+                        { id: "survivor-capsule", title: "Système de Protection" },
+                        { id: "especificacoes", title: "Données Techniques Détaillées" }
+                    ]
+                },
+                {
+                    id: "press-release",
+                    title: "Communication",
+                    subsections: [
+                        { id: "press-overview", title: "Vision Stratégique" },
+                        { id: "press-tech", title: "Innovations Technologiques" },
+                        { id: "press-market", title: "Positionnement Marché" }
+                    ]
+                },
+                {
+                    id: "glossario",
+                    title: "Glossaire Technique",
+                    subsections: [
+                        { id: "termos-principais", title: "Termes Principaux" },
+                        { id: "siglas", title: "Acronymes et Abréviations" },
+                        { id: "tecnologias", title: "Technologies Appliquées" }
+                    ]
+                }
+            ]
+        }
+    },
+    it: {
+        title: "VORTEXA HYBRID TECH FRAMEWORK",
+        slogan: "Design meets survival: quando la forma segue la missione",
+        sidebar: {
+            title: "Sommario",
+            sections: [
+                {
+                    id: "intro",
+                    title: "Panoramica",
+                    subsections: [
+                        { id: "intro-institucional", title: "Origine e Fondazione" },
+                        { id: "visao-geral", title: "Concetto VORTEXA" },
+                        { id: "diferenciais", title: "Vantaggi Competitivi" },
+                        { id: "roadmap", title: "Cronologia di Sviluppo" }
+                    ]
+                },
+                {
+                    id: "dados-tecnicos",
+                    title: "Specifiche Tecniche",
+                    subsections: [
+                        { id: "estrutura-design", title: "Architettura e Materiali" },
+                        { id: "filosofia-murray", title: "Design Funzionale" },
+                        { id: "survivor-capsule", title: "Sistema di Protezione" },
+                        { id: "especificacoes", title: "Dati Tecnici Dettagliati" }
+                    ]
+                },
+                {
+                    id: "press-release",
+                    title: "Comunicazione",
+                    subsections: [
+                        { id: "press-overview", title: "Visione Strategica" },
+                        { id: "press-tech", title: "Innovazioni Tecnologiche" },
+                        { id: "press-market", title: "Posizionamento di Mercato" }
+                    ]
+                },
+                {
+                    id: "glossario",
+                    title: "Glossario Tecnico",
+                    subsections: [
+                        { id: "termos-principais", title: "Termini Principali" },
+                        { id: "siglas", title: "Acronimi e Abbreviazioni" },
+                        { id: "tecnologias", title: "Tecnologie Applicate" }
+                    ]
+                }
+            ]
+        }
+    },
+    es: {
+        title: "VORTEXA HYBRID TECH FRAMEWORK",
+        slogan: "Design meets survival: cuando la forma sigue la misión",
+        sidebar: {
+            title: "Resumen",
+            sections: [
+                {
+                    id: "intro",
+                    title: "Visión General",
+                    subsections: [
+                        { id: "intro-institucional", title: "Origen y Fundación" },
+                        { id: "visao-geral", title: "Concepto VORTEXA" },
+                        { id: "diferenciais", title: "Ventajas Competitivas" },
+                        { id: "roadmap", title: "Cronograma de Desarrollo" }
+                    ]
+                },
+                {
+                    id: "dados-tecnicos",
+                    title: "Especificaciones Técnicas",
+                    subsections: [
+                        { id: "estrutura-design", title: "Arquitectura y Materiales" },
+                        { id: "filosofia-murray", title: "Diseño Funcional" },
+                        { id: "survivor-capsule", title: "Sistema de Protección" },
+                        { id: "especificacoes", title: "Datos Técnicos Detallados" }
+                    ]
+                },
+                {
+                    id: "press-release",
+                    title: "Comunicación",
+                    subsections: [
+                        { id: "press-overview", title: "Visión Estratégica" },
+                        { id: "press-tech", title: "Innovaciones Tecnológicas" },
+                        { id: "press-market", title: "Posicionamiento de Mercado" }
+                    ]
+                },
+                {
+                    id: "glossario",
+                    title: "Glosario Técnico",
+                    subsections: [
+                        { id: "termos-principais", title: "Términos Principales" },
+                        { id: "siglas", title: "Acrónimos y Abreviaciones" },
+                        { id: "tecnologias", title: "Tecnologías Aplicadas" }
+                    ]
+                }
+            ]
+        }
+    },
+    zh: {
+        title: "VORTEXA HYBRID TECH FRAMEWORK",
+        slogan: "设计遇见生存：当形式追随使命",
+        sidebar: {
+            title: "目录",
+            sections: [
+                {
+                    id: "intro",
+                    title: "概述",
+                    subsections: [
+                        { id: "intro-institucional", title: "起源与基础" },
+                        { id: "visao-geral", title: "VORTEXA概念" },
+                        { id: "diferenciais", title: "竞争优势" },
+                        { id: "roadmap", title: "开发时间表" }
+                    ]
+                },
+                {
+                    id: "dados-tecnicos",
+                    title: "技术规格",
+                    subsections: [
+                        { id: "estrutura-design", title: "架构与材料" },
+                        { id: "filosofia-murray", title: "功能设计" },
+                        { id: "survivor-capsule", title: "保护系统" },
+                        { id: "especificacoes", title: "详细技术数据" }
+                    ]
+                },
+                {
+                    id: "press-release",
+                    title: "通信",
+                    subsections: [
+                        { id: "press-overview", title: "战略愿景" },
+                        { id: "press-tech", title: "技术创新" },
+                        { id: "press-market", title: "市场定位" }
+                    ]
+                },
+                {
+                    id: "glossario",
+                    title: "技术词汇表",
+                    subsections: [
+                        { id: "termos-principais", title: "主要术语" },
+                        { id: "siglas", title: "缩写词" },
+                        { id: "tecnologias", title: "应用技术" }
+                    ]
+                }
+            ]
+        }
+    }
+};
                 content: `
                     <div class="back-to-top">
                         <button onclick="scrollToTop()" class="back-btn">↑ Voltar ao Topo</button>
@@ -658,21 +940,30 @@ function changeLang(lang) {
     currentLang = lang;
     loadContent();
     
-    // Atualizar botões
-    document.querySelectorAll('.controls button[id^="lang-"]').forEach(btn => {
+    // Atualizar botões de idioma
+    document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.remove('active');
     });
     document.getElementById(`lang-${lang}`).classList.add('active');
     
+    // Atualizar título e slogan no cabeçalho
+    const currentContent = content[lang];
+    document.querySelector('.main-title').textContent = currentContent.title;
+    document.querySelector('.main-slogan').textContent = currentContent.slogan;
+    
     // Atualizar texto do botão de tema
     const themeBtn = document.getElementById('theme-toggle');
-    if (lang === 'pt') {
-        themeBtn.textContent = isDarkMode ? 'Modo Claro' : 'Modo Escuro';
-    } else if (lang === 'en') {
-        themeBtn.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
-    } else if (lang === 'it') {
-        themeBtn.textContent = isDarkMode ? 'Modalità Chiara' : 'Modalità Scura';
-    }
+    const themeTexts = {
+        pt: { light: 'Modo Claro', dark: 'Modo Escuro' },
+        en: { light: 'Light Mode', dark: 'Dark Mode' },
+        de: { light: 'Heller Modus', dark: 'Dunkler Modus' },
+        fr: { light: 'Mode Clair', dark: 'Mode Sombre' },
+        it: { light: 'Modalità Chiara', dark: 'Modalità Scura' },
+        es: { light: 'Modo Claro', dark: 'Modo Oscuro' },
+        zh: { light: '浅色模式', dark: '深色模式' }
+    };
+    
+    themeBtn.textContent = isDarkMode ? themeTexts[lang].light : themeTexts[lang].dark;
 }
 
 function toggleTheme() {
@@ -680,20 +971,28 @@ function toggleTheme() {
     document.body.classList.toggle('light-mode');
     
     const themeBtn = document.getElementById('theme-toggle');
-    if (currentLang === 'pt') {
-        themeBtn.textContent = isDarkMode ? 'Modo Claro' : 'Modo Escuro';
-    } else if (currentLang === 'en') {
-        themeBtn.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
-    } else if (currentLang === 'it') {
-        themeBtn.textContent = isDarkMode ? 'Modalità Chiara' : 'Modalità Scura';
-    }
+    const themeTexts = {
+        pt: { light: 'Modo Claro', dark: 'Modo Escuro' },
+        en: { light: 'Light Mode', dark: 'Dark Mode' },
+        de: { light: 'Heller Modus', dark: 'Dunkler Modus' },
+        fr: { light: 'Mode Clair', dark: 'Mode Sombre' },
+        it: { light: 'Modalità Chiara', dark: 'Modalità Scura' },
+        es: { light: 'Modo Claro', dark: 'Modo Oscuro' },
+        zh: { light: '浅色模式', dark: '深色模式' }
+    };
+    
+    themeBtn.textContent = isDarkMode ? themeTexts[currentLang].light : themeTexts[currentLang].dark;
 }
 
 // Event listeners
 function setupEventListeners() {
     document.getElementById('lang-pt').addEventListener('click', () => changeLang('pt'));
     document.getElementById('lang-en').addEventListener('click', () => changeLang('en'));
+    document.getElementById('lang-de').addEventListener('click', () => changeLang('de'));
+    document.getElementById('lang-fr').addEventListener('click', () => changeLang('fr'));
     document.getElementById('lang-it').addEventListener('click', () => changeLang('it'));
+    document.getElementById('lang-es').addEventListener('click', () => changeLang('es'));
+    document.getElementById('lang-zh').addEventListener('click', () => changeLang('zh'));
     document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
 }
 

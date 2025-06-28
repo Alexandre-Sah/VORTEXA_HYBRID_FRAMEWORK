@@ -22,7 +22,91 @@ body.light-mode {
 /* Layout principal */
 .container {
     display: flex;
+    flex-direction: column;
     min-height: 100vh;
+}
+
+/* Cabeçalho Principal */
+.main-header {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+    padding: 30px 40px;
+    text-align: center;
+    border-bottom: 3px solid #00aaff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1002;
+}
+
+body.light-mode .main-header {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+    border-bottom-color: #0066cc;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-title {
+    color: #00aaff;
+    font-size: 3em;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    text-shadow: 0 2px 4px rgba(0, 170, 255, 0.3);
+    letter-spacing: 2px;
+}
+
+body.light-mode .main-title {
+    color: #0066cc;
+}
+
+.main-slogan {
+    color: #f0f0f0;
+    font-size: 1.2em;
+    font-style: italic;
+    margin: 0 0 25px 0;
+    opacity: 0.9;
+}
+
+body.light-mode .main-slogan {
+    color: #212529;
+}
+
+.language-selector {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.lang-btn {
+    background: linear-gradient(135deg, #00aaff, #0088cc);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 170, 255, 0.3);
+    min-width: 70px;
+}
+
+.lang-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 170, 255, 0.4);
+}
+
+.lang-btn.active {
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
+}
+
+/* Layout de conteúdo */
+.content-wrapper {
+    display: flex;
+    flex: 1;
 }
 
 /* Sidebar aprimorada */
@@ -30,8 +114,7 @@ body.light-mode {
     width: 300px;
     background: linear-gradient(180deg, #2c2c2c 0%, #1e1e1e 100%);
     padding: 20px;
-    height: 100vh;
-    position: fixed;
+    height: calc(100vh - 200px);
     overflow-y: auto;
     border-right: 3px solid #00aaff;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
@@ -138,7 +221,6 @@ body.light-mode .subsection-link.active {
 /* Conteúdo principal */
 .main-content {
     flex: 1;
-    margin-left: 300px;
     padding: 20px 40px;
     max-width: calc(100% - 300px);
 }
@@ -189,19 +271,7 @@ body.light-mode .controls {
     box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
 }
 
-/* Títulos */
-h1 {
-    text-align: center;
-    color: #00aaff;
-    font-size: 2.5em;
-    margin-bottom: 30px;
-    text-shadow: 0 2px 4px rgba(0, 170, 255, 0.3);
-}
-
-body.light-mode h1 {
-    color: #0066cc;
-}
-
+/* Títulos de conteúdo */
 h2 {
     color: #00aaff;
     border-bottom: 3px solid #00aaff;
@@ -558,22 +628,43 @@ kbd {
 
 /* Responsividade para dispositivos móveis */
 @media (max-width: 768px) {
+    .main-header {
+        padding: 20px 15px;
+    }
+    
+    .main-title {
+        font-size: 2.2em;
+        letter-spacing: 1px;
+    }
+    
+    .main-slogan {
+        font-size: 1em;
+    }
+    
+    .language-selector {
+        gap: 8px;
+    }
+    
+    .lang-btn {
+        padding: 8px 12px;
+        font-size: 0.8em;
+        min-width: 60px;
+    }
+    
+    .content-wrapper {
+        flex-direction: column;
+    }
+    
     .sidebar {
         width: 100%;
         height: auto;
-        position: relative;
         border-right: none;
         border-bottom: 3px solid #00aaff;
     }
     
     .main-content {
-        margin-left: 0;
         max-width: 100%;
         padding: 15px;
-    }
-    
-    .container {
-        flex-direction: column;
     }
     
     .controls {
@@ -588,11 +679,6 @@ kbd {
     .controls button {
         padding: 10px 15px;
         font-size: 14px;
-    }
-    
-    h1 {
-        font-size: 2em;
-        margin-bottom: 20px;
     }
     
     .content-section {
@@ -631,6 +717,24 @@ kbd {
 }
 
 @media (max-width: 480px) {
+    .main-header {
+        padding: 15px 10px;
+    }
+    
+    .main-title {
+        font-size: 1.8em;
+    }
+    
+    .main-slogan {
+        font-size: 0.9em;
+    }
+    
+    .lang-btn {
+        padding: 6px 10px;
+        font-size: 0.75em;
+        min-width: 50px;
+    }
+    
     .main-content {
         padding: 10px;
     }
@@ -638,15 +742,7 @@ kbd {
     .content-section {
         padding: 15px 10px;
     }
-    
-    h1 {
-        font-size: 1.8em;
-    }
-    
-    h2 {
-        font-size: 1.5em;
-    }
-    
+
     .controls button {
         padding: 8px 12px;
         font-size: 12px;
