@@ -11,41 +11,29 @@
 </head>
 <body>
     <div class="container">
-        <!-- Cabeçalho Multilíngue -->
-        <header class="main-header">
-            <div class="header-content">
-                <h1 class="main-title">VORTEXA HYBRID TECH FRAMEWORK</h1>
-                <p class="main-slogan">Design meets survival: quando a forma segue a missão</p>
-                <div class="language-selector">
-                    <button id="lang-pt" class="lang-btn active" data-lang="pt">🇧🇷 PT</button>
-                    <button id="lang-en" class="lang-btn" data-lang="en">🇺🇸 EN</button>
-                    <button id="lang-de" class="lang-btn" data-lang="de">🇩🇪 DE</button>
-                    <button id="lang-fr" class="lang-btn" data-lang="fr">🇫🇷 FR</button>
-                    <button id="lang-it" class="lang-btn" data-lang="it">🇮🇹 IT</button>
-                    <button id="lang-es" class="lang-btn" data-lang="es">🇪🇸 ES</button>
-                    <button id="lang-zh" class="lang-btn" data-lang="zh">🇨🇳 ZH</button>
-                </div>
+        <nav class="sidebar">
+            <h2>Sumário</h2>
+            <ul>
+                <!-- O sumário será carregado dinamicamente via JavaScript -->
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <div class="controls">
+                <button id="lang-pt" class="active">PT</button>
+                <button id="lang-en">EN</button>
+                <button id="lang-it">IT</button>
+                <button id="theme-toggle">Modo Claro</button>
             </div>
-        </header>
 
-        <div class="content-wrapper">
-            <nav class="sidebar">
-                <h2>Sumário</h2>
-                <ul>
-                    <!-- O sumário será carregado dinamicamente via JavaScript -->
-                </ul>
-            </nav>
+            <header>
+                <h1>VORTEXA HYBRID TECH FRAMEWORK</h1>
+            </header>
 
-            <main class="main-content">
-                <div class="controls">
-                    <button id="theme-toggle">Modo Claro</button>
-                </div>
-
-                <div id="content">
-                    <!-- O conteúdo será inserido aqui via JavaScript -->
-                </div>
-            </main>
-        </div>
+            <div id="content">
+                <!-- O conteúdo será inserido aqui via JavaScript -->
+            </div>
+        </main>
     </div>
 
     <script src="script.js"></script>
