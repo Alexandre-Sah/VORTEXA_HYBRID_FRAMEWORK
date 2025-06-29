@@ -3,26 +3,512 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VORTEXA HYBRID TECH FRAMEWORK</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>VORTEXA HYBRID TECH FRAMEWORK - DOC-BASE</title>
     <meta name="description" content="Documentação interativa do VORTEXA HYBRID TECH FRAMEWORK - Plataforma de mobilidade extrema com tecnologia avançada">
     <meta name="keywords" content="VORTEXA, hybrid, framework, mobilidade extrema, tecnologia automotiva">
     <meta name="author" content="Vortexa Motorsport Inc.">
+    <style>
+        /* Reset e estilos base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            line-height: 1.6;
+            transition: all 0.3s ease;
+        }
+
+        /* Modo claro */
+        body.light-mode {
+            background-color: #f5f5f5;
+            color: #212529;
+        }
+
+        /* Layout principal */
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar aprimorada */
+        .sidebar {
+            width: 280px;
+            background: linear-gradient(180deg, #2c2c2c 0%, #1e1e1e 100%);
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            overflow-y: auto;
+            border-right: 3px solid #00aaff;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        body.light-mode .sidebar {
+            background: linear-gradient(180deg, #e8e8e8 0%, #d0d0d0 100%);
+            border-right-color: #0066cc;
+        }
+
+        .sidebar h2 {
+            color: #00aaff;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+            text-align: center;
+            border-bottom: 2px solid #00aaff;
+            padding-bottom: 8px;
+        }
+
+        body.light-mode .sidebar h2 {
+            color: #0066cc;
+            border-bottom-color: #0066cc;
+        }
+
+        /* Sumário com subseções */
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .section-item {
+            margin-bottom: 12px;
+        }
+
+        .main-section-link {
+            display: block;
+            color: #f0f0f0;
+            text-decoration: none;
+            padding: 10px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.95em;
+            background: rgba(0, 170, 255, 0.1);
+            border-left: 3px solid transparent;
+            transition: all 0.3s ease;
+            margin-bottom: 6px;
+        }
+
+        body.light-mode .main-section-link {
+            color: #212529;
+            background: rgba(0, 102, 204, 0.1);
+        }
+
+        .main-section-link:hover,
+        .main-section-link.active {
+            background: rgba(0, 170, 255, 0.2);
+            border-left-color: #00aaff;
+            transform: translateX(3px);
+            box-shadow: 0 2px 6px rgba(0, 170, 255, 0.3);
+        }
+
+        body.light-mode .main-section-link:hover,
+        body.light-mode .main-section-link.active {
+            background: rgba(0, 102, 204, 0.2);
+            border-left-color: #0066cc;
+        }
+
+        /* Conteúdo principal */
+        .main-content {
+            flex: 1;
+            margin-left: 280px;
+            padding: 20px 40px;
+            max-width: calc(100% - 280px);
+        }
+
+        /* Controles */
+        .controls {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 8px;
+            z-index: 1001;
+            background: rgba(26, 26, 26, 0.9);
+            padding: 10px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 170, 255, 0.2);
+        }
+
+        body.light-mode .controls {
+            background: rgba(245, 245, 245, 0.9);
+            border-color: rgba(0, 102, 204, 0.2);
+        }
+
+        .controls button {
+            background: linear-gradient(135deg, #00aaff, #0088cc);
+            color: white;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85em;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 170, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+            min-width: 40px;
+        }
+
+        .controls button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 170, 255, 0.4);
+        }
+
+        .controls button.active {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
+        }
+
+        /* Títulos */
+        h1 {
+            text-align: center;
+            color: #00aaff;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 0 2px 4px rgba(0, 170, 255, 0.3);
+        }
+
+        body.light-mode h1 {
+            color: #0066cc;
+        }
+
+        h2 {
+            color: #00aaff;
+            border-bottom: 3px solid #00aaff;
+            padding-bottom: 10px;
+            margin: 30px 0 20px 0;
+            font-size: 1.8em;
+        }
+
+        body.light-mode h2 {
+            color: #0066cc;
+            border-bottom-color: #0066cc;
+        }
+
+        h3 {
+            color: #00aaff;
+            margin: 25px 0 15px 0;
+            font-size: 1.4em;
+        }
+
+        body.light-mode h3 {
+            color: #0066cc;
+        }
+
+        h4 {
+            color: #00aaff;
+            margin: 20px 0 10px 0;
+            font-size: 1.2em;
+        }
+
+        body.light-mode h4 {
+            color: #0066cc;
+        }
+
+        /* Seções de conteúdo */
+        .content-section {
+            margin-bottom: 50px;
+            padding: 30px;
+            background: rgba(44, 44, 44, 0.3);
+            border-radius: 15px;
+            border-left: 5px solid #00aaff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        body.light-mode .content-section {
+            background: rgba(255, 255, 255, 0.8);
+            border-left-color: #0066cc;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Público-alvo */
+        .audience {
+            background-color: rgba(0, 170, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #00aaff;
+        }
+
+        body.light-mode .audience {
+            background-color: rgba(0, 102, 204, 0.1);
+            border-left-color: #0066cc;
+        }
+
+        .audience strong {
+            color: #00aaff;
+        }
+
+        body.light-mode .audience strong {
+            color: #0066cc;
+        }
+
+        /* Destaque */
+        .highlight {
+            background-color: rgba(255, 193, 7, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+            font-style: italic;
+            text-align: center;
+            font-size: 1.1em;
+        }
+
+        /* Especificações técnicas */
+        .tech-spec {
+            background: rgba(0, 170, 255, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 1px solid rgba(0, 170, 255, 0.2);
+        }
+
+        body.light-mode .tech-spec {
+            background: rgba(0, 102, 204, 0.05);
+            border-color: rgba(0, 102, 204, 0.2);
+        }
+
+        /* Tabelas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: rgba(44, 44, 44, 0.5);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        body.light-mode table {
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(0, 170, 255, 0.2);
+        }
+
+        th {
+            background: rgba(0, 170, 255, 0.2);
+            color: #00aaff;
+            font-weight: 600;
+        }
+
+        body.light-mode th {
+            background: rgba(0, 102, 204, 0.2);
+            color: #0066cc;
+        }
+
+        tr:hover {
+            background: rgba(0, 170, 255, 0.1);
+        }
+
+        /* Listas */
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Glossário */
+        .glossary-term {
+            margin-bottom: 15px;
+            padding: 15px;
+            background: rgba(0, 170, 255, 0.1);
+            border-radius: 8px;
+            border-left: 4px solid #00aaff;
+        }
+
+        body.light-mode .glossary-term {
+            background: rgba(0, 102, 204, 0.1);
+            border-left-color: #0066cc;
+        }
+
+        .glossary-term strong {
+            color: #00aaff;
+            font-size: 1.1em;
+        }
+
+        body.light-mode .glossary-term strong {
+            color: #0066cc;
+        }
+
+        /* Links */
+        a {
+            color: #00aaff;
+            text-decoration: none;
+        }
+
+        body.light-mode a {
+            color: #0066cc;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Parágrafos */
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Responsividade para dispositivos móveis */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                border-right: none;
+                border-bottom: 3px solid #00aaff;
+            }
+            
+            .main-content {
+                margin-left: 0;
+                max-width: 100%;
+                padding: 15px;
+            }
+            
+            .container {
+                flex-direction: column;
+            }
+            
+            .controls {
+                position: relative;
+                top: auto;
+                right: auto;
+                justify-content: center;
+                margin: 15px 0;
+                flex-wrap: wrap;
+            }
+            
+            .controls button {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+            
+            h1 {
+                font-size: 2em;
+                margin-bottom: 20px;
+            }
+            
+            .content-section {
+                padding: 20px 15px;
+                margin-bottom: 30px;
+            }
+            
+            table {
+                font-size: 14px;
+            }
+            
+            th, td {
+                padding: 10px 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-content {
+                padding: 10px;
+            }
+            
+            .content-section {
+                padding: 15px 10px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            .controls button {
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+            
+            table {
+                font-size: 12px;
+            }
+            
+            th, td {
+                padding: 8px 6px;
+            }
+        }
+
+        /* Animações e transições suaves */
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Scrollbar personalizada */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(44, 44, 44, 0.3);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #00aaff, #0088cc);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #0088cc, #006699);
+        }
+
+        body.light-mode ::-webkit-scrollbar-track {
+            background: rgba(200, 200, 200, 0.3);
+        }
+
+        body.light-mode ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #0066cc, #004499);
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <nav class="sidebar">
             <h2>Sumário</h2>
             <ul>
-                <!-- O sumário será carregado dinamicamente via JavaScript -->
+                <li class="section-item">
+                    <a href="#introducao" class="main-section-link">1. Introdução</a>
+                </li>
+                <li class="section-item">
+                    <a href="#resumo-executivo" class="main-section-link">2. Resumo Executivo</a>
+                </li>
+                <li class="section-item">
+                    <a href="#tech-box" class="main-section-link">3. Tech Box</a>
+                </li>
+                <li class="section-item">
+                    <a href="#press-release" class="main-section-link">4. Press Release</a>
+                </li>
+                <li class="section-item">
+                    <a href="#glossario" class="main-section-link">5. Glossário</a>
+                </li>
             </ul>
         </nav>
 
         <main class="main-content">
             <div class="controls">
-                <button id="lang-pt" class="active">PT</button>
-                <button id="lang-en">EN</button>
-                <button id="lang-it">IT</button>
                 <button id="theme-toggle">Modo Claro</button>
             </div>
 
@@ -31,12 +517,631 @@
             </header>
 
             <div id="content">
-                <!-- O conteúdo será inserido aqui via JavaScript -->
+                <section id="introducao" class="content-section fade-in">
+                    <h2>1. INTRODUÇÃO</h2>
+                    
+                    <div class="audience">
+                        <strong>Público-alvo:</strong> público curioso, imprensa leiga, visitantes institucionais.
+                    </div>
+
+                    <p>A <strong>Vortexa Motorsport Inc.</strong> foi fundada no ecossistema de inovação do <strong>Stanford StartX</strong>, como spin-off convergente de pesquisas avançadas em neuroengenharia, inteligência artificial e mobilidade autônoma, com sinergia direta com o <strong>Stanford Driving Decision Lab (DDL)</strong>. A empresa mantém vínculos ativos com centros de excelência globais para transformar disrupção em confiabilidade aplicada — do deserto ao espaço.</p>
+
+                    <p>Com sede em fase de instalação no <strong>Colorado Springs Innovation Hub</strong>, próximo a zonas de testes em altitude, baixa pressão e clima severo, a nova central técnico-científica da Vortexa Motorsport Inc. abrigará o complexo de validação <strong>CAE VORTEXA™</strong>, incluindo infraestrutura para simulação termomecânica, laboratório de runtime neural e um <strong>túnel de vento modular 60%</strong> para protótipos de carros off-road com aerodinâmica otimizada (Cx ≈ 0,38).</p>
+
+                    <h3>Academia, Suporte e Formação Estratégica:</h3>
+                    <p>A <strong>Vortexa Motorsport Academy™</strong> é o núcleo de capacitação avançada do ecossistema VORTEXA, responsável por formar pilotos, navegadores, engenheiros de missão, técnicos de campo, administradores e operadores logísticos. A formação é baseada em simulações imersivas no <strong>CAE VORTEXA™</strong>, uso de gêmeos digitais, ensaios dinâmicos e validação no túnel de vento modular (60%).</p>
+                    <p>A Academy oferece certificações técnicas em resiliência aplicada, failover cognitivo, propulsão híbrida vetorial, protocolos de missão crítica e manutenção modular. Os treinamentos incluem simulações de falha, recuperação funcional, blackout estrutural e operação sob cenários de risco extremo — todos em conformidade com as normas <strong>FIA T1U</strong>, <strong>MIL-STD-810H</strong> e <strong>ISO 26262</strong>.</p>
+
+                    <h3>Infraestrutura de Apoio Operacional:</h3>
+                    <p>Para garantir autonomia técnica em ambientes hostis, a Vortexa Motorsport desenvolveu os <strong>Flute Kits™</strong> – módulos compactos de manutenção crítica, diagnóstico tático e reconfiguração embarcada. Esses kits permitem reparos avançados, substituição de carenagens inteligentes, reprogramação de SubCores™ e calibração híbrida, mesmo sob intempéries severas.</p>
+                    <p>Complementando essa mobilidade técnica, a rede <strong>QuickBay™ FieldOps</strong> viabiliza o estabelecimento de <strong>bases operacionais modulares</strong> em zonas remotas de rally, mineração, defesa ou resgate. Essas unidades incluem infraestrutura para diagnóstico, recarga, sincronia com o CAE VORTEXA™, substituição de módulos e atualizações OTA. Toda a gestão tática é operada pelo runtime <strong>xRT-VTXA™</strong> com fallback físico manual.</p>
+
+                    <p>O <strong>VORTEXA HYBRID TECH FRAMEWORK</strong> constitui a espinha dorsal da plataforma VORTEXA HYBRID — uma arquitetura cognitiva, modular e resiliente, concebida para enfrentar os desafios mais extremos da mobilidade inteligente. Sua aplicabilidade abrange desde rally-raid (W2RC) até defesa avançada, mineração e operações autônomas de resgate.</p>
+
+                    <div class="highlight">
+                        <strong>"Design meets survival: quando a forma segue a missão."</strong>
+                    </div>
+
+                    <p>Nascida do inconformismo técnico e da ambição funcional de criar algo inédito, a <strong>VORTEXA MOTORSPORT</strong> emerge como um ecossistema internacional de cocriação, reunindo engenheiros de competição, pesquisadores aeroespaciais, projetistas militares e especialistas em sistemas críticos. Seus centros de inovação estão distribuídos entre Brasil, Alemanha, Califórnia e Emirados Árabes Unidos.</p>
+
+                    <p>Diferente de soluções tradicionais, o VORTEXA não parte de um veículo — parte de um <strong>framework sistêmico</strong> que combina design funcional, inteligência descentralizada, redundância estrutural e interoperabilidade adaptativa. É uma máquina viva, capaz de resistir a falhas severas, reconfigurar seus subsistemas e continuar operando sob blackout total.</p>
+
+                    <h3>Seus pilares fundamentais incluem:</h3>
+                    <ul>
+                        <li><strong>Resiliência Sistêmica Total</strong>: com múltiplas camadas de redundância digital, física e energética.</li>
+                        <li><strong>Inovação Sustentável e Escalonável</strong>: com arquitetura de transição energética (e-fuels → elétrico → hidrogênio).</li>
+                        <li><strong>Inteligência Distribuída Modular</strong>: com Vortexa Brain™, SubCores™, NEVO OS™ e OptiCAN Matrix™.</li>
+                    </ul>
+
+                    <p>Este documento apresenta os cinco blocos estruturais que compõem o VORTEXA HYBRID:</p>
+                    <ol>
+                        <li>estrutura e design funcional;</li>
+                        <li>propulsão e mobilidade extrema;</li>
+                        <li>sistemas energéticos e vitais;</li>
+                        <li>cognição embarcada e interfaces humanas;</li>
+                        <li>escalabilidade, validação e legado institucional.</li>
+                    </ol>
+
+                    <p>Cada seção é acompanhada por dados técnicos, lógica de operação, estratégias de fallback, inteligência embarcada e conformidade com as normas internacionais mais exigentes. O VORTEXA está sendo validado por gêmeos digitais, testes de campo e simulações CAE, com cronograma técnico até 2030.</p>
+
+                    <p>Com parcerias estratégicas com <strong>ANSYS, SADEV, Oshkosh Defense, QEV Technologies, Bosch Motorsport, NVIDIA, Stanford DDL, CAE GmbH, MIT CSAIL, xAI</strong> e outros, a Vortexa Motorsport convida todos os inovadores a participar da criação de uma nova era de mobilidade cognitiva, resiliente e funcional.</p>
+
+                    <p><strong>Nota:</strong> O site oficial da Vortexa Motorsport será lançado em breve. O URL acima é um placeholder para referência futura.</p>
+                </section>
+
+                <section id="resumo-executivo" class="content-section fade-in">
+                    <h2>2. RESUMO EXECUTIVO</h2>
+                    
+                    <div class="audience">
+                        <strong>Público-alvo:</strong> CEOs, investidores, tomadores de decisão.
+                    </div>
+
+                    <h3>1.1 Visão Geral do VORTEXA HYBRID</h3>
+                    <p>O <strong>VORTEXA HYBRID</strong> é uma plataforma modular e resiliente baseada no <strong>VORTEXA HYBRID TECH FRAMEWORK</strong>, uma arquitetura integrada para mobilidade extrema. Composta por cinco blocos funcionais interdependentes — <em>estrutura, propulsão, energia, cognição e escalabilidade</em> —, a plataforma foi projetada para operar com confiabilidade em ambientes como W2RC, operações de defesa, mineração remota e resgate autônomo.</p>
+
+                    <p>Diferente de um veículo convencional, o VORTEXA é uma <strong>máquina adaptativa</strong>, capaz de se reconfigurar dinamicamente via rede cognitiva embarcada. Sua lógica operacional parte de um núcleo de inteligência (VORTEXA BRAIN), com redundância descentralizada (SubCores), sistema operacional em tempo real (NEVO OS) e uma matriz de interconexão robusta (OptiCAN Matrix), suportada por criptografia proprietária (VORTEXA SECURELINK).</p>
+
+                    <p>A infraestrutura energética combina múltiplas fontes (baterias de estado sólido, hidrogênio pressurizado, microturbina de fallback), gerenciadas por um sistema multicamadas (VECS™), enquanto a carenagem atua como organismo funcional — com propriedades energéticas, autorreparáveis e ultracapacitivas (VORTEXA SMART SKIN™).</p>
+
+                    <ul>
+                        <li><strong>Proteção Tática Total:</strong> A Survivor Capsule™ (VSC-RESIL™) resiste a 50 g, 1.200 °C, e falhas totais.</li>
+                        <li><strong>Desempenho Adaptativo:</strong> Powertrain híbrido (V-DVD™) com ICE de 390 kW + 4 ERS elétricos (150 kW cada).</li>
+                        <li><strong>Inteligência Distribuída:</strong> Grok 6 (xAI) em VORTEXA BRAIN, SubCores locais, diagnóstico preditivo e IA tolerante a falhas.</li>
+                        <li><strong>Interoperabilidade Modular:</strong> Kits de missão (rally, militar, mineração, resgate) reconfiguráveis em campo.</li>
+                        <li><strong>Sustentabilidade Avançada:</strong> Operação com H₂ direto e e-fuels; arquitetura sem transmissão mecânica.</li>
+                    </ul>
+
+                    <h3>1.2 Diferenciais e Benefícios</h3>
+                    <ul>
+                        <li><strong>Resiliência Sistêmica:</strong> Redundância física, digital e energética, com fallback manual e microECUs.</li>
+                        <li><strong>Eficiência Energética:</strong> 85% em modo híbrido, com torque vetorial e recuperação térmica avançada.</li>
+                        <li><strong>Autonomia Inteligente:</strong> 300–900 km (modo fallback); até 2.000 km com 20 kg de H₂ (modo estendido).</li>
+                        <li><strong>IA em Tempo Real:</strong> Grok 6 com latência ≤10 ms, inferência embarcada (TinyML) e xRT-VTXA para blackout.</li>
+                        <li><strong>Aplicações Multissetoriais:</strong> Rally-raid (W2RC), defesa tática, mineração profunda, operações SAR.</li>
+                    </ul>
+
+                    <p>Cada subsistema do VORTEXA está desenhado para interoperabilidade: sistemas de suspensão (SISMO™), refrigeração/limpeza (VULCANS™), telemetria e controle de pressão (CTIS), visualização (VRSH™) e propulsão híbrida são orquestrados por inteligência coletiva local e central.</p>
+
+                    <h3>1.3 Roadmap Estratégico e Chamada para Ação</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Ano</th>
+                                <th>Marco</th>
+                                <th>Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2025</td>
+                                <td>Validação CAE</td>
+                                <td>Modelagem de torque, crash, IA e fluxo térmico (ANSYS/CAE GmbH)</td>
+                            </tr>
+                            <tr>
+                                <td>2026</td>
+                                <td>Protótipos Funcionais</td>
+                                <td>Teste de powertrain híbrido (ICE + 2 ERS traseiros) e CTIS inteligente</td>
+                            </tr>
+                            <tr>
+                                <td>2027</td>
+                                <td>Arquitetura Completa</td>
+                                <td>Implementação com 4 ERS independentes, CAE VORTEXA embarcado</td>
+                            </tr>
+                            <tr>
+                                <td>2028</td>
+                                <td>Validação de Interfaces</td>
+                                <td>Testes de VRSH™, HUD Vuzix, sensores térmicos e BCI (neurofeedback)</td>
+                            </tr>
+                            <tr>
+                                <td>2029</td>
+                                <td>Rally dos Sertões</td>
+                                <td>Testes em campo com arquitetura plena, fallback ativo e kits modulares</td>
+                            </tr>
+                            <tr>
+                                <td>2030</td>
+                                <td>Borneo Extreme / Validação Final</td>
+                                <td>Ambiente hostil: dunas, floresta, umidade, blackout elétrico controlado</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="highlight">
+                        <strong>Chamada para Ação:</strong> A Vortexa Motorsport convida parceiros industriais, institutos de pesquisa e agências de missão crítica a integrar a coalizão VORTEXA para testes de campo, validação de novas tecnologias (Smart Skin™, H₂ OPS™, VORTEXCORE), e colaboração em IA resiliente. Contato via <a href="https://www.vortexamotorsport.com">www.vortexamotorsport.com</a>.
+                    </div>
+                </section>
+
+                <section id="tech-box" class="content-section fade-in">
+                    <h2>3. TECH BOX</h2>
+                    
+                    <div class="audience">
+                        <strong>Público-alvo:</strong> engenheiros, cientistas, universidades, agências de validação.
+                    </div>
+
+                    <p>O <strong>VORTEXA HYBRID</strong> é construído sobre uma arquitetura robusta e inovadora, projetada para desempenho e resiliência em ambientes extremos. A seguir, detalhamos os principais componentes e sistemas que compõem o <strong>VORTEXA HYBRID TECH FRAMEWORK</strong>.</p>
+
+                    <h3>2.1 Arquitetura Estrutural e Modularidade</h3>
+                    <p>A estrutura do <strong>VORTEXA HYBRID</strong> foi concebida com um único princípio inegociável: <em>sobreviver e continuar operando</em> mesmo após falhas severas. Sua arquitetura modular e multicamadas, denominada <strong>MRCS™ – Modular Reconfigurable Chassis System</strong>, combina <strong>blindagem ativa</strong>, <strong>redes de controle redundantes</strong> e <strong>reconfiguração funcional em campo</strong>. Cada subsistema vital está encapsulado em zonas estruturais com isolamento térmico, cognitivo e energético.</p>
+
+                    <div class="tech-spec">
+                        <h4>Divisão Estrutural – MRCS™:</h4>
+                        <ul>
+                            <li><strong>IFM – Módulo Frontal Integrado:</strong> Estrutura de absorção programada com radar frontal, painéis solares CIGS integrados, chassi deformável e travessia de sensores LIDAR/SensorGrid™.</li>
+                            <li><strong>CCM – Módulo Central Blindado:</strong> Monocoque em multicamadas com <strong>Survivor Capsule™ (VSC-RESIL™)</strong> integrada, tanques laterais de H₂ encapsulados, blindagem balística, isolamento térmico e <strong>Vortexa Brain™</strong> em núcleo protegido.</li>
+                            <li><strong>RTM – Módulo Traseiro Térmico:</strong> Compartimento para o ICE HBR-1 (PIPO Moteurs), motores QEV vetoriais, microturbina PEM, baterias de estado sólido (QuantumScape/Sila) e exaustão adaptativa Akrapovič, com <strong>circuito térmico redundante VULCANS™</strong>.</li>
+                        </ul>
+                    </div>
+
+                    <p>Os módulos estruturais são conectados por <strong>acoplamentos pneumáticos de liberação rápida</strong>, com <strong>travas anti-propagação</strong> e conduítes OptiCAN Matrix™ com isolamento por canal físico. Toda a arquitetura é monitorada por SubCores™ locais com fallback autônomo. A carenagem funcional – <strong>Smart Skin™</strong> – atua como escudo térmico, sistema energético auxiliar e superfície regenerativa.</p>
+
+                    <h4>Parâmetros Técnicos Atualizados:</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Parâmetro</th>
+                                <th>Especificação</th>
+                                <th>Nota Técnica</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Material</td>
+                                <td>Compósito híbrido CFRP-grafeno com aramida balística</td>
+                                <td>Alta resistência e leveza</td>
+                            </tr>
+                            <tr>
+                                <td>Rigidez Torcional</td>
+                                <td>45 kNm/° (CAE Validated)</td>
+                                <td>Validado por CAE</td>
+                            </tr>
+                            <tr>
+                                <td>Peso Estrutural Total</td>
+                                <td>~1.800 kg (configuração média)</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Tanques de H₂</td>
+                                <td>2×5 kg (Eaton 700 bar encapsulados)</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Resfriamento Estrutural</td>
+                                <td>Rede VULCANS™ multicircuito (80 bar)</td>
+                                <td>Gerenciamento térmico avançado</td>
+                            </tr>
+                            <tr>
+                                <td>Interoperabilidade</td>
+                                <td>Compatível com Flute Kits™ e QuickBay™ para reconfiguração rápida em campo</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="highlight">
+                        <strong>Nota Técnica:</strong> O chassi MRCS™ foi projetado para conformidade simultânea com <strong>MIL-STD-810H</strong> (impacto, vibração e calor), <strong>ISO 26262 ASIL-D</strong> (falha funcional) e <strong>FIA T1U</strong> (rally-raid), permitindo sobrevivência tática mesmo em cenário de falha elétrica, térmica e estrutural combinada.
+                    </div>
+
+                    <h3>2.2 Filosofia Funcional e Design Gordon Murray</h3>
+                    <p>A filosofia funcional de Gordon Murray — "<em>Design should follow the purest function</em>" — inspira profundamente o VORTEXA HYBRID. No lugar de excessos, encontra-se clareza estrutural. No lugar de ornamentos, propósito técnico absoluto. Suas obras-primas como o <strong>McLaren F1</strong> e o <strong>T.50</strong> estabeleceram um novo cânone de engenharia purista voltada à leveza, eficiência térmica e experiência centrada no condutor.</p>
+
+                    <p>No VORTEXA, essa filosofia foi reinterpretada para um contexto radicalmente diferente: o <strong>off-road extremo</strong>. Calor brutal, vibração constante, impacto lateral, blackout elétrico, manutenção em campo e sobrevivência do piloto não são exceções, mas regras. A estética ainda nasce da função — mas agora, a função é sobreviver, adaptar-se e reagir.</p>
+
+                    <h4>Princípios Herdados da Escola GMA:</h4>
+                    <ul>
+                        <li><strong>Design por função térmica:</strong> cada forma obedece à dissipação, condução ou isolamento</li>
+                        <li><strong>Leveza e modularidade:</strong> estruturas otimizadas para troca rápida, reparo e acesso</li>
+                        <li><strong>Simplicidade técnica como superioridade:</strong> eliminar complexidade supérflua aumenta confiabilidade</li>
+                        <li><strong>Integração funcional:</strong> peças que cumprem múltiplas funções com um único volume</li>
+                    </ul>
+
+                    <h4>Transposição para o Ambiente Off-Road Extremo:</h4>
+                    <ul>
+                        <li><strong>Arquitetura de sobrevivência:</strong> cápsula MRCS™, Smart Skin™ autocurativa, dissipação integrada</li>
+                        <li><strong>Reparabilidade em campo:</strong> módulos substituíveis com ferramentas mínimas e lógica de encaixe</li>
+                        <li><strong>Minimização de peso versus maximização de resiliência:</strong> cada quilo justificado por função crítica</li>
+                        <li><strong>Suspensão funcional, não luxuosa:</strong> DSSV-E da Multimatic e sistema TAK-4i interpretados sob a lógica da missão</li>
+                    </ul>
+
+                    <h4>Aplicações Reais no VORTEXA:</h4>
+                    <ul>
+                        <li><strong>VRSH™:</strong> capacete com integração HUD, fallback auditivo, comando BCI e blindagem leve</li>
+                        <li><strong>SubCores™:</strong> processadores modulares posicionados estrategicamente para isolamento e acesso</li>
+                        <li><strong>Smart Skin™:</strong> carenagem multicamada com função térmica, energética, estrutural e diagnóstica</li>
+                        <li><strong>Design de chassis e acesso:</strong> manutenção rápida e arquitetura pensada por missão, não estética</li>
+                    </ul>
+
+                    <h4>Comparativo Conceitual: GMA vs VORTEXA</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Gordon Murray Automotive</th>
+                                <th>VORTEXA HYBRID</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Leveza para performance de pista</td>
+                                <td>Resiliência para sobrevivência de missão</td>
+                            </tr>
+                            <tr>
+                                <td>Foco em simetria térmica e balanceamento dinâmico</td>
+                                <td>Foco em redundância tática e modularidade de campo</td>
+                            </tr>
+                            <tr>
+                                <td>Pureza estética como consequência da função</td>
+                                <td>Camuflagem funcional como extensão da missão</td>
+                            </tr>
+                            <tr>
+                                <td>Design voltado à experiência sensorial do condutor</td>
+                                <td>Design voltado à proteção e comando neurocognitivo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h4>Parâmetros Funcionais do Design:</h4>
+                    <ul>
+                        <li><strong>Cx Aerodinâmico (estimado):</strong> ≈ 0.38 em configuração off-road</li>
+                        <li><strong>Geometria frontal:</strong> otimizada para desvio de fluxo térmico e menor arrasto lateral</li>
+                        <li><strong>Modularidade:</strong> painéis Smart Skin™ substituíveis com fixação QuickLock (3 min/unidade)</li>
+                        <li><strong>Layout centralizado:</strong> para distribuição equilibrada de massa e inércia mínima</li>
+                        <li><strong>Área viva (crew):</strong> protegida por VSC-RESIL™ com isolamento estrutural 360°</li>
+                    </ul>
+
+                    <div class="highlight">
+                        <strong>Declaração VORTEXA:</strong> "Seguimos a filosofia de Gordon Murray, mas onde ele constrói a leveza que voa, nós construímos a estrutura que resiste. Não projetamos para a pista: projetamos para o impacto, para a poeira, para a missão — e para voltar inteiro."
+                    </div>
+
+                    <h3>2.3 Survivor Capsule™ (VSC-RESIL™)</h3>
+                    <p>A <strong>Survivor Capsule™ VSC-RESIL™</strong> é o núcleo de proteção biomecânica, cognitiva e térmica do VORTEXA HYBRID. Desenvolvida com inspiração em cápsulas aeroespaciais, sistemas MRAP militares e cockpits de hipercarros de resistência, a VSC-RESIL™ integra blindagem leve, gerenciamento térmico adaptativo e compatibilidade total com o capacete inteligente VRSH™.</p>
+
+                    <p>Sua arquitetura multicamada é baseada na <strong>estrutura MRCS™</strong> (<em>Modular Resilient Core Shell</em>) — um casulo central de sobrevivência com zonas deformáveis controladas, acoplamentos termicamente isolados e módulos substituíveis em campo. No interior, sistemas de suporte à vida, sensores biométricos e interfaces cognitivas operam em harmonia com a IA embarcada.</p>
+
+                    <p>A cápsula é diretamente conectada aos <strong>SubCores™</strong> — microcontroladores distribuídos com funções específicas (missão, HUD, refrigeração, navegação, diagnóstico) — que garantem funcionamento redundante mesmo sob falha parcial do sistema central. O controle operacional é coordenado pelo <strong>runtime cognitivo embarcado xRT-VTXA™</strong>, capaz de interpretar sinais fisiológicos, ambientais e contextuais em tempo real.</p>
+
+                    <p>Tanto os SubCores™ quanto o <strong>Vortexa Brain™</strong> e a <strong>ECU Resilient™</strong> operam sobre circuitos dedicados da <strong>família de ASICs neuromórficos xAI VortexCore™</strong>. Essa arquitetura unificada garante baixa latência, interoperabilidade nativa entre módulos, aprendizado embarcado e fallback distribuído com decisões locais mesmo em blackout completo.</p>
+                </section>
+
+                <section id="press-release" class="content-section fade-in">
+                    <h2>4. PRESS RELEASE</h2>
+                    
+                    <div class="audience">
+                        <strong>Público-alvo:</strong> mídia especializada, setor off-road, militar, aeroespacial, mineração, resgate.
+                    </div>
+
+                    <h3>Vortexa Hybrid: Redefinindo a Mobilidade Extrema com Resiliência e Inteligência</h3>
+                    
+                    <p><strong>Colorado Springs, [Data]</strong> – A Vortexa Motorsport Inc., spin-off inovadora nascida do ecossistema de Stanford StartX, anuncia o lançamento do <strong>VORTEXA HYBRID</strong>, uma plataforma de mobilidade que transcende os limites convencionais, projetada para operar em ambientes hostis e missões críticas. Com uma arquitetura sistêmica que prioriza a sobrevivência e a adaptabilidade, o VORTEXA HYBRID não é apenas um veículo, mas um ecossistema de tecnologias de ponta que promete revolucionar setores como rally-raid, defesa, mineração e operações de resgate.</p>
+
+                    <div class="highlight">
+                        "Design meets survival: quando a forma segue a missão." Este é o lema que impulsiona a Vortexa Motorsport, que integra neuroengenharia, inteligência artificial e mobilidade autônoma para criar uma máquina viva, capaz de resistir a falhas severas, reconfigurar seus subsistemas e continuar operando sob as condições mais adversas.
+                    </div>
+
+                    <p>Nossos centros de inovação, espalhados por Brasil, Alemanha, Califórnia e Emirados Árabes Unidos, reúnem uma coalizão de engenheiros de competição, pesquisadores aeroespaciais e especialistas em sistemas críticos.</p>
+
+                    <h4>Inovações Destacadas com Foco em Aplicação:</h4>
+                    
+                    <ul>
+                        <li><strong>MRCS™ – Modular Reconfigurable Chassis System:</strong> Uma estrutura multicamadas com blindagem ativa e redundância de controle, garantindo a integridade operacional mesmo após impactos severos. Esta arquitetura é compatível com <strong>MIL-STD-810H</strong>, <strong>ISO 26262 ASIL-D</strong> e <strong>FIA T1U</strong>, assegurando a sobrevivência tática em cenários combinados de falha elétrica, térmica e estrutural.</li>
+                        <li><strong>Survivor Capsule™ (VSC-RESIL™):</strong> O coração da proteção do piloto, inspirada em cápsulas aeroespaciais e sistemas MRAP. Resiste a 50 g de impacto e 1.200 °C de calor, integrando sistemas de suporte à vida e interfaces cognitivas para o operador.</li>
+                        <li><strong>Powertrain Híbrido V-DVD™:</strong> Uma combinação de um motor de combustão interna de 390 kW e quatro motores elétricos (ERS) de 150 kW cada, oferecendo eficiência energética de 85% em modo híbrido e torque vetorial. A autonomia inteligente varia de 300 a 900 km em modo fallback, e até 2.000 km com 20 kg de hidrogênio.</li>
+                        <li><strong>Inteligência Distribuída com Grok 6 (xAI):</strong> O Vortexa Brain™ e os SubCores™ locais utilizam a inteligência artificial Grok 6, com latência inferior a 10 ms, para diagnóstico preditivo e tolerância a falhas. O runtime cognitivo embarcado xRT-VTXA™ garante a interpretação de sinais fisiológicos e ambientais em tempo real, mesmo em blackout total.</li>
+                        <li><strong>Smart Skin™:</strong> Uma carenagem funcional e multicamada que atua como escudo térmico, sistema energético auxiliar e superfície regenerativa, otimizada para aerodinâmica (Cx ≈ 0.38) e reparabilidade em campo.</li>
+                    </ul>
+
+                    <h4>Comparativos com Soluções de Mercado:</h4>
+                    
+                    <p>Enquanto soluções tradicionais focam na performance em pista, o VORTEXA HYBRID é construído para a resiliência em campo. Diferente de veículos que são adaptados para ambientes extremos, o VORTEXA foi concebido desde o início como um <strong>framework sistêmico</strong> para sobreviver, adaptar-se e reagir. Sua modularidade permite reconfigurações rápidas para diferentes missões, desde rally-raid até operações militares e de resgate, superando a rigidez de designs convencionais.</p>
+
+                    <h4>Frases de Impacto e Dados Prontos para Citação:</h4>
+                    
+                    <ul>
+                        <li>"O VORTEXA HYBRID não é apenas um veículo; é uma máquina viva, projetada para desafiar o impossível e voltar inteiro." – [Nome do Porta-voz, Título]</li>
+                        <li>"Com 85% de eficiência energética em modo híbrido e autonomia de até 2.000 km, o VORTEXA HYBRID estabelece um novo padrão para a mobilidade sustentável em condições extremas."</li>
+                        <li>"Nossa arquitetura MRCS™ e a Survivor Capsule™ VSC-RESIL™ garantem que a segurança do operador seja inegociável, mesmo em cenários de falha combinada."</li>
+                        <li>"A integração da IA Grok 6 e dos ASICs neuromórficos xAI VortexCore™ permite uma inteligência distribuída e tolerante a falhas, redefinindo a cognição embarcada."</li>
+                    </ul>
+
+                    <h4>Perspectivas Futuras:</h4>
+                    
+                    <p>Com um roadmap estratégico que inclui validações CAE em 2025, protótipos funcionais em 2026 e testes em campo no Rally dos Sertões em 2029, a Vortexa Motorsport está no caminho para a validação final no Borneo Extreme em 2030. Convidamos a mídia especializada e parceiros estratégicos a acompanhar nossa jornada e a se juntarem a nós na construção do futuro da mobilidade resiliente.</p>
+
+                    <p><strong>Contato para Imprensa:</strong></p>
+                    <p>[Nome do Contato]<br>
+                    [Email do Contato]<br>
+                    [Telefone do Contato]</p>
+                </section>
+
+                <section id="glossario" class="content-section fade-in">
+                    <h2>5. GLOSSÁRIO, TERMOS TÉCNICOS E CONFORMIDADES</h2>
+                    
+                    <div class="audience">
+                        <strong>Público-alvo:</strong> transversal (engenheiros, jornalistas, CEOs, designers, juristas técnicos).
+                    </div>
+
+                    <p>Este glossário detalha os termos técnicos, abreviações, siglas e normas de conformidade essenciais para a compreensão do <strong>VORTEXA HYBRID TECH FRAMEWORK</strong>.</p>
+
+                    <h3>Termos Técnicos e Siglas</h3>
+                    
+                    <div class="glossary-term">
+                        <strong>ASIL-D (Automotive Safety Integrity Level D):</strong> Nível mais alto de integridade de segurança automotiva, conforme a norma ISO 26262, indicando o menor risco residual de falha funcional.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>BCI (Brain-Computer Interface):</strong> Interface Cérebro-Computador. Tecnologia que permite a comunicação direta entre o cérebro e um dispositivo externo.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>CAE (Computer-Aided Engineering):</strong> Engenharia Assistida por Computador. Utilização de software para simular o desempenho de produtos e processos, incluindo análise de elementos finitos (FEA), dinâmica de fluidos computacional (CFD) e análise de sistemas multicorpos (MBA).
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>CAE VORTEXA™:</strong> Complexo de validação da Vortexa Motorsport Inc., incluindo infraestrutura para simulação termomecânica, laboratório de runtime neural e um túnel de vento modular 60%.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>CCM (Central Control Module):</strong> Módulo Central Blindado da arquitetura MRCS™.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>CFRP (Carbon Fiber Reinforced Polymer):</strong> Polímero Reforçado com Fibra de Carbono. Material compósito leve e de alta resistência.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>CIGS (Copper Indium Gallium Selenide):</strong> Cobre, Índio, Gálio e Seleneto. Tecnologia de células solares de filme fino.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>CTIS (Central Tire Inflation System):</strong> Sistema Central de Inflação de Pneus. Permite ajustar a pressão dos pneus a partir do cockpit.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>DDL (Driving Decision Lab):</strong> Laboratório de Decisão de Condução da Universidade de Stanford.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>DSSV-E (Dynamic Suspensions Spool Valve - Electronic):</strong> Válvula de Carretel de Suspensão Dinâmica Eletrônica. Tecnologia de suspensão avançada.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>ECU Resilient™:</strong> Unidade de Controle Eletrônico Resiliente. Componente do sistema de controle do VORTEXA HYBRID.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>ERS (Energy Recovery System):</strong> Sistema de Recuperação de Energia. Converte energia cinética em energia elétrica, geralmente durante a frenagem.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>FIA T1U:</strong> Regulamentação da Federação Internacional do Automóvel para veículos de rally-raid, categoria T1U.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>Flute Kits™:</strong> Módulos compactos de manutenção crítica, diagnóstico tático e reconfiguração embarcada desenvolvidos pela Vortexa Motorsport.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>GMA (Gordon Murray Automotive):</strong> Empresa de design e engenharia automotiva fundada por Gordon Murray.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>Grok 6:</strong> Modelo de linguagem grande desenvolvido pela xAI.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>H₂ OPS™:</strong> Operações com Hidrogênio. Refere-se à utilização e gestão de hidrogênio como fonte de energia.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>HUD (Head-Up Display):</strong> Display de Projeção. Projeta informações no campo de visão do usuário.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>ICE (Internal Combustion Engine):</strong> Motor de Combustão Interna.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>IFM (Integrated Front Module):</strong> Módulo Frontal Integrado da arquitetura MRCS™.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>ISO 26262:</strong> Norma internacional para segurança funcional de sistemas elétricos e eletrônicos em veículos rodoviários.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>LIDAR (Light Detection and Ranging):</strong> Detecção e Alcance da Luz. Tecnologia de sensoriamento remoto que usa luz laser para medir distâncias.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>MIL-STD-810H:</strong> Padrão militar dos EUA para testes de impacto, vibração, temperatura e outras condições ambientais.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>MRAP (Mine-Resistant Ambush Protected):</strong> Veículos Protegidos contra Minas e Emboscadas. Categoria de veículos militares.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>MRCS™ (Modular Reconfigurable Chassis System):</strong> Sistema de Chassi Modular Reconfigurável. Arquitetura estrutural do VORTEXA HYBRID.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>NEVO OS™:</strong> Sistema Operacional em Tempo Real do VORTEXA HYBRID.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>OptiCAN Matrix™:</strong> Matriz de interconexão robusta e criptografada do VORTEXA HYBRID.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>PEM (Proton Exchange Membrane):</strong> Membrana de Troca de Prótons. Tecnologia de célula de combustível.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>QuickBay™ FieldOps:</strong> Rede de bases operacionais modulares da Vortexa Motorsport para suporte em campo.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>QuickLock:</strong> Sistema de fixação rápida para painéis da Smart Skin™.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>RTM (Rear Thermal Module):</strong> Módulo Traseiro Térmico da arquitetura MRCS™.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>SAR (Search and Rescue):</strong> Busca e Resgate.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>SensorGrid™:</strong> Rede de sensores integrada para monitoramento ambiental e contextual.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>SISMO™:</strong> Sistema de suspensão do VORTEXA HYBRID.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>Smart Skin™:</strong> Carenagem funcional do VORTEXA HYBRID com propriedades térmicas, energéticas e autorreparáveis.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>SubCores™:</strong> Microcontroladores distribuídos com funções específicas no VORTEXA HYBRID.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>Survivor Capsule™ (VSC-RESIL™):</strong> Cápsula de proteção biomecânica, cognitiva e térmica do VORTEXA HYBRID.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>TAK-4i:</strong> Sistema de suspensão independente da Oshkosh Defense.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>TinyML:</strong> Machine Learning embarcado em dispositivos de baixa potência.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>V-DVD™:</strong> Powertrain híbrido do VORTEXA HYBRID.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>VECS™:</strong> Sistema de Gerenciamento Energético do VORTEXA HYBRID.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>VIRETTA™:</strong> Sistema de visualização e controle remoto da Vortexa Motorsport.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>Vortexa Brain™:</strong> Núcleo de inteligência do VORTEXA HYBRID.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>VORTEXA CORE™:</strong> Família de ASICs neuromórficos da xAI, utilizada nos SubCores™ e Vortexa Brain™.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>VORTEXA HYBRID TECH FRAMEWORK:</strong> Arquitetura cognitiva, modular e resiliente que constitui a espinha dorsal da plataforma VORTEXA HYBRID.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>VORTEXA SECURELINK:</strong> Criptografia proprietária que suporta a OptiCAN Matrix™.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>VRSH™:</strong> Capacete inteligente com integração HUD, fallback auditivo, comando BCI e blindagem leve.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>VULCANS™:</strong> Rede multicircuito de resfriamento estrutural do VORTEXA HYBRID.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>W2RC (World Rally-Raid Championship):</strong> Campeonato Mundial de Rally-Raid.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>xAI:</strong> Empresa de inteligência artificial fundada por Elon Musk.
+                    </div>
+
+                    <div class="glossary-term">
+                        <strong>xRT-VTXA™:</strong> Runtime cognitivo embarcado do VORTEXA HYBRID.
+                    </div>
+
+                    <h3>Normas de Conformidade</h3>
+                    
+                    <div class="tech-spec">
+                        <ul>
+                            <li><strong>FIA T1U:</strong> Regulamentação da Federação Internacional do Automóvel para veículos de rally-raid, categoria T1U.</li>
+                            <li><strong>ISO 26262 ASIL-D:</strong> Norma internacional de segurança funcional para sistemas eletrônicos automotivos, com o mais alto nível de integridade de segurança.</li>
+                            <li><strong>MIL-STD-810H:</strong> Padrão militar dos EUA que estabelece requisitos para testes ambientais e de engenharia de equipamentos militares.</li>
+                        </ul>
+                    </div>
+                </section>
             </div>
         </main>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        // Funcionalidade de modo claro/escuro
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            themeToggle.textContent = body.classList.contains('light-mode') ? 'Modo Escuro' : 'Modo Claro';
+        });
+
+        // Navegação suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Destacar seção ativa na navegação
+        window.addEventListener('scroll', function() {
+            let current = '';
+            const sections = document.querySelectorAll('.content-section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.main-section-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Animação de entrada das seções
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.content-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
 
