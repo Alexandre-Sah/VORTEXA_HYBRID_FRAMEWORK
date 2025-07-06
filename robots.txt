@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://alexandre-sah.github.io/VORTEXA_HYBRID_FRAMEWORK/sitemap.xml
